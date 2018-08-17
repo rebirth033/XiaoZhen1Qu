@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
     {
         //房产信息
         public string ID { get; set; }
-        public string ZJ { get; set; }
+        public decimal ZJ { get; set; }
         public string CZFS { get; set; }
         public string S { get; set; }
         public string T { get; set; }

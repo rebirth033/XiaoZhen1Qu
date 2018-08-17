@@ -57,15 +57,11 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_zj">' + (obj.GQ === "出租" ? GetJG(obj.ZJ, obj.ZJDW) : GetJG(obj.SJ, obj.ZJDW)) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">类    别：</span>');
-    html += ('<span class="span_body_left_body_right_right">厂房</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">面积：</span>');
+    html += ('<span class="span_body_left_body_right_left">厂房面积：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.MJ + '平米</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">区域：</span>');
+    html += ('<span class="span_body_left_body_right_left">所在区域：</span>');
     html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');

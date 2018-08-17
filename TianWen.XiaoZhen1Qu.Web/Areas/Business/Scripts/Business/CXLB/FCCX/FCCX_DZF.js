@@ -114,7 +114,7 @@ function LoadInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz">' + obj.FWLX + ' / ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">联系商家</span></p>');
+     html += ('<p class="p_li_body_left_right">' + GetJG(obj.ZJ, '元/天') + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

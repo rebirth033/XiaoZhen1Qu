@@ -53,7 +53,7 @@ body {width: 100%;height: 100%;overflow-x: hidden;background-color: #eeeff1;}
 .div_body .div_body_left .div_body_left_body_xq{ height: auto;float: left;display: block;width: 100%;}
 .div_body .div_body_left .div_body_left_body_xq .p_body_left_body_xq{ font-size: 18px;font-weight: 700;height: 60px;border-bottom: 1px solid #cccccc;margin-top:20px;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx{ height: auto;width: 100%;display: block;margin-left: 10px;float: left;font-size: 14px;margin-bottom:10px;}
-.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_left{ font-size: 16px;float: left;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_left{ font-size: 15px;float: left;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right{ margin-left: 20px;color: #666666;float: left;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .span_body_left_body_xq_xx_right{width: 96px;text-align: center;display: inline-block;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .span_body_left_body_xq_xx_right_fwld{width: 96px;text-align: center;display: inline-block;}
@@ -138,7 +138,7 @@ body {width: 100%;height: 100%;overflow-x: hidden;background-color: #eeeff1;}
 .div_body_left_body_xq_zk_bcms .i_body_left_body_xq_zk_bcms{width: 12px;height: 12px;display: inline-block;background-image: url(../images/head_nav_down.png);margin-left: 5px;}
 
 
-.div_body_left_body_right_lxdh{background-color:#bc6ba6;width:260px;height:60px;cursor:pointer;text-align:center;margin-left:68px;margin-top:16px;}
+.div_body_left_body_right_lxdh{background-color:#bc6ba6;width:260px;height:60px;cursor:pointer;text-align:center;margin-left:38px;margin-top:16px;}
 .img_body_left_body_right_lxdh{width:30px;height:23px;margin-right:15px;margin-bottom:8px;}
 .span_body_left_body_right_lxdh{color:#ffffff;font-size:24px;margin-top:10px;display:inline-block;}
 .div_body .div_body_left .div_body_left_body_right .p_body_left_body_right .span_body_left_body_right_right_lxdh {font-size: 28px;color: #bc6ba6;}

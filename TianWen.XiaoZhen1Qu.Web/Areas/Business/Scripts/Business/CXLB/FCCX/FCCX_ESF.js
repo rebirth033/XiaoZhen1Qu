@@ -81,6 +81,8 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 function LoadURLCondition() {
     if (getUrlParam("FWLD") !== null)
         SelectURLDropdown(getUrlParam("FWLD"),"FWLD");
+    else if (getUrlParam("FL") !== null)
+        SelectURLDropdown(getUrlParam("FL"),"FL");
     else if (getUrlParam("SJ") !== null)
         SelectURLCondition(getUrlParam("SJ"));
     else if (getUrlParam("ZZLX") !== null)

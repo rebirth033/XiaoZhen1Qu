@@ -94,9 +94,8 @@ function LoadXQ(obj, BCMSString) {
     html += ('<div class="div_body_left_body_xq">');
     html += ('<p class="p_body_left_body_xq">房源详情</p>');
     html += ('<div class="div_body_left_body_xq_xx">');
-    if (obj.FWPZ !== null) {
+    if (obj.FWPZ !== null && obj.FWPZ !== "") {
         var fwpzarray = obj.FWPZ.split(',');
-
         html += ('<div class="div_body_left_body_xq_xx_left">房屋配置</div>');
         html += ('<div class="div_body_left_body_xq_xx_right" style="width: 600px;">');
         for (var i = 0; i < fwpzarray.length; i++) {
@@ -108,7 +107,7 @@ function LoadXQ(obj, BCMSString) {
         html += ('</div>');
         html += ('</div>');
     }
-    if (obj.FWLD !== null) {
+    if (obj.FWLD !== null && obj.FWLD !== "") {
         var fwldarray = obj.FWLD.split(',');
         html += ('<div class="div_body_left_body_xq_xx">');
         html += ('<div class="div_body_left_body_xq_xx_left">房屋亮点</div>');
@@ -185,7 +184,7 @@ function LoadXQXX(obj) {
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">建筑年代：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.JZND === null ? "" : obj.JZND) + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.JZND === null ? "" : obj.JZND) + '年</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">容积率：</span>');

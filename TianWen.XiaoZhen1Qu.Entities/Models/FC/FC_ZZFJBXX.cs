@@ -86,7 +86,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 租金
         /// </summary>
         [Property]
-        public virtual string ZJ { get; set; }
+        public virtual decimal ZJ { get; set; }
         /// <summary>
         /// 押付方式
         /// </summary>

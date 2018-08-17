@@ -122,5 +122,11 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string FKFS { get; set; }
+
+        /// <summary>
+        /// 租金
+        /// </summary>
+        [Property]
+        public virtual string ZJ { get; set; }
     }
 }

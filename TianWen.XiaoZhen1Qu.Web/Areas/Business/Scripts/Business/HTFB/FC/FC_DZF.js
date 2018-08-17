@@ -36,6 +36,7 @@ function LoadDuoX(type, id) {
                     $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
+                $(".liFKFS").bind("click", function () { ValidateCheck(id, "忘记选择付款方式啦"); });
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 if (type === "日租短租房屋配置")
                     LoadDuoX("日租短租付款方式", "FKFS");

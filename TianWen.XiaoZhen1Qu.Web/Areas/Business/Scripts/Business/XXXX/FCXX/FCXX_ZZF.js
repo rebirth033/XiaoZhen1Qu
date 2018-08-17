@@ -112,7 +112,7 @@ function LoadFYXQ(obj, BCMSString) {
         html += ('<div class="div_body_left_body_xq_xx_left">房屋配置</div>');
         html += ('<div class="div_body_left_body_xq_xx_right" style="width: 600px;">');
         for (var i = 0; i < fwpzarray.length; i++) {
-            html += ('<span class="span_body_left_body_xq_xx_right" style="height:60px;display:inline-block;">');
+            html += ('<span class="span_body_left_body_xq_xx_right" style="height:50px;display:inline-block;">');
             //html += ('<img class="img_body_left_body_xq_xx_right" src="' + getRootPath() + '/Areas/Business/Css/images/xxxx/fc/xxxx_fc_' + fwpzarray[i] + '.png")" />');
             html += ('<span class="span_img_body_left_body_xq_xx_right">' + fwpzarray[i] + '</span>');
             html += ('</span>');
@@ -126,7 +126,7 @@ function LoadFYXQ(obj, BCMSString) {
         html += ('<div class="div_body_left_body_xq_xx_left">房屋亮点</div>');
         html += ('<div class="div_body_left_body_xq_xx_right">');
         for (var i = 0; i < fwldarray.length; i++) {
-            html += ('<span class="span_body_left_body_xq_xx_right_fwld">' + fwldarray[i] + '</span>');
+            html += ('<span class="span_body_left_body_xq_xx_right_fwld" style="height:50px;display:inline-block;">' + fwldarray[i] + '</span>');
         }
         html += ('</div>');
         html += ('</div>');
@@ -205,7 +205,7 @@ function LoadXQXX(obj) {
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">建筑年代：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.JZND === null ? "" : obj.JZND) + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.JZND === null ? "" : obj.JZND) + '年</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">容积率：</span>');

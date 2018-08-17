@@ -95,7 +95,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 售价
         /// </summary>
         [Property]
-        public virtual string SJ { get; set; }
+        public virtual decimal SJ { get; set; }
 
         /// <summary>
         /// 房屋亮点
