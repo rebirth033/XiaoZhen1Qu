@@ -12,7 +12,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         //车辆_轿车信息
         public string ID { get; set; }
         public string CLYS { get; set; }
-        public string SPNF { get; set; }
+        public int SPNF { get; set; }
         public string SPYF { get; set; }
         public string JG { get; set; }
         public string PP { get; set; }

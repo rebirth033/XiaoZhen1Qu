@@ -56,7 +56,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 上牌年份
         /// </summary>
         [Property]
-        public virtual string SPNF { get; set; }
+        public virtual int SPNF { get; set; }
 
         /// <summary>
         /// 上牌月份
