@@ -42,8 +42,8 @@
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left .div_img_li_body_left_count{ padding: 0px 1px;background:rgba(0,0,0,.6);position: absolute;width: 35px;height: 20px;left: 0;bottom: 20px;text-align:center;}
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left .div_img_li_body_left_count span{ color: #ffffff;}
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center{ width: 660px;height: 100%;padding: 0px 10px 0px 10px;float: left;display: inline-block;}
-.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center .p_li_body_left_center_bt{ margin-bottom:5px;font-size: 20px;font-weight: 700;height: 34px;overflow:hidden;}
-.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center .p_li_body_left_center_cs{ color: #999999;height: 32px;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center .p_li_body_left_center_bt{ margin-bottom:5px;font-size: 20px;font-weight: 700;height: 32px;overflow:hidden;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center .p_li_body_left_center_cs{ color: #999999;height: 32px;margin-bottom:5px;}
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center .p_li_body_left_center_dz{ color: #999999;height: 32px;}
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center .p_li_body_left_center_nr{ font-size: 14px;margin-bottom:5px;color: #999999;height: 45px;overflow: hidden;}
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_right{ width: 150px;height: 100%;display: inline-block;float: left;padding-top: 10px;}

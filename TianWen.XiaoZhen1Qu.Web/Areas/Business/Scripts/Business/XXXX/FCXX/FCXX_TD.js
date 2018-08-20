@@ -35,7 +35,8 @@ function LoadJBXX(obj) {
     html += ('<p class="p_div_body_left_head_ll">' + obj.ZXGXSJ.ToString('yyyy年MM月dd日') + '  ' + obj.LLCS + '次浏览 <span id="span_div_body_left_head_jb" class="span_div_body_left_head_jb">举报</span><span class="span_div_body_left_head_split">|</span><span id="span_div_body_left_head_sc" onclick="SCXX(\'' + obj.JCXXID + '\')" class="span_div_body_left_head_sc">收藏</span></p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
-    html += ('<div class="div_body_left_body_left">');    html += ('<div class="div_body_left_body_left_img">');
+    html += ('<div class="div_body_left_body_left">');    
+    html += ('<div class="div_body_left_body_left_img">');
     html += ('<img id="img_body_left_body_left_show" onclick="ImgShow(this)" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('</div>');
     html += ('<span onclick="LeftImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
@@ -56,15 +57,15 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_zj">' + (obj.GQ === "出租" ? GetJG(obj.ZJ, obj.ZJDW) : GetJG(obj.SJ, obj.ZJDW)) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">类    别：</span>');
-    html += ('<span class="span_body_left_body_right_right">厂房</span>');
+    html += ('<span class="span_body_left_body_right_left">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>');
+    html += ('<span class="span_body_left_body_right_right">土地</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">面积：</span>');
+    html += ('<span class="span_body_left_body_right_left">土地面积：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.MJ + '平米</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">区域：</span>');
+    html += ('<span class="span_body_left_body_right_left">所在区域：</span>');
     html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
@@ -72,7 +73,7 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + (obj.JTDZ === null ? "暂无数据":obj.JTDZ) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">联 系 人：</span>');
+    html += ('<span class="span_body_left_body_right_left">联&nbsp;系&nbsp;人&nbsp;：</span>');
     html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.LXR) + '</span>');
     html += ('</p>');
     html += ('<div class="div_body_left_body_right_lxdh" id="div_body_left_body_right_lxdh" onclick="ShowLXDH(\''+obj.LXDH+'\')"><img class="img_body_left_body_right_lxdh"  src="' + getRootPath() + "/Areas/Business/Css/images/XXXX/GY/xxxx_gy_lxdh.png" + '" /><span class="span_body_left_body_right_lxdh">联系电话</span></div>');

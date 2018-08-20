@@ -141,7 +141,7 @@ function OpenThird(codeid, cx) {
 //选择款式
 function SelectThird(cx, ks) {
     $("#spanPP").html(cx + " " + ks);
-    $("#KS").html(ks);
+    $("#KS").val(ks);
     ValidateJCPP();
 }
 //关闭选择品牌框
@@ -345,11 +345,11 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.CL_JCJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                $("#spanPP").html(xml.Value.CL_JCJBXX.CX + xml.Value.CL_JCJBXX.KS);
+                $("#spanPP").html(xml.Value.CL_JCJBXX.PP + xml.Value.CL_JCJBXX.CX + xml.Value.CL_JCJBXX.KS);
                 $("#PP").html(xml.Value.CL_JCJBXX.PP);
                 $("#CX").html(xml.Value.CL_JCJBXX.CX);
                 $("#KS").html(xml.Value.CL_JCJBXX.KS);
-                $("#spanSPNF").html(xml.Value.CL_JCJBXX.SPNF);
+                $("#spanSPNF").html(xml.Value.CL_JCJBXX.SPNF+"年");
                 $("#spanSPYF").html(xml.Value.CL_JCJBXX.SPYF);
                 $("#spanNJDQNF").html(xml.Value.CL_JCJBXX.NJDQNF);
                 $("#spanNJDQYF").html(xml.Value.CL_JCJBXX.NJDQYF);
@@ -388,7 +388,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "CX", "'" + $("#CX").val() + "'");
     obj = jsonObj.AddJson(obj, "KS", "'" + $("#KS").val() + "'");
     obj = jsonObj.AddJson(obj, "CLYS", "'" + GetCLYS() + "'");
-    obj = jsonObj.AddJson(obj, "SPNF", "'" + $("#spanSPNF").html() + "'");
+    obj = jsonObj.AddJson(obj, "SPNF", "'" + RTrimStr($("#spanSPNF").html(),"年") + "'");
     obj = jsonObj.AddJson(obj, "SPYF", "'" + $("#spanSPYF").html() + "'");
     obj = jsonObj.AddJson(obj, "NJDQNF", "'" + $("#spanNJDQNF").html() + "'");
     obj = jsonObj.AddJson(obj, "NJDQYF", "'" + $("#spanNJDQYF").html() + "'");

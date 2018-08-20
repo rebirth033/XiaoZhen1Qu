@@ -430,7 +430,7 @@ function GetCalcJG(jg, mj, dw) {
     if (jg === "面议")
         return '';
     else {
-        if (dw === "元/㎡/月")
+        if (dw === "元/㎡/天")
             return '<span class="span_calc_zj">' + parseFloat(parseFloat(jg) / 30 / mj).toFixed(2) + '</span>' + dw;
         if (dw === "元/㎡")
             return '<span class="span_calc_zj">' + parseFloat(parseFloat(jg) / mj * 10000).toFixed(0) + '</span>' + dw;

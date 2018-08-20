@@ -6,7 +6,7 @@
     BindClick("ZZLX");
     BindClick("CQNX");
     BindClick("CQLX");
-    BindClick("JZND");
+    //BindClick("JZND");
     LoadDuoX("出售房屋亮点", "FWLD");
 });
 //绑定下拉框
@@ -265,7 +265,7 @@ function LoadJBXX() {
                 $("#spanZZLX").html(xml.Value.FC_ESFJBXX.ZZLX);
                 $("#spanCQNX").html(xml.Value.FC_ESFJBXX.CQNX);
                 $("#spanCQLX").html(xml.Value.FC_ESFJBXX.CQLX);
-                $("#spanJZND").html(xml.Value.FC_ESFJBXX.JZND);
+		$("#JZND").val(xml.Value.FC_ESFJBXX.JZND);
                 $("#SJ").html(xml.Value.FC_ESFJBXX.SJ);
                 $("#XQDZ").val(xml.Value.FC_ESFJBXX.XQMC);
                 //设置编辑器的内容
@@ -293,7 +293,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
     obj = jsonObj.AddJson(obj, "CQNX", "'" + $("#spanCQNX").html() + "'");
     obj = jsonObj.AddJson(obj, "CQLX", "'" + $("#spanCQLX").html() + "'");
-    obj = jsonObj.AddJson(obj, "JZND", "'" + $("#spanJZND").html() + "'");
+    obj = jsonObj.AddJson(obj, "JZND", "'" + $("#JZND").val() + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
     obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
