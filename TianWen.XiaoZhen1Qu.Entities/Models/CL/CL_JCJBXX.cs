@@ -47,6 +47,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string KS { get; set; }
 
         /// <summary>
+        /// 款式ID
+        /// </summary>
+        [Property]
+        public virtual int KSID { get; set; }
+
+        /// <summary>
         /// 车辆颜色
         /// </summary>
         [Property]

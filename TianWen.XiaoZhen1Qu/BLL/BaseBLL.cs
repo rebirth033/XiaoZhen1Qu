@@ -413,7 +413,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     string[] array = conditions[i].Split(':');
                     if (array[1] != "全部")
                     {
-                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ" || array[0] == "JG_CR" || array[0] == "S" || array[0] == "FL" || array[0] == "LC" || array[0] == "CL")
+                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ" || array[0] == "JG_CR" || array[0] == "S" || array[0] == "FL" || array[0] == "LC" || array[0] == "CL" || array[0] == "PL")
                         {
                             if (array[1].Contains("万元"))
                             {
@@ -466,6 +466,24 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                 else
                                 {
                                     string zjxx = array[1].Substring(0, array[1].IndexOf("月龄"));
+                                    condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
+                                }
+                            }
+                            else if (array[1].Contains("升"))
+                            {
+                                if (array[1].Contains("-"))
+                                {
+                                    string[] zjarray = array[1].Substring(0, array[1].IndexOf("升")).Split('-');
+                                    condition.AppendFormat(" and {0} >= {1} and {0} <= {2}", array[0], zjarray[0], zjarray[1]);
+                                }
+                                else if (array[1].Contains("以上"))
+                                {
+                                    string zjsx = array[1].Substring(0, array[1].IndexOf("升"));
+                                    condition.AppendFormat(" and {0} >= {1}", array[0], zjsx);
+                                }
+                                else
+                                {
+                                    string zjxx = array[1].Substring(0, array[1].IndexOf("升"));
                                     condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
                                 }
                             }

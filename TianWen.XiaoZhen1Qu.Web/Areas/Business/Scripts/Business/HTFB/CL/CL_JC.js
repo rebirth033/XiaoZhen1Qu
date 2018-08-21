@@ -126,7 +126,7 @@ function OpenThird(codeid, cx) {
                 html += '<span class="p_row_right_jcpp">请选择款式<span onclick="CloseJCPP(3)" class="span_row_right_jcpp">×</span></span>';
                 html += '<ul class="ul_row_right_jcpp_third">';
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<li onclick="SelectThird(\'' + cx + '\',\'' + xml.list[i].CODENAME + '\')" class="li_row_right_jcpp_third">' + xml.list[i].CODENAME + '</li>';
+                    html += '<li onclick="SelectThird(\'' + cx + '\',\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')" class="li_row_right_jcpp_third">' + xml.list[i].CODENAME + '</li>';
                 }
                 html += '</ul>';
                 $("#div_row_right_jcpp_third").append(html);
@@ -139,9 +139,10 @@ function OpenThird(codeid, cx) {
     });
 }
 //选择款式
-function SelectThird(cx, ks) {
+function SelectThird(cx, ks, ksid) {
     $("#spanPP").html(cx + " " + ks);
     $("#KS").val(ks);
+    $("#KSID").val(ksid);
     ValidateJCPP();
 }
 //关闭选择品牌框
@@ -349,6 +350,7 @@ function LoadJBXX() {
                 $("#PP").html(xml.Value.CL_JCJBXX.PP);
                 $("#CX").html(xml.Value.CL_JCJBXX.CX);
                 $("#KS").html(xml.Value.CL_JCJBXX.KS);
+                $("#KSID").html(xml.Value.CL_JCJBXX.KSID);
                 $("#spanSPNF").html(xml.Value.CL_JCJBXX.SPNF+"年");
                 $("#spanSPYF").html(xml.Value.CL_JCJBXX.SPYF);
                 $("#spanNJDQNF").html(xml.Value.CL_JCJBXX.NJDQNF);
@@ -387,6 +389,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#PP").val() + "'");
     obj = jsonObj.AddJson(obj, "CX", "'" + $("#CX").val() + "'");
     obj = jsonObj.AddJson(obj, "KS", "'" + $("#KS").val() + "'");
+    obj = jsonObj.AddJson(obj, "KSID", "'" + $("#KSID").val() + "'");
     obj = jsonObj.AddJson(obj, "CLYS", "'" + GetCLYS() + "'");
     obj = jsonObj.AddJson(obj, "SPNF", "'" + RTrimStr($("#spanSPNF").html(),"年") + "'");
     obj = jsonObj.AddJson(obj, "SPYF", "'" + $("#spanSPYF").html() + "'");
