@@ -102,18 +102,18 @@ function SelectPPCondition(obj) {
     });
     $(".li_condition_body_more").remove();
     $("#li_condition_body_more").remove();
-    
+
     var hasPP = 0;
-    $("#ul_condition_body_PP").find(".li_condition_body").each(function(){
-        if(this.id == obj.id){
-	    hasPP = 1;
+    $("#ul_condition_body_PP").find(".li_condition_body").each(function () {
+        if (this.id == obj.id) {
+            hasPP = 1;
         }
     });
-    if(hasPP === 0)
-        $("#ul_condition_body_PP").append('<li class="li_condition_body li_condition_body_more" id="' + obj.id + '" onclick="SelectCondition(this,\'品牌\')">'+obj.innerHTML+'</li>');
+    if (hasPP === 0)
+        $("#ul_condition_body_PP").append('<li class="li_condition_body li_condition_body_more" id="' + obj.id + '" onclick="SelectCondition(this,\'品牌\')">' + obj.innerHTML + '</li>');
     $("#ul_condition_body_PP").append('<li id="li_condition_body_more" class="li_condition_body" onclick="MorePP()" style="color:#2274e0;">更多<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>');
-    
-    $("#"+obj.id).addClass("li_condition_body_active");
+
+    $("#" + obj.id).addClass("li_condition_body_active");
 
     LoadBody("CLXX_JC", currentIndex);
     ShowSelectCondition("CLXX_JC");
@@ -145,27 +145,27 @@ function LoadCondition(array, name, id, length) {
         html += '<li class="li_condition_body_first">' + name + '</li>';
     html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
     for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
-            html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
     }
-    if(name === "品牌")
+    if (name === "品牌")
         html += '<li id="li_condition_body_more" class="li_condition_body" onclick="MorePP()" style="color:#2274e0;">更多<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>';
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
     $("#span_select_arrow_blue").attr("src", getRootPath() + "/Areas/Business/Css/images/arrow_down_blue.png");
-    if(name === "车系")
+    if (name === "车系")
         $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 0));
     else
         $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 20));
 }
 //更多品牌
-function MorePP(){
-    if($("#span_select_arrow_blue").attr("src").indexOf('down') !== -1){
+function MorePP() {
+    if ($("#span_select_arrow_blue").attr("src").indexOf('down') !== -1) {
         $("#span_select_arrow_blue").attr("src", getRootPath() + "/Areas/Business/Css/images/arrow_up_blue.png" + "?j=" + Math.random());
-	$(".div_row_right_jcpp_item").css("display","block");
+        $(".div_row_right_jcpp_item").css("display", "block");
     }
-    else{
+    else {
         $("#span_select_arrow_blue").attr("src", getRootPath() + "/Areas/Business/Css/images/arrow_down_blue.png" + "?j=" + Math.random());
-        $(".div_row_right_jcpp_item").css("display","none");
+        $(".div_row_right_jcpp_item").css("display", "none");
     }
     GoToBQ('A');
 }
@@ -199,9 +199,9 @@ function LoadJCPP() {
                 html += '</div>';
 
                 html += '<div class="div_row_right_jcpp_first_right">';
-                
+
                 for (var i = 0; i < BQArray.length; i++) {
-		    html += '<ul id="ul_row_right_jcpp_first_right_' + BQArray[i] + '" class="ul_row_right_jcpp_first_right">';
+                    html += '<ul id="ul_row_right_jcpp_first_right_' + BQArray[i] + '" class="ul_row_right_jcpp_first_right">';
                     var count = 0;
                     for (var j = 0; j < xml.list.length; j++) {
                         if (BQArray[i] === xml.list[j].CODEVALUE)
@@ -209,7 +209,7 @@ function LoadJCPP() {
                     }
                     for (var j = 0; j < xml.list.length; j++) {
                         if (BQArray[i] === xml.list[j].CODEVALUE)
-                            html += '<li id="'+xml.list[j].CODEID+'" onclick="SelectPPCondition(this)" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                            html += '<li id="' + xml.list[j].CODEID + '" onclick="SelectPPCondition(this)" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
                     }
                     html += '</ul>';
                 }
@@ -225,9 +225,9 @@ function LoadJCPP() {
     });
 }
 //跳转到标签页
-function GoToBQ(BQ){
-    $(".ul_row_right_jcpp_first_right").css("display","none");
-    $("#ul_row_right_jcpp_first_right_"+BQ).css("display","block");
+function GoToBQ(BQ) {
+    $(".ul_row_right_jcpp_first_right").css("display", "none");
+    $("#ul_row_right_jcpp_first_right_" + BQ).css("display", "block");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
@@ -268,7 +268,7 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_JC\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs">' + obj.SPNF + ' / ' + obj.XSLC + '万公里' + ' / ' + '2.0升' + ' / ' + (obj.BT.indexOf('手动') !== -1 ? "手动" : "自动") + '</p>');
+    html += ('<p class="p_li_body_left_center_cs">' + obj.SPNF + '年 / ' + obj.XSLC + '万公里' + ' / ' + toDecimal1(obj.PL) + '升 / ' + obj.BSX + '</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
@@ -309,7 +309,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'CLXX_JC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.SPNF + ' / ' + '2.0升' + ' / ' + '自动' + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.SPNF + '年 / ' + toDecimal1(obj.PL) + '升 / ' + obj.BSX + '</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.JG + '万元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
@@ -330,12 +330,12 @@ function insertHtmlAtCaret(html) {
     if (window.getSelection) {
         sel = window.getSelection();
         if (sel.getRangeAt && sel.rangeCount) {
-                range = sel.getRangeAt(0);
-                range.deleteContents();
-                var el = document.createElement("div");
-                el.innerHTML = html;
-                var frag = document.createDocumentFragment(), node, lastNode;
-                while ( (node = el.firstChild) ) {
+            range = sel.getRangeAt(0);
+            range.deleteContents();
+            var el = document.createElement("div");
+            el.innerHTML = html;
+            var frag = document.createDocumentFragment(), node, lastNode;
+            while ((node = el.firstChild)) {
                 lastNode = frag.appendChild(node);
             }
             range.insertNode(frag);

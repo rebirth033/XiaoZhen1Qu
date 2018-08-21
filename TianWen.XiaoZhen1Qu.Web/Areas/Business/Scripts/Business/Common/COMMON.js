@@ -296,7 +296,7 @@ function AutoLogin() {
 //判断非空
 function ValidateNull(value, dw) {
     if (value === "" || value === undefined || value === null)
-        return "暂无数据";
+        return "暂无";
     else {
         if (dw !== undefined)
             return value + dw;
@@ -335,4 +335,21 @@ function DrawImage(ImgObj, maxWidth, maxHeight) {
         imgobj.width = tempWidth;
         ImgObj.alt = image.width + "*" + image.height;
     }
+}
+function toDecimal1(x) {
+   var f = parseFloat(x);
+   if (isNaN(f)) {
+      return false;
+   }
+   var f = Math.round(x*10)/10;
+   var s = f.toString();
+   var rs = s.indexOf('.');
+   if (rs < 0) {
+      rs = s.length;
+      s += '.';
+   }
+   while (s.length <= rs + 1) {
+      s += '0';
+   }
+   return s;
 }

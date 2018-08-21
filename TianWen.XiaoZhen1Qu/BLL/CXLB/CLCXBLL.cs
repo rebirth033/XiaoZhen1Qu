@@ -20,7 +20,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 DataTable dt = new DataTable();
                 if (TYPE == "CLXX_JC")
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_jcjbxx b where a.jcxxid = b.jcxxid and status = 1 and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,c.*,d.* from jcxx a,cl_jcjbxx b,codes_cl_jc c,codes_cl_jc_xxxx d where a.jcxxid = b.jcxxid and b.ks = c.codename and c.codeid = d.id and status = 1 and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_JCView> list = ConvertHelper.DataTableToList<CL_JCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -267,7 +267,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 DataTable dt = new DataTable();
                 if (TYPE == "CLXX_JC") 
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_jcjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,c.*,d.* from jcxx a,cl_jcjbxx b,codes_cl_jc c,codes_cl_jc_xxxx d where a.jcxxid = b.jcxxid and b.ks = c.codename and c.codeid = d.id and b.id = '{0}'  order by zxgxsj desc", ID));
                     List<CL_JCView> list = ConvertHelper.DataTableToList<CL_JCView>(dt);
                     foreach (var jcxx in list)
                     {

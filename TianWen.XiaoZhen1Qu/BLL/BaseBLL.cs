@@ -564,17 +564,17 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                 if (array[1].Contains("-"))
                                 {
                                     string[] zjarray = array[1].Substring(0, array[1].IndexOf("年")).Split('-');
-                                    condition.AppendFormat(" and x.spnf >= 2018 - {1} and x.spnf <= 2018 - {0}", zjarray[0], zjarray[1]);
+                                    condition.AppendFormat(" and spnf >= 2018 - {1} and spnf <= 2018 - {0}", zjarray[0], zjarray[1]);
                                 }
                                 else if (array[1].Contains("以上"))
                                 {
                                     string zjsx = array[1].Substring(0, array[1].IndexOf("年"));
-                                    condition.AppendFormat(" and x.spnf <= 2018 - {0}", zjsx);
+                                    condition.AppendFormat(" and spnf <= 2018 - {0}", zjsx);
                                 }
                                 else
                                 {
                                     string zjxx = array[1].Substring(0, array[1].IndexOf("年"));
-                                    condition.AppendFormat(" and x.spnf >= 2018 - {0}", zjxx);
+                                    condition.AppendFormat(" and spnf >= 2018 - {0}", zjxx);
                                 }
                             }
                             else if (array[1].Contains("万公里"))
