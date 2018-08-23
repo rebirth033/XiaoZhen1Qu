@@ -4,5 +4,10 @@
 .div_body .div_body_left .div_body_left_body_right .span_body_left_body_right_zj{ color: #bc6ba6;font-size: 14px;}
 .div_body .div_body_left .div_body_left_body_right .span_body_left_body_right_zjdw{ color: #bc6ba6;font-size: 14px;}
 .div_body .div_body_left .div_body_left_body_right .span_body_left_body_right_yffs{ font-size: 14px;margin-left: 30px; }
-.div_body .div_body_left .div_body_left_body_right .p_body_left_body_right{ height: 45px;width: 100%;padding: 20px 30px;}
+.div_body .div_body_left .div_body_left_body_right .p_body_left_body_right{ height: 62.7px;width: 100%;padding: 20px 30px;}
 .div_body .div_body_left .div_body_left_body_right .p_body_left_body_right .span_body_left_body_right_left{ width: 80px;display: inline-block;text-align: right;vertical-align:top;}
+
+.div_body_left_body_xq_xx_right{width:600px;}
+.div_body_left_body_xq_xx_right .p_body_left_body_xq_xx_right{float:left;width:300px;}
+.span_body_left_body_xq_xx_left{text-align:right;display:inline-block;width:120px;}
+.span_body_left_body_xq_xx_right{text-align:left;display:inline-block;width:120px;}

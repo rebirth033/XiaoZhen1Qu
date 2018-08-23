@@ -58,7 +58,7 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_zj">' + GetJG(obj.JG, '万元') + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">品牌：</span>');
+    html += ('<span class="span_body_left_body_right_left">品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.PP.split(' ')[0] + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
@@ -74,7 +74,7 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.CLYS + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">联 系 人：</span>');
+    html += ('<span class="span_body_left_body_right_left">联&nbsp;&nbsp;系&nbsp;&nbsp;人：</span>');
     html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.LXR) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');

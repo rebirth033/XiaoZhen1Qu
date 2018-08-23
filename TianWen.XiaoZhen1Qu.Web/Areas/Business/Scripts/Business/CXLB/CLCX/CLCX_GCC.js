@@ -159,9 +159,9 @@ function SelectCXCondition(obj) {
     $("#ul_condition_body_CX").append('<li id="li_condition_body_more" class="li_condition_body" onclick="MoreCX()" style="color:#2274e0;">全部品牌<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>');
 
     $("#" + obj.id).addClass("li_condition_body_active");
-
-    LoadBody("CLXX_JC", currentIndex);
-    ShowSelectCondition("CLXX_JC");
+    $("#span_select_arrow_blue").attr("src", getRootPath() + "/Areas/Business/Css/images/arrow_up_blue.png");
+    LoadBody("CLXX_GCC", currentIndex);
+    ShowSelectCondition("CLXX_GCC");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
