@@ -184,11 +184,16 @@ function LoadJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.CL_HCJBXX.LB);
                 $("#spanXL").html(xml.Value.CL_HCJBXX.XL);
-                $("#spanPP").html(xml.Value.CL_HCJBXX.PP);
-                $("#spanCCNF").html(xml.Value.CL_HCJBXX.CCNF);
-                $("#spanCCYF").html(xml.Value.CL_HCJBXX.CCYF);
-                $("#spanQY").html(xml.Value.CL_HCJBXX.QY);
-                $("#spanDD").html(xml.Value.CL_HCJBXX.DD);
+		if(xml.Value.CL_HCJBXX.PP !== "")
+                    $("#spanPP").html(xml.Value.CL_HCJBXX.PP);
+		if(xml.Value.CL_HCJBXX.CCNF !== "")
+                    $("#spanCCNF").html(xml.Value.CL_HCJBXX.CCNF);
+		if(xml.Value.CL_HCJBXX.CCYF !== "")
+                    $("#spanCCYF").html(xml.Value.CL_HCJBXX.CCYF);
+		if(xml.Value.CL_HCJBXX.QY !== "")
+                    $("#spanQY").html(xml.Value.CL_HCJBXX.QY);
+		if(xml.Value.CL_HCJBXX.DD !== "")
+                    $("#spanDD").html(xml.Value.CL_HCJBXX.DD);
                 if (xml.Value.CL_HCJBXX.SF !== null)
                     SetDX("SF", xml.Value.CL_HCJBXX.SF);
 
@@ -208,11 +213,11 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "CCNF", "'" + $("#spanCCNF").html() + "'");
-    obj = jsonObj.AddJson(obj, "CCYF", "'" + $("#spanCCYF").html() + "'");
-    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + IsDropdownNull($("#spanPP").html()) + "'");
+    obj = jsonObj.AddJson(obj, "CCNF", "'" + IsDropdownNull($("#spanCCNF").html()) + "'");
+    obj = jsonObj.AddJson(obj, "CCYF", "'" + IsDropdownNull($("#spanCCYF").html()) + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + IsDropdownNull($("#spanQY").html()) + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + IsDropdownNull($("#spanDD").html()) + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 

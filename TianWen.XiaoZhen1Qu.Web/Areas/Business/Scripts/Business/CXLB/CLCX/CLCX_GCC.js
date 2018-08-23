@@ -2,6 +2,7 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadCLCondition();
+    LoadGCCCX();
     LoadHot("CLXX_GCC");
 });
 //加载条件
@@ -30,21 +31,15 @@ function LoadCondition(array, name, id, length) {
         html += '<li class="li_condition_body_first">' + name + '</li>';
     html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
     for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
-        if (name === "车型") {
-            if (SZM == "" || SZM !== array[i].CODEVALUE) {
-                SZM = array[i].CODEVALUE;
-                html += '<li class="li_condition_body_szm" style="font-weight:bold;">' + SZM + '</li>';
-            }
-            html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
-        }
-        else{
-            html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
-        }
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
     }
+    if (name === "车型")
+        html += '<li id="li_condition_body_more" class="li_condition_body" onclick="MoreCX()" style="color:#2274e0;">全部车型<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>';
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
+    $("#span_select_arrow_blue").attr("src", getRootPath() + "/Areas/Business/Css/images/arrow_down_blue.png");
     if (name === "车型")
-        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 10));
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 20));
     else
         $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 20));
 }
@@ -71,6 +66,102 @@ function SelectURLCondition(obj) {
     $("#" + obj).addClass("li_condition_body_active");
     LoadBody("CLXX_GCC", currentIndex);
     ShowSelectCondition("CLXX_GCC");
+}
+//更多车型
+function MoreCX() {
+    if ($("#span_select_arrow_blue").attr("src").indexOf('down') !== -1) {
+        $("#span_select_arrow_blue").attr("src", getRootPath() + "/Areas/Business/Css/images/arrow_up_blue.png" + "?j=" + Math.random());
+        $(".div_row_right_jcpp_item").css("display", "block");
+    }
+    else {
+        $("#span_select_arrow_blue").attr("src", getRootPath() + "/Areas/Business/Css/images/arrow_down_blue.png" + "?j=" + Math.random());
+        $(".div_row_right_jcpp_item").css("display", "none");
+    }
+    GoToBQ('B');
+}
+//跳转到标签页
+function GoToBQ(BQ) {
+    $(".ul_row_right_jcpp_first_right").css("display", "none");
+    $("#ul_row_right_jcpp_first_right_" + BQ).css("display", "block");
+}
+//加载车型名称
+function LoadGCCCX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "工程车车型",
+            TBName: "CODES_CL"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#div_row_right_jcpp_first").html('');
+                var html = "";
+                html += '<div class="div_row_right_jcpp_first_left">';
+                html += '<ul class="ul_row_right_jcpp_first_left">';
+                for (var i = 0; i < BQArray.length; i++) {
+                    var count = 0;
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            count++;
+                    }
+                    if (count !== 0)
+                        html += '<li onmouseover="GoToBQ(\'' + BQArray[i] + '\')" class="li_row_right_jcpp_first_left">' + BQArray[i] + '</li>';
+                }
+                html += '</ul>';
+                html += '</div>';
+
+                html += '<div class="div_row_right_jcpp_first_right">';
+
+                for (var i = 0; i < BQArray.length; i++) {
+                    html += '<ul id="ul_row_right_jcpp_first_right_' + BQArray[i] + '" class="ul_row_right_jcpp_first_right">';
+                    var count = 0;
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            count++;
+                    }
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            html += '<li id="' + xml.list[j].CODEID + '" onclick="SelectCXCondition(this)" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                    }
+                    html += '</ul>';
+                }
+
+                html += '</div>';
+
+                $("#div_row_right_jcpp_first").append(html);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择车型条件
+function SelectCXCondition(obj) {
+
+    $("#ul_condition_body_CX").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $(".li_condition_body_more").remove();
+    $("#li_condition_body_more").remove();
+
+    var hasPP = 0;
+    $("#ul_condition_body_CX").find(".li_condition_body").each(function () {
+        if (this.id == obj.id) {
+            hasPP = 1;
+        }
+    });
+    if (hasPP === 0)
+        $("#ul_condition_body_CX").append('<li class="li_condition_body li_condition_body_more" id="' + obj.id + '" onclick="SelectCondition(this,\'品牌\')">' + obj.innerHTML + '</li>');
+    $("#ul_condition_body_CX").append('<li id="li_condition_body_more" class="li_condition_body" onclick="MoreCX()" style="color:#2274e0;">全部品牌<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>');
+
+    $("#" + obj.id).addClass("li_condition_body_active");
+
+    LoadBody("CLXX_JC", currentIndex);
+    ShowSelectCondition("CLXX_JC");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {

@@ -24,7 +24,7 @@ function LoadCondition(array, name, id, length) {
     $("#ul_condition_body_" + id).remove();
     var html = ""; var SZM = "";
     html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
-    if (name === "地段" || name === "类别" || name === "小类" || name === "品牌" || name === "车系" || name === "车型" || name === "驾照" || name === "品种" || name === "型号" || name === "语种" || name === "用途" || name === "婚车品牌" || name === "国家" || name === "留学国家")
+    if (name === "类别" || name === "品牌" || name === "车系" || name === "车型")
         html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
     else
         html += '<li class="li_condition_body_first">' + name + '</li>';
@@ -47,6 +47,8 @@ function LoadCondition(array, name, id, length) {
         $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) + 0));
     else
         $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 20));
+    if(array.length === 0)
+	$("#ul_condition_body_" + id).remove();
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -89,7 +91,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadCL_JCInfo(xml.list[i]);
+                    LoadCL_HCInfo(xml.list[i]);
                 }
             }
         },
@@ -99,7 +101,7 @@ function LoadBody(TYPE, PageIndex) {
     });
 }
 //加载车辆_轿车单条信息
-function LoadCL_JCInfo(obj) {
+function LoadCL_HCInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');

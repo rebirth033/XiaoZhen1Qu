@@ -182,3 +182,10 @@ function LoadFWFW() {
         }
     });
 }
+//判断下拉框是否选择
+function IsDropdownNull(result){
+    if(result.indexOf('请选择') !== -1)
+	return "";
+    else
+        return result;
+}

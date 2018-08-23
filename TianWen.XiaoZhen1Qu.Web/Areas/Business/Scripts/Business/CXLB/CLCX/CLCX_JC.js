@@ -32,7 +32,7 @@ function BindClick(type) {
 }
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG", "19,100");
+    LoadConditionByTypeNames("'二手车类型','轿车品牌','轿车价格'", "CODES_CL", "类型,品牌,价格", "LX,PP,JG", "19,100");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
@@ -71,6 +71,8 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 function LoadURLCondition() {
     if (getUrlParam("JG") !== null)
         SelectURLCondition(getUrlParam("JG"));
+    else if (getUrlParam("LX") !== null)
+        SelectURLCondition(getUrlParam("LX"));
     else if (getUrlParam("PP") !== null) {
         SelectURLCondition(getUrlParam("PP"));
         LoadConditionByParentID(getUrlParam("PP"), "CODES_CL_JC", "车系", "CX");
@@ -111,7 +113,7 @@ function SelectPPCondition(obj) {
     });
     if (hasPP === 0)
         $("#ul_condition_body_PP").append('<li class="li_condition_body li_condition_body_more" id="' + obj.id + '" onclick="SelectCondition(this,\'品牌\')">' + obj.innerHTML + '</li>');
-    $("#ul_condition_body_PP").append('<li id="li_condition_body_more" class="li_condition_body" onclick="MorePP()" style="color:#2274e0;">更多<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>');
+    $("#ul_condition_body_PP").append('<li id="li_condition_body_more" class="li_condition_body" onclick="MorePP()" style="color:#2274e0;">全部品牌<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>');
 
     $("#" + obj.id).addClass("li_condition_body_active");
 
@@ -148,7 +150,7 @@ function LoadCondition(array, name, id, length) {
         html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
     }
     if (name === "品牌")
-        html += '<li id="li_condition_body_more" class="li_condition_body" onclick="MorePP()" style="color:#2274e0;">更多<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>';
+        html += '<li id="li_condition_body_more" class="li_condition_body" onclick="MorePP()" style="color:#2274e0;">全部品牌<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>';
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
     $("#span_select_arrow_blue").attr("src", getRootPath() + "/Areas/Business/Css/images/arrow_down_blue.png");
@@ -232,7 +234,7 @@ function GoToBQ(BQ) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("PP,CX,JG,PL,LC,BSX,CLYS,SF,CL");
+    var condition = GetAllCondition("LX,PP,CX,JG,PL,LC,BSX,CLYS,SF,CL");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/CLCX/LoadCLXX",

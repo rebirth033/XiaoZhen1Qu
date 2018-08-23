@@ -95,7 +95,7 @@ function OpenSecond(codeid, pp) {
                 html += '<span class="p_row_right_jcpp">请选择车系<span onclick="CloseJCPP(2)" class="span_row_right_jcpp">×</span></span>';
                 html += '<ul class="ul_row_right_jcpp_second">';
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<li onclick="OpenThird(\'' + xml.list[i].CODEID + '\',\'' + xml.list[i].CODEVALUE + " " + xml.list[i].CODENAME + '\')" class="li_row_right_jcpp_second">' + xml.list[i].CODEVALUE + " " + xml.list[i].CODENAME + '</li>';
+                    html += '<li onclick="OpenThird(\'' + xml.list[i].CODEID + '\',\'' + " " + xml.list[i].CODENAME + '\')" class="li_row_right_jcpp_second">'  + xml.list[i].CODENAME + '</li>';
                 }
                 html += '</ul>';
                 $("#div_row_right_jcpp_second").append(html);
@@ -140,7 +140,7 @@ function OpenThird(codeid, cx) {
 }
 //选择款式
 function SelectThird(cx, ks, ksid) {
-    $("#spanPP").html(cx + " " + ks);
+    $("#spanPP").html($("#PP").val() + " " + cx + " " + ks);
     $("#KS").val(ks);
     $("#KSID").val(ksid);
     ValidateJCPP();
@@ -314,9 +314,9 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -347,10 +347,10 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanPP").html(xml.Value.CL_JCJBXX.PP + xml.Value.CL_JCJBXX.CX + xml.Value.CL_JCJBXX.KS);
-                $("#PP").html(xml.Value.CL_JCJBXX.PP);
-                $("#CX").html(xml.Value.CL_JCJBXX.CX);
-                $("#KS").html(xml.Value.CL_JCJBXX.KS);
-                $("#KSID").html(xml.Value.CL_JCJBXX.KSID);
+                $("#PP").val(xml.Value.CL_JCJBXX.PP);
+                $("#CX").val(xml.Value.CL_JCJBXX.CX);
+                $("#KS").val(xml.Value.CL_JCJBXX.KS);
+                $("#KSID").val(xml.Value.CL_JCJBXX.KSID);
                 $("#spanSPNF").html(xml.Value.CL_JCJBXX.SPNF+"年");
                 $("#spanSPYF").html(xml.Value.CL_JCJBXX.SPYF);
                 $("#spanNJDQNF").html(xml.Value.CL_JCJBXX.NJDQNF);
