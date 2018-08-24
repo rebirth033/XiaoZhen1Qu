@@ -58,15 +58,15 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_zj">' + GetJG(obj.JG, '元/只') + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">年龄：</span>');
+    html += ('<span class="span_body_left_body_right_left">年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.NL + obj.NLDW + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">品种：</span>');
+    html += ('<span class="span_body_left_body_right_left">品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;种：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.PZ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">性别：</span>');
+    html += ('<span class="span_body_left_body_right_left">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.XB + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
@@ -74,7 +74,7 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.ZSZS + '只</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">防疫：</span>');
+    html += ('<span class="span_body_left_body_right_left">防疫情况：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.YMQK + ' / ' + obj.QCQK + '</span>');
     html += ('</p>');
     html += ('<div class="div_body_left_body_right_lxdh" id="div_body_left_body_right_lxdh" onclick="ShowLXDH(\'' + obj.LXDH + '\')"><img class="img_body_left_body_right_lxdh"  src="' + getRootPath() + "/Areas/Business/Css/images/XXXX/GY/xxxx_gy_lxdh.png" + '" /><span class="span_body_left_body_right_lxdh">联系电话</span></div>');
@@ -218,7 +218,7 @@ function LoadJJRTJFY(TYPE) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1",
-            PageSize: 100,
+            PageSize: 4,
             PageIndex: 1
         },
         success: function (xml) {

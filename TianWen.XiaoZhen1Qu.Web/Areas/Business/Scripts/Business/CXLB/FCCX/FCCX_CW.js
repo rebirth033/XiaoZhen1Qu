@@ -147,7 +147,7 @@ function LoadCZInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'FCXX_CW\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs">' + obj.MJ + '平米</p>');
-    html += ('<p class="p_li_body_left_center_dz">' + '[' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '] ' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + '[' + ValidateNull(obj.QY) + ' - ' + ValidateNull(obj.DD) + '] ' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right">' + GetJG(obj.ZJ, obj.ZJDW) + '</p>');
@@ -170,7 +170,7 @@ function LoadCSInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs">' + obj.MJ + '平米</p>');
-    html += ('<p class="p_li_body_left_center_dz">' + '[' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '] ' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + '[' + ValidateNull(obj.QY) + ' - ' + ValidateNull(obj.DD) + '] ' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right">' + GetJG(obj.SJ, obj.ZJDW) + '</p>');
