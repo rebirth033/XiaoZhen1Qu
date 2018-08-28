@@ -30,7 +30,7 @@ function LoadDuoX(type, id) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 45) === 0)
+                if (parseInt(xml.list.length % 5) === 0)
                     $("#div" + id).css("height", parseInt(xml.list.length / 5) * 40 + "px");
                 else
                     $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 40 + "px");

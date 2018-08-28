@@ -6,7 +6,7 @@
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadXL($("#spanLB").html());
+    LoadXL("辅导班"+$("#spanLB").html());
     $("#divXL").css("display", "");
 }
 //加载小类
@@ -37,8 +37,10 @@ function LoadXL(lbmc, xl) {
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
-                if (xl !== "" && xl !== null && xl !== undefined)
+                if (xl !== "" && xl !== null && xl !== undefined){
+		    $("#divXL").css("display","block");
                     SetDuoX("XL", xl);
+		}
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -116,7 +118,7 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.JYPX_ZXXFDBJBXX.QY);
                 $("#spanDD").html(xml.Value.JYPX_ZXXFDBJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                LoadXL(xml.Value.JYPX_ZXXFDBJBXX.LB, xml.Value.JYPX_ZXXFDBJBXX.XL);
+                LoadXL("辅导班"+xml.Value.JYPX_ZXXFDBJBXX.LB, xml.Value.JYPX_ZXXFDBJBXX.XL);
                 SetDuoX("SKXS", xml.Value.JYPX_ZXXFDBJBXX.SKXS);
             }
         },

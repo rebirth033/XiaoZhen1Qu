@@ -22,6 +22,7 @@ function ValidateAll() {
         & ValidateCWMNL()
         & ValidateSelect("CWMXB", "XB", "请选择性别")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
+        & ValidateXXDZ()
         & ValidateCommon())
         return true;
     else

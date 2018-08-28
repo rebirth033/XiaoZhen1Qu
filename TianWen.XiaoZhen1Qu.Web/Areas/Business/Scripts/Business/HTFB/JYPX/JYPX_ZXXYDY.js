@@ -6,7 +6,7 @@
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadXL($("#spanLB").html());
+    LoadXL("一对一"+$("#spanLB").html());
     $("#divXL").css("display", "");
 }
 //加载小类
@@ -77,7 +77,7 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.JYPX_ZXXYDYJBXX.QY);
                 $("#spanDD").html(xml.Value.JYPX_ZXXYDYJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                LoadXL(xml.Value.JYPX_ZXXYDYJBXX.LB, xml.Value.JYPX_ZXXYDYJBXX.XL);
+                LoadXL("一对一"+xml.Value.JYPX_ZXXYDYJBXX.LB, xml.Value.JYPX_ZXXYDYJBXX.XL);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

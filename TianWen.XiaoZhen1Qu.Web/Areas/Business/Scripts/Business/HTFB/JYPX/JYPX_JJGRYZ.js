@@ -24,7 +24,7 @@ function ValidateAll() {
         & ValidateCheck("FDJD", "忘记选择辅导阶段啦")
         & ValidateCheck("FDKM", "忘记选择辅导科目啦")
         & ValidateQWSX()
-
+        & ValidateCheck("FWFW", "忘记选择服务范围啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

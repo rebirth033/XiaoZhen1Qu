@@ -15,6 +15,7 @@ function ValidateAll() {
         & ValidateSelect("XJCD", "XJ", "请填写新旧")
         & ValidateJG()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
+        & ValidateXXDZ()
         & ValidateCommon())
             return true;
         else

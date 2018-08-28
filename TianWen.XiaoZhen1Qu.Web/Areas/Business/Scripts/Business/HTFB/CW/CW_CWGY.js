@@ -22,6 +22,8 @@ function LoadJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.CW_CWGYJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.CW_CWGYJBXX.ID);
+                $("#spanQY").html(xml.Value.CW_CWGYJBXX.QY);
+                $("#spanDD").html(xml.Value.CW_CWGYJBXX.DD);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.CW_CWGYJBXX.GQ !== null)
@@ -40,6 +42,8 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

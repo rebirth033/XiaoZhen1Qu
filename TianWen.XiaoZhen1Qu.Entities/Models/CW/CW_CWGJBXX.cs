@@ -34,7 +34,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         [Property]
         public virtual string PZ { get; set; }
 
-
         /// <summary>
         /// 价格
         /// </summary>
@@ -94,5 +93,23 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual Byte[] BCMS { get; set; }
+
+        /// <summary>
+        /// 区域
+        /// </summary>
+        [Property]
+        public virtual string QY { get; set; }
+
+        /// <summary>
+        /// 地段
+        /// </summary>
+        [Property]
+        public virtual string DD { get; set; }
+
+        /// <summary>
+        /// 具体地址
+        /// </summary>
+        [Property]
+        public virtual string JTDZ { get; set; }
     }
 }

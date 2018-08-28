@@ -205,7 +205,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TBName == "CODES_CW")
                 { 
-                    if (TYPENAMES.Contains("宠物狗品种"))
+                    if (TYPENAMES.Contains("宠物狗品种") || TYPENAMES.Contains("宠物猫品种"))
                         return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_CW>(String.Format("FROM CODES_CW WHERE TYPENAME in({0}) and ISHOT = '是' ORDER BY TYPENAME,CODEVALUE", TYPENAMES)) };
                     else
                         return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_CW>(String.Format("FROM CODES_CW WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEVALUE", TYPENAMES)) };
@@ -227,7 +227,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TBName == "CODES_SHFW")
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_SHFW>(String.Format("FROM CODES_SHFW WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 if (TBName == "CODES_JYPX")
-                    return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_JYPX>(String.Format("FROM CODES_JYPX WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEVALUE", TYPENAMES)) };
+                { 
+                    if (TYPENAMES.Contains("语种") || TYPENAMES.Contains("留学国家"))
+                        return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_JYPX>(String.Format("FROM CODES_JYPX WHERE TYPENAME in({0}) and ISHOT = '是' ORDER BY TYPENAME,CODEVALUE", TYPENAMES)) };
+                    else
+                        return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_JYPX>(String.Format("FROM CODES_JYPX WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEVALUE", TYPENAMES)) };
+                }
                 if (TBName == "CODES_JYPX_XX")
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_JYPX_XX>(String.Format("FROM CODES_JYPX_XX WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEVALUE", TYPENAMES)) };
                 if (TBName == "CODES_LYJD")

@@ -14,6 +14,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.CODENAME, "CODENAME");
             Map(x => x.CODEVALUE, "CODEVALUE");
             Map(x => x.CODEORDER, "CODEORDER");
+            Map(x => x.ISHOT, "ISHOT");
             Map(x => x.PARENTID, "PARENTID");
             #endregion
 

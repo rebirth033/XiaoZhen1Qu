@@ -44,7 +44,7 @@ function SelectURLCondition(obj) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,TZJE,QY");
+    var condition = GetAllCondition("LB,XS,TZJE,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/JYPXCX/LoadJYPXXX",
