@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadZXJCCondition() {
-    LoadConditionByTypeNames("'建材类别'", "CODES_ZXJC", "类别", "LB", "14");
+    LoadConditionByTypeNames("'建材类别'", "CODES_ZXJC", "类别", "LB", "100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
@@ -83,7 +83,7 @@ function LoadInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ZXJCXX_JC\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
-    html += ('<p class="p_li_body_left_center_dz">' + obj.FWFW + ' / ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + obj.QY + ' - ' + obj.DD + ' / ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">联系商家</span></p>');

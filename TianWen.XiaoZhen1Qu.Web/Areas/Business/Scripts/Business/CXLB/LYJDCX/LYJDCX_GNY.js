@@ -6,12 +6,14 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadLYJDCondition() {
-    LoadConditionByTypeNames("'国内游游玩天数','出游方式','国内游价格'", "CODES_LYJD", "游玩天数,出游方式,价格", "YWTS,CYFS,JG_CR", "100,100,100");
+    LoadConditionByTypeNames("'国内游游玩天数','出游方式','国内游价格'", "CODES_LYJD", "游玩天数,出游方式,价格", "XCTS_R,CYFS,JG_CR", "100,100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
     if (getUrlParam("LB") !== null)
         SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("CYFS") !== null)
+        SelectURLCondition(getUrlParam("CYFS"));
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
@@ -38,7 +40,7 @@ function SelectURLCondition(obj) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("YWTS,CYFS,CYLB,JG_CR,QY");
+    var condition = GetAllCondition("XCTS_R,CYFS,CYLB,JG_CR,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/LYJDCX/LoadLYJDXX",

@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'生活配送类别'", "CODES_SHFW", "类别", "LB", "100");
+    LoadConditionByTypeNames("'生活配送类别','桶装水品牌'", "CODES_SHFW", "类别,品牌", "LB,PP", "100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
@@ -23,15 +23,16 @@ function LoadURLCondition() {
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "跑腿服务")) {
         LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL", 15);
-        $("#ul_condition_body_PP").remove();
+        $("#div_condition_body_PP").css("display","none");
+	$("#div_condition_body_XL").css("display","block");
     }
     if (name === "类别" && (obj.innerHTML === "桶装水")) {
-        LoadConditionByTypeName("桶装水品牌", "CODES_SHFW", "品牌", "PP", 15);
-        $("#ul_condition_body_XL").remove();
+	$("#div_condition_body_PP").css("display","block");
+        $("#div_condition_body_XL").css("display","none");
     }
     if (name === "类别" && (obj.innerHTML !== "跑腿服务" && obj.innerHTML !== "桶装水")) {
-        $("#ul_condition_body_XL").remove();
-        $("#ul_condition_body_PP").remove();
+        $("#div_condition_body_XL").css("display","none");
+        $("#div_condition_body_PP").css("display","none");
     }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");

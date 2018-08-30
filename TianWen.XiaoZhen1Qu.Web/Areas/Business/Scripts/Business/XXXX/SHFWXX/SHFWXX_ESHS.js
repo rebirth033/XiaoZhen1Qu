@@ -46,12 +46,12 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.XL + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">联&nbsp;&nbsp;系&nbsp;&nbsp;人：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.LXR) + '</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">服务范围：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.FWFW + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">联&nbsp;&nbsp;系&nbsp;&nbsp;人：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.LXR) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">具体地址：</span>');

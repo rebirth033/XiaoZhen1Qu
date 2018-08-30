@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     BindClick("CYSJ");
-    LoadJBXX();
+    LoadFWFW();
 });
 //绑定下拉框
 function BindClick(type) {

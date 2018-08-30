@@ -204,7 +204,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 }
                 if (TBName == "CODES_CW")
-                { 
+                {
                     if (TYPENAMES.Contains("宠物狗品种") || TYPENAMES.Contains("宠物猫品种"))
                         return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_CW>(String.Format("FROM CODES_CW WHERE TYPENAME in({0}) and ISHOT = '是' ORDER BY TYPENAME,CODEVALUE", TYPENAMES)) };
                     else
@@ -227,7 +227,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TBName == "CODES_SHFW")
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_SHFW>(String.Format("FROM CODES_SHFW WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 if (TBName == "CODES_JYPX")
-                { 
+                {
                     if (TYPENAMES.Contains("语种") || TYPENAMES.Contains("留学国家"))
                         return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_JYPX>(String.Format("FROM CODES_JYPX WHERE TYPENAME in({0}) and ISHOT = '是' ORDER BY TYPENAME,CODEVALUE", TYPENAMES)) };
                     else
@@ -238,7 +238,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TBName == "CODES_LYJD")
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_LYJD>(String.Format("FROM CODES_LYJD WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 if (TBName == "CODES_HQSY")
-                    return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_HQSY>(String.Format("FROM CODES_HQSY WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
+                {
+                    if (TYPENAMES.Contains("婚车品牌"))
+                        return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_HQSY>(String.Format("FROM CODES_HQSY WHERE TYPENAME in({0}) and ISHOT = '是' ORDER BY TYPENAME,CODEVALUE", TYPENAMES)) };
+                    else
+                        return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_HQSY>(String.Format("FROM CODES_HQSY WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
+                }
                 if (TBName == "CODES_NLMFY")
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_NLMFY>(String.Format("FROM CODES_NLMFY WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 return new { Result = EnResultType.Failed, Message = "表名未找到" };
@@ -423,7 +428,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     string[] array = conditions[i].Split(':');
                     if (array[1] != "全部")
                     {
-                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ" || array[0] == "JG_CR" || array[0] == "S" || array[0] == "FL" || array[0] == "LC" || array[0] == "CL" || array[0] == "PL")
+                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ" || array[0] == "JG_CR" || array[0] == "S" || array[0] == "FL" || array[0] == "LC" || array[0] == "CL" || array[0] == "PL" || array[0] == "XCTS_R")
                         {
                             if (array[1].Contains("万元"))
                             {
@@ -540,15 +545,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                     string[] zjarray = array[1].Substring(0, array[1].IndexOf("日游")).Split('-');
                                     condition.AppendFormat(" and {0} >= {1} and {0} <= {2}", array[0], zjarray[0], zjarray[1]);
                                 }
-                                else if (array[1].Contains("及以上"))
+                                else if (array[1].Contains("以上"))
                                 {
                                     string zjsx = array[1].Substring(0, array[1].IndexOf("日游"));
                                     condition.AppendFormat(" and {0} >= {1}", array[0], zjsx);
                                 }
-                                else
+                                else if (array[1].Contains("以下"))
                                 {
                                     string zjxx = array[1].Substring(0, array[1].IndexOf("日游"));
                                     condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
+                                }
+                                else
+                                {
+                                    string zjxx = array[1].Substring(0, array[1].IndexOf("日游"));
+                                    condition.AppendFormat(" and {0} = {1}", array[0], zjxx);
                                 }
                             }
                             else if (array[1].Contains("室"))

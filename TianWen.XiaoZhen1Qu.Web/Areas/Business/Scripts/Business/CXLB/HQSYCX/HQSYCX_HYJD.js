@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'婚宴酒店价格范围','婚宴酒店酒店类型','婚宴酒店容纳桌数','婚宴酒店婚礼类型'", "CODES_HQSY", "价格范围,酒店类型,容纳桌数,婚礼类型", "JGFW,JDLX,RNZS,HLLX", "100,100,100,100");
+    LoadConditionByTypeNames("'婚宴酒店价格范围','婚宴酒店酒店类型','婚宴酒店容纳桌数','婚宴酒店婚礼类型'", "CODES_HQSY", "价格范围,酒店类型,容纳桌数,婚礼类型", "JG,JDLX,RNZS,HLLX", "100,100,100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
@@ -38,7 +38,7 @@ function SelectURLCondition(obj) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("JGFW,JDLX,RNZS,HLLX,QY");
+    var condition = GetAllCondition("JG,JDLX,RNZS,HLLX,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/HQSYCX/LoadHQSYXX",

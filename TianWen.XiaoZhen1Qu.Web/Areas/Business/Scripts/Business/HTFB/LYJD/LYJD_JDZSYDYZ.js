@@ -12,7 +12,7 @@ function ValidateLB() {
 //验证所有
 function ValidateAll() {
     if (ValidateLB()
-        & ValidateJG()
+        //& ValidateJG()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

@@ -6,8 +6,19 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadLYJDCondition() {
-    LoadConditionByTypeNames("'出境游游玩天数','国内游出游方式','出境游价格'", "CODES_LYJD", "行程天数,出游方式,价格", "XCTS_R,CYFS,MSJ", "100,100,100");
+    LoadConditionByTypeNames("'出境游目的地','出境游游玩天数','国内游出游方式','出境游价格'", "CODES_LYJD", "目的地,游玩天数,出游方式,价格", "MDDCS,XCTS_R,CYFS,JG_CR", "100,100,100");
     LoadBody("LYJDXX_CJY", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("CYFS") !== null)
+        SelectURLCondition(getUrlParam("CYFS"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("LYJDXX_CJY", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -24,10 +35,40 @@ function SelectCondition(obj, name) {
     LoadBody("LYJDXX_CJY", currentIndex);
     ShowSelectCondition("LYJDXX_CJY");
 }
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
+    LoadBody("LYJDXX_CJY", currentIndex);
+    ShowSelectCondition("LYJDXX_CJY");
+}
+//加载查询条件
+function LoadCondition(array, name, id, length) {
+    $("#ul_condition_body_" + id).remove();
+    var html = "";
+    html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
+    if (name === "类别" || name === "目的地")
+        html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
+    else
+        html += '<li class="li_condition_body_first">' + name + '</li>';
+    html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
+    for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+    }
+    html += '</ul>';
+    $("#div_condition_body_" + id).append(html);
+    $("#span_select_arrow_blue").attr("src", getRootPath() + "/Areas/Business/Css/images/arrow_down_blue.png");
+    if (name === "目的地")
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 20));
+    else
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 20));
+}
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("XCTS_R,CYFS,MSJ,QY");
+    var condition = GetAllCondition("MDDCS,XCTS_R,CYFS,MSJ,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/LYJDCX/LoadLYJDXX",
