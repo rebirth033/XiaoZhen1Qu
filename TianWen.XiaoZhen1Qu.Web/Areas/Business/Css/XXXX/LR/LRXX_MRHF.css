@@ -1,5 +1,5 @@
 ﻿/*详细信息页_主体_左部_信息主要内容*/
-.div_body .div_body_left .div_body_left_body_right{ width: 380px;height: auto;float: left;}
+.div_body .div_body_left .div_body_left_body_right{ width: 100%;height: auto;float: left;}
 .div_body .div_body_left .div_body_left_body_right .p_body_left_body_right_first{ height: 40px;width: 100%;padding-left: 58px;}
 .div_body .div_body_left .div_body_left_body_right .span_body_left_body_right_zj{ color: #bc6ba6;font-size: 14px;}
 .div_body .div_body_left .div_body_left_body_right .span_body_left_body_right_zjdw{ color: #bc6ba6;font-size: 14px;}

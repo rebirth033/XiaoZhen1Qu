@@ -103,7 +103,7 @@ function LoadXQ(obj, BCMSString) {
         $("#div_body_left_body_xq_xx_bcms").css("height", "300px").css("overflow", "hidden");
         $("#zk").append('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
     }    	
-	if (obj.PHOTOS.length > 4) {
+    if (obj.PHOTOS.length > 4) {
         $("#div_body_left_body_xq_xx").css("height", "710px");
         $("#div_body_left_body_xq_zk").css("display", "block");
     }

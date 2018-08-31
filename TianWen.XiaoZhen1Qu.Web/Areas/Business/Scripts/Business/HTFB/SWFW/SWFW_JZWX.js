@@ -55,7 +55,7 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.SWFW_JZWXJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                SetDuoX("JZWXLB", xml.Value.SWFW_JZWXJBXX.LB);
+                SetDuoX("LB", xml.Value.SWFW_JZWXJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_JZWXJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_JZWXJBXX.DD);
                 if (xml.Value.SWFW_JZWXJBXX.FWFW !== null)
@@ -77,7 +77,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("JZWXLB") + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
     obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)

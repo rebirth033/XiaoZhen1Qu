@@ -55,9 +55,11 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.SWFW_JXSBWXJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                SetDuoX("JXSBWXLB", xml.Value.SWFW_JXSBWXJBXX.LB);
+                SetDuoX("LB", xml.Value.SWFW_JXSBWXJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_JXSBWXJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_JXSBWXJBXX.DD);
+                if (xml.Value.SWFW_JXSBWXJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.SWFW_JXSBWXJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -75,7 +77,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("JXSBWXLB") + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

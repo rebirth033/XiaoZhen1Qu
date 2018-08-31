@@ -29,7 +29,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择类别啦"); });
-                LoadFWFW();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -55,7 +55,7 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#ID").val(xml.Value.SWFW_ZXFWJBXX.ID);
-                $("#spanLB").html(xml.Value.SWFW_ZXFWJBXX.LB);
+		SetDuoX("LB", xml.Value.SWFW_ZXFWJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_ZXFWJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_ZXFWJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -72,7 +72,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

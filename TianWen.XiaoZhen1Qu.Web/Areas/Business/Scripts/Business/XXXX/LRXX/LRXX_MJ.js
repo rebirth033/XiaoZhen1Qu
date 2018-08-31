@@ -35,23 +35,23 @@ function LoadJBXX(obj) {
     html += ('<p class="p_div_body_left_head_ll">' + obj.ZXGXSJ.ToString('yyyy年MM月dd日') + '  ' + obj.LLCS + '次浏览 <span id="span_div_body_left_head_jb" class="span_div_body_left_head_jb">举报</span><span class="span_div_body_left_head_split">|</span><span id="span_div_body_left_head_sc" onclick="SCXX(\'' + obj.JCXXID + '\')" class="span_div_body_left_head_sc">收藏</span></p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
-    html += ('<div class="div_body_left_body_left">');    
-    html += ('<div class="div_body_left_body_left_img">');
-    html += ('<img id="img_body_left_body_left_show" onclick="ImgShow(this)" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('</div>');
-    html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;margin-left:5px"><</span>');
-    html += ('<div class="div_body_left_body_left_list">');
-    html += ('<ul id="ul_body_left_body_left_list" class="ul_body_left_body_left_list">');
-    for (var i = 0; i < obj.PHOTOS.length; i++) {
-        html += ('<li class="li_body_left_body_left_list_tp">');
-        html += ('<img class="img_body_left_body_left_list_tp" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
-        html += ('<div class="div_img_body_left_body_left_list_tp" onmouseover="ClickShowImg(this,' + i + ')"></div>');
-        html += ('</li>');
-    }
-    html += ('</ul>');
-    html += ('</div>');
-    html += ('<span onclick="RightImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an">></span>');
-    html += ('</div>');
+    //html += ('<div class="div_body_left_body_left">');    
+    //html += ('<div class="div_body_left_body_left_img">');
+    //html += ('<img id="img_body_left_body_left_show" onclick="ImgShow(this)" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    //html += ('</div>');
+    //html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;margin-left:5px"><</span>');
+    //html += ('<div class="div_body_left_body_left_list">');
+    //html += ('<ul id="ul_body_left_body_left_list" class="ul_body_left_body_left_list">');
+    //for (var i = 0; i < obj.PHOTOS.length; i++) {
+    //    html += ('<li class="li_body_left_body_left_list_tp">');
+    //    html += ('<img class="img_body_left_body_left_list_tp" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
+    //    html += ('<div class="div_img_body_left_body_left_list_tp" onmouseover="ClickShowImg(this,' + i + ')"></div>');
+    //    html += ('</li>');
+    //}
+    //html += ('</ul>');
+    //html += ('</div>');
+    //html += ('<span onclick="RightImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an">></span>');
+    //html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>');
@@ -78,10 +78,10 @@ var right = 0;
 function LoadXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_xq">');
-    html += ('<p class="p_body_left_body_xq">物品详情</p>');
+    html += ('<p class="p_body_left_body_xq">详情描述</p>');
 
     html += ('<div class="div_body_left_body_xq_xx">');
-    html += ('<div class="div_body_left_body_xq_xx_left">物品描述</div>');
+    //html += ('<div class="div_body_left_body_xq_xx_left">物品描述</div>');
     html += ('<div id="div_body_left_body_xq_xx_bcms" class="div_body_left_body_xq_xx_right fyms div_body_left_body_xq_xx_bcms">');
     html += (BCMSString);
     html += ('</div>');
@@ -99,8 +99,13 @@ function LoadXQ(obj, BCMSString) {
 
     html += ('<div id="div_body_left_body_xq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_xq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
     html += ('</div>');
-    $("#div_body_left").append(html);    	
-	if (obj.PHOTOS.length > 4) {
+    $("#div_body_left").append(html); 
+ 
+    if (parseInt(RTrimStr($("#div_body_left_body_xq_xx_bcms").css("height"), "px")) > 300) {
+        $("#div_body_left_body_xq_xx_bcms").css("height", "300px").css("overflow", "hidden");
+        $("#zk").append('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
+    }    	
+    if (obj.PHOTOS.length > 4) {
         $("#div_body_left_body_xq_xx").css("height", "710px");
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
