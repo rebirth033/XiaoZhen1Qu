@@ -69,6 +69,7 @@ function LoadGRXX(grxx) {
 }
 //处理图片信息
 function HandlerTPXX() {
+    return;
     $(".div_img_body_left_body_left_list_tp:eq(0)").each(function () { 
 	$(this).css("background-color", "rgba(0,0,0,0)") 
     });
