@@ -22,9 +22,9 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -58,9 +58,9 @@ function LoadXL(lbmc, xl) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 6) * 60 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 6) * 40 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 6) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -101,8 +101,6 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.PFCG_DJZMJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_DJZMJBXX.DD);
                 LoadXL(xml.Value.PFCG_DJZMJBXX.LB, xml.Value.PFCG_DJZMJBXX.XL);
-                if (xml.Value.PFCG_DJZMJBXX.FWFW !== null)
-                    SetDuoX("FWFW", xml.Value.PFCG_DJZMJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -122,7 +120,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

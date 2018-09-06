@@ -13,7 +13,6 @@ function BindClick(type) {
         }
         if (type === "XL") {
             $("#divXL").css("display", "block");
-            ActiveStyle("XL");
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");

@@ -19,9 +19,37 @@ function BindClick(type) {
     });
 }
 //选择类别下拉框
-function SelectLB(obj, type) {
+function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
+    if(type === "LB") HasXL(id);
+}
+//判断是否有小类
+function HasXL(codeid){
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Common/LoadByParentID",
+        dataType: "json",
+        data:
+        {
+            ParentID: codeid,
+            TBName: "CODES_ES_MYFZMR"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+		if(xml.list.length>0){
+		    $("#divXLText").css("display", "inline-block");
+		    $("#spanXL").html("请选择小类");
+		}
+		else{
+		    $("#divXLText").css("display", "none");
+		}
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
 //加载二手_手机数码_母婴/服装/美容基本信息
 function LoadJBXX() {

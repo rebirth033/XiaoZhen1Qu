@@ -353,3 +353,20 @@ function toDecimal1(x) {
    }
    return s;
 }
+//生成二维码
+function GenerateQRCode(qrdata, showid) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Areas/Business/Ashx/GenerateQRCode.ashx",
+        data:
+        {
+            qrdata: qrdata
+        },
+        success: function (filename) {
+            $("#" + showid).attr("src", getRootPath() + "/Areas/Business/QRCode/" + filename);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}

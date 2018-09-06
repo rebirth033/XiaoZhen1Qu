@@ -23,13 +23,9 @@ function LoadURLCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML === "电视机" || obj.innerHTML === "洗衣机" || obj.innerHTML === "空调" || obj.innerHTML === "冰箱" || obj.innerHTML === "冰柜")) {
-        $("#ul_condition_body_XL").remove();
-        LoadConditionByTypeNames("'" + obj.innerHTML + "品牌'", "CODES_ES_JDJJBG", "品牌", "PP");
-    }
-    if (name === "类别" && (obj.innerHTML === "影音家电" || obj.innerHTML === "生活家电" || obj.innerHTML === "厨卫家电")) {
+    if (name === "类别" && (obj.innerHTML !== "其他家电" || obj.innerHTML !== "家电回收")) {
         $("#ul_condition_body_PP").remove();
-        LoadConditionByTypeNames("'" + obj.innerHTML + "'", "CODES_ES_JDJJBG", "小类", "XL");
+	LoadConditionByParentID(obj.id, "CODES_ES_JDJJBG", "小类", "XL")
     }
     if (name === "类别" && (obj.innerHTML === "其他家电" || obj.innerHTML === "家电回收")) {
         $("#ul_condition_body_PP").remove();

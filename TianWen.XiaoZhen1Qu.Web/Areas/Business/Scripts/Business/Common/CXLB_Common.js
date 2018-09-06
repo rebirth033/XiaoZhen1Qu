@@ -6,11 +6,14 @@ $(document).ready(function () {
     $(".div_condition").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_condition_toggle").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_condition_select").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
+    $(".div_show").css("left", (document.documentElement.clientWidth - 800) / 2);
+    $(".div_show").css("top", (document.documentElement.clientHeight - 540) / 2);
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $("#li_condition_head_qyzf").css("background-color", "#ffffff");
     $("#span_fbxx").bind("click", FBXX);
     $("#span_condition_toggle").bind("click", ToggleCondition);
+    $(".img_show_close").bind("click", function(){ $(".div_show").css("display","none");$(".div_shadow").css("display","none"); });
     $("body").bind("click", function () { CloseByClassID("div_select_dropdown"); CloseByClassID("div_bqss"); });//所有下拉框在点击别处时应该自动收缩
     $("#div_condition_body").html('');
     GetHeadNav();
@@ -280,7 +283,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                         }
                     }
                 }
-                LoadURLCondition();
+                if(ids.indexOf("LB") !== -1) LoadURLCondition();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -486,4 +489,6 @@ function Bind(idout, idin, message) {
 function ShowLXDH(lxdh) {
     $("#div_shadow").css("display", "block");
     $("#div_show").css("display", "block");
+    $("#div_show_lxdh").html(lxdh);
+    GenerateQRCode(lxdh, "img_show_qrcode");
 }

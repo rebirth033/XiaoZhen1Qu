@@ -30,9 +30,9 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -67,8 +67,6 @@ function LoadJBXX() {
                 SetDuoX("BZYT", xml.Value.PFCG_BZJBXX.YT);
                 $("#spanQY").html(xml.Value.PFCG_BZJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_BZJBXX.DD);
-                if (xml.Value.PFCG_BZJBXX.FWFW !== null)
-                    SetDuoX("FWFW", xml.Value.PFCG_BZJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -87,7 +85,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("BZLB") + "'");
-    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
     obj = jsonObj.AddJson(obj, "YT", "'" + GetDuoX("BZYT") + "'");
 
     if (getUrlParam("ID") !== null)

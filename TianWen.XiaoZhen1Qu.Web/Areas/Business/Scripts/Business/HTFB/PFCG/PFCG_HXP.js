@@ -58,8 +58,6 @@ function LoadJBXX() {
                 SetDuoX("HXPLB", xml.Value.PFCG_HXPJBXX.LB);
                 $("#spanQY").html(xml.Value.PFCG_HXPJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_HXPJBXX.DD);
-                if (xml.Value.PFCG_HXPJBXX.FWFW !== null)
-                    SetDuoX("FWFW", xml.Value.PFCG_HXPJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -78,7 +76,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("HXPLB") + "'");
-    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
