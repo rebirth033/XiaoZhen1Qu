@@ -80,10 +80,12 @@ function GetWTLX() {
 }
 //信息被删除
 function ShowXXBSC(text) {
-    $("#span_step_text_second").html("请输入您的信息编号：<span class=\"span_second_lx\">[" + text + "]</span>");
-    $("#div_xxbsc").css("display", "block");
-    $("#div_step_two").css("display", "block");
-    $("#btnCKBSCYY").bind("click", CKBSCYY);
+        $("#span_step_text_second").html("请输入您的信息编号：<span class=\"span_second_lx\">[" + text + "]</span>");
+        $("#div_xxbsc").css("display", "block");
+        $("#div_step_two").css("display", "block");
+        $("#btnCKBSCYY").bind("click", CKBSCYY);
+        if(text !== "信息被删除") $("#tr_xxbh").css("display", "none");
+	else $("#tr_xxbh").css("display", "");
 }
 //绑定问题描述框
 function BindWTMS() {

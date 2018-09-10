@@ -332,7 +332,7 @@ function DrawImage(ImgObj, maxWidth, maxHeight) {
             }
         }
         ImgObj.height = tempHeight;
-        imgobj.width = tempWidth;
+        ImgObj.width = tempWidth;
         ImgObj.alt = image.width + "*" + image.height;
     }
 }

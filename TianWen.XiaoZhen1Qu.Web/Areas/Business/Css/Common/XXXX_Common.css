@@ -166,10 +166,12 @@ body {width: 100%;height: 100%;overflow-x: hidden;background-color: #eeeff1;font
 .div_show_right{z-index: 1101;position: fixed;width:20%;height:100%;top:0;right:0;text-align:right;cursor:pointer;}
 .div_show_right .img_show_right{background-image: url(../images/XXXX/GY/xxxx_gy_right.png);width:30px;height:52px;margin-right:40px;top:48%;right:0;position:fixed;}
 .div_show_middle{position: fixed;width:60%;height:100%;left:20%;text-align:center;}
+.div_show_middle .div_show_middle_top{width:100%;height:520px;line-height:520px;}
+.div_show_middle .div_show_middle_top .img_show_middle{vertical-align:middle;}
 .div_show_middle_bottom{height:100px;text-align:center;width:100%;overflow:hidden;display:inline-block;}
 
-.ul_body_left_body_left_list{width: 2000px;height: 106px;padding: 0;display:inline-block;}
-.li_show_tp{float: left;height: 100px;margin-right: 5px;width: 140px;position: relative;}
+.ul_body_left_body_left_list{width: auto;height: 106px;padding: 0;display:inline-block;}
+.li_show_tp{float: left;height: 100px;margin-right: 5px;width: 139px;position: relative;}
 .li_show_tp:hover{ cursor: pointer;}
 .img_show_tp{ width: 130px;height: 100px;}
 .div_show_tp{ position: absolute;width: 130px;height: 100px;top: 0;left: 0;background-color: rgba(0, 0, 0, 0.5);margin-left: 10px; }

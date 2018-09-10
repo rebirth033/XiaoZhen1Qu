@@ -69,38 +69,37 @@ function LoadGRXX(grxx) {
 }
 //处理图片信息
 function HandlerTPXX() {
-    return;
-    $(".div_img_body_left_body_left_list_tp:eq(0)").each(function () { 
-	$(this).css("background-color", "rgba(0,0,0,0)") 
-    });
-    if ($("#img_body_left_body_left_show").length > 0) {
-     	var img = new Image();
-     	img.src = $("#img_body_left_body_left_show").attr("src");
-     	$("#img_body_left_body_left_show").css("width", ((img.width > 460 || img.width === 0) ? 460 : img.width));
-        $("#img_body_left_body_left_show").css("height", ((img.height > 350 || img.height === 0) ? 350 : img.height));
-    }
+    //$(".div_img_body_left_body_left_list_tp:eq(0)").each(function () { 
+	//$(this).css("background-color", "rgba(0,0,0,0)") 
+    //});
+    //if ($("#img_body_left_body_left_show").length > 0) {
+    // 	var img = new Image();
+    // 	img.src = $("#img_body_left_body_left_show").attr("src");
+    // 	$("#img_body_left_body_left_show").css("width", ((img.width > 460 || img.width === 0) ? 460 : img.width));
+    //    $("#img_body_left_body_left_show").css("height", ((img.height > 350 || img.height === 0) ? 350 : img.height));
+    //}
 
-    $(".img_body_left_body_xq_xx").each(function () {
-        var img = new Image();
-        img.src = $("#" + this.id).attr("src");
+    //$(".img_body_left_body_xq_xx").each(function () {
+    //    var img = new Image();
+    //    img.src = $("#" + this.id).attr("src");
 
-	var width = img.width;//区域宽度
-        var height = img.height;//区域高度
-	var ratio = 405 / 350;//宽高比
- 	imgWidth = img.width;//图片实际宽度
-        imgHeight = img.height;//图片实际高度
-        imgRatio = imgWidth / imgHeight;//实际宽高比
-        if (ratio > imgRatio) {
-             showWidth = height * imgRatio;//调整宽度太小
-             $("#" + this.id).attr('width', showWidth).css('margin-left', (width - showWidth) / 2);
-        } else {
-             showHeight = width / imgRatio;//调高度太小
-             $("#" + this.id).attr('height', showHeight).css('margin-top', (height - showHeight) / 2);
-        }
+	//var width = img.width;//区域宽度
+    //    var height = img.height;//区域高度
+	//var ratio = 405 / 350;//宽高比
+ 	//imgWidth = img.width;//图片实际宽度
+    //    imgHeight = img.height;//图片实际高度
+    //    imgRatio = imgWidth / imgHeight;//实际宽高比
+    //    if (ratio > imgRatio) {
+    //         showWidth = height * imgRatio;//调整宽度太小
+    //         $("#" + this.id).attr('width', showWidth).css('margin-left', (width - showWidth) / 2);
+    //    } else {
+    //         showHeight = width / imgRatio;//调高度太小
+    //         $("#" + this.id).attr('height', showHeight).css('margin-top', (height - showHeight) / 2);
+    //    }
 
-        $("#" + this.id).css("width", 405)
-        $("#" + this.id).css("height", 350);
-    });
+    //    $("#" + this.id).css("width", 405)
+    //    $("#" + this.id).css("height", 350);
+    //});
 }
 //图片左侧切换
 function LeftImg(length) {
@@ -228,15 +227,15 @@ function SCXX(jcxxid) {
 //绑定图片点击预览事件
 function ImgShow(obj) {
     $("#div_show").html('');
-    var show_html = ('<div class="div_show_left" onclick="LeftShowImg('+$(".img_body_left_body_left_list_tp").length+')"><img class="img_show_left" /></div>');
+    var show_html = ('<div class="div_show_left" onclick="LeftShowImg(' + $(".img_body_left_body_left_list_tp").length + ')"><img class="img_show_left" /></div>');
     show_html += ('<div class="div_show_middle">');
     show_html += ('<div class="div_show_middle_top">');
-    show_html += ('<img id="img_show_middle" class="img_show_middle" onload="DrawImage(this,785,588)" />');
+    show_html += ('<img id="img_show_middle" class="img_show_middle" onload="DrawImage(this,785,520)" />');
     show_html += ('</div>');
     show_html += ('<div class="div_show_middle_bottom" id="div_show_middle_bottom">');
     show_html += ('</div>');
     show_html += ('</div>');
-    show_html += ('<div class="div_show_right" onclick="RightShowImg('+$(".img_body_left_body_left_list_tp").length+')"><img class="img_show_right" /></div>');
+    show_html += ('<div class="div_show_right" onclick="RightShowImg(' + $(".img_body_left_body_left_list_tp").length + ')"><img class="img_show_right" /></div>');
     $("#div_show").html(show_html);
 
     $("#div_shadow").css("display", "block");
@@ -249,13 +248,15 @@ function ImgShow(obj) {
     $("#div_show_middle_bottom").html('');
     var html = ('<ul id="ul_show_list" class="ul_body_left_body_left_list">');
     for (var i = 0; i < $(".img_body_left_body_xq_xx").length; i++) {
-        html += ('<li class="li_show_tp" id="'+i+'">');
+        html += ('<li class="li_show_tp" id="' + i + '">');
         html += ('<img class="img_show_tp" src="' + $(".img_body_left_body_xq_xx")[i].src + '" />');
         html += ('<div class="div_show_tp"></div>');
         html += ('</li>');
     }
     html += ('</ul>');
     $("#div_show_middle_bottom").html(html);
+
+    if($(".img_body_left_body_xq_xx").length > 6) $("#ul_show_list").css("width", "2000px");
 
     $(".li_show_tp").bind("mouseover", function () {
 	imgIndex = parseInt(this.id);
