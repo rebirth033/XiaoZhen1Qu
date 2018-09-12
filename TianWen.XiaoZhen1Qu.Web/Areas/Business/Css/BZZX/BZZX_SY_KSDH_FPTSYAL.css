@@ -1,4 +1,4 @@
-﻿body {text-align: center;}
+﻿body {text-align: center;font-family: 宋体;}
 
 .div_head {width: 100%;}
 
@@ -10,15 +10,13 @@
 
 .em_split {display: block;height: 1px;width: 100%;background-color: #ccc;margin-top: 20px;}
 
-.div_content_info {display: block;width: 1000px;height: 30px;margin: 0 auto;text-align: left;padding: 20px 20px;font-family: 宋体;color: #666;font-size: 14px;}
+.div_content_info {display: block;width: 1000px;height: 30px;margin: 0 auto;text-align: left;padding: 20px 20px;color: #666;font-size: 14px;}
 
 .div_body {width: 1000px;margin: 0 auto;text-align: left;display: block;}
 
-.div_body_nav {margin-top: 20px;display: block;width: 1000px;font-family: 宋体;}
-
+.div_body_nav {margin-top: 20px;display: block;width: 1000px;}
 
 .span_body_nav_inner_first {width: 1000px;display: inline-block;background-color: #f7f7f7;height: 34px;border-left: 2px solid #bc6ba6;padding-left: 10px;padding-top: 6px;font-weight: 700;}
-
 
 .div_body_nav_inner {display: inline-block;width: 100%;vertical-align: top;font-weight: bold;height: 40px;}
 
@@ -32,7 +30,7 @@
 
 .div_body_nav_title {background-color: #f7f7f7;width: 1000px;height: 34px;border-left: 2px solid #bc6ba6;display: block;margin-top: 20px;padding-left: 10px;padding-top: 4px;font-weight: 700;font-size: 16px;}
 
-.div_body_nav_title_child {font-weight: normal;font-size: 16px;}
+.div_body_nav_title_child {font-size: 16px;}
 
 .div_body_nav_text {font-size: 14px;padding: 10px 10px;font-family: 宋体;line-height: 34px;}
 

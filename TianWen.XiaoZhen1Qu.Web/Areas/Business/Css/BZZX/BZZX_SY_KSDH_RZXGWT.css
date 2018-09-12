@@ -14,21 +14,15 @@
 
 .div_body {width: 1000px;margin: 0 auto;text-align: left;display: block;}
 
-.div_body_nav {margin-top: 20px;display: block;width: 1000px;font-family: 宋体;}
+.div_body_nav {margin-top: 20px;display: block;height: 160px;width: 1000px;}
 
-.div_body_nav_inner {display: inline-block;width: 100%;vertical-align: top;font-weight: bold;height: 40px;}
+.span_body_nav {display: inline-block;width: 500px;height: 40px;float: left;color: #0000cd;padding-top: 3px;font-weight: bold;}
 
-.span_body_nav_inner {width: 300px;display: inline-block;height: 34px;padding-left: 10px;padding-top: 6px;}
+.span_body_nav:hover {cursor: pointer;color: #bc6ba6;}
 
-.span_body_nav {display: inline-block;width: 330px;height: 34px;float: left;color: #0000cd;padding-top: 3px;}
-
-.span_body_nav:hover {cursor: pointer;color: #bc6ba6}
-
-.childnode {padding-left: 30px;font-weight: normal;}
+.span_body_nav_inner{ font-weight: 700;}
 
 .div_body_nav_title {background-color: #f7f7f7;width: 1000px;height: 34px;border-left: 2px solid #bc6ba6;display: block;margin-top: 20px;padding-left: 10px;padding-top: 4px;font-weight: 700;font-size: 16px;}
-
-.div_body_nav_title_child {font-weight: normal;font-size: 16px;}
 
 .div_body_nav_text {font-size: 14px;padding: 10px 10px;font-family: 宋体;line-height: 34px;}
 
@@ -40,7 +34,7 @@
 
 .cursor:hover {text-decoration: underline;cursor: pointer;color: #bc6ba6;}
 
-.span_body_nav_img {background-image: url(../images/BZZX/bzzx_sy_rzsm_rzgl.png);display: block;width: 100%;height: 700px;background-repeat: no-repeat;}
+.span_body_nav_img {background-image: url(../images/BZZX/bzzx_htgl_wdzh_rzgl_qyrz.png);display: block;width: 100%;height: 700px;background-repeat: no-repeat;}
 
 .span_body_nav_img_yxrz {background-image: url(../images/BZZX/bzzx_sy_rzsm_yxrz.png);display: inline-block;width: 23px;height: 23px;background-repeat: no-repeat;}
 
@@ -54,36 +48,14 @@
 
 .span_body_nav_img {float: left;margin-top: 5px;}
 
-.span_body_nav_text_title {font-weight: bold;display: block;width: 100%;height: 60px;padding-top: 10px;text-align: left;}
+.span_body_nav_text_title {font-weight: bold;display: block;width: 100%;height: 60px;padding-top: 10px;}
 
 .div_bottom {border-top: 1px solid #cccccc;display: block;text-align: center;height: 100px;color: #333;padding-top: 15px;font-family: Microsoft YaHei, SimHei, Arial, Helvetica, sans-serif;margin-top: 20px;background-color: #000;opacity: 0.5;color: #fff;line-height: 34px;}
 
 .span_div_bottom_inner {font-size: 14px;font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simhei;}
 
-.span_div_bottom_inner:hover {cursor: pointer;text-decoration: underline}
+.span_div_bottom_inner:hover {cursor: pointer;text-decoration: underline;}
 
 .em_div_bottom_inner {width: 1px;background-color: #fff;height: 9px;margin: 2px 5px 0px 5px;display: inline-block;}
-
-.div_fhdb {cursor: pointer;float: right;display: inline-block;}
-
-.span_fhdb {display: inline-block;float: right;width: 55px;height: 100%;color: #ad5b97;font-size: 12px;padding: 3px 3px;}
-
-.span_fhdb_img {width: 12px;height: 12px;display: inline-block;float: right;margin-top: 5px;background-image: url(../images/BZZX/bzzx_sy_xxbsc_fhdb.png);margin-right: 10px;}
-
-table {width: 1000px;border: none;}
-
-table tr {border: none;line-height: 35px;}
-
-table tr td {border: none;}
-
-.td_title {width: 100px;text-align: center;vertical-align: top;}
-
-.td_content {text-align: left;padding-left: 10px;padding-right: 20px;}
-
-.span_green {color: green;}
-
-.span_red {color: red;}
-
-.span_bold {font-weight: 700;color: #364242;font-size: 14px;}
 
 .div_rtop {width: 40px;height: 40px;text-align: center;font-size: small;position: fixed;right: 100px;bottom: 10px;margin: 5px;cursor: pointer;display: none;background-image: url(../images/BZZX/bzzx_fhdb.png);}

@@ -84,8 +84,10 @@ function ShowXXBSC(text) {
         $("#div_xxbsc").css("display", "block");
         $("#div_step_two").css("display", "block");
         $("#btnCKBSCYY").bind("click", CKBSCYY);
-        if(text !== "信息被删除") $("#tr_xxbh").css("display", "none");
-	else $("#tr_xxbh").css("display", "");
+        if(text === "信息被删除" || text === "信息被返回修改" || text === "信息被判分类不当" || text === "信息不显示/无法刷新" || text === "投诉举报虚假信息")
+            $("#tr_xxbh").css("display", "");
+	else 
+	    $("#tr_xxbh").css("display", "none");
 }
 //绑定问题描述框
 function BindWTMS() {

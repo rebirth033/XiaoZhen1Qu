@@ -8,7 +8,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public JCXX()
         {
-            JCXXID = Guid.NewGuid().ToString("N");
+            JCXXID = Guid.NewGuid().ToString("N").Substring(0, 16); ;
             PHOTOS = new List<PHOTOS>();
         }
 

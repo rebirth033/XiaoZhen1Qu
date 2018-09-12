@@ -10,9 +10,9 @@
 
 .div_content_info {width: 900px;height: 60px;margin-bottom: 60px;padding-top: 33px;}
 
-.img_content_info {width: 0;margin:0 10px;height: 62px;display: block;background-repeat: no-repeat;float: left;border: 0;background-position-x: center;background-position-y: center;}
+.img_content_info {width: 62px;margin:0 40px;height: 62px;display: block;background-repeat: no-repeat;float: left;border: 0;background-position-x: center;background-position-y: center;}
 
-/*#img_content_info_rlrz {background-image: url(../../images/HTGL/htgl_rzgl_rlrz.png);}
+#img_content_info_rlrz {background-image: url(../../images/HTGL/htgl_rzgl_rlrz.png);}
 
 #img_content_info_zmsmrz {background-image: url(../../images/HTGL/htgl_rzgl_smrz.png);}
 
@@ -28,7 +28,7 @@
 
 #img_content_info_yyzzptrz {background-image: url(../../images/HTGL/yyzzptrz.png);}
 
-#img_content_info_qtrz {background-image: url(../../images/HTGL/qtrz.png);}*/
+#img_content_info_qtrz {background-image: url(../../images/HTGL/qtrz.png);}
 
 .div_content_info_left_info {display: block;float: left;width: 400px;}
 

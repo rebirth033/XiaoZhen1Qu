@@ -283,7 +283,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                         }
                     }
                 }
-                if(ids.indexOf("LB") !== -1 || ids.indexOf("PP") !== -1) LoadURLCondition();
+                if(ids.indexOf("LB") !== -1 || ids.indexOf("PP") !== -1 || ids.indexOf("TGFW") !== -1) LoadURLCondition();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

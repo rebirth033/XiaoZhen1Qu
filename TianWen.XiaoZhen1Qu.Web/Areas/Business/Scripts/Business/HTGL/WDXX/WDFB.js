@@ -63,7 +63,7 @@ function LoadInfo(obj) {
     html += ('<li class="li_new_info">');
     html += ('<div class="div_new_info">');
     html += ('<div class="div_new_info_head">');
-    html += ('<span class="span_new_info_head">' + obj.CJSJ.ToString("yyyy年MM月dd日 hh:mm:ss") + '</span>');
+    html += ('<span class="span_new_info_head">信息编号:' + obj.JCXXID  + '<span style="float:right;">更新时间:' +obj.CJSJ.ToString("yyyy年MM月dd日 hh:mm:ss") + '</span></span>');
     //html += ('<span class="span_new_info_edit"></span>');
     //html += ('<span class="span_new_info_delete"></span>');
     html += ('</div>');

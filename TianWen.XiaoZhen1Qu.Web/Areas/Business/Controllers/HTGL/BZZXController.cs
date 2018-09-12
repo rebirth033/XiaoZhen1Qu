@@ -52,11 +52,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
-        public ActionResult BZZX_SY_RZSM()
-        {
-            return View();
-        }
-
         public ActionResult BZZX_SY_YHSYXY()
         {
             return View();
@@ -77,7 +72,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
-        public ActionResult BZZX_SY_KSDH_XSSYZN()
+        public ActionResult BZZX_SY_KSDH_XXFBYGL()
+        {
+            return View();
+        }
+
+        public ActionResult BZZX_SY_KSDH_RZXGWT()
         {
             return View();
         }
@@ -87,17 +87,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
-        public ActionResult BZZX_SY_KSDH_XXFBYSC()
-        {
-            return View();
-        }
-
         public ActionResult BZZX_SY_KSDH_ZHDJYXY()
         {
             return View();
         }
 
-        public ActionResult BZZX_SY_KSDH_WLFPCS()
+        public ActionResult BZZX_SY_KSDH_FPTSYAL()
         {
             return View();
         }
