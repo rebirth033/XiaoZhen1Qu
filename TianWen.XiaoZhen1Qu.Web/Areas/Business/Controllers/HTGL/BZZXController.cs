@@ -31,6 +31,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult BZZX_SY_KSDH_FPTSYAL() { return View(); }
         public ActionResult BZZX_SY_KSDH_JBYSS() { return View(); }
         public ActionResult BZZX_QYXY() { return View(); }
+        public ActionResult BZZX_GYWM() { return View(); }
 
         public JsonResult SJCX()
         {
