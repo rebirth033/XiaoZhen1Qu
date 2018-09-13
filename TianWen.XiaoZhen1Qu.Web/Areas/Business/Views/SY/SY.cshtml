@@ -8,17 +8,34 @@
 @section Section_Body {
     <div class="div_head_nav">
         <ul class="ul_head_nav">
-            <li id="li_head_sy" class="li_head_nav" style="width: 80px;"><span class="span_head_nav">首页</span></li>
-            <li id="li_head_xzapp" class="li_head_nav_dropdown"><span class="span_head_nav">风铃APP</span><i class="i_head_nav"></i></li>
-            <li id="li_head_xzgzh" class="li_head_nav_dropdown"><span class="span_head_nav">风铃公众号</span><i class="i_head_nav"></i></li>
+            <li id="li_head_sy" class="li_head_nav"><span class="span_head_nav">首页</span></li>
+            <li id="li_head_flapp" class="li_head_nav_dropdown"><span class="span_head_nav">风铃APP</span><i class="i_head_nav"></i>
+	        <div class="div_head_nav_dropdown" style="width:230px;height:130px;">
+		    <div id="div_head_flapp_ewm" style="width:109px;height:100%;display:inline-block;"></div>
+		    <div style="width:114px;height:100%;border-top:1px solid #bc6ba6;display:inline-block;vertical-align:top;">
+		        <span style="margin-top:20px;font-size:14px;display:block;">风铃APP</span>
+		        <span style="margin-top:8px;font-size:12px;display:block;color:#999999;font-weight:normal;">扫描二维码</span>
+		        <span style="margin-top:8px;font-size:12px;display:block;color:#999999;font-weight:normal;">安装风铃客户端</span>
+		    </div>
+	        </div>
+	    </li>
+            <li id="li_head_flgzh" class="li_head_nav_dropdown"><span class="span_head_nav">风铃公众号</span><i class="i_head_nav"></i>
+	        <div class="div_head_nav_dropdown" style="width:230px;height:130px;">
+		    <div id="div_head_flgzh_ewm" style="width:124px;height:100%;display:inline-block;"></div>
+		    <div style="width:99px;height:100%;border-top:1px solid #bc6ba6;display:inline-block;vertical-align:top;">
+		        <span style="margin-top:20px;font-size:14px;display:block;">风铃公众号</span>
+		        <span style="margin-top:8px;font-size:12px;display:block;color:#999999;font-weight:normal;">扫描关注</span>
+		        <span style="margin-top:8px;font-size:12px;display:block;color:#999999;font-weight:normal;">风铃微信公众号</span>
+		    </div>
+	        </div>
+	    </li>
             <li id="li_head_xcx" class="li_head_nav_dropdown"><span class="span_head_nav">小程序</span><i class="i_head_nav"></i></li>
-            <li id="li_head_xztm" class="li_head_nav"><span class="span_head_nav">风铃特卖</span></li>
-            <li id="li_head_xzjr" class="li_head_nav"><span class="span_head_nav">风铃装修</span></li>
-            <li id="li_head_xzgy" class="li_head_nav"><span class="span_head_nav">风铃公益</span></li>
-            <li id="li_head_xzfc" class="li_head_nav"><span class="span_head_nav">风铃房产</span></li>
-            <li id="li_head_xzesc" class="li_head_nav"><span class="span_head_nav">风铃卖车</span></li>
-            <li id="li_head_xztg" class="li_head_nav_dropdown"><span class="span_head_nav">风铃推广</span><i class="i_head_nav"></i></li>
-            <li id="li_head_viphy" class="li_head_nav_dropdown"><span class="span_head_nav">VIP会员</span><i class="i_head_nav"></i></li>
+            <li id="li_head_fltm" class="li_head_nav"><span class="span_head_nav">风铃特卖</span></li>
+            <li id="li_head_flzx" class="li_head_nav"><span class="span_head_nav">风铃装修</span></li>
+            <li id="li_head_flfc" class="li_head_nav"><span class="span_head_nav">风铃房产</span></li>
+            <li id="li_head_flesc" class="li_head_nav"><span class="span_head_nav">风铃卖车</span></li>
+            <li id="li_head_fltg" class="li_head_nav_dropdown"><span class="span_head_nav">风铃推广</span><i class="i_head_nav"></i></li>
+            <li id="li_head_flvip" class="li_head_nav_dropdown"><span class="span_head_nav">VIP会员</span><i class="i_head_nav"></i></li>
         </ul>
     </div>
     <div id="div_Body" class="div_body">
@@ -1093,9 +1110,9 @@
         <p class="p_div_bottom"><span class="p_div_bottom_copyright">©</span>2018 福建沐晗信息技术有限公司&nbsp;&nbsp;客服及举报电话：400-043-5650 | 031-88342390（周一至周五，9:00-18:00）</p>
         <p class="p_div_bottom_reduce">闽ICP备18003746号-1</p>
 	<p class="p_div_bottom">
-	    <img class="img_div_bottom" src="@Url.Content("~/Areas/Business/Css/images/SY/WZJB/sy_qyxyxx.png")" />
-	    <img class="img_div_bottom" src="@Url.Content("~/Areas/Business/Css/images/SY/WZJB/sy_wljbappxz.png")" href="http://report.12377.cn:13225/toreportinputNormal_anis.do" />
-	    <img class="img_div_bottom" src="@Url.Content("~/Areas/Business/Css/images/SY/WZJB/sy_wsyhxxjbzq.png")" href="http://www.12377.cn/node_548446.htm?PGTID=0d100000-0013-0d7a-7a03-2802f15ed53d&ClickID=13" />
+	    <img class="img_div_bottom" id="img_div_bottom_qyxyxx" src="@Url.Content("~/Areas/Business/Css/images/SY/WZJB/sy_qyxyxx.png")" />
+	    <img class="img_div_bottom" id="img_div_bottom_wljbappxz" src="@Url.Content("~/Areas/Business/Css/images/SY/WZJB/sy_wljbappxz.png")" />
+	    <img class="img_div_bottom" id="img_div_bottom_wsyhxxjbzq" src="@Url.Content("~/Areas/Business/Css/images/SY/WZJB/sy_wsyhxxjbzq.png")" />
 	</p>
     </div>
 }

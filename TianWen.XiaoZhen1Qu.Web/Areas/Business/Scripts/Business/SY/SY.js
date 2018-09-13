@@ -11,9 +11,23 @@ $(document).ready(function () {
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#span_hide_fbxx").bind("click", FBXX);
     $("body").bind("click", function () { CloseByClassID("div_select_dropdown"); });
+    $(".li_head_nav_dropdown").bind("mouseover", function () { ShowMenu(this); });
+    $(".li_head_nav_dropdown").bind("mouseleave", function () { HideMenu(this); });
     LoadDefault();
     LoadHeadSearch();
 });
+//显示菜单项
+function ShowMenu(obj){
+    $(obj).find(".i_head_nav").css("background-image","url(" + getRootPath() + "/Areas/Business/Css/images/head_nav_up.png)");
+    $(obj).css("border-color","#bc6bca");
+    $(obj).find(".div_head_nav_dropdown").css("display","block");
+}
+//隐藏菜单项
+function HideMenu(obj){
+    $(obj).find(".i_head_nav").css("background-image","url(" + getRootPath() + "/Areas/Business/Css/images/head_nav_down.png)");
+    $(obj).css("border-color","#ffffff");
+    $(obj).find(".div_head_nav_dropdown").css("display","none");
+}
 //首页获取title
 function GetHeadNav() {
     document.title = "风铃网_首页";
@@ -25,6 +39,9 @@ function FBXX() {
 //加载默认
 function LoadDefault() {
     LoadSY_ML();
+    $("#img_div_bottom_wljbappxz").bind("click", function(){window.open("http://report.12377.cn:13225/toreportinputNormal_anis.do");});
+    $("#img_div_bottom_wsyhxxjbzq").bind("click", function(){window.open("http://www.12377.cn/node_548446.htm?PGTID=0d100000-0013-0d7a-7a03-2802f15ed53d&ClickID=13");});
+    $("#img_div_bottom_qyxyxx").bind("click", function(){window.open( getRootPath() + "/BZZX/BZZX_QYXY");});
 }
 //加载头部搜索栏关键字
 function LoadHeadSearch() {

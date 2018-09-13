@@ -12,95 +12,25 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public IYHJBXXBLL YHJBXXBLL { get; set; }
 
-        public ActionResult BZZX()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_LXKF()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_WZJY()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_ZDJS()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_ZHMM()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_DHMYCX()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_YYYZM()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_YHSYXY()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_XXBSC()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_FBGZLTZ()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_FTBG()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_KSDH_XXFBYGL()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_KSDH_RZXGWT()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_KSDH_YHZCYDL()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_KSDH_ZHDJYXY()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_KSDH_FPTSYAL()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_SY_KSDH_JBYSS()
-        {
-            return View();
-        }
+        public ActionResult BZZX() { return View(); }
+        public ActionResult BZZX_SY() { return View(); }
+        public ActionResult BZZX_LXKF() { return View(); }
+        public ActionResult BZZX_WZJY() { return View(); }
+        public ActionResult BZZX_SY_ZDJS() { return View(); }
+        public ActionResult BZZX_SY_ZHMM() { return View(); }
+        public ActionResult BZZX_SY_DHMYCX() { return View(); }
+        public ActionResult BZZX_SY_YYYZM() { return View(); }
+        public ActionResult BZZX_SY_YHSYXY() { return View(); }
+        public ActionResult BZZX_SY_XXBSC() { return View(); }
+        public ActionResult BZZX_SY_FBGZLTZ() { return View(); }
+        public ActionResult BZZX_SY_FTBG() { return View(); }
+        public ActionResult BZZX_SY_KSDH_XXFBYGL() { return View(); }
+        public ActionResult BZZX_SY_KSDH_RZXGWT() { return View(); }
+        public ActionResult BZZX_SY_KSDH_YHZCYDL() { return View(); }
+        public ActionResult BZZX_SY_KSDH_ZHDJYXY() { return View(); }
+        public ActionResult BZZX_SY_KSDH_FPTSYAL() { return View(); }
+        public ActionResult BZZX_SY_KSDH_JBYSS() { return View(); }
+        public ActionResult BZZX_QYXY() { return View(); }
 
         public JsonResult SJCX()
         {

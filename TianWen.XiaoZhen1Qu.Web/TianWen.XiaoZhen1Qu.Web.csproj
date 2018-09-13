@@ -128,6 +128,7 @@
   <ItemGroup>
     <Content Include="Areas\Business\Aspx\png.aspx" />
     <Content Include="Areas\Business\Css\BZZX\BZZX.css" />
+    <Content Include="Areas\Business\Css\BZZX\BZZX_QYXY.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_LXKF.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_DHMYCX.css" />
@@ -2867,7 +2868,9 @@
     <Content Include="Areas\Business\Views\SHFWCX\SHFWCX_ESHS.cshtml" />
     <Content Include="Areas\Business\Views\LYJD\LYJD_CJY.cshtml" />
     <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_CJY.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX_QYXY.cshtml" />
     <None Include="Areas\Business\Views\SHFWXX\SHFWXX_ESHS.cshtml" />
+    <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\xxxz.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

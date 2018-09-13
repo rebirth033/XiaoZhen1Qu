@@ -1,0 +1,8 @@
+﻿.div_body{width:100%;text-align:center;}
+.div_body .div_head{width:1200px;text-align:center;display:block;height:100px;padding:30px 0px;font-size:18px;font-weight:700;color:#003366;}
+.div_body .div_content{width:1200px;text-align:center;display:block;}
+.div_body .div_content .div_content_title{background:rgba(221,238,255, .7); ;color:#003366;text-align:left;padding:5px 10px;}
+.div_content_title{margin-bottom:20px;}
+.table_content{margin-bottom:20px;}
+.td_content_left{background:rgba(247,247,222, .7);width:200px;padding:5px 5px;border:1px solid #cccccc !important;}
+.td_content_right{background:rgba(221,238,255, .7);width:400px;padding:5px 5px;border:1px solid #cccccc !important;}
