@@ -1,10 +1,10 @@
 package com.example.administrator.infotownletsecond;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 public class FBActivity extends BaseActivity implements View.OnClickListener {
 
@@ -12,6 +12,9 @@ public class FBActivity extends BaseActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fb);
+        resetBottomMenu();
+        ImageView ivsy_fb = (ImageView) findViewById(R.id.ivFB);
+        ivsy_fb.setImageResource(R.drawable.dbcd_fb_active);
         findById();
     }
 

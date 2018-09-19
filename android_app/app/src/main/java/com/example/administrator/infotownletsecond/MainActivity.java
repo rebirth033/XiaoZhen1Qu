@@ -250,25 +250,16 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         if (id == "FB") {
             Intent intent = new Intent(MainActivity.this, FBActivity.class);
             startActivity(intent);
-            resetBottomMenu();
-            ImageView ivsy_fb = (ImageView) findViewById(R.id.ivFB);
-            ivsy_fb.setImageResource(R.drawable.dbcd_fb_active);
             finish();//关闭当前页面
         }
         if (id == "XX") {
             Intent intent = new Intent(MainActivity.this, XXActivity.class);
             startActivity(intent);
-            resetBottomMenu();
-            ImageView ivsy_xx = (ImageView) findViewById(R.id.ivXX);
-            ivsy_xx.setImageResource(R.drawable.dbcd_xx_active);
             finish();//关闭当前页面
         }
         if (id == "GRZX") {
             Intent intent = new Intent(MainActivity.this, GRZXActivity.class);
             startActivity(intent);
-            resetBottomMenu();
-            ImageView ivsy_grzx = (ImageView) findViewById(R.id.ivGRZX);
-            ivsy_grzx.setImageResource(R.drawable.dbcd_grzx_active);
             finish();//关闭当前页面
         }
         if (id == "SY_ZF") {

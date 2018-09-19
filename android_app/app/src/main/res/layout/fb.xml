@@ -56,8 +56,8 @@
 
                     <ImageView
                         android:id="@+id/ivFC"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
                         android:src="@drawable/fc" />
@@ -81,8 +81,8 @@
 
                     <ImageView
                         android:id="@+id/ivZP"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
                         android:src="@drawable/zp" />
@@ -106,8 +106,8 @@
 
                     <ImageView
                         android:id="@+id/ivJZ"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
                         android:src="@drawable/jz" />
@@ -140,8 +140,8 @@
 
                     <ImageView
                         android:id="@+id/ivES"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
                         android:src="@drawable/es" />
@@ -165,8 +165,8 @@
 
                     <ImageView
                         android:id="@+id/ivCL"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
                         android:src="@drawable/esc" />
@@ -190,8 +190,8 @@
 
                     <ImageView
                         android:id="@+id/ivSHFW"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
                         android:src="@drawable/shfw" />
@@ -224,8 +224,8 @@
 
                     <ImageView
                         android:id="@+id/ivSWFW"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
                         android:src="@drawable/swfw" />
@@ -249,8 +249,8 @@
 
                     <ImageView
                         android:id="@+id/ivCW"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
                         android:src="@drawable/cw" />
@@ -265,7 +265,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/llZSJM"
+                    android:id="@+id/llJYPX"
                     android:layout_width="130dp"
                     android:layout_height="75dp"
                     android:layout_gravity="left|bottom"
@@ -273,18 +273,18 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/ivZSJM"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:id="@+id/ivJYPX"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/fb_zsjm" />
+                        android:src="@drawable/jypx" />
 
                     <TextView
-                        android:id="@+id/tvZSJM"
+                        android:id="@+id/tvJYPX"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:text="招商加盟"
+                        android:text="教育培训"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -299,31 +299,6 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/llJYPX"
-                    android:layout_width="130dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivJYPX"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/jypx" />
-
-                    <TextView
-                        android:id="@+id/tvJYPX"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="教育培训"
-                        android:textAlignment="center" />
-
-                </LinearLayout>
-
-                <LinearLayout
                     android:id="@+id/llZXJC"
                     android:layout_width="130dp"
                     android:layout_height="75dp"
@@ -333,8 +308,8 @@
 
                     <ImageView
                         android:id="@+id/ivZXJC"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
                         android:src="@drawable/zxjc" />
@@ -348,144 +323,29 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/llPFCG"
-                    android:layout_width="130dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivPFCG"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/pfcg" />
-
-                    <TextView
-                        android:id="@+id/tvPFCG"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="批发采购"
-                        android:textAlignment="center" />
-
-                </LinearLayout>
-
             </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_gravity="bottom"
-        android:background="@null"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/llSY"
-            android:layout_width="100dp"
-            android:layout_height="75dp"
-            android:layout_gravity="left|bottom"
-            android:background="@null"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/ivSY"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center|bottom"
-                android:adjustViewBounds="true"
-                android:src="@drawable/dbcd_sy" />
-
-            <TextView
-                android:id="@+id/tvSY"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:text="首页"
-                android:textAlignment="center" />
-
+    <LinearLayout style="@style/ll_dbcd">
+        <LinearLayout android:id="@+id/llSY" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivSY" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_sy" />
+            <TextView android:id="@+id/tvSY" style="@style/tv_dbcd_item" android:text="首页" />
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llFB"
-            android:layout_width="100dp"
-            android:layout_height="75dp"
-            android:layout_gravity="left|bottom"
-            android:background="@null"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/ivFB"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center|bottom"
-                android:adjustViewBounds="true"
-                android:src="@drawable/dbcd_fb" />
-
-            <TextView
-                android:id="@+id/tvFB"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:text="发布"
-                android:textAlignment="center" />
-
+        <LinearLayout android:id="@+id/llFB" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivFB" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_fb" />
+            <TextView android:id="@+id/tvFB" style="@style/tv_dbcd_item" android:text="发布" />
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llXX"
-            android:layout_width="100dp"
-            android:layout_height="75dp"
-            android:layout_gravity="left|bottom"
-            android:background="@null"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/ivXX"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center|bottom"
-                android:adjustViewBounds="true"
-                android:src="@drawable/dbcd_xx" />
-
-            <TextView
-                android:id="@+id/tvXX"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:text="消息"
-                android:textAlignment="center" />
-
+        <LinearLayout android:id="@+id/llXX" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivXX" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_xx" />
+            <TextView android:id="@+id/tvXX" style="@style/tv_dbcd_item" android:text="消息" />
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llGRZX"
-            android:layout_width="100dp"
-            android:layout_height="75dp"
-            android:layout_gravity="left|bottom"
-            android:background="@null"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/ivGRZX"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center|bottom"
-                android:adjustViewBounds="true"
-                android:src="@drawable/dbcd_grzx" />
-
-            <TextView
-                android:id="@+id/tvGRZX"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:text="个人中心"
-                android:textAlignment="center" />
-
+        <LinearLayout android:id="@+id/llGRZX" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivGRZX" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_grzx" />
+            <TextView android:id="@+id/tvGRZX" style="@style/tv_dbcd_item" android:text="个人中心" />
         </LinearLayout>
-
     </LinearLayout>
 
 </LinearLayout>

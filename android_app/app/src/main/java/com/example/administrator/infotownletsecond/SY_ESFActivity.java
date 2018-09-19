@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +27,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.administrator.infotownletsecond.MainActivity.getHttpBitmap;
 
 public class SY_ESFActivity extends BaseActivity implements View.OnClickListener {
 
@@ -47,6 +45,23 @@ public class SY_ESFActivity extends BaseActivity implements View.OnClickListener
         mivBACK = (ImageView) findViewById(R.id.ivBACK);
         mivBACK.setOnClickListener(this);
         mllCNXH = (LinearLayout) findViewById(R.id.llCNXH);
+    }
+
+    //事件监听
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.ivBACK:
+                YMTZ("BACK");
+                break;
+        }
+    }
+
+    //首页_租房
+    public void YMTZ(String id) {
+        if(id == "BACK") {
+            Intent intent = new Intent(SY_ESFActivity.this,MainActivity.class);
+            finish();//关闭当前页面
+        }
     }
 
     //猜你喜欢
@@ -68,7 +83,7 @@ public class SY_ESFActivity extends BaseActivity implements View.OnClickListener
                 String targeturl = "http://www.915fl.com/FCCX/LoadFCXXWithoutXZQ";
                 try {
                     HttpPost httpRequest = new HttpPost(targeturl);
-                    NameValuePair TYPE = new BasicNameValuePair("TYPE", "FCXX_ZZF");
+                    NameValuePair TYPE = new BasicNameValuePair("TYPE", "FCXX_ESF");
                     NameValuePair Condition = new BasicNameValuePair("Condition", "STATUS:1,ISHOT:1");
                     NameValuePair PageIndex = new BasicNameValuePair("PageIndex", "1");
                     NameValuePair PageSize = new BasicNameValuePair("PageSize", "10");
@@ -138,23 +153,6 @@ public class SY_ESFActivity extends BaseActivity implements View.OnClickListener
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-
-    //事件监听
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.ivBACK:
-                YMTZ("BACK");
-                break;
-        }
-    }
-
-    //首页_租房
-    public void YMTZ(String id) {
-        if(id == "BACK") {
-            Intent intent = new Intent(SY_ESFActivity.this,MainActivity.class);
-            finish();//关闭当前页面
         }
     }
 }

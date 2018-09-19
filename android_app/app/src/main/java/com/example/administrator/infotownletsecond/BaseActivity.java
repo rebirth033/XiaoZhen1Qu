@@ -15,17 +15,17 @@ import java.util.Date;
 
 public class BaseActivity extends Activity implements View.OnClickListener {
 
-    @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransitionExit();
-    }
-
-    @Override
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
-        overridePendingTransitionEnter();
-    }
+//    @Override
+//    public void finish() {
+//        super.finish();
+//        //overridePendingTransitionExit();
+//    }
+//
+//    @Override
+//    public void startActivity(Intent intent) {
+//        super.startActivity(intent);
+//        //overridePendingTransitionEnter();
+//    }
 
     //事件监听
     public void onClick(View view) {
@@ -35,19 +35,19 @@ public class BaseActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    /**
-     * Overrides the pending Activity transition by performing the "Enter" animation.
-     */
-    protected void overridePendingTransitionEnter() {
-        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
-    }
-
-    /**
-     * Overrides the pending Activity transition by performing the "Exit" animation.
-     */
-    protected void overridePendingTransitionExit() {
-        overridePendingTransition(R.anim.slide_left_in, R.anim.slide_right_out);
-    }
+//    /**
+//     * Overrides the pending Activity transition by performing the "Enter" animation.
+//     */
+//    protected void overridePendingTransitionEnter() {
+//        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
+//    }
+//
+//    /**
+//     * Overrides the pending Activity transition by performing the "Exit" animation.
+//     */
+//    protected void overridePendingTransitionExit() {
+//        overridePendingTransition(R.anim.slide_left_in, R.anim.slide_right_out);
+//    }
 
     //时间转换
     public String strToDateLong(String strDate) {
@@ -89,10 +89,10 @@ public class BaseActivity extends Activity implements View.OnClickListener {
         ImageView ivsy_sy = (ImageView) findViewById(R.id.ivSY);
         ivsy_sy.setImageResource(R.drawable.dbcd_sy);
         ImageView ivsy_fb = (ImageView) findViewById(R.id.ivFB);
-        ivsy_sy.setImageResource(R.drawable.dbcd_fb);
+        ivsy_fb.setImageResource(R.drawable.dbcd_fb);
         ImageView ivsy_xx = (ImageView) findViewById(R.id.ivXX);
-        ivsy_sy.setImageResource(R.drawable.dbcd_xx);
+        ivsy_xx.setImageResource(R.drawable.dbcd_xx);
         ImageView ivsy_grzx = (ImageView) findViewById(R.id.ivGRZX);
-        ivsy_sy.setImageResource(R.drawable.dbcd_grzx);
+        ivsy_grzx.setImageResource(R.drawable.dbcd_grzx);
     }
 }

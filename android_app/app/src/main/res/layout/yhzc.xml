@@ -1,127 +1,23 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:baselineAligned="false"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:weightSum="1"
-    tools:context="com.example.administrator.infotownletsecond.YHZCActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" style="@style/ll_yhzc_root"  tools:context="com.example.administrator.infotownletsecond.YHZCActivity">
 
-    <!-- Login progress -->
-
-    <LinearLayout
-        android:layout_width="441dp"
-        android:layout_height="50dp"
-        android:background="@null"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tvGB"
-            android:layout_marginLeft="76dp"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_gravity="left|center_vertical"
-            android:text="X" />
-
-        <TextView
-            android:id="@+id/tvDL"
-            android:layout_marginLeft="236dp"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_gravity="right|center_vertical"
-            android:text="登录" />
-
+    <LinearLayout style="@style/ll_yhzc_top">
+        <TextView android:id="@+id/tvGB" style="@style/tv_top_gb" android:text="X" />
+        <TextView android:id="@+id/tvDL" style="@style/tv_top_zc" android:text="登录" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvLOGO"
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="风铃网"
-        android:textAlignment="center"
-        android:textColor="#bc6ba6"
-        android:textSize="40dp" />
+    <TextView android:id="@+id/tvLOGO" style="@style/tv_yhzc_logo" android:text="风铃网"/>
 
-    <LinearLayout
-        android:layout_width="441dp"
-        android:layout_height="50dp"
-        android:background="@drawable/border"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/etSJH"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="76dp"
-            android:background="@null"
-            android:hint="手机号"
-            android:maxLength="11"
-            android:inputType="phone"
-            android:maxLines="1"
-            android:textSize="22px" />
-
-        <TextView
-            android:id="@+id/tvHQYZM"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:text="获取验证码"
-            android:textAlignment="center"
-            android:textSize="22px" />
-
+    <LinearLayout style="@style/ll_yhzc_sjh">
+        <EditText android:id="@+id/etSJH" style="@style/et_yhzc_sjh" android:background="@drawable/border" android:hint="手机号" />
+        <TextView android:id="@+id/tvHQYZM" style="@style/tv_yhzc_hqyzm" android:text="获取验证码" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/etDTM"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/border"
-        android:textSize="22px"
-        android:maxLines="1"
-        android:inputType="number"
-        android:hint="动态码" />
+    <EditText android:id="@+id/etDTM" style="@style/et_yhzc_dtm" android:background="@drawable/border" android:hint="动态码" />
 
-    <EditText
-        android:id="@+id/etMM"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/border"
-        android:textSize="22px"
-        android:maxLines="1"
-        android:hint="密码" />
+    <EditText android:id="@+id/etMM" style="@style/et_yhzc_mm" android:background="@drawable/border" android:hint="密码" />
 
-    <Button
-        android:id="@+id/btnZC"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#bc6ba6"
-        android:layout_marginTop="10dp"
-        android:text="注册"
-        android:textColor="#ffffff" />
+    <Button android:id="@+id/btnZC" style="@style/btn_zc" android:text="注册" />
 
-    <TextView
-        android:id="@+id/tvZCTS"
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:layout_marginTop="15dp"
-        android:textSize="18px"
-        android:textColor="#9E9E9E"
-        android:text="注册前请阅读《风铃网服务协议》,注册即表示同意此协议"
-        android:textAlignment="center" />
-
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
+    <TextView android:id="@+id/tvZCTS" style="@style/tv_zcts" android:text="注册前请阅读《风铃网服务协议》,注册即表示同意此协议" />
 
 </LinearLayout>

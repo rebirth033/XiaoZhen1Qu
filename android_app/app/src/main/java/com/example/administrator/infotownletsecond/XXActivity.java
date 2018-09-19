@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 public class XXActivity extends BaseActivity implements View.OnClickListener {
 
@@ -12,6 +13,9 @@ public class XXActivity extends BaseActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.xx);
+        resetBottomMenu();
+        ImageView ivsy_xx = (ImageView) findViewById(R.id.ivXX);
+        ivsy_xx.setImageResource(R.drawable.dbcd_xx_active);
         findById();
     }
 
