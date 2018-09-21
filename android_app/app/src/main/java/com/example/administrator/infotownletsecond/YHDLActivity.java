@@ -65,8 +65,13 @@ public class YHDLActivity extends AppCompatActivity implements OnClickListener {
                     JSONObject jsonobject = new JSONObject(result.toString());
                     String Result = jsonobject.getString("Result");
                     String Message = jsonobject.getString("Message");
-                    if(Result == "1") DLCG();
-                    else DLSB(Message);
+                    String temp = Result;
+                    if(Result.indexOf("1") != -1) {
+                        DLCG();
+                    }
+                    else {
+                        DLSB(Message);
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -100,7 +105,7 @@ public class YHDLActivity extends AppCompatActivity implements OnClickListener {
     }
     //登录成功
     public void DLCG(){
-        Intent intent = new Intent(YHDLActivity.this, GRZXActivity.class);
+        Intent intent = new Intent(YHDLActivity.this, GRZX_MainActivity.class);
         startActivity(intent);
         finish();//关闭当前页面
     }

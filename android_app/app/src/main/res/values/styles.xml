@@ -30,12 +30,14 @@
         <item name="android:layout_height">75dp</item>
         <item name="android:layout_gravity">bottom</item>
         <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/colorGray</item>
     </style>
     <style name="ll_dbcd_item">
         <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">75dp</item>
         <item name="android:layout_gravity">left|bottom</item>
         <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">8dp</item>
     </style>
     <style name="iv_dbcd_item">
         <item name="android:layout_width">27dp</item>

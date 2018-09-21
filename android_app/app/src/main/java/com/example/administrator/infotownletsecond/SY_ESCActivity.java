@@ -53,7 +53,7 @@ public class SY_ESCActivity extends BaseActivity implements View.OnClickListener
     //首页_租房
     public void YMTZ(String id) {
         if(id == "BACK") {
-            Intent intent = new Intent(SY_ESCActivity.this,MainActivity.class);
+            Intent intent = new Intent(SY_ESCActivity.this,SY_MainActivity.class);
             finish();//关闭当前页面
         }
     }

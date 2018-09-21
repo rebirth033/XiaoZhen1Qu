@@ -1,423 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/llSY_ZF"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/llSY_ZF" style="@style/ll_sy_zf_root">
 
-    <ScrollView
-        android:id="@+id/sv_channel"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:fillViewport="false"
-        android:scrollbars="none">
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_sy_zf_channel">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <LinearLayout style="@style/ll_sy_zf_main">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:background="#bc6ba6"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/ivBACK"
-                    android:layout_width="18dp"
-                    android:layout_height="42dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:adjustViewBounds="true"
-                    android:background="#bc6ba6"
-                    android:src="@drawable/arrow_back" />
-
-                <EditText
-                    android:id="@+id/etSJH"
-                    android:layout_width="330dp"
-                    android:layout_height="42dp"
-                    android:layout_gravity="center"
-                    android:textAlignment="center"
-                    android:background="#ffffff"
-                    android:hint="请输入类别或关键字"
-                    android:textSize="15dp" />
-
+            <LinearLayout style="@style/ll_sy_zf_top">
+                <ImageView android:id="@+id/ivBACK" style="@style/iv_sy_zf_back" android:src="@drawable/arrow_back" />
+                <EditText android:id="@+id/etSS" style="@style/tv_sy_zf_ss" android:hint="请输入类别或关键字"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_gravity="bottom"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_ZZ"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_ZZ"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_zz" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_ZZ"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="整租"
-                        android:textAlignment="center" />
-
+            <LinearLayout style="@style/ll_sy_zf_fl_row">
+                <LinearLayout android:id="@+id/llSY_ZF_ZZ" style="@style/ll_sy_zf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_ZZ" style="@style/iv_sy_zf_fl_item" android:src="@drawable/sy_zf_zz" />
+                    <TextView android:id="@+id/tvSY_ZF_ZZ" style="@style/tv_sy_zf_fl_item" android:text="整租" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llZP"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_HZ"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_hz" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_HZ"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="合租"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llZP" style="@style/ll_sy_zf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_HZ" style="@style/iv_sy_zf_fl_item" android:src="@drawable/sy_zf_hz" />
+                    <TextView android:id="@+id/tvSY_ZF_HZ" style="@style/tv_sy_zf_fl_item" android:text="合租" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_DZ"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_DZ"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_dz" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_DZ"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="短租"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_ZF_DZ" style="@style/ll_sy_zf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_DZ" style="@style/iv_sy_zf_fl_item" android:src="@drawable/sy_zf_dz" />
+                    <TextView android:id="@+id/tvSY_ZF_DZ" style="@style/tv_sy_zf_fl_item" android:text="短租" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_GRFY"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_GRFY"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_grfy" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_GRFY"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="个人房源"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_ZF_GRFY" style="@style/ll_sy_zf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_GRFY" style="@style/iv_sy_zf_fl_item" android:src="@drawable/sy_zf_grfy" />
+                    <TextView android:id="@+id/tvSY_ZF_GRFY" style="@style/tv_sy_zf_fl_item" android:text="个人房源" />
                 </LinearLayout>
-
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_gravity="bottom"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_XZL"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_XZL"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_xzl" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_XZL"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="写字楼"
-                        android:textAlignment="center" />
-
+            <LinearLayout style="@style/ll_sy_zf_fl_row">
+                <LinearLayout android:id="@+id/llSY_ZF_XZL" style="@style/ll_sy_zf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_XZL" style="@style/iv_sy_zf_fl_item" android:src="@drawable/sy_zf_xzl" />
+                    <TextView android:id="@+id/tvSY_ZF_XZL" style="@style/tv_sy_zf_fl_item" android:text="写字楼" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_SP"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_SP"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_sp" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_SP"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="商铺"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_ZF_SP" style="@style/ll_sy_zf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_SP" style="@style/iv_sy_zf_fl_item" android:src="@drawable/sy_zf_sp" />
+                    <TextView android:id="@+id/tvSY_ZF_SP" style="@style/tv_sy_zf_fl_item" android:text="商铺" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_CW"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_CW"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_cw" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_CW"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="车位"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_ZF_CW" style="@style/ll_sy_zf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_CW" style="@style/iv_sy_zf_fl_item" android:src="@drawable/sy_zf_cw" />
+                    <TextView android:id="@+id/tvSY_ZF_CW" style="@style/tv_sy_zf_fl_item" android:text="车位" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_CF"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_CF"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_cf" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_CF"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="厂房"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_ZF_CF" style="@style/ll_sy_zf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_CF" style="@style/iv_sy_zf_fl_item" android:src="@drawable/sy_zf_cf" />
+                    <TextView android:id="@+id/tvSY_ZF_CF" style="@style/tv_sy_zf_fl_item" android:text="厂房" />
                 </LinearLayout>
-
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="410dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvXGFW"
-                    android:layout_width="80dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@null"
-                    android:paddingTop="13dp"
-                    android:text="相关服务"
-                    android:textSize="18dp" />
-
+            <LinearLayout style="@style/ll_sy_zf_xgfw_top">
+                <TextView android:id="@+id/tvXGFW" style="@style/tv_sy_zf_xgfw_top" android:text="相关服务" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_gravity="bottom"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_BJ"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_BJ"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_bj" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_BJ"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="搬家"
-                        android:textAlignment="center" />
-
+            <LinearLayout style="@style/ll_sy_zf_xgfw_row">
+                <LinearLayout android:id="@+id/llSY_ZF_BJ" style="@style/ll_sy_zf_xgfw_item">
+                    <ImageView android:id="@+id/ivSY_ZF_BJ" style="@style/iv_sy_zf_xgfw_item" android:src="@drawable/sy_zf_bj" />
+                    <TextView android:id="@+id/tvSY_ZF_BJ" style="@style/tv_sy_zf_xgfw_item" android:text="搬家" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_BAOJ"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_BAOJ"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_baoj" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_BAOJ"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="保洁"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_ZF_BAOJ" style="@style/ll_sy_zf_xgfw_item">
+                    <ImageView android:id="@+id/ivSY_ZF_BAOJ" style="@style/iv_sy_zf_xgfw_item" android:src="@drawable/sy_zf_baoj" />
+                    <TextView android:id="@+id/tvSY_ZF_BAOJ" style="@style/tv_sy_zf_xgfw_item" android:text="保洁" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_WX"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_WX"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_wx" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_WX"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="维修"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_ZF_WX" style="@style/ll_sy_zf_xgfw_item">
+                    <ImageView android:id="@+id/ivSY_ZF_WX" style="@style/iv_sy_zf_xgfw_item" android:src="@drawable/sy_zf_wx" />
+                    <TextView android:id="@+id/tvSY_ZF_WX" style="@style/tv_sy_zf_xgfw_item" android:text="维修" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_PS"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_PS"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_zf_ps" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_PS"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="配送"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_ZF_PS" style="@style/ll_sy_zf_xgfw_item">
+                    <ImageView android:id="@+id/ivSY_ZF_PS" style="@style/iv_sy_zf_xgfw_item" android:src="@drawable/sy_zf_ps" />
+                    <TextView android:id="@+id/tvSY_ZF_PS" style="@style/tv_sy_zf_xgfw_item" android:text="配送" />
                 </LinearLayout>
-
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="410dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvCNXH"
-                    android:layout_width="80dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@null"
-                    android:paddingTop="13dp"
-                    android:text="猜你喜欢"
-                    android:textSize="18dp" />
-
+            <LinearLayout style="@style/ll_sy_zf_cnxh_top">
+                <TextView android:id="@+id/tvCNXH" style="@style/tv_sy_zf_cnxh_top" android:text="猜你喜欢" />
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/llCNXH"
-                android:layout_width="400dp"
-                android:layout_height="match_parent"
-                android:background="@null"
-                android:orientation="vertical">
+            <LinearLayout android:id="@+id/llCNXH" style="@style/ll_sy_zf_cnxh_content">
 
             </LinearLayout>
 
@@ -425,91 +83,19 @@
 
     </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_gravity="bottom"
-        android:background="@null"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/llFB"
-            android:layout_width="130dp"
-            android:layout_height="75dp"
-            android:layout_gravity="left|bottom"
-            android:paddingTop="8dp"
-            android:background="@null"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/ivFB"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center|bottom"
-                android:adjustViewBounds="true"
-                android:src="@drawable/dbcd_fb" />
-
-            <TextView
-                android:id="@+id/tvFB"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:text="租房"
-                android:textAlignment="center" />
-
+    <LinearLayout style="@style/ll_zf_dbdh">
+        <LinearLayout android:id="@+id/llFB" style="@style/ll_zf_dbdh_item">
+            <ImageView android:id="@+id/ivFB" style="@style/iv_zf_dbdh_item" android:src="@drawable/dbcd_fb" />
+            <TextView android:id="@+id/tvFB" style="@style/tv_zf_dbdh_item" android:text="租房" />
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llXX"
-            android:layout_width="130dp"
-            android:layout_height="75dp"
-            android:layout_gravity="left|bottom"
-            android:paddingTop="8dp"
-            android:background="@null"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/ivXX"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center|bottom"
-                android:adjustViewBounds="true"
-                android:src="@drawable/dbcd_xx" />
-
-            <TextView
-                android:id="@+id/tvXX"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:text="发布"
-                android:textAlignment="center" />
-
+        <LinearLayout android:id="@+id/llXX" style="@style/ll_zf_dbdh_item">
+            <ImageView android:id="@+id/ivXX" style="@style/iv_zf_dbdh_item" android:src="@drawable/dbcd_xx" />
+            <TextView android:id="@+id/tvXX" style="@style/tv_zf_dbdh_item" android:text="发布" />
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/llGRZX"
-            android:layout_width="130dp"
-            android:layout_height="75dp"
-            android:layout_gravity="left|bottom"
-            android:paddingTop="8dp"
-            android:background="@null"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/ivGRZX"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center|bottom"
-                android:adjustViewBounds="true"
-                android:src="@drawable/dbcd_grzx" />
-
-            <TextView
-                android:id="@+id/tvGRZX"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:text="我的"
-                android:textAlignment="center" />
-
+        <LinearLayout android:id="@+id/llGRZX" style="@style/ll_zf_dbdh_item">
+            <ImageView android:id="@+id/ivGRZX" style="@style/iv_zf_dbdh_item" android:src="@drawable/dbcd_grzx" />
+            <TextView android:id="@+id/tvGRZX" style="@style/tv_zf_dbdh_item" android:text="我的" />
         </LinearLayout>
-
     </LinearLayout>
 
 </LinearLayout>

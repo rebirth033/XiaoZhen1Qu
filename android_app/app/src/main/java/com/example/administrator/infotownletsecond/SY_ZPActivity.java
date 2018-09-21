@@ -1,7 +1,6 @@
 package com.example.administrator.infotownletsecond;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -37,7 +36,7 @@ public class SY_ZPActivity extends BaseActivity implements View.OnClickListener 
     //首页_招聘
     public void YMTZ(String id) {
         if(id == "BACK") {
-            Intent intent = new Intent(SY_ZPActivity.this,MainActivity.class);
+            Intent intent = new Intent(SY_ZPActivity.this,SY_MainActivity.class);
             finish();//关闭当前页面
         }
     }

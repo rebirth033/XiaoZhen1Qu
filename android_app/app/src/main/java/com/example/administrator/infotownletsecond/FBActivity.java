@@ -11,7 +11,7 @@ public class FBActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fb);
+        setContentView(R.layout.fb_main);
         resetBottomMenu();
         ImageView ivsy_fb = (ImageView) findViewById(R.id.ivFB);
         ivsy_fb.setImageResource(R.drawable.dbcd_fb_active);
@@ -48,12 +48,12 @@ public class FBActivity extends BaseActivity implements View.OnClickListener {
     //个人中心
     public void YMTZ(String id) {
         if(id == "SY") {
-            Intent intent = new Intent(FBActivity.this, MainActivity.class);
+            Intent intent = new Intent(FBActivity.this, SY_MainActivity.class);
             startActivity(intent);
             finish();//关闭当前页面
         }
         if(id == "GRZX") {
-            Intent intent = new Intent(FBActivity.this, GRZXActivity.class);
+            Intent intent = new Intent(FBActivity.this, GRZX_MainActivity.class);
             startActivity(intent);
             finish();//关闭当前页面
         }

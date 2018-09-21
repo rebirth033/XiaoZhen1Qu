@@ -1,596 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/llSY_CW"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/llSY_CW" style="@style/ll_sy_cw_root">
 
-    <ScrollView
-        android:id="@+id/sv_channel"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:fillViewport="false"
-        android:scrollbars="none">
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_sy_cw_channel">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <LinearLayout style="@style/ll_sy_cw_main">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:background="#bc6ba6"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/ivBACK"
-                    android:layout_width="18dp"
-                    android:layout_height="42dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:adjustViewBounds="true"
-                    android:background="#bc6ba6"
-                    android:src="@drawable/arrow_back" />
-
-                <TextView
-                    android:id="@+id/etSJH"
-                    android:layout_width="326dp"
-                    android:layout_height="42dp"
-                    android:textAlignment="center"
-                    android:layout_gravity="center"
-                    android:background="#bc6ba6"
-                    android:textColor="#FFFFFF"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="8dp"
-                    android:text="宠物"
-                    android:textSize="20dp" />
-
+            <LinearLayout style="@style/ll_sy_cw_top">
+                <ImageView android:id="@+id/ivBACK" style="@style/iv_sy_cw_back" android:src="@drawable/arrow_back" />
+                <TextView android:id="@+id/etTITLE" style="@style/tv_sy_cw_title" android:text="宠物" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_gravity="bottom"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_ZZ"
-                    android:layout_width="130dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_ZZ"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_cw_cwg" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_ZZ"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="宠物狗"
-                        android:textAlignment="center" />
-
+            <LinearLayout style="@style/ll_sy_cw_fl_row">
+                <LinearLayout android:id="@+id/llSY_ZF_ZZ" style="@style/ll_sy_cw_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_ZZ" style="@style/iv_sy_cw_fl_item" android:src="@drawable/sy_cw_cwg" />
+                    <TextView android:id="@+id/tvSY_ZF_ZZ" style="@style/tv_sy_cw_fl_item" android:text="宠物狗" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llZP"
-                    android:layout_width="130dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_HZ"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_cw_cwm" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_HZ"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="宠物猫"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llZP" style="@style/ll_sy_cw_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_HZ" style="@style/iv_sy_cw_fl_item" android:src="@drawable/sy_cw_cwm" />
+                    <TextView android:id="@+id/tvSY_ZF_HZ" style="@style/tv_sy_cw_fl_item" android:text="宠物猫" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_DZ"
-                    android:layout_width="130dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_DZ"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_cw_hnyc" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_DZ"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="花鸟鱼虫"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_ZF_DZ" style="@style/ll_sy_cw_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_DZ" style="@style/iv_sy_cw_fl_item" android:src="@drawable/sy_cw_hnyc" />
+                    <TextView android:id="@+id/tvSY_ZF_DZ" style="@style/tv_sy_cw_fl_item" android:text="花鸟鱼虫" />
                 </LinearLayout>
-
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_gravity="bottom"
-                android:background="@null"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_GRFY"
-                    android:layout_width="130dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_GRFY"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_cw_cwyp" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_GRFY"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="宠物用品"
-                        android:textAlignment="center" />
-
+            <LinearLayout style="@style/ll_sy_cw_fl_row">
+                <LinearLayout android:id="@+id/llSY_ZF_GRFY" style="@style/ll_sy_cw_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_GRFY" style="@style/iv_sy_cw_fl_item" android:src="@drawable/sy_cw_cwyp" />
+                    <TextView android:id="@+id/tvSY_ZF_GRFY" style="@style/tv_sy_cw_fl_item" android:text="宠物用品" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_ZF_XZL"
-                    android:layout_width="130dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_ZF_XZL"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_cw_cwfw" />
-
-                    <TextView
-                        android:id="@+id/tvSY_ZF_XZL"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="宠物服务"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_ZF_XZL" style="@style/ll_sy_cw_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_XZL" style="@style/iv_sy_cw_fl_item" android:src="@drawable/sy_cw_cwfw" />
+                    <TextView android:id="@+id/tvSY_ZF_XZL" style="@style/tv_sy_cw_fl_item" android:text="宠物服务" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_CW_ZS"
-                    android:layout_width="130dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_CW_ZS"
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/sy_cw_zsly" />
-
-                    <TextView
-                        android:id="@+id/tvSY_CW_ZS"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="赠送领养"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_CW_ZS" style="@style/ll_sy_cw_fl_item">
+                    <ImageView android:id="@+id/ivSY_CW_ZS" style="@style/iv_sy_cw_fl_item" android:src="@drawable/sy_cw_zsly" />
+                    <TextView android:id="@+id/tvSY_CW_ZS" style="@style/tv_sy_cw_fl_item" android:text="赠送领养" />
                 </LinearLayout>
-
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="410dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvCWG"
-                    android:layout_width="80dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@null"
-                    android:paddingTop="13dp"
-                    android:textStyle="bold"
-                    android:text="宠物狗"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/tvCWGCKQB"
-                    android:layout_width="70dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="180dp"
-                    android:background="@null"
-                    android:paddingTop="13dp"
-                    android:text="查看全部"
-                    android:textSize="15sp" />
-
-                <ImageView
-                    android:id="@+id/ivCWG"
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:layout_marginTop="22dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/arrow_right" />
-
+            <LinearLayout style="@style/ll_sy_cw_xl">
+                <TextView android:id="@+id/tvCWG" style="@style/tv_sy_cw_xl_left" android:text="宠物狗" />
+                <TextView android:id="@+id/tvCWGCKQB" style="@style/tv_sy_cw_xl_right" android:text="查看全部" />
+                <ImageView android:id="@+id/ivCWG" style="@style/iv_sy_cw_xl_right" android:src="@drawable/arrow_right" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_gravity="bottom"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/llSY_CW_LBLD"
-                    android:layout_width="130dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_CW_LBLD"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
-
-                    <TextView
-                        android:id="@+id/tvSY_CW_LBLD"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="拉布拉多"
-                        android:textSize="16dp"
-                        android:textAlignment="center" />
-
+            <LinearLayout style="@style/ll_sy_cw_xl_row">
+                <LinearLayout android:id="@+id/llSY_CW_LBLD" style="@style/ll_sy_cw_xl_item">
+                    <ImageView android:id="@+id/ivSY_CW_LBLD" style="@style/iv_sy_cw_xl_item" android:src="@drawable/no_image" />
+                    <TextView android:id="@+id/tvSY_CW_LBLD" style="@style/tv_sy_cw_xl_item" android:text="拉布拉多" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_CW_JM"
-                    android:layout_width="130dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_CW_JM"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
-
-                    <TextView
-                        android:id="@+id/tvSY_CW_JM"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="金毛"
-                        android:textSize="16dp"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_CW_JM" style="@style/ll_sy_cw_xl_item">
+                    <ImageView android:id="@+id/ivSY_CW_JM" style="@style/iv_sy_cw_xl_item" android:src="@drawable/no_image" />
+                    <TextView android:id="@+id/tvSY_CW_JM" style="@style/tv_sy_cw_xl_item" android:text="金毛" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_CW_TD"
-                    android:layout_width="130dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_CW_TD"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
-
-                    <TextView
-                        android:id="@+id/tvSY_CW_TD"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="泰迪"
-                        android:textSize="16dp"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_CW_TD" style="@style/ll_sy_cw_xl_item">
+                    <ImageView android:id="@+id/ivSY_CW_TD" style="@style/iv_sy_cw_xl_item" android:src="@drawable/no_image" />
+                    <TextView android:id="@+id/tvSY_CW_TD" style="@style/tv_sy_cw_xl_item" android:text="泰迪" />
                 </LinearLayout>
-
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="410dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvCWM"
-                    android:layout_width="80dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@null"
-                    android:paddingTop="13dp"
-                    android:textStyle="bold"
-                    android:text="宠物猫"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/tvCWMCKQB"
-                    android:layout_width="70dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="180dp"
-                    android:background="@null"
-                    android:paddingTop="13dp"
-                    android:text="查看全部"
-                    android:textSize="15sp" />
-
-                <ImageView
-                    android:id="@+id/ivCWM"
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:layout_marginTop="22dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/arrow_right" />
-
+            <LinearLayout style="@style/ll_sy_cw_xl">
+                <TextView android:id="@+id/tvCWM" style="@style/tv_sy_cw_xl_left" android:text="宠物猫" />
+                <TextView android:id="@+id/tvCWMCKQB" style="@style/tv_sy_cw_xl_right" android:text="查看全部" />
+                <ImageView android:id="@+id/ivCWM" style="@style/iv_sy_cw_xl_right" android:src="@drawable/arrow_right" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_gravity="bottom"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/llSY_CW_DMM"
-                    android:layout_width="130dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_CW_DMM"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
-
-                    <TextView
-                        android:id="@+id/tvSY_CW_DMM"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="短毛猫"
-                        android:textSize="16dp"
-                        android:textAlignment="center" />
-
+            <LinearLayout style="@style/ll_sy_cw_xl_row">
+                <LinearLayout android:id="@+id/llSY_CW_DMM" style="@style/ll_sy_cw_xl_item">
+                    <ImageView android:id="@+id/ivSY_CW_DMM" style="@style/iv_sy_cw_xl_item" android:src="@drawable/no_image" />
+                    <TextView android:id="@+id/tvSY_CW_DMM" style="@style/tv_sy_cw_xl_item" android:text="短毛猫" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_CW_BOM"
-                    android:layout_width="130dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_CW_BOM"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
-
-                    <TextView
-                        android:id="@+id/tvSY_CW_BOM"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="布偶猫"
-                        android:textSize="16dp"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_CW_BOM" style="@style/ll_sy_cw_xl_item">
+                    <ImageView android:id="@+id/ivSY_CW_BOM" style="@style/iv_sy_cw_xl_item" android:src="@drawable/no_image" />
+                    <TextView android:id="@+id/tvSY_CW_BOM" style="@style/tv_sy_cw_xl_item" android:text="布偶猫" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_CW_JFM"
-                    android:layout_width="130dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_CW_JFM"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
-
-                    <TextView
-                        android:id="@+id/tvSY_CW_JFM"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="加菲猫"
-                        android:textSize="16dp"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_CW_JFM" style="@style/ll_sy_cw_xl_item">
+                    <ImageView android:id="@+id/ivSY_CW_JFM" style="@style/iv_sy_cw_xl_item" android:src="@drawable/no_image" />
+                    <TextView android:id="@+id/tvSY_CW_JFM" style="@style/tv_sy_cw_xl_item" android:text="加菲猫" />
                 </LinearLayout>
-
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="410dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvHNYC"
-                    android:layout_width="100dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@null"
-                    android:paddingTop="13dp"
-                    android:textStyle="bold"
-                    android:text="花鸟鱼虫"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/tvHNYCCKQB"
-                    android:layout_width="70dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="160dp"
-                    android:background="@null"
-                    android:paddingTop="13dp"
-                    android:text="查看全部"
-                    android:textSize="15sp" />
-
-                <ImageView
-                    android:id="@+id/ivHNYC"
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:layout_marginTop="22dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/arrow_right" />
-
+            <LinearLayout style="@style/ll_sy_cw_xl">
+                <TextView android:id="@+id/tvHNYC" style="@style/tv_sy_cw_xl_left" android:text="花鸟鱼虫" />
+                <TextView android:id="@+id/tvHNYCCKQB" style="@style/tv_sy_cw_xl_right" android:text="查看全部" />
+                <ImageView android:id="@+id/ivHNYC" style="@style/iv_sy_cw_xl_right" android:src="@drawable/arrow_right" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_gravity="bottom"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/llSY_CW_GSY"
-                    android:layout_width="130dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_CW_GSY"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
-
-                    <TextView
-                        android:id="@+id/tvSY_CW_GSY"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="观赏鱼"
-                        android:textSize="16dp"
-                        android:textAlignment="center" />
-
+            <LinearLayout style="@style/ll_sy_cw_xl_row">
+                <LinearLayout android:id="@+id/llSY_CW_GSY" style="@style/ll_sy_cw_xl_item">
+                    <ImageView android:id="@+id/ivSY_CW_GSY" style="@style/iv_sy_cw_xl_item"  android:src="@drawable/no_image" />
+                    <TextView android:id="@+id/tvSY_CW_GSY" style="@style/tv_sy_cw_xl_item" android:text="观赏鱼" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_CW_WSN"
-                    android:layout_width="130dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_CW_WSN"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
-
-                    <TextView
-                        android:id="@+id/tvSY_CW_WSN"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="玩赏鸟"
-                        android:textSize="16dp"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_CW_WSN" style="@style/ll_sy_cw_xl_item">
+                    <ImageView android:id="@+id/ivSY_CW_WSN" style="@style/iv_sy_cw_xl_item" android:src="@drawable/no_image" />
+                    <TextView android:id="@+id/tvSY_CW_WSN" style="@style/tv_sy_cw_xl_item" android:text="玩赏鸟" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llSY_CW_QTXC"
-                    android:layout_width="130dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivSY_CW_QTXC"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
-
-                    <TextView
-                        android:id="@+id/tvSY_CW_QTXC"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="其他小宠"
-                        android:textSize="16dp"
-                        android:textAlignment="center" />
-
+                <LinearLayout android:id="@+id/llSY_CW_QTXC" style="@style/ll_sy_cw_xl_item">
+                    <ImageView android:id="@+id/ivSY_CW_QTXC" style="@style/iv_sy_cw_xl_item" android:src="@drawable/no_image" />
+                    <TextView android:id="@+id/tvSY_CW_QTXC" style="@style/tv_sy_cw_xl_item" android:text="其他小宠" />
                 </LinearLayout>
-
             </LinearLayout>
 
         </LinearLayout>

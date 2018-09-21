@@ -3,7 +3,6 @@ package com.example.administrator.infotownletsecond;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +54,7 @@ public class SY_ZFActivity extends BaseActivity implements View.OnClickListener 
     //首页_租房
     public void YMTZ(String id) {
         if (id == "BACK") {
-            Intent intent = new Intent(SY_ZFActivity.this, MainActivity.class);
+            Intent intent = new Intent(SY_ZFActivity.this, SY_MainActivity.class);
             finish();//关闭当前页面
         }
     }

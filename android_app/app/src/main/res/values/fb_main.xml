@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ll_xzfblb_root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="sv_xzfblb_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">600dp</item>
+        <item name="android:fillViewport">false</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+    <style name="ll_xzfblb_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="ll_xzfblb_top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="tv_xzfblb_title">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">50dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tv_xzfblb_wdfb">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+    <style name="ll_xzfblb_row">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">75dp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="ll_xzfblb_item">
+        <item name="android:layout_width">130dp</item>
+        <item name="android:layout_height">75dp</item>
+        <item name="android:layout_gravity">left|bottom</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="iv_xzfblb_item">
+        <item name="android:layout_width">38dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_gravity">center|bottom</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+    <style name="tv_xzfblb_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+</resources>

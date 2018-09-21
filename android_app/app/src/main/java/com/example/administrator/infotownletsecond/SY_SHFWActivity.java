@@ -33,7 +33,7 @@ public class SY_SHFWActivity extends BaseActivity implements View.OnClickListene
     //首页_租房
     public void YMTZ(String id) {
         if(id == "BACK") {
-            Intent intent = new Intent(SY_SHFWActivity.this,MainActivity.class);
+            Intent intent = new Intent(SY_SHFWActivity.this,SY_MainActivity.class);
             finish();//关闭当前页面
         }
     }

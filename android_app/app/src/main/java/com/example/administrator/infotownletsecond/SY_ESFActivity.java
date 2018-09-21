@@ -1,8 +1,6 @@
 package com.example.administrator.infotownletsecond;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -21,9 +19,6 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,7 +54,7 @@ public class SY_ESFActivity extends BaseActivity implements View.OnClickListener
     //首页_租房
     public void YMTZ(String id) {
         if(id == "BACK") {
-            Intent intent = new Intent(SY_ESFActivity.this,MainActivity.class);
+            Intent intent = new Intent(SY_ESFActivity.this,SY_MainActivity.class);
             finish();//关闭当前页面
         }
     }

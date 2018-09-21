@@ -158,7 +158,7 @@ public class YHZCActivity extends AppCompatActivity implements OnClickListener {
     }
     //注册成功
     public void ZCCG(){
-        Intent intent = new Intent(YHZCActivity.this, GRZXActivity.class);
+        Intent intent = new Intent(YHZCActivity.this, GRZX_MainActivity.class);
         startActivity(intent);
         finish();//关闭当前页面
     }

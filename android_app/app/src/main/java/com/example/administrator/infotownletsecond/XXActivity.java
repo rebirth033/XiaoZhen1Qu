@@ -1,7 +1,6 @@
 package com.example.administrator.infotownletsecond;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,7 @@ public class XXActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.xx);
+        setContentView(R.layout.xx_main);
         resetBottomMenu();
         ImageView ivsy_xx = (ImageView) findViewById(R.id.ivXX);
         ivsy_xx.setImageResource(R.drawable.dbcd_xx_active);
@@ -49,7 +48,7 @@ public class XXActivity extends BaseActivity implements View.OnClickListener {
     //个人中心
     public void YMTZ(String id) {
         if(id == "SY") {
-            Intent intent = new Intent(XXActivity.this, MainActivity.class);
+            Intent intent = new Intent(XXActivity.this, SY_MainActivity.class);
             startActivity(intent);
             finish();//关闭当前页面
         }
@@ -59,7 +58,7 @@ public class XXActivity extends BaseActivity implements View.OnClickListener {
             finish();//关闭当前页面
         }
         if(id == "GRZX") {
-            Intent intent = new Intent(XXActivity.this, GRZXActivity.class);
+            Intent intent = new Intent(XXActivity.this, GRZX_MainActivity.class);
             startActivity(intent);
             finish();//关闭当前页面
         }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_xx_main_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_xx_main_channel">
+
+        <LinearLayout style="@style/ll_xx_main_main">
+
+            <LinearLayout style="@style/ll_xx_main_top">
+                <TextView android:id="@+id/tvTitle" style="@style/tv_xx_main_title" android:text="消息" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_xx_main_fl_row">
+                <LinearLayout android:id="@+id/llJXHD" style="@style/ll_xx_main_fl_item">
+                    <ImageView android:id="@+id/ivJXHD" style="@style/iv_xx_main_fl_item" android:src="@drawable/xx_jxhd" />
+                    <TextView android:id="@+id/tvJXHD" style="@style/tv_xx_main_fl_item" android:text="精选活动" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llHDXX" style="@style/ll_xx_main_fl_item">
+                    <ImageView android:id="@+id/ivHDXX" style="@style/iv_xx_main_fl_item" android:src="@drawable/xx_hdxx" />
+                    <TextView android:id="@+id/tvHDXX" style="@style/tv_xx_main_fl_item" android:text="互动消息" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llDYTX" style="@style/ll_xx_main_fl_item">
+                    <ImageView android:id="@+id/ivDYTX" style="@style/iv_xx_main_fl_item" android:src="@drawable/xx_dytx" />
+                    <TextView android:id="@+id/tvDYTX" style="@style/tv_xx_main_fl_item" android:text="订阅提醒" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llJRTJ" style="@style/ll_xx_main_fl_item">
+                    <ImageView android:id="@+id/ivJRTJ" style="@style/iv_xx_main_fl_item" android:src="@drawable/xx_jrtj" />
+                    <TextView android:id="@+id/tvJRTJ" style="@style/tv_xx_main_fl_item" android:text="今日推荐" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout style="@style/ll_dbcd">
+        <LinearLayout android:id="@+id/llSY" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivSY" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_sy" />
+            <TextView android:id="@+id/tvSY" style="@style/tv_dbcd_item" android:text="首页" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/llFB" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivFB" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_fb" />
+            <TextView android:id="@+id/tvFB" style="@style/tv_dbcd_item" android:text="发布" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/llXX" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivXX" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_xx" />
+            <TextView android:id="@+id/tvXX" style="@style/tv_dbcd_item" android:text="消息" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/llGRZX" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivGRZX" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_grzx" />
+            <TextView android:id="@+id/tvGRZX" style="@style/tv_dbcd_item" android:text="个人中心" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
