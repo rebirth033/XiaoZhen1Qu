@@ -84,10 +84,10 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<YHJBXX> YHJBXXs = DAO.GetObjectList<YHJBXX>(string.Format("FROM YHJBXX WHERE SJ='{0}'", SJ));
-                if (YHJBXXs.Count > 0)
+                IList<YHJBXX> YHZCs = DAO.GetObjectList<YHJBXX>(string.Format("FROM YHJBXX WHERE SJ='{0}'", SJ));
+                if (YHZCs.Count > 0)
                 {
-                    return YHJBXXs[0];
+                    return YHZCs[0];
                 }
                 else
                 {

@@ -172,7 +172,7 @@ function SJCheck() {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: getRootPath() + "/YHJBXX/ValidateSJ",
+            url: getRootPath() + "/YHZC/ValidateSJ",
             data: {
                 SJ: $("#SJ").val()
             },
@@ -224,7 +224,7 @@ function Register() {
     var obj = jsonObj.GetJsonObject();
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/YHJBXX/Register",
+        url: getRootPath() + "/YHZC/Register",
         dataType: "json",
         data:
         {
@@ -317,7 +317,7 @@ function DragValidate(dargEle, msgEle) {
 function ValidateYHM() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/YHJBXX/ValidateYHM",
+        url: getRootPath() + "/YHZC/ValidateYHM",
         dataType: "json",
         data: {
             YHM: $("#YHM").val()
@@ -354,7 +354,7 @@ function GetCheckCode() {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: getRootPath() + "/YHJBXX/ValidateSJ",
+            url: getRootPath() + "/YHZC/ValidateSJ",
             data: {
                 SJ: $("#SJ").val()
             },
@@ -366,7 +366,7 @@ function GetCheckCode() {
                     $.ajax({
                         type: "POST",
                         dataType: "json",
-                        url: getRootPath() + "/YHJBXX/GetYZM",
+                        url: getRootPath() + "/YHZC/GetYZM",
                         data: {
                             SJ: $("#SJ").val()
                         },

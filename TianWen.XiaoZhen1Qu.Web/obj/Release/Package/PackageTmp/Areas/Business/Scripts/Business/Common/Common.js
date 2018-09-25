@@ -1,7 +1,7 @@
 ﻿//js获取网站根路径(站点及虚拟目录)，获得网站的根目录或虚拟目录的根地址     
 function getRootPath() {
     var strFullPath = window.document.location.href;
-    if (strFullPath === "http://localhost") strFullPath = "http://localhost/sy/sy";
+    if (strFullPath === "http://www.915fl.com/") strFullPath = "http://www.915fl.com/sy/sy";
     var strPath = window.document.location.pathname;
     if (strPath === "/") strPath = "/sy/sy";
     var pos = strFullPath.indexOf(strPath);
@@ -212,13 +212,13 @@ function CXLB() {
 }
 //鼠标点击样式
 function ActiveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "2px solid #bc6ba6").css("border-right", "2px solid #bc6ba6").css("border-left", "2px solid #bc6ba6").css("border-bottom", "2px solid #bc6ba6");
-    $("#div" + name).find("ul").css("border-left", "2px solid #bc6ba6").css("border-right", "2px solid #bc6ba6").css("border-bottom", "2px solid #bc6ba6");
+    $("#div" + name + "Text").css("border-top", "1px solid #bc6ba6").css("border-right", "1px solid #bc6ba6").css("border-left", "1px solid #bc6ba6").css("border-bottom", "1px solid #bc6ba6");
+    $("#div" + name).find("ul").css("border-left", "1px solid #bc6ba6").css("border-right", "1px solid #bc6ba6").css("border-bottom", "1px solid #bc6ba6");
 }
 //鼠标离开样式
 function LeaveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "2px solid #cccccc").css("border-right", "2px solid #cccccc").css("border-left", "2px solid #cccccc").css("border-bottom", "2px solid #cccccc");
-    $("#div" + name).find("ul").css("border-left", "2px solid #cccccc").css("border-right", "2px solid #cccccc").css("border-bottom", "2px solid #cccccc");
+    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
+    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
 }
 //关闭
 function Close(id) {
@@ -228,7 +228,6 @@ function Close(id) {
 //关闭
 function CloseByClassID(classid) {
     $("." + classid).css("display", "none");
-    $(".div_select_out").css("border-top", "2px solid #cccccc").css("border-right", "2px solid #cccccc").css("border-left", "2px solid #cccccc").css("border-bottom", "2px solid #cccccc");
 }
 //Transition结束监听事件
 function whichTransitionEvent() {
@@ -296,12 +295,78 @@ function AutoLogin() {
 }
 //判断非空
 function ValidateNull(value, dw) {
-    if (value === "" || value === undefined || (value.indexOf("请选择") !== -1))
-        return "暂无数据";
+    if (value === "" || value === undefined || value === null)
+        return "暂无";
     else {
         if (dw !== undefined)
             return value + dw;
         else
             return value;
     }
+}
+//图片等比例缩放
+function DrawImage(ImgObj, maxWidth, maxHeight) {
+    var image = new Image();
+    image.src = ImgObj.src;
+    var tempWidth; var tempHeight;;
+
+    if (image.width > 0 && image.height > 0) {
+        if (image.width / image.height >= maxWidth / maxHeight) {
+            if (image.width > maxWidth) {
+                tempWidth = maxWidth;
+                tempHeight = (image.height * maxWidth) / image.width;
+            }
+            else {
+                tempWidth = image.width;
+                tempHeight = image.height;
+            }
+        }
+        else {
+            if (image.height > maxHeight) {
+                tempHeight = maxHeight;
+                tempWidth = (image.width * maxHeight) / image.height;
+            }
+            else {
+                tempWidth = image.width;
+                tempHeight = image.height;
+            }
+        }
+        ImgObj.height = tempHeight;
+        ImgObj.width = tempWidth;
+        ImgObj.alt = image.width + "*" + image.height;
+    }
+}
+function toDecimal1(x) {
+   var f = parseFloat(x);
+   if (isNaN(f)) {
+      return false;
+   }
+   var f = Math.round(x*10)/10;
+   var s = f.toString();
+   var rs = s.indexOf('.');
+   if (rs < 0) {
+      rs = s.length;
+      s += '.';
+   }
+   while (s.length <= rs + 1) {
+      s += '0';
+   }
+   return s;
+}
+//生成二维码
+function GenerateQRCode(qrdata, showid) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Areas/Business/Ashx/GenerateQRCode.ashx",
+        data:
+        {
+            qrdata: qrdata
+        },
+        success: function (filename) {
+            $("#" + showid).attr("src", getRootPath() + "/Areas/Business/QRCode/" + filename);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }

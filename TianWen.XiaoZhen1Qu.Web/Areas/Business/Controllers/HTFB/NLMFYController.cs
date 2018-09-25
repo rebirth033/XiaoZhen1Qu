@@ -71,11 +71,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBNLMFY_CQYZJBXX()
         {
-            YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             NLMFY_CQYZJBXX NLMFY_CQYZjbxx = JsonHelper.ConvertJsonToObject<NLMFY_CQYZJBXX>(json);
             NLMFY_CQYZjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
@@ -85,11 +85,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBNLMFY_DZWZMJBXX()
         {
-            YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             NLMFY_DZWZMJBXX NLMFY_DZWZMjbxx = JsonHelper.ConvertJsonToObject<NLMFY_DZWZMJBXX>(json);
             NLMFY_DZWZMjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
@@ -99,11 +99,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBNLMFY_FLNYJBXX()
         {
-            YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             NLMFY_FLNYJBXX NLMFY_FLNYjbxx = JsonHelper.ConvertJsonToObject<NLMFY_FLNYJBXX>(json);
             NLMFY_FLNYjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
@@ -113,11 +113,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBNLMFY_SLSYJBXX()
         {
-            YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             NLMFY_SLSYJBXX NLMFY_SLSYjbxx = JsonHelper.ConvertJsonToObject<NLMFY_SLSYJBXX>(json);
             NLMFY_SLSYjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
@@ -127,11 +127,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBNLMFY_NCPJGJBXX()
         {
-            YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             NLMFY_NCPJGJBXX NLMFY_NCPJGjbxx = JsonHelper.ConvertJsonToObject<NLMFY_NCPJGJBXX>(json);
             NLMFY_NCPJGjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
@@ -141,11 +141,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBNLMFY_NJJSBJBXX()
         {
-            YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             NLMFY_NJJSBJBXX NLMFY_NJJSBjbxx = JsonHelper.ConvertJsonToObject<NLMFY_NJJSBJBXX>(json);
             NLMFY_NJJSBjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
@@ -155,11 +155,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBNLMFY_NZWJBXX()
         {
-            YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             NLMFY_NZWJBXX NLMFY_NZWjbxx = JsonHelper.ConvertJsonToObject<NLMFY_NZWJBXX>(json);
             NLMFY_NZWjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
@@ -169,11 +169,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBNLMFY_SCJBXX()
         {
-            YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             NLMFY_SCJBXX NLMFY_SCjbxx = JsonHelper.ConvertJsonToObject<NLMFY_SCJBXX>(json);
             NLMFY_SCjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
@@ -183,11 +183,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBNLMFY_YLHHJBXX()
         {
-            YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             NLMFY_YLHHJBXX NLMFY_YLHHjbxx = JsonHelper.ConvertJsonToObject<NLMFY_YLHHJBXX>(json);
             NLMFY_YLHHjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);

@@ -1,9 +1,9 @@
 ﻿/*首页_头部*/
-.div_head {background-color: #ffffff;width: 1200px;height: 130px;padding-top: 10px;font-family: "宋体"}
+.div_head {background-color: #ffffff;width: 1200px;height: 110px;padding-top: 10px;font-family: "宋体"}
 
 /*首页_头部_左侧*/
 .div_head_left {float: left;width: 120px;margin-top: 10px;}
-.div_head_left .img_head_left_logo {width: 100%;text-align: center;color: white;font-size: 25px;float: left;width: 174px;height: 47px;}
+.div_head_left .img_head_left_logo {width: 100%;text-align: center;color: white;font-size: 25px;float: left;width: 147px;height: 45px;}
 
 /*首页_头部_右侧*/
 .div_head_right {float: right;width: 1080px;margin-top: 5px;}
@@ -12,7 +12,7 @@
 .div_head_right .div_head_right_ss {display: inline-block;width: 600px;height: 80px;float: left;margin-left: 150px;}
 .div_head_right .div_head_right_ss .span_spaninput_out {border: none;display: block;width: 630px;height: 40px;font-size: 14px;margin-top: 10px;margin-bottom: 10px;}
 .div_head_right .div_head_right_ss .span_spaninput_out .span_spaninput_in {border: 2px solid #bc6ba6;display: inline-block;width: 500px;height: 40px;font-size: 14px;padding: 6px 12px;border-radius: 0 !important; }
-.div_head_right .div_head_right_ss .span_head_right_ss {font-size: 14px;color: #999;cursor: pointer;margin-left: 4px;}
+.div_head_right .div_head_right_ss .span_head_right_ss {font-size: 12px;color: #999;cursor: pointer;margin-left: 4px;font-family:"微软雅黑"}
 .div_head_right .div_head_right_ss .span_head_right_ss:hover {color: #ad5b97;text-decoration: underline;}
 .div_head_right .div_head_right_ss .span_head_right_ss_split{ color: #999999;margin: 0 7px;}
 .div_head_right .div_head_right_ss .span_spaninput_out .span_ss {width: 130px;font-family: "微软雅黑";height: 40px;background: #bc6ba6;float: right;display: inline-block;color: #fff;font-size: 18px;font-weight: 700;padding: 6px 46px;cursor: pointer;}
@@ -23,9 +23,13 @@
 /*首页_头部导航*/
 .div_head_nav {background-color: #ffffff;width: 1200px;height: 39px;}
 .div_head_nav .ul_head_nav {height: 39px;display: block;padding: 0;width: 100%;border-bottom: 2px solid #bc6ba6;}
-.div_head_nav .ul_head_nav .li_head_nav {background: #ffffff;text-align: center;color: #bc6ba6;height: 37px;font-size: 16px;font-weight: 700;float: left;display: inline-block;padding: 6px 17px;border-top-left-radius: 4px;border-top-right-radius: 4px;}
-.div_head_nav .ul_head_nav .li_head_nav .span_head_nav {cursor: default;}
-.div_head_nav .ul_head_nav .li_head_nav .i_head_nav {background-image: url(../images/head_nav_down.png);display: inline-block;width: 14px;height: 14px;margin-left: 5px;}
+.div_head_nav .ul_head_nav .li_head_nav {background: #ffffff;text-align: center;color: #bc6ba6;height: 37px;font-size: 16px;font-weight: 700;float: left;display: inline-block;padding: 6px 27px;border-top-left-radius: 4px;border-top-right-radius: 4px;}
+.div_head_nav .ul_head_nav .li_head_nav:hover{cursor:pointer;background: #bc6ba6;color: #ffffff;}
+.div_head_nav .ul_head_nav .li_head_nav_dropdown{cursor:pointer;background: #ffffff;position:relative;border-left:1px solid #ffffff;border-right:1px solid #ffffff;border-top:1px solid #ffffff;text-align: center;margin:0 3px;color: #bc6ba6;height: 37px;font-size: 16px;font-weight: 700;float: left;display: inline-block;padding: 6px 15px;}
+.div_head_nav .ul_head_nav .li_head_nav_dropdown .i_head_nav {background-image: url(../images/head_nav_down.png);display: inline-block;width: 14px;height: 14px;margin-left: 5px;}
+.div_head_nav .ul_head_nav .li_head_nav_dropdown .div_head_nav_dropdown{border-left:1px solid #bc6ba6;border-bottom:1px solid #bc6ba6;border-right:1px solid #bc6ba6;position:absolute;left:-1px;top:36px;background-color:#ffffff;display:none;}
+#div_head_flapp_ewm{background-image:url(../images/SY/TBDH/app_ewm.png);background-size:100%;background-repeat:no-repeat;margin-top:10px;padding:5px 5px;}
+#div_head_flgzh_ewm{background-image:url(../images/SY/TBDH/gzh_ewm.png);background-size:100%;background-repeat:no-repeat;margin-top:0px;padding:5px 5px;}
 
 /*搜索结果下拉框*/
 .div_select_dropdown {top:-10px; border-top:none; width: 499px;height:320px; position: relative;z-index: 1001;display:none;}

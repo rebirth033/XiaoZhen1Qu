@@ -35,11 +35,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBCY_KCTSJBXX()
         {
-            YHJBXX yhjbxx = CY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = CY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             CY_KCTSJBXX CY_KCTSjbxx = JsonHelper.ConvertJsonToObject<CY_KCTSJBXX>(json);
             CY_KCTSjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
@@ -49,11 +49,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBCY_MSJBXX()
         {
-            YHJBXX yhjbxx = CY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = CY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             CY_MSJBXX CY_MSjbxx = JsonHelper.ConvertJsonToObject<CY_MSJBXX>(json);
             CY_MSjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
@@ -63,11 +63,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBCY_WMJBXX()
         {
-            YHJBXX yhjbxx = CY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = CY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            JCXX jcxx = CreateJCXX(YHJBXX, json);
             CY_WMJBXX CY_WMjbxx = JsonHelper.ConvertJsonToObject<CY_WMJBXX>(json);
             CY_WMjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);

@@ -1,21 +1,78 @@
 ﻿$(document).ready(function () {
     LoadDuoX("移民类别", "YMLB");
-    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_JYPX", "留学国家"); });
+    $("#divZWMCText").bind("click", function () { LoadLXGJ(); });
 });
-//选择小类标签
-function SelectXLBQ(obj, codename) {
-    if ($(obj).find("img").attr("src").indexOf("purple") !== -1) {
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-        $("#" + codename).remove();
-    }
-    else {
-        if ($("#spanXLBQ").find(".div_XLBQ").length !== 2) {
-            if ($("#spanXLBQ").html().indexOf("请选择") !== -1) $("#spanXLBQ").html('');
-            $("#spanXLBQ").append('<div id="' + codename + '" class="div_XLBQ">' + codename + '</div>');
-            $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
+//加载留学国家
+function LoadLXGJ() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "留学国家",
+            TBName: "CODES_JYPX"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#div_row_right_jcpp_first").html('');
+                var html = "";
+                html += '<span class="p_row_right_jcpp">请选择留学国家<span onclick="CloseLXGJ(1)" class="span_row_right_jcpp">×</span></span>';
+                html += '<div class="div_row_right_jcpp_first_left">';
+                html += '<ul class="ul_row_right_jcpp_first_left">';
+                for (var i = 0; i < BQArray.length; i++) {
+                    var count = 0;
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            count++;
+                    }
+                    if (count !== 0)
+                        html += '<li onclick="GoToBQ(\'' + BQArray[i] + '\')" class="li_row_right_jcpp_first_left">' + BQArray[i] + '</li>';
+                }
+                html += '</ul>';
+                html += '</div>';
+
+                html += '<div class="div_row_right_jcpp_first_right">';
+                html += '<ul class="ul_row_right_jcpp_first_right">';
+                for (var i = 0; i < BQArray.length; i++) {
+                    var count = 0;
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            count++;
+                    }
+                    if (count !== 0)
+                        html += '<li id="li_row_right_jcpp_first_right_tag_' + BQArray[i] + '" class="li_row_right_jcpp_first_right_tag">' + BQArray[i] + '</li>';
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            html += '<li onclick="SelectFirst(\'' + xml.list[j].CODENAME + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                    }
+                }
+                html += '</ul>';
+                html += '</div>';
+
+                $("#div_row_right_jcpp_first").append(html);
+                $("#div_row_right_jcpp_first").css("display", "inline-block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
-        else
-            alert("最多只选择2项");
+    });
+}
+//跳转到标签位置
+function GoToBQ(tag) {
+    var len = document.getElementById("li_row_right_jcpp_first_right_tag_" + tag).offsetTop - 75;//获取div层到页面顶部的高度 
+    $(".ul_row_right_jcpp_first_right").stop().animate({ scrollTop: len }, 300, "swing", function () { });
+}
+//选择职位
+function SelectFirst(name) {
+    $("#spanZWMC").html(name);
+    ValidateSelect("ZWMC", "ZWMC", "请选择留学国家");
+}
+//关闭选择留学国家
+function CloseLXGJ(count) {
+    if (count === 1) {
+        $("#div_row_right_jcpp_first").css("display", "none");
     }
 }
 //加载多选
@@ -34,14 +91,14 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 6 === 5) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 6 === 5 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -73,7 +130,7 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.JYPX_YMJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                SetXLBQ(xml.Value.JYPX_YMJBXX.GJ);
+                $("#spanZWMC").html(xml.Value.JYPX_LXJBXX.GJ);
                 $("#spanQY").html(xml.Value.JYPX_YMJBXX.QY);
                 $("#spanDD").html(xml.Value.JYPX_YMJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -92,7 +149,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "GJ", "'" + GetXLBQ() + "'");
+    obj = jsonObj.AddJson(obj, "GJ", "'" + $("#spanZWMC").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

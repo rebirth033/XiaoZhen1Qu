@@ -4,126 +4,1073 @@
 @section Section_Head {
     <link href="@Url.Content("~/Areas/Business/Css/SY/SY.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/SY/SY.js")"></script>
-    <script language="javascript" type="text/javascript" src="http://fw.qq.com/ipaddress"></script>
 }
 @section Section_Body {
     <div class="div_head_nav">
         <ul class="ul_head_nav">
-            <li id="li_head_sy" class="li_head_nav" style="width: 80px;"><span class="span_head_nav">首页</span></li>
-            <li id="li_head_xzapp" class="li_head_nav"><span class="span_head_nav">风铃APP</span><i class="i_head_nav"></i></li>
-            <li id="li_head_xzgzh" class="li_head_nav"><span class="span_head_nav">风铃公众号</span><i class="i_head_nav"></i></li>
-            <li id="li_head_xcx" class="li_head_nav"><span class="span_head_nav">小程序</span><i class="i_head_nav"></i></li>
-            <li id="li_head_xztm" class="li_head_nav"><span class="span_head_nav">风铃特卖</span></li>
-            <li id="li_head_xzjr" class="li_head_nav"><span class="span_head_nav">风铃装修</span></li>
-            <li id="li_head_xzgy" class="li_head_nav"><span class="span_head_nav">风铃公益</span></li>
-            <li id="li_head_xzfc" class="li_head_nav"><span class="span_head_nav">风铃房产</span></li>
-            <li id="li_head_xzesc" class="li_head_nav"><span class="span_head_nav">风铃卖车</span></li>
-            <li id="li_head_xztg" class="li_head_nav"><span class="span_head_nav">风铃推广</span><i class="i_head_nav"></i></li>
-            <li id="li_head_viphy" class="li_head_nav"><span class="span_head_nav">VIP会员</span><i class="i_head_nav"></i></li>
+            <li id="li_head_sy" class="li_head_nav"><span class="span_head_nav">首页</span></li>
+            <li id="li_head_flapp" class="li_head_nav_dropdown"><span class="span_head_nav">风铃APP</span><i class="i_head_nav"></i>
+	        <div class="div_head_nav_dropdown" style="width:230px;height:130px;">
+		    <div id="div_head_flapp_ewm" style="width:109px;height:100%;display:inline-block;"></div>
+		    <div style="width:114px;height:100%;border-top:1px solid #bc6ba6;display:inline-block;vertical-align:top;">
+		        <span style="margin-top:20px;font-size:14px;display:block;">风铃APP</span>
+		        <span style="margin-top:8px;font-size:12px;display:block;color:#999999;font-weight:normal;">扫描二维码</span>
+		        <span style="margin-top:8px;font-size:12px;display:block;color:#999999;font-weight:normal;">安装风铃客户端</span>
+		    </div>
+	        </div>
+	    </li>
+            <li id="li_head_flgzh" class="li_head_nav_dropdown"><span class="span_head_nav">风铃公众号</span><i class="i_head_nav"></i>
+	        <div class="div_head_nav_dropdown" style="width:230px;height:130px;">
+		    <div id="div_head_flgzh_ewm" style="width:124px;height:100%;display:inline-block;"></div>
+		    <div style="width:99px;height:100%;border-top:1px solid #bc6ba6;display:inline-block;vertical-align:top;">
+		        <span style="margin-top:20px;font-size:14px;display:block;">风铃公众号</span>
+		        <span style="margin-top:8px;font-size:12px;display:block;color:#999999;font-weight:normal;">扫描关注</span>
+		        <span style="margin-top:8px;font-size:12px;display:block;color:#999999;font-weight:normal;">风铃微信公众号</span>
+		    </div>
+	        </div>
+	    </li>
+            <li id="li_head_xcx" class="li_head_nav_dropdown"><span class="span_head_nav">小程序</span><i class="i_head_nav"></i></li>
+            <li id="li_head_fltm" class="li_head_nav"><span class="span_head_nav">风铃特卖</span></li>
+            <li id="li_head_flzx" class="li_head_nav"><span class="span_head_nav">风铃装修</span></li>
+            <li id="li_head_flfc" class="li_head_nav"><span class="span_head_nav">风铃房产</span></li>
+            <li id="li_head_flesc" class="li_head_nav"><span class="span_head_nav">风铃卖车</span></li>
+            <li id="li_head_fltg" class="li_head_nav_dropdown"><span class="span_head_nav">风铃推广</span><i class="i_head_nav"></i></li>
+            <li id="li_head_flvip" class="li_head_nav_dropdown"><span class="span_head_nav">VIP会员</span><i class="i_head_nav"></i></li>
         </ul>
     </div>
     <div id="div_Body" class="div_body">
         <div class="div_body_top">
             <div class="div_body_top_inner">
                 <ul class="ul_body_top">
-                    <li class="li_body_top" onclick="ToEJSY('FCSY')">
-                        <p class="p_body_top_left">
-                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_fc2.png")" />
-                        </p>
-                        <p class="p_body_top_left p_body_top_left_dl">房产</p>
+                    <li class="li_body_top">
+                        <div class="p_body_top_left" onclick="ToEJSY('FCSY')">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_fc.png")" />
+		 	    <div class="p_body_top_left_dl">房产</div>
+                        </div>
+            		<ul class="ul_body_top_inner">
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(13,'/FCCX/FCCX_ZZF','null')">租房</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(16,'/FCCX/FCCX_ESF','null')">二手房</li>
+            		</ul>
                     </li>
-                    <li class="li_body_top" onclick="ToEJSY('CLSY')">
-                        <p class="p_body_top_left">
-                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_cl4.png")" />
-                        </p>
-                        <p class="p_body_top_left p_body_top_left_dl">车辆</p>
+                    <li class="li_body_top">
+                        <div class="p_body_top_left" onclick="ToEJSY('CLSY')">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_cl.png")" />
+			    <div class="p_body_top_left_dl">车辆</div>
+                        </div>
+            		<ul class="ul_body_top_inner">
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','LX=2203')">轿车</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(192,'/CLCX/CLCX_KC','null')">客车</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(190,'/CLCX/CLCX_HC','null')">货车</li>
+            		</ul>
                     </li>
-                    <li class="li_body_top" onclick="ToEJSY('ZPSY')">
-                        <p class="p_body_top_left">
-                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_zp2.png")" />
-                        </p>
-                        <p class="p_body_top_left p_body_top_left_dl">招聘</p>
+                    <li class="li_body_top">
+                        <div class="p_body_top_left" onclick="ToEJSY('ZPSY')">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_zp.png")" />
+			    <div class="p_body_top_left_dl">招聘</div>
+                        </div>
+            		<ul class="ul_body_top_inner">
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','null')">全职</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','null')">兼职</li>
+            		</ul>
                     </li>
-                    <li class="li_body_top" onclick="ToEJSY('CWSY')">
-                        <p class="p_body_top_left">
-                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_cw2.png")" />
-                        </p>
-                        <p class="p_body_top_left p_body_top_left_dl">宠物</p>
+                    <li class="li_body_top">
+                        <div class="p_body_top_left" onclick="ToEJSY('SHFWSY')">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_shfw.png")" />
+			    <div class="p_body_top_left_dl">生活服务</div>
+                        </div>
+			<ul class="ul_body_top_inner">
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(172,'/SHFWCX/SHFWCX_BJ','null')">搬家</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(173,'/SHFWCX/SHFWCX_BMYS','LB=14')">保姆</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(174,'/SHFWCX/SHFWCX_BJQX','null')">保洁</li>
+            		</ul>
                     </li>
-                    <li class="li_body_top" onclick="ToEJSY('ESSY')">
-                        <p class="p_body_top_left">
-                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_es2.png")" />
-                        </p>
-                        <p class="p_body_top_left p_body_top_left_dl">二手市场</p>
+                    <li class="li_body_top">
+                        <div class="p_body_top_left" onclick="ToEJSY('SWFWSY')">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_swfw.png")" />
+			    <div class="p_body_top_left_dl">商务服务</div>
+                        </div>
+			<ul class="ul_body_top_inner">
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(211,'/SWFWCX/SWFWCX_GSZC','null')">工商</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(236,'/SWFWCX/SWFWCX_CWKJPG','null')">财务</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(219,'/SWFWCX/SWFWCX_SJCH','null')">营销</li>
+            		</ul>
                     </li>
-                    <li class="li_body_top" onclick="ToEJSY('SHFWSY')">
-                        <p class="p_body_top_left">
-                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_shfw3.png")" />
-                        </p>
-                        <p class="p_body_top_left p_body_top_left_dl">生活服务</p>
+                    <li class="li_body_top">
+                        <div class="p_body_top_left" onclick="ToEJSY('CWSY')">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_cw.png")" />
+			    <div class="p_body_top_left_dl">宠物</div>
+                        </div>
+			<ul class="ul_body_top_inner">
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(31,'/CWCX/CWCX_CWG','null')">狗</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(32,'/CWCX/CWCX_CWM','null')">猫</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(33,'/CWCX/CWCX_HNYC','LB=120')">小宠</li>
+            		</ul>
                     </li>
-                    <li class="li_body_top" onclick="ToEJSY('SWFWSY')">
-                        <p class="p_body_top_left">
-                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_swfw2.png")" />
-                        </p>
-                        <p class="p_body_top_left p_body_top_left_dl">商务服务</p>
+                    <li class="li_body_top">
+                        <div class="p_body_top_left" onclick="ToEJSY('ESSY')">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_es.png")" />
+			    <div class="p_body_top_left_dl">二手市场</div>
+                        </div>
+			<ul class="ul_body_top_inner">
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(154,'/ESCX/ESCX_SJSM_ESSJ','null')">手机</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(156,'/ESCX/ESCX_SJSM_PBDN','null')">平板</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(159,'/ESCX/ESCX_JDJJBG_ESJD','null')">家电</li>
+            		</ul>
                     </li>
-                    <li class="li_body_top" onclick="ToEJSY('JYPXSY')">
-                        <p class="p_body_top_left">
-                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_jypx3.png")" />
-                        </p>
-                        <p class="p_body_top_left p_body_top_left_dl">教育培训</p>
-                    </li>
-                    <li class="li_body_top" onclick="ToEJSY('ZSJMSY')">
-                        <p class="p_body_top_left">
-                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_zsjm3.png")" />
-                        </p>
-                        <p class="p_body_top_left p_body_top_left_dl">招商加盟</p>
-                    </li>
-                    <li class="li_body_top" onclick="ToEJSY('PFCGSY')">
-                        <p class="p_body_top_left">
-                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_pfcg2.png")" />
-                        </p>
-                        <p class="p_body_top_left p_body_top_left_dl">批发采购</p>
+                    <li class="li_body_top">
+                        <div class="p_body_top_left" onclick="ToEJSY('JYPXSY')">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_jypx.png")" />
+			    <div class="p_body_top_left_dl">教育培训</div>
+                        </div>
+			<ul class="ul_body_top_inner">
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(106,'/JYPXCX/JYPXCX_JJJG','null')">家教</li>
+				<li class="li_body_top_fg">/</li>
+            			<li class="li_body_top_small" style="margin-right:0px;" onclick="OpenCXLB(108,'/JYPXCX/JYPXCX_YYPXJG','null')">培训</li>
+            		</ul>
                     </li>
                 </ul>
             </div>
+	<div class="div_body_top_inner" style="width:270px;margin-left:10px;padding:10px 12px 10px 12px;">
+		<p class="p_body_middle_left_title" id="p_body_middle_left_title_FC" style="border-bottom-color: #f2f2f2; border-bottom-width: 1px; border-bottom-style: solid;">上门服务</p>
+		<ul class="ul_body_top">
+		    <li class="li_body_top_right" onclick="OpenCXLB(174,'/SHFWCX/SHFWCX_BJQX','null')">
+                        <div class="p_body_top_left">
+                            <img class="img_body_top_right" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_bjqx.png")" />
+                        </div>
+                        <div class="p_body_top_right_dl">家庭保洁</div>
+                    </li>
+		    <li class="li_body_top_right" onclick="OpenCXLB(173,'/SHFWCX/SHFWCX_BMYS','null')">
+                        <div class="p_body_top_left">
+                            <img class="img_body_top_right" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_bmys.png")" />
+                        </div>
+                        <div class="p_body_top_right_dl">保姆月嫂</div>
+                    </li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(178,'/SHFWCX/SHFWCX_JDWX','null')">
+                        <div class="p_body_top_left">
+                            <img class="img_body_top_right" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_jdwx.png")" />
+                        </div>
+                        <div class="p_body_top_right_dl">家电维修</div>
+                    </li>
+		    <li class="li_body_top_right"  onclick="OpenCXLB(180,'/SHFWCX/SHFWCX_FWWX','null')">
+                        <div class="p_body_top_left">
+                            <img class="img_body_top_right" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_fwwx.png")" />
+                        </div>
+                        <div class="p_body_top_right_dl">房屋维修</div>
+                    </li>
+		</ul>
+	</div>
         </div>
-        <div class="div_body_middle">
-            <div id="div_body_middle_left_FC" class="div_body_middle_left_section" style="width: 595px">
+        <div class="div_body_middle" style="width: 280px;margin-right:5px;">
+            <div id="div_body_middle_left_FC" class="div_body_middle_left_section" style="width: 280px;height:180px;">
+		<p class="p_body_middle_left_title" onclick="ToEJSY('FCSY')" id="p_body_middle_left_title_FC" style="border-bottom-color: #f2f2f2; border-bottom-width: 1px; border-bottom-style: solid;">房产</p>
+		<ul class="ul_body_middle_left_section" style="height: 30px;">		
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(13,'/FCCX/FCCX_ZZF','null')">整租</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(14,'/FCCX/FCCX_HZF','null')">合租</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(15,'/FCCX/FCCX_DZF','null')">短租</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(13,'/FCCX/FCCX_ZZF','ZZLX=公寓')">公寓</li>
+		</ul>
+		<ul class="ul_body_middle_left_section" style="height: 30px;">		
+			<li class="li_body_middle_left_section purple" style="margin-right:20px;" onclick="OpenCXLB(16,'/FCCX/FCCX_ESF','null')">二手房</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(16,'/FCCX/FCCX_ESF','FL=5年以内')">新房</li>	
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(17,'/FCCX/FCCX_SP','null')">商铺</li>
+			<li class="li_body_middle_left_section" onclick="OpenCXLB(18,'/FCCX/FCCX_XZL','null')">写字楼</li>
+		</ul>
+		<ul class="ul_body_middle_left_section" style="height: 30px;">		
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(19,'/FCCX/FCCX_CF','null')">厂房</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(20,'/FCCX/FCCX_CK','null')">仓库</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(21,'/FCCX/FCCX_TD','null')">土地</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(22,'/FCCX/FCCX_CW','null')">车位</li>
+		</ul>
             </div>
-            <div id="div_body_middle_left_CL" class="div_body_middle_left_section" style="width: 595px;margin-right: 0;">
+            <div id="div_body_middle_left_CL" class="div_body_middle_left_section" style="width: 280px;height:500px;">
+		<p class="p_body_middle_left_title" onclick="ToEJSY('CLSY')" id="p_body_middle_left_title_CL" style="border-bottom-color: #f2f2f2; border-bottom-width: 1px; border-bottom-style: solid;">车辆</p>	
+		<ul class="ul_body_middle_left_section" style="height: 240px;">
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','JG=746')">0-3万</li>		
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','JG=747')">3-5万</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','JG=748')">5-8万</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','JG=749')">8-10万</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','JG=750')">10-15万</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','JG=751')">15-20万</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','JG=752')">20万以上</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=65')">大众</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=37')">宝马</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=31')">奥迪</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=79')">丰田</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=41')">标致</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=40')">奔驰</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=82')">福特</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=91')">观致</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=135')">雷诺</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=170')">起亚</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=176')">荣威</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=208')">现代</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=67')">东风</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=181')">三菱</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=97')">华泰</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=42')">本田</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=209')">雪铁龙</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=210')">雪佛兰</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','PP=155')">马自达</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','LX=2203')">轿车</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','LX=2204')">SUV</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(187,'/CLCX/CLCX_MTC','null')">摩托车</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(186,'/CLCX/CLCX_DDC','null')">电动车</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(191,'/CLCX/CLCX_GCC','null')">工程车</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(190,'/CLCX/CLCX_HC','null')">货车</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(185,'/CLCX/CLCX_JC','LX=2208')">面包车</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(192,'/CLCX/CLCX_KC','null')">客车</li>
+		</ul>
+		<p class="p_body_middle_left_title_small">车辆服务</p>
+		<ul class="ul_body_middle_left_section" style="height: 120px;">
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(197,'/CLCX/CLCX_QCWXBY','null')">维修保养</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(197,'/CLCX/CLCX_QCWXBY','LB=925')">刹车维修</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(197,'/CLCX/CLCX_QCWXBY','LB=927')">换胎补胎</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(198,'/CLCX/CLCX_GHSPNJYC','LB=941')">车辆过户</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(198,'/CLCX/CLCX_GHSPNJYC','LB=942')">汽车年检</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(198,'/CLCX/CLCX_GHSPNJYC','LB=943')">代办上牌</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(198,'/CLCX/CLCX_GHSPNJYC','LB=945')">异地验车</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(199,'/CLCX/CLCX_QCMRZS','null')">美容装饰</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(194,'/CLCX/CLCX_DJ','null')">汽车代驾</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(200,'/CLCX/CLCX_QCGZFH','null')">改装防护</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(193,'/CLCX/CLCX_ZC','null')">汽车租赁</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(196,'/CLCX/CLCX_QCPL','null')">汽车陪练</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(2001,'/CLCX/CLCX_QCPJ','null')">汽车配件</li>
+			<li class="li_body_middle_left_section" style="margin-right:20px;" onclick="OpenCXLB(195,'/CLCX/CLCX_JX','null')">驾校培训</li>
+		</ul>
             </div>
-            <div id="div_body_middle_left_ZP" class="div_body_middle_left_section" style="width: 595px">
-            </div>
-            <div id="div_body_middle_left_ES" class="div_body_middle_left_section" style="width: 595px;margin-right: 0;">
-            </div>
-            <div id="div_body_middle_left_SHFW" class="div_body_middle_left_section" style="width: 595px;">
-            </div>
-            <div id="div_body_middle_left_SWFW" class="div_body_middle_left_section" style="width: 595px;margin-right: 0;">
-            </div>
-            <div id="div_body_middle_left_CW" class="div_body_middle_left_section">
-            </div>
-            <div id="div_body_middle_left_JYPX" class="div_body_middle_left_section">
-            </div>
-            <div id="div_body_middle_left_ZSJM" class="div_body_middle_left_section">
-            </div>
-            <div id="div_body_middle_left_PFCG" class="div_body_middle_left_section" style="margin-right: 0;">
-            </div>
+            <div id="div_body_middle_left_CW" class="div_body_middle_left_section" style="width: 280px;height:360px;">
+		<p class="p_body_middle_left_title" onclick="ToEJSY('CWSY')" id="p_body_middle_left_title_CW" style="border-bottom-color: #f2f2f2; border-bottom-width: 1px; border-bottom-style: solid;">宠物</p>
+            	<span class="span_body_middle_left_title_small_cw" onclick="OpenCXLB(31,'/CWCX/CWCX_CWG','null')">狗狗</span>
+            	<ul class="ul_body_middle_left_section_cw" style="height: 60px;">
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(31,'/CWCX/CWCX_CWG','PZ=33')">金毛</li>
+			<li class="li_body_middle_left_section_fg">/</li>
+            		<li class="li_body_middle_left_section_cw"style="margin-right:0px;" onclick="OpenCXLB(31,'/CWCX/CWCX_CWG','PZ=30')">哈士奇</li>
+            		<li class="li_body_middle_left_section_fg">/</li>
+			<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(31,'/CWCX/CWCX_CWG','PZ=2')">阿拉斯加</li>
+			<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(31,'/CWCX/CWCX_CWG','PZ=67')">泰迪</li>
+            		<li class="li_body_middle_left_section_fg">/</li>
+			<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(31,'/CWCX/CWCX_CWG','PZ=60')">萨摩耶</li>
+            		<li class="li_body_middle_left_section_fg">/</li>
+			<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(31,'/CWCX/CWCX_CWG','PZ=44')">拉布拉多</li>
+            	</ul>
+            	<span class="span_body_middle_left_title_small_cw" onclick="OpenCXLB(32,'/CWCX/CWCX_CWM','null')">猫猫</span>
+            	<ul class="ul_body_middle_left_section_cw" style="height: 30px;">
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(32,'/CWCX/CWCX_CWM','PZ=11615')">蓝猫</li>
+			<li class="li_body_middle_left_section_fg">/</li>
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(32,'/CWCX/CWCX_CWM','PZ=11649')">折耳猫</li>
+			<li class="li_body_middle_left_section_fg">/</li>
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(32,'/CWCX/CWCX_CWM','PZ=1167')">加菲猫</li>
+            	</ul>
+		<span class="span_body_middle_left_title_small_cw" onclick="OpenCXLB(33,'/CWCX/CWCX_HNYC','null')">小宠</span>
+            	<ul class="ul_body_middle_left_section_cw" style="height: 30px;">
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(33,'/CWCX/CWCX_HNYC','LB=117')">鱼</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li>
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(33,'/CWCX/CWCX_HNYC','LB=118')">鸟</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li>            		
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(33,'/CWCX/CWCX_HNYC','LB=120&XL=148')">龟</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li>            		
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(33,'/CWCX/CWCX_HNYC','LB=120')">其他</li>            	
+            	</ul>
+            	<span class="span_body_middle_left_title_small_cw" onclick="OpenCXLB(34,'/CWCX/CWCX_CWFW','null')">服务</span>
+            	<ul class="ul_body_middle_left_section_cw" style="height: 60px;">
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(34,'/CWCX/CWCX_CWFW','LB=189')">配种</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li>             		
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(34,'/CWCX/CWCX_CWFW','LB=187')">训练</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li>             		
+            		<li class="li_body_middle_left_section_cw" style="margin-right:40px;" onclick="OpenCXLB(34,'/CWCX/CWCX_CWFW','LB=188')">托运</li>          		
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(34,'/CWCX/CWCX_CWFW','LB=184')">医疗</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li>             		
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(34,'/CWCX/CWCX_CWFW','LB=186')">美容</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li>             		
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(34,'/CWCX/CWCX_CWFW','LB=185')">寄养</li>
+            	</ul>
+            	<span class="span_body_middle_left_title_small_cw" onclick="OpenCXLB(35,'/CWCX/CWCX_CWYPSP','null')">用品</span>
+		<ul class="ul_body_middle_left_section_cw" style="height: 30px;">
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(35,'/CWCX/CWCX_CWYPSP','LB=159')">狗用品</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li>                		
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(35,'/CWCX/CWCX_CWYPSP','LB=161')">猫用品</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li>                		
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(35,'/CWCX/CWCX_CWYPSP','LB=163')">其他</li>
+            	</ul>
+            	<span class="span_body_middle_left_title_small_cw" onclick="OpenCXLB(36,'/CWCX/CWCX_CWGY','null')">公益</span>
+		<ul class="ul_body_middle_left_section_cw" style="height: 30px;">
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(36,'/CWCX/CWCX_CWGY','LB=218')">赠送</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li>              		
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(36,'/CWCX/CWCX_CWGY','LB=219')">领养</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li>              		
+            		<li class="li_body_middle_left_section_cw" style="margin-right:0px;" onclick="OpenCXLB(36,'/CWCX/CWCX_CWGY','LB=220')">寻宠启示</li>
+            	</ul>
+	    </div>
         </div>
+ 	<div class="div_body_middle" style="width: 350px;margin-right:5px;">
+            <div id="div_body_middle_left_ZP" class="div_body_middle_left_section" style="width: 350px;height:560px;float:left;">
+		<p class="p_body_middle_left_title" onclick="ToEJSY('ZPSY')" id="p_body_middle_left_title_ZP" style="border-bottom-color: #f2f2f2; border-bottom-width: 1px; border-bottom-style: solid;">招聘</p>
+		<ul class="ul_body_middle_left_section" style="height: 60px;">
+			<li class="li_body_middle_left_section" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWFL=29')">年底双薪</li>
+			<li class="li_body_middle_left_section" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWFL=36')">带薪年假</li>
+			<li class="li_body_middle_left_section purple" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWFL=26')">五险一金</li>
+			<li class="li_body_middle_left_section" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWFL=28')">包住</li>
+			<li class="li_body_middle_left_section" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWFL=31')">交通补助</li>
+			<li class="li_body_middle_left_section" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWFL=34')">住房补贴</li>
+			<li class="li_body_middle_left_section" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWFL=30')">周末双休</li>
+			<li class="li_body_middle_left_section" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWFL=27')">包吃</li>
+		</ul>
+		<p class="p_body_middle_left_title_small">热招职位</p>
+		<span class="span_body_middle_left_title_small_zp" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=餐饮&CLICKID=8906')">餐饮</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=餐饮&ZWMC=254&CLICKID=8906')">服务员</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=餐饮&ZWMC=255&CLICKID=8906')">送餐员</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=餐饮&ZWMC=256&CLICKID=8906')">厨师</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=餐饮&ZWMC=268&CLICKID=8906')">后厨</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=餐饮&ZWMC=269&CLICKID=8906')">杂工</li>		
+		</ul>
+		<span class="span_body_middle_left_title_small_zp" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=销售&CLICKID=8901')">销售</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=销售&ZWMC=61&CLICKID=8901')">销售代表</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=销售&ZWMC=66&CLICKID=8901')">汽车销售</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=销售&ZWMC=67&CLICKID=8901')">医药销售</li>
+		</ul>
+		<span class="span_body_middle_left_title_small_zp" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=行政&CLICKID=8902')">行政</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=行政&ZWMC=115&CLICKID=8902')">文员秘书</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=行政&ZWMC=116&CLICKID=8902')">前台接待</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=行政&ZWMC=118&CLICKID=8902')">行政专员</li>
+		</ul>
+		<span class="span_body_middle_left_title_small_zp purple" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=司机&CLICKID=8902')">司机/教练</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=司机&ZWMC=126&CLICKID=8902')">货运司机</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=司机&ZWMC=127&CLICKID=8902')">客运司机</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=司机&ZWMC=130&CLICKID=8902')">驾校教练</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=司机&ZWMC=131&CLICKID=8902')">陪练</li>		
+		</ul>
+		<span class="span_body_middle_left_title_small_zp" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=普工/技工&CLICKID=8904')">普工/技工</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=普工/技工&ZWMC=137&CLICKID=8904')">普工</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=普工/技工&ZWMC=138&CLICKID=8904')">电工</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=普工/技工&ZWMC=139&CLICKID=8904')">木工</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=普工/技工&ZWMC=144&CLICKID=8904')">油漆工</li>		
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=普工/技工&ZWMC=145&CLICKID=8904')">维修工</li>			
+		</ul>
+		<span class="span_body_middle_left_title_small_zp" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=家政/保洁/保安&CLICKID=8906')">家政/保洁</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=家政/保洁/保安&ZWMC=272&CLICKID=8906')">保姆</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=家政/保洁/保安&ZWMC=273&CLICKID=8906')">月嫂</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=家政/保洁/保安&ZWMC=271&CLICKID=8906')">保洁</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=家政/保洁/保安&ZWMC=277&CLICKID=8906')">钟点工</li>		
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=家政/保洁/保安&ZWMC=279&CLICKID=8906')">送水工</li>			
+		</ul>
+		<span class="span_body_middle_left_title_small_zp purple" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=美容/美发&CLICKID=8906')">美容/美发</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=美容/美发&ZWMC=282&CLICKID=8906')">发型师</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=美容/美发&ZWMC=284&CLICKID=8906')">美甲师</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=美容/美发&ZWMC=285&CLICKID=8906')">美容师</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=美容/美发&ZWMC=288&CLICKID=8906')">美容店长</li>					
+		</ul>
+		<span class="span_body_middle_left_title_small_zp" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=运动/健身&CLICKID=8906')">运动/健身</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=运动/健身&ZWMC=293&CLICKID=8906')">体育教练</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=运动/健身&ZWMC=294&CLICKID=8906')">瑜伽老师</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=运动/健身&ZWMC=295&CLICKID=8906')">健身教练</li>				
+		</ul>
+		<span class="span_body_middle_left_title_small_zp" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=超市/淘宝/网店&CLICKID=8913')">淘宝/网店</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=超市/淘宝/网店&ZWMC=323&CLICKID=8913')">淘宝客服</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=超市/淘宝/网店&ZWMC=324&CLICKID=8913')">淘宝美工</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=超市/淘宝/网店&ZWMC=329&CLICKID=8913')">网店运营</li>				
+		</ul>
+		<span class="span_body_middle_left_title_small_zp" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=财务/审计&CLICKID=8918')">财务/审计</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=财务/审计&ZWMC=397&CLICKID=8918')">会计</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=财务/审计&ZWMC=398&CLICKID=8918')">出纳</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=财务/审计&ZWMC=401&CLICKID=8918')">审计专员</li>				
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=财务/审计&ZWMC=403&CLICKID=8918')">税务专员</li>		
+		</ul>
+		<span class="span_body_middle_left_title_small_zp" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=汽车&CLICKID=8919')">汽车</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=汽车&ZWMC=438&CLICKID=8919')">汽车修理工</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=汽车&ZWMC=440&CLICKID=8919')">汽车美容</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=汽车&ZWMC=441&CLICKID=8919')">4S店管理</li>		
+		</ul>
+		<span class="span_body_middle_left_title_small_zp" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=物流/仓储&CLICKID=8910')">物流/仓储</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=物流/仓储&ZWMC=462&CLICKID=8910')">物流专员</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=物流/仓储&ZWMC=464&CLICKID=8910')">快递员</li>
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=物流/仓储&ZWMC=466&CLICKID=8910')">分拣员</li>		
+            		<li class="li_body_middle_left_section_fg">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=物流/仓储&ZWMC=470&CLICKID=8910')">搬运工</li>			
+		</ul>
+		<span class="span_body_middle_left_title_small_zp" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=广告/咨询&CLICKID=8911')">广告/咨询</span>
+		<ul class="ul_body_middle_left_section" style="height: 10px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=广告/咨询&ZWMC=474&CLICKID=8911')">广告设计</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','ZWLB=广告/咨询&ZWMC=477&CLICKID=8911')">广告策划</li>
+            		<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(89,'/QZZPCX/QZZPCX_QZZP','null')">更多>></li>		
+		</ul>
+            </div>
+		<div id="div_body_middle_left_JZ" class="div_body_middle_left_section" style="width: 350px;height:220px;float:left;">
+		<p class="p_body_middle_left_title" onclick="ToEJSY('ZPSY')" id="p_body_middle_left_title_JZ" style="border-bottom-color: #f2f2f2; border-bottom-width: 1px; border-bottom-style: solid;">兼职</p>
+		<ul class="ul_body_middle_left_section" style="height: 90px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=653')">网络营销</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=654')">生活配送</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=655')">传单派发</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=660')">美工设计</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=662')">促销导购</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=665')">艺术老师</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=661')">导游</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=677')">会计</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=666')">化妆师</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=658')">钟点工</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=671')">网站开发</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=672')">网络布线</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=674')">汽车代驾</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=673')">汽车陪练</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=669')">演出表演</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=675')">保洁清洗</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=663')">平面模特</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=667')">SEO优化</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','JZLB=668')">护工</li>
+			<li class="li_body_middle_left_section" style="margin-right:0px;width:80px;" onclick="OpenCXLB(90,'/QZZPCX/QZZPCX_JZZP','null')">更多>></li>		
+		</ul>
+		</div>
+		<div id="div_body_middle_left_JYPX" class="div_body_middle_left_section" style="width: 350px;height:260px;float:left;">
+		<p class="p_body_middle_left_title" onclick="ToEJSY('JYPXSY')" id="p_body_middle_left_title_JZ" style="border-bottom-color: #f2f2f2; border-bottom-width: 1px; border-bottom-style: solid;">教育培训</p>
+		<span class="span_body_middle_left_title_small_jypx" onclick="OpenCXLB(106,'/JYPXCX/JYPXCX_JJJG','null')">家教</span>		
+		<ul class="ul_body_middle_left_section" style="height: 20px;">
+			<li class="li_body_middle_left_section"  style="margin-right:0px;" onclick="OpenCXLB(104,'/JYPXCX/JYPXCX_ZXXFDB','null')">辅导班</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section"  style="margin-right:0px;" onclick="OpenCXLB(105,'/JYPXCX/JYPXCX_ZXXYDY','null')">一对一</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section"  style="margin-right:0px;" onclick="OpenCXLB(106,'/JYPXCX/JYPXCX_JJJG','null')">机构</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section"  style="margin-right:0px;" onclick="OpenCXLB(107,'/JYPXCX/JYPXCX_JJGR','null')">个人</li>		
+		</ul>
+		<span class="span_body_middle_left_title_small_jypx" onclick="OpenCXLB(108,'/JYPXCX/JYPXCX_YYPXJG','null')">培训</span>	
+		<ul class="ul_body_middle_left_section" style="height: 20px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(108,'/JYPXCX/JYPXCX_YYPXJG','null')">语言</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(110,'/JYPXCX/JYPXCX_YSPXJG','null')">艺术</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(112,'/JYPXCX/JYPXCX_ZYJNPX','null')">职业</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(113,'/JYPXCX/JYPXCX_TYPXJG','null')">体育</li>
+		</ul>
+		<span class="span_body_middle_left_title_small_jypx"></span>
+		<ul class="ul_body_middle_left_section" style="height: 30px;">			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(118,'/JYPXCX/JYPXCX_GLPX','null')">管理</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(119,'/JYPXCX/JYPXCX_YYEJY','null')">早教</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(117,'/JYPXCX/JYPXCX_SJPX','null')">设计</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(116,'/JYPXCX/JYPXCX_ITPX','null')">IT</li>
+		</ul>
+		<span class="span_body_middle_left_title_small_jypx" onclick="OpenCXLB(115,'/JYPXCX/JYPXCX_XLJY','null')">学历</span>	
+		<ul class="ul_body_middle_left_section" style="height: 20px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(115,'/JYPXCX/JYPXCX_XLJY','LB=441')">考研</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(115,'/JYPXCX/JYPXCX_XLJY','LB=446')">考博</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(115,'/JYPXCX/JYPXCX_XLJY','LB=443')">成考</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(115,'/JYPXCX/JYPXCX_XLJY','LB=444')">自考</li>
+		</ul>
+		<span class="span_body_middle_left_title_small_jypx" onclick="OpenCXLB(114,'/JYPXCX/JYPXCX_LX','null')">留学</span>	
+		<ul class="ul_body_middle_left_section" style="height: 20px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(114,'/JYPXCX/JYPXCX_LX','LB=830')">美国</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(114,'/JYPXCX/JYPXCX_LX','LB=799')">加拿大</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(114,'/JYPXCX/JYPXCX_LX','LB=724')">澳大利亚</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(114,'/JYPXCX/JYPXCX_LX','LB=864')">日本</li>
+		</ul>
+		<span class="span_body_middle_left_title_small_jypx" onclick="OpenCXLB(111,'/JYPXCX/JYPXCX_YM','null')">移民</span>	
+		<ul class="ul_body_middle_left_section" style="height: 30px;">
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(111,'/JYPXCX/JYPXCX_YM','LB=830')">美国</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(111,'/JYPXCX/JYPXCX_YM','LB=905')">新加坡</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(111,'/JYPXCX/JYPXCX_YM','LB=799')">加拿大</li>
+			<li class="li_body_middle_left_section_fg_10">/</li> 			
+			<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(111,'/JYPXCX/JYPXCX_YM','LB=724')">澳大利亚</li>
+		</ul>
+		</div>
+	</div>
+	<div class="div_body_middle" style="width: 270px;margin-right:5px;">
+		<div id="div_body_middle_left_SHFW" class="div_body_middle_left_section" style="width: 270px;height:640px;">
+			<p class="p_body_middle_left_title" onclick="ToEJSY('SHFWSY')" id="p_body_middle_left_title_SHFW" style="border-bottom-color: #f2f2f2; border-bottom-width: 1px; border-bottom-style: solid;">生活服务</p>
+			<p class="p_body_middle_left_title_small">家政服务</p>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(173,'/SHFWCX/SHFWCX_BMYS','null')">家政</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(173,'/SHFWCX/SHFWCX_BMYS','LB=14')">保姆</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(173,'/SHFWCX/SHFWCX_BMYS','LB=12')">月嫂</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(173,'/SHFWCX/SHFWCX_BMYS','LB=15')">钟点工</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(173,'/SHFWCX/SHFWCX_BMYS','LB=17')">陪护</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(174,'/SHFWCX/SHFWCX_BJQX','null')">保洁</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(174,'/SHFWCX/SHFWCX_BJQX','LB=24')">家庭</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(174,'/SHFWCX/SHFWCX_BJQX','LB=25')">玻璃</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(174,'/SHFWCX/SHFWCX_BJQX','LB=26')">沙发</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(174,'/SHFWCX/SHFWCX_BJQX','LB=27')">灯具</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(174,'/SHFWCX/SHFWCX_BJQX','LB=28')">壁纸</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(172,'/SHFWCX/SHFWCX_BJ','null')">搬家</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(172,'/SHFWCX/SHFWCX_BJ','LB=1')">居民</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(172,'/SHFWCX/SHFWCX_BJ','LB=2')">公司</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(172,'/SHFWCX/SHFWCX_BJ','LB=3')">小型</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(172,'/SHFWCX/SHFWCX_BJ','LB=4')">长途</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(172,'/SHFWCX/SHFWCX_BJ','LB=11')">国际</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(172,'/SHFWCX/SHFWCX_FWWX','null')">维修</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(180,'/SHFWCX/SHFWCX_FWWX','null')">房屋</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(178,'/SHFWCX/SHFWCX_JDWX','null')">家电</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(181,'/SHFWCX/SHFWCX_JJWX','null')">家具</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(182,'/SHFWCX/SHFWCX_SJWX','null')">手机</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(184,'/SHFWCX/SHFWCX_SMWX','null')">数码</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(175,'/SHFWCX/SHFWCX_GDSTQL','null')">其他</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(175,'/SHFWCX/SHFWCX_GDSTQL','null')">补漏</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(175,'/SHFWCX/SHFWCX_GDSTQL','null')">疏通</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(176,'/SHFWCX/SHFWCX_SHPS','null')">配送</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(183,'/SHFWCX/SHFWCX_KSXSHS','null')">开锁</li>
+				<li class="li_body_middle_left_section_fg">/</li> 	
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(177,'/SHFWCX/SHFWCX_BZMD','null')">白事</li>
+			</ul>
+			<p class="p_body_middle_left_title_small">旅游酒店</p>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(125,'/LYJDCX/LYJDCX_ZBY','null')">周边</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(125,'/LYJDCX/LYJDCX_ZBY','YWXM=42')">农家乐</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(125,'/LYJDCX/LYJDCX_ZBY','YWXM=49')">烧烤</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(125,'/LYJDCX/LYJDCX_ZBY','YWXM=47')">温泉</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(125,'/LYJDCX/LYJDCX_ZBY','YWXM=44')">采摘</li>	
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(124,'/LYJDCX/LYJDCX_GNY','null')">国内</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(123,'/LYJDCX/LYJDCX_LXS','null')">旅行社</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(127,'/LYJDCX/LYJDCX_JDZSYD','null')">酒店</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(124,'/LYJDCX/LYJDCX_GNY','CYFS=2')">自驾游</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(126,'/LYJDCX/LYJDCX_CJY','null')">国外</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1291,'/LYJDCX/LYJDCX_QZFW','null')">签证</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(128,'/LYJDCX/LYJDCX_JP','null')">机票</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(126,'/LYJDCX/LYJDCX_CJY','CYFS=115')">跟团</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(129,'/LYJDCX/LYJDCX_DYDDR','null')">导游</li>
+			</ul>
+			<p class="p_body_middle_left_title_small">装修建材</p>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(130,'/ZXJCCX/ZXJCCX_JZFW','null')">家装</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(131,'/ZXJCCX/ZXJCCX_GZFW','null')">工装</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(133,'/ZXJCCX/ZXJCCX_JC','null')">建材</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(135,'/ZXJCCX/ZXJCCX_JFJS','null')">软装</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(134,'/ZXJCCX/ZXJCCX_JJ','null')">家具</li>	
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(131,'/ZXJCCX/ZXJCCX_GZFW','LB=17')">店铺</li>
+			</ul>
+			<p class="p_body_middle_left_title_small">婚庆摄影</p>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(136,'/HQSYCX/HQSYCX_HQGS','null')">婚庆</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(137,'/HQSYCX/HQSYCX_HCZL','null')">婚车</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(138,'/HQSYCX/HQSYCX_HYJD','null')">婚宴</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(139,'/HQSYCX/HQSYCX_CZZX','null')">彩妆</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(140,'/HQSYCX/HQSYCX_HQYP','null')">用品</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(141,'/HQSYCX/HQSYCX_SY','null')">司仪</li>	
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(144,'/HQSYCX/HQSYCX_HSSY','null')">摄影</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(143,'/HQSYCX/HQSYCX_HSLF','null')">婚纱</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(142,'/HQSYCX/HQSYCX_HLGP','null')">跟拍</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(144,'/HQSYCX/HQSYCX_HSSY','null')">写真</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(144,'/HQSYCX/HQSYCX_HSSY','null')">儿童</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(136,'/HQSYCX/HQSYCX_HQGS','TGFW=18')">策划</li>	
+			</ul>
+			<p class="p_body_middle_left_title_small">休闲娱乐</p>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(48,'/XXYLCX/XXYLCX_XYWQ','null')">休闲</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(48,'/XXYLCX/XXYLCX_XYWQ','null')">洗浴温泉</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(49,'/XXYLCX/XXYLCX_ZLAM','null')">足疗按摩</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(45,'/XXYLCX/XXYLCX_YDJB','LB=34')">棋牌室</li>	
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(45,'/XXYLCX/XXYLCX_YDJB','null')">娱乐</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(44,'/XXYLCX/XXYLCX_YDJS','null')">健身</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(47,'/XXYLCX/XXYLCX_HW','null')">户外</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(45,'/XXYLCX/XXYLCX_YDJB','LB=14')">KTV</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(45,'/XXYLCX/XXYLCX_YDJB','LB=11')">酒吧</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(45,'/XXYLCX/XXYLCX_YDJB','LB=3401')">网吧</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(145,'/LRCX/LRCX_MRHF','null')">丽人</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(145,'/LRCX/LRCX_MRHF','null')">美容</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(146,'/LRCX/LRCX_MFHF','null')">美发</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(149,'/LRCX/LRCX_MJ','null')">美甲</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(147,'/LRCX/LRCX_WD','null')">舞蹈</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(148,'/LRCX/LRCX_YJ','null')">瑜伽</li>
+			</ul>
+		</div>
+		<div id="div_body_middle_left_JWHS" class="div_body_middle_left_section" style="width: 350px;height:410px;">
+			<p class="p_body_middle_left_title" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','null')" id="p_body_middle_left_title_ES" style="border-bottom-color: #f2f2f2; border-bottom-width: 1px; border-bottom-style: solid;">旧物回收</p>
+			<p class="p_body_middle_left_title_small">热门回收</p>			
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=504')">电脑</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=504&XL=535')">笔记本</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=504&XL=536')">显示器</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=504&XL=537')">平板</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=504&XL=539')">台式机</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=518')">数码</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=505')">手机</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=518&XL=626')">摄像机</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=518&XL=627')">单反</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=518&XL=632')">导航仪</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=506')">金银</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=506&XL=541')">黄金</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=506&XL=542')">白银</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=506&XL=543')">铂金</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=506&XL=544')">钯金</li>
+			</ul>
+			<p class="p_body_middle_left_title_small">生活回收</p>			
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=509')">家具</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=509&XL=555')">床</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=509&XL=556')">沙发</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=509&XL=554')">衣柜</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=509&XL=558')">桌椅</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=503')">电器</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=503&XL=528')">空调</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=503&XL=530')">电视</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=503&XL=531')">冰箱</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=503&XL=529')">洗衣机</li>
+			</ul>
+			<p class="p_body_middle_left_title_small">商业回收</p>
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=521')">办公</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=521&XL=648')">打印机</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=521&XL=651')">传真机</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=521&XL=652')">电话机</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=507')">礼品</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=507&XL=546')">燕窝</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=507&XL=547')">海参</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=507&XL=550')">鹿茸</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=507&XL=549')">名酒</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=515')">设备</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=515&XL=580')">工厂</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=515&XL=581')">机械</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','LB=515&XL=582')">酒店</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(1761,'/SHFWCX/SHFWCX_ESHS','null')">更多>></li>
+			</ul>
+		</div>
+	</div>
+	<div class="div_body_middle" style="width: 270px;">
+		<div id="div_body_middle_left_SHFW" class="div_body_middle_left_section" style="width: 270px;height:370px;">
+			<p class="p_body_middle_left_title" onclick="ToEJSY('SWFWSY')" id="p_body_middle_left_title_SWFW" style="border-bottom-color: #f2f2f2; border-bottom-width: 1px; border-bottom-style: solid;">商务服务</p>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(211,'/SWFWCX/SWFWCX_GSZC','null')">工商</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(211,'/SWFWCX/SWFWCX_GSZC','null')">注册</li>
+	
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(212,'/SWFWCX/SWFWCX_SBZL','null')">专利</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(232,'/SWFWCX/SWFWCX_FLZX','null')">律师</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(235,'/SWFWCX/SWFWCX_ZXFW','null')">咨询</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(236,'/SWFWCX/SWFWCX_CWKJPG','null')">财务</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(238,'/SWFWCX/SWFWCX_TZDB','null')">投资担保</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(236,'/SWFWCX/SWFWCX_CWKJPG','LB=48')">验资</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(236,'/SWFWCX/SWFWCX_CWKJPG','LB=47')">记账</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(237,'/SWFWCX/SWFWCX_BX','null')">保险</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(215,'/SWFWCX/SWFWCX_HYWL','null')">物流</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(215,'/SWFWCX/SWFWCX_HYWL','null')">货运</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(214,'/SWFWCX/SWFWCX_KD','null')">快递</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(215,'/SWFWCX/SWFWCX_HYWL','LB=617')">仓储</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(215,'/SWFWCX/SWFWCX_HYWL','LB=622')">进出口</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"  onclick="OpenCXLB(219,'/SWFWCX/SWFWCX_SJCH','null')">营销</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(220,'/SWFWCX/SWFWCX_GGCM','null')">广告</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(219,'/SWFWCX/SWFWCX_SJCH','null')">设计策划</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(217,'/SWFWCX/SWFWCX_YSBZ','null')">印刷包装</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw"></span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(218,'/SWFWCX/SWFWCX_PHZP','null')">喷绘</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(223,'/SWFWCX/SWFWCX_ZK','null')">制卡</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(234,'/SWFWCX/SWFWCX_FYSJ','null')">翻译</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(221,'/SWFWCX/SWFWCX_ZHFW','null')">展会</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(222,'/SWFWCX/SWFWCX_LPDZ','null')">礼品</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(224,'/SWFWCX/SWFWCX_WZJSTG','null')">IT</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(224,'/SWFWCX/SWFWCX_WZJSTG','LB=410')">网站建设</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(224,'/SWFWCX/SWFWCX_WZJSTG','LB=402')">网络推广</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(224,'/SWFWCX/SWFWCX_WZJSTG','LB=404')">app开发</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(231,'/SWFWCX/SWFWCX_JXSBWX','null')">维修</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(231,'/SWFWCX/SWFWCX_JXSBWX','null')">机械维修</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(229,'/SWFWCX/SWFWCX_BGSBWX','null')">办公维修</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(230,'/SWFWCX/SWFWCX_JZWX','null')">建筑维修</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(54,'/ZSJMCX/ZSJMCX_CY','null')">加盟</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(54,'/ZSJMCX/ZSJMCX_CY','null')">餐饮</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(55,'/ZSJMCX/ZSJMCX_FZXB','null')">服装</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(58,'/ZSJMCX/ZSJMCX_MRBJ','null')">美容</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(56,'/ZSJMCX/ZSJMCX_JC','null')">建材</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(60,'/ZSJMCX/ZSJMCX_JJRY','null')">家居</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(68,'/PFCGCX/PFCGCX_SP','null')">采购</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(68,'/PFCGCX/PFCGCX_SP','null')">食品</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(69,'/PFCGCX/PFCGCX_LP','null')">礼品</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(70,'/PFCGCX/PFCGCX_FSXM','null')">服装</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(75,'/PFCGCX/PFCGCX_HZP','null')">化妆品</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_fw" onclick="OpenCXLB(243,'/NLMFYCX/NLMFYCX_NZW','null')">农业</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(243,'/NLMFYCX/NLMFYCX_NZW','null')">农作物</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(240,'/NLMFYCX/NLMFYCX_CQYZ','null')">畜禽养殖</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(239,'/NLMFYCX/NLMFYCX_YLHH','null')">园林花卉</li>
+			</ul>
+		</div>
+		<div id="div_body_middle_left_ES" class="div_body_middle_left_section" style="width: 270px;height:680px;">
+			<p class="p_body_middle_left_title" onclick="ToEJSY('ESSY')" id="p_body_middle_left_title_ES" style="border-bottom-color: #f2f2f2; border-bottom-width: 1px; border-bottom-style: solid;">二手市场</p>
+			<p class="p_body_middle_left_title_small">手机数码</p>			
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(154,'/ESCX/ESCX_SJSM_ESSJ','null')">二手手机</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(154,'/ESCX/ESCX_SJSM_ESSJ','PP=102')">苹果</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(154,'/ESCX/ESCX_SJSM_ESSJ','PP=103')">三星</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(154,'/ESCX/ESCX_SJSM_ESSJ','PP=105')">华为</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(154,'/ESCX/ESCX_SJSM_ESSJ','PP=104')">小米</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(158,'/ESCX/ESCX_SJSM_TSJ','null')">台式电脑</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(158,'/ESCX/ESCX_SJSM_TSJ','LB=889')">台式机</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(158,'/ESCX/ESCX_SJSM_TSJ','LB=890')">服务器</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(158,'/ESCX/ESCX_SJSM_TSJ','LB=891')">硬件</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(155,'/ESCX/ESCX_SJSM_BJBDN','null')">笔记本</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(155,'/ESCX/ESCX_SJSM_BJBDN','LB=944&BJBPP=507')">联想</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(155,'/ESCX/ESCX_SJSM_BJBDN','LB=944&BJBPP=509')">华硕</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(155,'/ESCX/ESCX_SJSM_BJBDN','LB=944&BJBPP=508')">戴尔</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(155,'/ESCX/ESCX_SJSM_BJBDN','LB=944&BJBPP=512')">苹果</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(156,'/ESCX/ESCX_SJSM_PBDN','null')">平板电脑</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(156,'/ESCX/ESCX_SJSM_PBDN','PP=749')">iPad</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(156,'/ESCX/ESCX_SJSM_PBDN','PP=750')">三星</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(156,'/ESCX/ESCX_SJSM_PBDN','PP=755')">小米</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(156,'/ESCX/ESCX_SJSM_PBDN','PP=755')">华为</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(157,'/ESCX/ESCX_SJSM_SMCP','null')">数码产品</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(157,'/ESCX/ESCX_SJSM_SMCP','LB=841')">相机</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(157,'/ESCX/ESCX_SJSM_SMCP','LB=844')">打印机</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(157,'/ESCX/ESCX_SJSM_SMCP','LB=844')">游戏机</li>
+			</ul>
+			<p class="p_body_middle_left_title_small">生活百货</p>			
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(159,'/ESCX/ESCX_JDJJBG_ESJD','null')">二手家电</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(159,'/ESCX/ESCX_JDJJBG_ESJD','LB=3')">空调</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(159,'/ESCX/ESCX_JDJJBG_ESJD','LB=1')">电视</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(159,'/ESCX/ESCX_JDJJBG_ESJD','LB=4')">冰箱</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(159,'/ESCX/ESCX_JDJJBG_ESJD','LB=8')">厨卫</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(160,'/ESCX/ESCX_JDJJBG_ESJJ','null')">二手家具</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(160,'/ESCX/ESCX_JDJJBG_ESJJ','LB=176')">床</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(160,'/ESCX/ESCX_JDJJBG_ESJJ','LB=182')">沙发</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(160,'/ESCX/ESCX_JDJJBG_ESJJ','LB=178')">柜子</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(160,'/ESCX/ESCX_JDJJBG_ESJJ','LB=180')">桌子</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(161,'/ESCX/ESCX_JDJJBG_JJRY','null')">家居日用</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(161,'/ESCX/ESCX_JDJJBG_JJRY','LB=260')">生活日用</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(161,'/ESCX/ESCX_JDJJBG_JJRY','LB=261')">灯具</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(161,'/ESCX/ESCX_JDJJBG_JJRY','LB=258')">床品</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(163,'/ESCX/ESCX_MYFZMR_MYETYPWJ','null')">母婴儿童</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(163,'/ESCX/ESCX_MYFZMR_MYETYPWJ','LB=5')">婴幼服</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(163,'/ESCX/ESCX_MYFZMR_MYETYPWJ','LB=6')">童床童车</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(163,'/ESCX/ESCX_MYFZMR_MYETYPWJ','LB=7')">玩具</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(164,'/ESCX/ESCX_MYFZMR_FZXMXB','null')">服饰箱包</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(164,'/ESCX/ESCX_MYFZMR_FZXMXB','LB=83')">手表</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(164,'/ESCX/ESCX_MYFZMR_FZXMXB','LB=80')">箱包</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(164,'/ESCX/ESCX_MYFZMR_FZXMXB','LB=78')">服饰</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(164,'/ESCX/ESCX_MYFZMR_FZXMXB','LB=81')">配饰</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(162,'/ESCX/ESCX_JDJJBG_BGSB','null')">办公用品</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(162,'/ESCX/ESCX_JDJJBG_BGSB','LB=295')">设备</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(162,'/ESCX/ESCX_JDJJBG_BGSB','LB=296')">耗材</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(162,'/ESCX/ESCX_JDJJBG_BGSB','LB=297')">文仪</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(162,'/ESCX/ESCX_JDJJBG_BGSB','LB=298')">家具</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(170,'/ESCX/ESCX_QTES_ESSB','null')">二手设备</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(170,'/ESCX/ESCX_QTES_ESSB','LB=1')">机床</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(170,'/ESCX/ESCX_QTES_ESSB','LB=4')">发电</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(170,'/ESCX/ESCX_QTES_ESSB','LB=8')">化工</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(170,'/ESCX/ESCX_QTES_ESSB','LB=9')">仪表</li>
+			</ul>
+			<p class="p_body_middle_left_title_small">文化娱乐</p>			
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(167,'/ESCX/ESCX_WHYL_WTHWYQ','null')">文体户外</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(167,'/ESCX/ESCX_WHYL_WTHWYQ','LB=53')">户外</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(167,'/ESCX/ESCX_WHYL_WTHWYQ','LB=54')">健身</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(167,'/ESCX/ESCX_WHYL_WTHWYQ','LB=56')">文教</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(167,'/ESCX/ESCX_WHYL_WTHWYQ','LB=57')">乐器</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(166,'/ESCX/ESCX_WHYL_YSPSCP','null')">工艺收藏</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(166,'/ESCX/ESCX_WHYL_YSPSCP','LB=1')">古玩</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(166,'/ESCX/ESCX_WHYL_YSPSCP','LB=2')">书画</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(166,'/ESCX/ESCX_WHYL_YSPSCP','LB=7')">邮票</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(166,'/ESCX/ESCX_WHYL_YSPSCP','LB=4')">钱币</li>
+			</ul>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(168,'/ESCX/ESCX_WHYL_TSYXRJ','null')">书籍杂志</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(168,'/ESCX/ESCX_WHYL_TSYXRJ','LB=144')">图书</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(168,'/ESCX/ESCX_WHYL_TSYXRJ','LB=1441')">教材</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(168,'/ESCX/ESCX_WHYL_TSYXRJ','LB=145')">音像</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(168,'/ESCX/ESCX_WHYL_TSYXRJ','LB=146')">软件</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es" onclick="OpenCXLB(38,'/ESCX/ESCX_PWKQ_MPKQ','null')">票务卡券</span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(38,'/ESCX/ESCX_PWKQ_MPKQ','LB=107')">购物卡</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(38,'/ESCX/ESCX_PWKQ_MPKQ','LB=108')">健身卡</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" (38,'/ESCX/ESCX_PWKQ_MPKQ','null')">游泳卡</li>
+			</ul>
+			<span class="span_body_middle_left_title_small_es"></span>
+			<ul class="ul_body_middle_left_section" style="height: 20px;">
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(38,'/ESCX/ESCX_PWKQ_MPKQ','LB=110')">景点票</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(38,'/ESCX/ESCX_PWKQ_MPKQ','LB=109')">电影票</li>
+				<li class="li_body_middle_left_section_fg">/</li> 
+				<li class="li_body_middle_left_section" style="margin-right:0px;" onclick="OpenCXLB(38,'/ESCX/ESCX_PWKQ_MPKQ','LB=108')">充值卡</li>
+			</ul>
+		</div>
+	</div>
         <div class="div_body_bottom" style="display: none;">
         </div>
     </div>
     <div id="div_Foot" class="div_foot">
         <div class="div_foot_left">
-            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/logo_purple.png")" />
+            <img class="img_body_top" style="width:174px" src="@Url.Content("~/Areas/Business/Css/images/logo_purple.png")" />
         </div>
         <div class="div_foot_right">
             <p class="p_div_foot_right">
                 关于风铃网
                 <ul class="ul_div_foot_right">
-                    <li class="li_div_foot_right"><a class="a_div_foot_right">了解风铃网</a></li>
-                    <li class="li_div_foot_right"><a class="a_div_foot_right">加入风铃网</a></li>
+                    <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://www.915fl.com/BZZX/BZZX_GYWM" target="blank">了解风铃网</a></li>
+                    <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://www.915fl.com/BZZX/BZZX_GYWM" target="blank">加入风铃网</a></li>
                 </ul>
         </div>
         <div class="div_foot_right">
@@ -144,23 +1091,28 @@
             <p class="p_div_foot_right">服务支持</p>
             <ul class="ul_div_foot_right">
                 <li class="li_div_foot_right"><a class="a_div_foot_right">用户服务协议</a></li>
-                <li class="li_div_foot_right"><a class="a_div_foot_right">现金服务协议</a></li>
+                <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://www.915fl.com/BZZX/BZZX_SY_KSDH_ZHDJYXY?id=5" target="blank">现金服务协议</a></li>
                 <li class="li_div_foot_right"><a class="a_div_foot_right">诚信建设</a></li>
-                <li class="li_div_foot_right"><a class="a_div_foot_right">举报平台</a></li>
+                @*<li class="li_div_foot_right"><a class="a_div_foot_right">举报平台</a></li>*@
             </ul>
         </div>
         <div class="div_foot_right">
             <p class="p_div_foot_right">帮助中心</p>
             <ul class="ul_div_foot_right">
-                <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://localhost/infotownlet/Business/BZZX/BZZX?TYPE=CJWT">常见问题</a></li>
-                <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://localhost/infotownlet/Business/BZZX/BZZX?TYPE=LXKF">联系客服</a></li>
-                <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://localhost/infotownlet/Business/BZZX/BZZX?TYPE=YJFK">网站建议</a></li>
+                <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://www.915fl.com/BZZX/BZZX?TYPE=CJWT" target="blank">常见问题</a></li>
+                <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://www.915fl.com/BZZX/BZZX?TYPE=LXKF" target="blank">联系客服</a></li>
+                <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://www.915fl.com/BZZX/BZZX?TYPE=YJFK" target="blank">网站建议</a></li>
             </ul>
         </div>
         <p class="p_div_foot_bottom"></p>
     </div>
     <div class="div_bottom">
-        <p class="p_div_bottom">©2018 福建沐晗信息技术有限公司 客服电话：13675017762（周一至周日，8:00-22:00）</p>
-        <p class="p_div_bottom reduce">闽ICP备18003746号</p>
+        <p class="p_div_bottom"><span class="p_div_bottom_copyright">©</span>2018 福建沐晗信息技术有限公司&nbsp;&nbsp;客服及举报电话：400-043-5650 | 031-88342390（周一至周五，9:00-18:00）</p>
+        <p class="p_div_bottom_reduce">闽ICP备18003746号-1</p>
+	<p class="p_div_bottom">
+	    <img class="img_div_bottom" id="img_div_bottom_qyxyxx" src="@Url.Content("~/Areas/Business/Css/images/SY/WZJB/sy_qyxyxx.png")" />
+	    <img class="img_div_bottom" id="img_div_bottom_wljbappxz" src="@Url.Content("~/Areas/Business/Css/images/SY/WZJB/sy_wljbappxz.png")" />
+	    <img class="img_div_bottom" id="img_div_bottom_wsyhxxjbzq" src="@Url.Content("~/Areas/Business/Css/images/SY/WZJB/sy_wsyhxxjbzq.png")" />
+	</p>
     </div>
 }

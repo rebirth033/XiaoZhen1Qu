@@ -4,10 +4,26 @@ $(document).ready(function () {
     BindBodyNav();
     LoadFCCondition();
     LoadHot("FCXX_HZF");
+    BindClick("CX");
+    BindClick("ZXQK");
 });
+//绑定下拉框
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "CX") {
+            LoadCODESByTYPENAME("朝向", "CX", "CODES_FC", Bind, "CX", "CX", "");
+        }
+        if (type === "ZXQK") {
+            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC", Bind, "ZXQK", "ZXQK", "");
+        }
+        if (type === "ZZLX") {
+            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC", Bind, "FWQK", "ZZLX", "");
+        }
+    });
+}
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'整租房租金','出租间类型','朝向','装修情况'", "CODES_FC", "租金,类型,朝向,装修情况", "ZJ,CZJLX,CX,ZXQK", "100,100,100,100");
+    LoadConditionByTypeNames("'整租房租金','出租间类型'", "CODES_FC", "租金,类型", "ZJ,CZJLX", "100,100");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
@@ -72,10 +88,17 @@ function SelectURLCondition(obj) {
     LoadBody("FCXX_HZF", currentIndex);
     ShowSelectCondition("FCXX_HZF");
 }
+//选择下拉框
+function SelectDropdown(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    LoadBody("FCXX_HZF", currentIndex);
+    ShowSelectCondition("FCXX_HZF");
+}
 //加载主体部分
 function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("CZJLX,ZJ,QY,CX,ZXQK,SF");
+    var condition = GetAllCondition("CZJLX,ZJ,QY,DD,CX,ZXQK,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/FCCX/LoadFCXX",
@@ -106,13 +129,13 @@ function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
 //加载单条信息
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left" onclick="OpenXXXX(\'FCXX_HZF\',\'' + obj.ID + '\')">');
+    html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'FCXX_HZF\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'FCXX_HZF\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs">单间出租 / ' + obj.S + '室' + obj.T + '厅' + obj.W + '卫 / ' + obj.PFM + '平米 / ' + obj.ZXQK + ' / ' + obj.CX + ' / ' + obj.C + '层[共' + obj.GJC + '层]</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');

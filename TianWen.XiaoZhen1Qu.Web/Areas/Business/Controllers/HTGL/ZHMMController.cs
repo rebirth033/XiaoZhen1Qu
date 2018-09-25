@@ -10,7 +10,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class ZHMMController : BaseController
     {
-        public IYHJBXXBLL YHJBXXBLL { get; set; }
+        public IYHZCBLL YHZCBLL { get; set; }
         public ActionResult ZHMM()
         {
             return View();
@@ -25,7 +25,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 string checkcode = Session["TXCheckCode"].ToString();
                 if (TXYZM == checkcode)
                 {
-                    string result = YHJBXXBLL.GetObjByYHMOrSJ(Value);
+                    string result = YHZCBLL.GetObjByYHMOrSJ(Value);
                     if (!string.IsNullOrEmpty(result))
                     {
                         return Json(new { Result = EnResultType.Success, Message = "验证成功" });
@@ -73,7 +73,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string SJ = Request["SJ"];
             string DQYHM = Request["DQYHM"];
-            YHJBXX result = YHJBXXBLL.GetYHJBXXByYHMOrSJ(DQYHM);
+            YHJBXX result = YHZCBLL.GetYHJBXXByYHMOrSJ(DQYHM);
             if (result != null && SJ == result.SJ)
             {
                 Session["SJ"] = result.SJ;
@@ -89,7 +89,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string MM = Request["MM"];
             string SJ = Session["SJ"].ToString();
-            object result = YHJBXXBLL.UpdatePassword(MM, SJ);
+            object result = YHZCBLL.UpdatePassword(MM, SJ);
             return Json(result);
         }
 

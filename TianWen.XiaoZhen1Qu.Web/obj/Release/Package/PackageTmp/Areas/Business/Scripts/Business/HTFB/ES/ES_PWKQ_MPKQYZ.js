@@ -4,12 +4,13 @@
 //验证所有
 function ValidateAll() {
     if (ValidateRadio("GQ", "忘记选择供求啦")
-        & ValidateSelect("MPKQLB", "LB", "忘记选择类别啦")
+        & ValidateSelect("LB", "LB", "忘记选择类别啦")
         //& ValidateYXQZ()
         & ValidateJG()
         & ValidateXXDZ()
+        & ValidateCheck("PSFS", "忘记选择配送方式啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
-        & ValidateInput("BT", "标题") & ValidateInput("LXDH", "联系电话"))
+        & ValidateCommonWithoutZP())
         return true;
     else
         return false;

@@ -706,7 +706,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         //获取个人信息
         public List<GRXXView> GetGRXX(string yhid)
         {
-            DataTable dtgrxx = DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'", yhid));
+            DataTable dtgrxx = DAO.Repository.GetDataTable(string.Format("select * from YHJBXX y where y.yhid = '{0}'", yhid));
             return ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
         }
 

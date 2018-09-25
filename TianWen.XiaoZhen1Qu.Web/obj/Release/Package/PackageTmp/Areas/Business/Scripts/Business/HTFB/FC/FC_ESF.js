@@ -6,7 +6,7 @@
     BindClick("ZZLX");
     BindClick("CQNX");
     BindClick("CQLX");
-    BindClick("JZND");
+    //BindClick("JZND");
     LoadDuoX("出售房屋亮点", "FWLD");
 });
 //绑定下拉框
@@ -214,14 +214,14 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 4 || i === 9 || i === 14 || i === 19) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 5 === 4 && i !== xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -265,7 +265,7 @@ function LoadJBXX() {
                 $("#spanZZLX").html(xml.Value.FC_ESFJBXX.ZZLX);
                 $("#spanCQNX").html(xml.Value.FC_ESFJBXX.CQNX);
                 $("#spanCQLX").html(xml.Value.FC_ESFJBXX.CQLX);
-                $("#spanJZND").html(xml.Value.FC_ESFJBXX.JZND);
+		$("#JZND").val(xml.Value.FC_ESFJBXX.JZND);
                 $("#SJ").html(xml.Value.FC_ESFJBXX.SJ);
                 $("#XQDZ").val(xml.Value.FC_ESFJBXX.XQMC);
                 //设置编辑器的内容
@@ -293,7 +293,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
     obj = jsonObj.AddJson(obj, "CQNX", "'" + $("#spanCQNX").html() + "'");
     obj = jsonObj.AddJson(obj, "CQLX", "'" + $("#spanCQLX").html() + "'");
-    obj = jsonObj.AddJson(obj, "JZND", "'" + $("#spanJZND").html() + "'");
+    obj = jsonObj.AddJson(obj, "JZND", "'" + $("#JZND").val() + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
     obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

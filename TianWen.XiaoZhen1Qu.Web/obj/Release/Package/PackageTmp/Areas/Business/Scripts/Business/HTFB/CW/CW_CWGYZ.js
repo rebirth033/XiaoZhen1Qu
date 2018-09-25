@@ -31,6 +31,7 @@ function ValidateAll() {
         & ValidateCWGYMQK()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateRadio("QCQK", "忘记选择驱虫情况啦")
+        & ValidateXXDZ()
         & ValidateCommon())
         return true;
     else

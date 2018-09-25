@@ -64,9 +64,14 @@ function GoToBQ(tag) {
     var len = document.getElementById("li_row_right_jcpp_first_right_tag_" + tag).offsetTop - 75;//获取div层到页面顶部的高度 
     $(".ul_row_right_jcpp_first_right").stop().animate({ scrollTop: len }, 300, "swing", function () { });
 }
+//跳转到标签位置
+function GoToBQ2(tag) {
+    var len = document.getElementById("li_row_right_jcpp_second_right_tag_" + tag).offsetTop - 75;//获取div层到页面顶部的高度 
+    $(".ul_row_right_jcpp_second_right").stop().animate({ scrollTop: len }, 300, "swing", function () { });
+}
 //打开车系列表
 function OpenSecond(codeid, codename) {
-    SelectSecond(codename);
+    SelectSecond(codeid, codename);
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadByParentID",
@@ -79,13 +84,41 @@ function OpenSecond(codeid, codename) {
         success: function (xml) {
             if (xml.Result === 1) {
                 $("#div_row_right_jcpp_second").html('');
-                var html = "";
-                html += '<span class="p_row_right_jcpp">请选择小类<span onclick="CloseZWMC(2)" class="span_row_right_jcpp">×</span></span>';
-                html += '<ul class="ul_row_right_jcpp_second">';
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += '<li onclick="SelectSecond(\'' + xml.list[i].CODENAME + '\')" class="li_row_right_jcpp_second">' + xml.list[i].CODENAME + '</li>';
+
+		var html = "";
+                html += '<span class="p_row_right_jcpp">请选择小类(可不选)<span onclick="CloseZWMC(1)" class="span_row_right_jcpp">×</span></span>';
+                html += '<div class="div_row_right_jcpp_second_left">';
+                html += '<ul class="ul_row_right_jcpp_second_left">';
+                for (var i = 0; i < BQArray.length; i++) {
+                    var count = 0;
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            count++;
+                    }
+                    if (count !== 0)
+                        html += '<li onclick="GoToBQ2(\'' + BQArray[i] + '\')" class="li_row_right_jcpp_second_left">' + BQArray[i] + '</li>';
                 }
                 html += '</ul>';
+                html += '</div>';
+
+                html += '<div class="div_row_right_jcpp_second_right">';
+                html += '<ul class="ul_row_right_jcpp_second_right">';
+                for (var i = 0; i < BQArray.length; i++) {
+                    var count = 0;
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            count++;
+                    }
+                    if (count !== 0)
+                        html += '<li id="li_row_right_jcpp_second_right_tag_' + BQArray[i] + '" class="li_row_right_jcpp_second_right_tag">' + BQArray[i] + '</li>';
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            html += '<li onclick="SelectSecond(\'' + xml.list[j].CODEID + '\',\'' + codename + " " + xml.list[j].CODENAME + '\')" class="li_row_right_jcpp_second_right_value">' + xml.list[j].CODENAME + '</li>';
+                    }
+                }
+                html += '</ul>';
+                html += '</div>';
+
                 $("#div_row_right_jcpp_second").append(html);
                 $("#div_row_right_jcpp_second").css("display", "inline-block");
             }
@@ -96,7 +129,7 @@ function OpenSecond(codeid, codename) {
     });
 }
 //选择职位
-function SelectSecond(name) {
+function SelectSecond(id, name) {
     $("#spanLB").html(name);
     ValidateSelect("OUTLB", "LB", "请选择类别");
 }

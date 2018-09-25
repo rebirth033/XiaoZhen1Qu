@@ -14,7 +14,7 @@
     document.title = "风铃网_发布信息_发布成功";
     
     LoadDefault();
-    GenerateQRCode();
+    GenerateQRCode("君临天华B区5号楼单身公寓一套");
 });
 //加载默认
 function LoadDefault() {
@@ -38,8 +38,7 @@ function LoadDefault() {
     });
 }
 //生成二维码
-function GenerateQRCode() {
-    var qrdata = "君临天华B区5号楼单身公寓一套";
+function GenerateQRCode(qrdata) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Areas/Business/Ashx/GenerateQRCode.ashx",

@@ -29,9 +29,10 @@ function ValidateAll() {
         & ValidateZPRS()
         & ValidateJZSJ() 
         & ValidateXZSP()
+	& ValidateSelect("ZPXZJS", "XZJS", "忘记选择结算方式啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
-        & ValidateInput("BT", "标题")& ValidateInput("LXDH", "联系电话"))
+        & ValidateCommonWithoutZP())
         return true;
     else
         return false;

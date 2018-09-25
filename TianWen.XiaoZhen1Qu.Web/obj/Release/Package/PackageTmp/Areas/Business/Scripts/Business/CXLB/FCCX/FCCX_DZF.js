@@ -52,6 +52,9 @@ function LoadURLCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
+    if (name === "QY") {
+        LoadConditionByParentID(obj.id, "CODES_DISTRICT", "地段", "DD");
+    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -71,7 +74,7 @@ function SelectURLCondition(obj) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("FWLX,ZJ,QY");
+    var condition = GetAllCondition("FWLX,ZJ,QY,DD");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/FCCX/LoadFCXX",
@@ -100,18 +103,18 @@ function LoadBody(TYPE, PageIndex) {
 //加载单条信息
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left" onclick="OpenXXXX(\'FCXX_DZF\',\'' + obj.ID + '\')">');
+    html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'FCXX_DZF\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'FCXX_DZF\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.FWLX + ' / ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">联系商家</span></p>');
+     html += ('<p class="p_li_body_left_right">' + GetJG(obj.ZJ, '元/天') + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

@@ -18,13 +18,13 @@ function LoadJZ() {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liJZ' style='width:220px;' onclick='SelectDuoX(this)'><img class='img_JZ'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 3 === 2) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 3) === 0)
-                    $("#divJZ").css("height", parseInt(xml.list.length / 3) * 50 + "px");
+                    $("#divJZ").css("height", parseInt(xml.list.length / 3) * 40 + "px");
                 else
-                    $("#divJZ").css("height", (parseInt(xml.list.length / 3) + 1) * 50 + "px");
+                    $("#divJZ").css("height", (parseInt(xml.list.length / 3) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divJZText").html(html);
                 $(".img_JZ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -54,19 +54,19 @@ function LoadBB() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liBB' style='width:150px;' onclick='SelectDuoX(this)'><img class='img_BB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 4 === 3 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divBB").css("height", parseInt(xml.list.length / 4) * 60 + "px");
+                    $("#divBB").css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#divBB").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
+                    $("#divBB").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divBBText").html(html);
                 $(".img_BB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liBB").bind("click", function () { ValidateCheck("BB", "忘记选择班别啦"); });
-                LoadJBXX();
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

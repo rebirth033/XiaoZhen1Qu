@@ -38,15 +38,15 @@ function LoadJBXX(obj) {
     html += ('<div class="div_body_left_body">');
     html += ('<div class="div_body_left_body_left">');
     html += ('<div class="div_body_left_body_left_img">');
-    html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img id="img_body_left_body_left_show" onload="DrawImage(this,460,350)" onclick="ImgShow(this)" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('</div>');
-    html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
+    html += ('<span onclick="LeftImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
     html += ('<div class="div_body_left_body_left_list">');
     html += ('<ul id="ul_body_left_body_left_list" class="ul_body_left_body_left_list">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_left_list_tp">');
         html += ('<img class="img_body_left_body_left_list_tp" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
-        html += ('<div class="div_img_body_left_body_left_list_tp"></div>');
+        html += ('<div class="div_img_body_left_body_left_list_tp" onmouseover="ClickShowImg(this,'+i+')"></div>');
         html += ('</li>');
     }
     html += ('</ul>');
@@ -54,16 +54,15 @@ function LoadJBXX(obj) {
     html += ('<span onclick="RightImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an">></span>');
     html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">价格：</span>');
-    html += ('<span class="span_body_left_body_right_right" style="color: #bc6ba6;font-size: 16px;font-weight:700;">' + GetJG(obj.JG, '万元') + '</span>');
+    html += ('<p class="p_body_left_body_right_first">');
+    html += ('<span class="span_body_left_body_right_zj">' + GetJG(obj.JG, '万元') + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">车型：</span>');
+    html += ('<span class="span_body_left_body_right_left">车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.PP + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">颜色：</span>');
+    html += ('<span class="span_body_left_body_right_left">颜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.CLYS + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
@@ -72,22 +71,17 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">首次上牌：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.SPNF + obj.SPYF + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.SPNF + "年" + obj.SPYF + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">看车地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + '［' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '］ ' + obj.JTDZ + '</span>');
+    html += ('<span class="span_body_left_body_right_right">'  + ValidateNull(obj.QY) + ' - ' + ValidateNull(obj.DD) + ' - ' + obj.JTDZ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">联系人：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + (obj.LXR === "" ? "暂无数据" : obj.LXR) + '</span>');
+    html += ('<span class="span_body_left_body_right_left">联&nbsp;&nbsp;系&nbsp;&nbsp;人：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + (obj.LXR === "" ? "暂无" : obj.LXR) + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
-    html += ('<span class="span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 4) + '****' + '</span>');
-    html += ('<span class="span_body_left_body_right_right_ckwzdh" onclick="ShowWZDH()">完整电话</span>');
-    html += ('<span class="span_body_left_body_right_wzdh"><span class="span_body_left_body_right_wzdh_lxdh"><i class="i_body_left_body_right_wzdh_lxdh"></i>' + obj.LXDH + '</span><span class="span_body_left_body_right_wzdh_ts">联系时请一定说明在风铃网上看到的哈，谢谢^_^</span><i class="i_body_left_body_right_wzdh_close" onclick="HideWZDH()">×</i></span>');
-    html += ('</p>');
+    html += ('<div class="div_body_left_body_right_lxdh" id="div_body_left_body_right_lxdh" onclick="ShowLXDH(\''+obj.LXDH+'\')"><img class="img_body_left_body_right_lxdh"  src="' + getRootPath() + "/Areas/Business/Css/images/XXXX/GY/xxxx_gy_lxdh.png" + '" /><span class="span_body_left_body_right_lxdh">联系电话</span></div>');
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
@@ -121,7 +115,7 @@ function LoadXQ(obj, BCMSString) {
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_xq_xx">');
-        html += ('<img id="img_body_left_body_xq_xx' + i + '" class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<img id="img_body_left_body_xq_xx' + i + '" onload="DrawImage(this,403,348)" onclick="ImgShow(this)" class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
         html += ('</li>');
     }
     html += ('</ul>');
@@ -180,7 +174,7 @@ function LoadCNXHInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'CLXX_JC\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.SPNF + ' / ' + obj.XSLC + ' / ' + '自动' + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.SPNF + '年 / ' + toDecimal1(obj.PL) + '升 / ' + '自动' + '</p>');
     html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.JG + '万元</p>');
     html += ('</li>');
     return html;
@@ -223,7 +217,7 @@ function LoadJPTJInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'CLXX_JC\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.SPNF + ' / ' + obj.XSLC + ' / ' + '自动' + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.SPNF + '年 / ' + toDecimal1(obj.PL) + '升 / ' + '自动' + '</p>');
     html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.JG + '万元</p>');
     html += ('</li>');
     return html;
@@ -270,7 +264,7 @@ function LoadJJRTJFYInfo(obj) {
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
     html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.SPNF + ' / ' + obj.XSLC + ' / ' + '自动' + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.SPNF + '年 / ' + toDecimal1(obj.PL) + '升 / ' + '自动' + '</p>');
     html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.JG + '万元</p>');
     html += ('</div>');
     html += ('</li>');

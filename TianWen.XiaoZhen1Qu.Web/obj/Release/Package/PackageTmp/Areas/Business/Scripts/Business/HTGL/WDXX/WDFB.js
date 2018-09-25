@@ -63,7 +63,7 @@ function LoadInfo(obj) {
     html += ('<li class="li_new_info">');
     html += ('<div class="div_new_info">');
     html += ('<div class="div_new_info_head">');
-    html += ('<span class="span_new_info_head">' + obj.CJSJ.ToString("yyyy年MM月dd日 hh:mm:ss") + '</span>');
+    html += ('<span class="span_new_info_head">信息编号:' + obj.JCXXID  + '<span style="float:right;">更新时间:' +obj.CJSJ.ToString("yyyy年MM月dd日 hh:mm:ss") + '</span></span>');
     //html += ('<span class="span_new_info_edit"></span>');
     //html += ('<span class="span_new_info_delete"></span>');
     html += ('</div>');
@@ -84,22 +84,17 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_new_info_body_middle">');
     if (obj.STATUS === 1 || obj.STATUS === 2)
-        html += ('<span class="span_new_info_body_middle_common">状态:' + (obj.STATUS === 1 ? '<span class="green">正常显示</span>' : '<span class="red">已隐藏</span>') + '</span>');
+        html += ('<span class="span_new_info_body_middle_common">状态:' + (obj.STATUS === 1 ? '<span class="green" style="margin-left:5px;">正常显示</span>' : '<span class="red" style="margin-left:5px;">已删除</span>') + '</span>');
     if (obj.STATUS === 3)
-        html += ('<span class="span_new_info_body_middle_common">状态:<span class="green">待审核</span></span>');
-    html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_read" style="margin-top:10px;">浏览:' + '<span class="purple" style="font-weight:700;">' + obj.LLCS + '次</span>' + '</span>');
+        html += ('<span class="span_new_info_body_middle_common">状态:<span class="green" style="margin-left:5px;">待审核</span></span>');
+    html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_read" style="margin-top:10px;">浏览:' + '<span class="purple" style="font-weight:700;margin-left:5px;">' + obj.LLCS + '次</span>' + '</span>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_right">');
-    if (obj.STATUS === 0)
+    if (obj.STATUS === 0 || obj.STATUS === 2)
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_update" onclick="Restore(\'' + obj.JCXXID + '\')">恢复显示</span>');
-    if (obj.STATUS === 1){
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_top" onclick="Hide(\'' + obj.JCXXID + '\')">隐藏</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_delete" onclick="Delete(\'' + obj.JCXXID + '\')">删除</span>');
-    }
-    if (obj.STATUS === 3) {
+    if (obj.STATUS === 1 || obj.STATUS === 3) {
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_update" onclick="Update(\'' + obj.JCXXID + '\',\'' + obj.LBID + '\')">修改</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_top" onclick="Hide(\'' + obj.JCXXID + '\')">隐藏</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_delete" onclick="Delete(\'' + obj.JCXXID + '\')">删除</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_delete" onclick="Hide(\'' + obj.JCXXID + '\')">删除</span>');
     }
     html += ('</div>');
     html += ('</div>');
@@ -146,35 +141,9 @@ function Restore(JCXXID) {
         }
     });
 }
-//删除信息
-function Delete(JCXXID) {
-    window.wxc.xcConfirm("您确定彻底删除本条信息吗,删除后将无法恢复", window.wxc.xcConfirm.typeEnum.warning, {
-        onOk: function (v) {
-            $.ajax({
-                type: "POST",
-                url: getRootPath() + "/WDFB/UpdateYHFBXX",
-                dataType: "json",
-                data:
-                {
-                    JCXXID: JCXXID,
-                    OPTYPE: "DELETE"
-                },
-                success: function (xml) {
-                    if (xml.Result === 1) {
-                        window.wxc.xcConfirm("信息删除成功", window.wxc.xcConfirm.typeEnum.success);
-                        LoadByActive();
-                    }
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-                }
-            });
-        }
-    });
-}
 //隐藏信息
 function Hide(JCXXID) {
-    window.wxc.xcConfirm("您确定隐藏本条信息吗?", window.wxc.xcConfirm.typeEnum.warning, {
+    window.wxc.xcConfirm("您确定删除本条信息吗?", window.wxc.xcConfirm.typeEnum.warning, {
         onOk: function (v) {
             $.ajax({
                 type: "POST",
@@ -187,7 +156,7 @@ function Hide(JCXXID) {
                 },
                 success: function (xml) {
                     if (xml.Result === 1) {
-                        window.wxc.xcConfirm("信息隐藏成功", window.wxc.xcConfirm.typeEnum.success);
+                        window.wxc.xcConfirm("信息删除成功", window.wxc.xcConfirm.typeEnum.success);
                         LoadByActive();
                     }
                 },

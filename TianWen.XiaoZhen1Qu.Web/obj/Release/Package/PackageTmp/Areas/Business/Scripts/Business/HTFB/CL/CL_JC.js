@@ -56,7 +56,7 @@ function LoadJCPP() {
                         html += '<li id="li_row_right_jcpp_first_right_tag_' + BQArray[i] + '" class="li_row_right_jcpp_first_right_tag">' + BQArray[i] + '</li>';
                     for (var j = 0; j < xml.list.length; j++) {
                         if (BQArray[i] === xml.list[j].CODEVALUE)
-                            html += '<li onclick="OpenSecond(\'' + xml.list[j].CODEID + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                            html += '<li onclick="OpenSecond(\'' + xml.list[j].CODEID + '\',\'' + xml.list[j].CODENAME + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
                     }
                 }
                 html += '</ul>';
@@ -77,7 +77,8 @@ function GoToBQ(tag) {
     $(".ul_row_right_jcpp_first_right").stop().animate({ scrollTop: len }, 300, "swing", function () { });
 }
 //打开车系列表
-function OpenSecond(codeid) {
+function OpenSecond(codeid, pp) {
+    $("#PP").val(pp);
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadByParentID",
@@ -94,7 +95,7 @@ function OpenSecond(codeid) {
                 html += '<span class="p_row_right_jcpp">请选择车系<span onclick="CloseJCPP(2)" class="span_row_right_jcpp">×</span></span>';
                 html += '<ul class="ul_row_right_jcpp_second">';
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<li onclick="OpenThird(\'' + xml.list[i].CODEID + '\',\'' + xml.list[i].CODEVALUE + " " + xml.list[i].CODENAME + '\')" class="li_row_right_jcpp_second">' + xml.list[i].CODEVALUE + " " + xml.list[i].CODENAME + '</li>';
+                    html += '<li onclick="OpenThird(\'' + xml.list[i].CODEID + '\',\'' + " " + xml.list[i].CODENAME + '\')" class="li_row_right_jcpp_second">'  + xml.list[i].CODENAME + '</li>';
                 }
                 html += '</ul>';
                 $("#div_row_right_jcpp_second").append(html);
@@ -108,6 +109,7 @@ function OpenSecond(codeid) {
 }
 //打开款式列表
 function OpenThird(codeid, cx) {
+    $("#CX").val(cx);
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadByParentID",
@@ -124,7 +126,7 @@ function OpenThird(codeid, cx) {
                 html += '<span class="p_row_right_jcpp">请选择款式<span onclick="CloseJCPP(3)" class="span_row_right_jcpp">×</span></span>';
                 html += '<ul class="ul_row_right_jcpp_third">';
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<li onclick="SelectThird(\'' + cx + '\',\'' + xml.list[i].CODENAME + '\')" class="li_row_right_jcpp_third">' + xml.list[i].CODENAME + '</li>';
+                    html += '<li onclick="SelectThird(\'' + cx + '\',\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')" class="li_row_right_jcpp_third">' + xml.list[i].CODENAME + '</li>';
                 }
                 html += '</ul>';
                 $("#div_row_right_jcpp_third").append(html);
@@ -137,8 +139,10 @@ function OpenThird(codeid, cx) {
     });
 }
 //选择款式
-function SelectThird(cx, ks) {
-    $("#spanPP").html(cx + " " + ks);
+function SelectThird(cx, ks, ksid) {
+    $("#spanPP").html($("#PP").val() + " " + cx + " " + ks);
+    $("#KS").val(ks);
+    $("#KSID").val(ksid);
     ValidateJCPP();
 }
 //关闭选择品牌框
@@ -270,9 +274,12 @@ function SetCLYS(clys) {
 //选择车辆颜色
 function ActiveCLYS() {
     $(".div_clys").each(function () {
-        $(this).css("border-color", "#cccccc").css("background-color", "#ffffff");;
+        $(this).css("border-color", "#cccccc").css("background-color", "#ffffff");
+        $(this).bind("mouseover",function(){$(this).css("background-color", "#ececec");});
+        $(this).bind("mouseout",function(){$(this).css("background-color", "#ffffff");});
     });
     $(this).css("border-color", "#bc6ba6").css("background-color", "#bc6ba6");
+    $(this).unbind("mouseover").unbind("mouseout");
 }
 //选择类别下拉框
 function SelectLB(obj, type) {
@@ -302,14 +309,14 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 6 === 5) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 6 === 5 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -339,8 +346,12 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.CL_JCJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                $("#spanPP").html(xml.Value.CL_JCJBXX.PP);
-                $("#spanSPNF").html(xml.Value.CL_JCJBXX.SPNF);
+                $("#spanPP").html(xml.Value.CL_JCJBXX.PP + xml.Value.CL_JCJBXX.CX + xml.Value.CL_JCJBXX.KS);
+                $("#PP").val(xml.Value.CL_JCJBXX.PP);
+                $("#CX").val(xml.Value.CL_JCJBXX.CX);
+                $("#KS").val(xml.Value.CL_JCJBXX.KS);
+                $("#KSID").val(xml.Value.CL_JCJBXX.KSID);
+                $("#spanSPNF").html(xml.Value.CL_JCJBXX.SPNF+"年");
                 $("#spanSPYF").html(xml.Value.CL_JCJBXX.SPYF);
                 $("#spanNJDQNF").html(xml.Value.CL_JCJBXX.NJDQNF);
                 $("#spanNJDQYF").html(xml.Value.CL_JCJBXX.NJDQYF);
@@ -375,9 +386,12 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + $("#PP").val() + "'");
+    obj = jsonObj.AddJson(obj, "CX", "'" + $("#CX").val() + "'");
+    obj = jsonObj.AddJson(obj, "KS", "'" + $("#KS").val() + "'");
+    obj = jsonObj.AddJson(obj, "KSID", "'" + $("#KSID").val() + "'");
     obj = jsonObj.AddJson(obj, "CLYS", "'" + GetCLYS() + "'");
-    obj = jsonObj.AddJson(obj, "SPNF", "'" + $("#spanSPNF").html() + "'");
+    obj = jsonObj.AddJson(obj, "SPNF", "'" + RTrimStr($("#spanSPNF").html(),"年") + "'");
     obj = jsonObj.AddJson(obj, "SPYF", "'" + $("#spanSPYF").html() + "'");
     obj = jsonObj.AddJson(obj, "NJDQNF", "'" + $("#spanNJDQNF").html() + "'");
     obj = jsonObj.AddJson(obj, "NJDQYF", "'" + $("#spanNJDQYF").html() + "'");

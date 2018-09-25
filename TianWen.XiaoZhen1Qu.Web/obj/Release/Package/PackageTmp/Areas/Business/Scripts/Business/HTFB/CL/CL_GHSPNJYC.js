@@ -17,19 +17,19 @@ function LoadGHSPNJYC() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liLB' onclick='SelectDuoX(this)'><img class='img_GHSPNJYC'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 4 === 3 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 175px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divLB").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divLB").css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#divLB").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divLB").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divLBText").html(html);
                 $(".img_GHSPNJYC").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liLB").bind("click", function () { ValidateCheck("LB", "忘记选择类别啦"); });
-                //LoadFWFW();
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

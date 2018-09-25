@@ -2,7 +2,7 @@
     BindClick("YS");
     BindClick("LX");
     BindClick("CZ");
-    LoadFWFW();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {

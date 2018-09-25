@@ -3,11 +3,11 @@
     $(".div_left_box_info").bind("mouseleave", HideRemark);
 
     //用户注册与登录
-    $("#span_left_box_bottom_right_rhzczh").bind("click", function(){OpenYHZCYDL(1)});
-    $("#span_left_box_bottom_right_rhdlzh").bind("click", function(){OpenYHZCYDL(2)});
-    $("#span_left_box_bottom_right_rhxgyhmhmm").bind("click", function(){OpenYHZCYDL(3)});
-    $("#span_left_box_bottom_right_rhghbddsjh").bind("click", function(){OpenYHZCYDL(4)});
-    $("#span_left_box_bottom_right_zhdshbdlzmb").bind("click", function(){OpenYHZCYDL(5)});
+    $("#span_left_box_bottom_right_rhzczh").bind("click", function(){OpenYHJBXXYDL(1)});
+    $("#span_left_box_bottom_right_rhdlzh").bind("click", function(){OpenYHJBXXYDL(2)});
+    $("#span_left_box_bottom_right_rhxgyhmhmm").bind("click", function(){OpenYHJBXXYDL(3)});
+    $("#span_left_box_bottom_right_rhghbddsjh").bind("click", function(){OpenYHJBXXYDL(4)});
+    $("#span_left_box_bottom_right_zhdshbdlzmb").bind("click", function(){OpenYHJBXXYDL(5)});
 
     //信息发布与管理
     $("#span_left_box_bottom_right_rhfbxx").bind("click", function(){OpenXXFBYGL(1)});
@@ -58,8 +58,8 @@ function HideRemark() {
     });
 }
 
-function OpenYHZCYDL(id) {
-    window.open(getRootPath() + "/BZZX/BZZX_SY_KSDH_YHZCYDL?id="+id);
+function OpenYHJBXXYDL(id) {
+    window.open(getRootPath() + "/BZZX/BZZX_SY_KSDH_YHJBXXYDL?id="+id);
 }
 
 function OpenXXFBYGL(id) {

@@ -16,8 +16,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadYHFBXX()
         {
             string YHM = Session["YHM"].ToString();
-            YHJBXX yhjbxx = WDFBBLL.GetYHJBXXByYHM(YHM);
-            return Json(WDFBBLL.LoadYHFBXX(yhjbxx.YHID, Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
+            YHJBXX YHJBXX = WDFBBLL.GetYHJBXXByYHM(YHM);
+            return Json(WDFBBLL.LoadYHFBXX(YHJBXX.YHID, Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
         }
 
         public JsonResult UpdateYHFBXX()

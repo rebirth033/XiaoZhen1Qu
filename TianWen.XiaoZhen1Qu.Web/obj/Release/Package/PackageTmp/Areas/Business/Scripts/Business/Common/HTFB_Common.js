@@ -18,7 +18,7 @@ $(document).ready(function () {
     $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
     $("#btnClose").bind("click", CloseWindow);
     $("#aWJMM").attr("href", getRootPath() + "/ZHMM/ZHMM");
-    $("#aYHZC1").attr("href", getRootPath() + "/YHJBXX/YHJBXX");
+    $("#aYHJBXX1").attr("href", getRootPath() + "/YHZC/YHZC");
     $("body").bind("click", function () { CloseByClassID("div_select_dropdown"); CloseByClassID("div_bqss"); });//所有下拉框在点击别处时应该自动收缩
     LoadDefault();
     LoadTXXX();
@@ -30,6 +30,12 @@ function LoadDefault() {
         $(".div_shadow").css("display", "block");
         $(".div_body_yhdl").css("display", "block");
     }
+    //车辆品牌下来框隐藏处理
+    $(document).click(function(e){
+      var _con = $(".div_row_right_jcpp_item");   
+      if(!_con.is(e.target) && _con.has(e.target).length === 0)
+         $(".div_row_right_jcpp_item").css("display", "none");
+    });
 }
 //根据TYPENAME获取字典表
 function LoadCODESByTYPENAME(type, id, table, callback, idout, idin, message) {
@@ -80,14 +86,14 @@ function LoadXLByName(lb, xl, tbname) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liXL' style='width:120px' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 5 === 4) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                   if (i % 5 === 4 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 5) * 60 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 5) * 40 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 5) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -156,14 +162,14 @@ function LoadFWFW() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liFWFW' onclick='SelectDuoX(this)'><img class='img_FWFW'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 6 === 5) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 6 === 5 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#divFWFW").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#divFWFW").css("height", parseInt(xml.list.length / 6) * 40 + "px");
                 else
-                    $("#divFWFW").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#divFWFW").css("height", (parseInt(xml.list.length / 6) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divFWFWText").html(html);
                 $(".img_FWFW").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -175,4 +181,11 @@ function LoadFWFW() {
 
         }
     });
+}
+//判断下拉框是否选择
+function IsDropdownNull(result){
+    if(result.indexOf('请选择') !== -1)
+	return "";
+    else
+        return result;
 }

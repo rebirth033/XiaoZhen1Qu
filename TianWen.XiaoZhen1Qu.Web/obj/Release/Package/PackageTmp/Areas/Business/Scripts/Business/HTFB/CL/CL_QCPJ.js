@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    LoadJBXX();
     LoadDuoX("汽车配件类别", "LB");
 });
 //加载多选
@@ -18,18 +17,19 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' style='width:150px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 4 === 3 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liLB").bind("click", function () { ValidateCheck("LB", "忘记选择类别啦"); });
+		LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

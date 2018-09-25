@@ -20,26 +20,26 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadYHXX()
         {
-            YHJBXX yhjbxx = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            return Json(XXGLBLL.LoadYHXX(yhjbxx.YHID, Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
+            YHJBXX YHJBXX = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            return Json(XXGLBLL.LoadYHXX(YHJBXX.YHID, Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
         }
 
         public JsonResult LoadYHXXMX()
         {
-            YHJBXX yhjbxx = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            return Json(XXGLBLL.LoadYHXXMX(yhjbxx.YHID, Request["YHXXID"]));
+            YHJBXX YHJBXX = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            return Json(XXGLBLL.LoadYHXXMX(YHJBXX.YHID, Request["YHXXID"]));
         }
 
         public JsonResult LoadUpYHXXMX()
         {
-            YHJBXX yhjbxx = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            return Json(XXGLBLL.LoadUpYHXXMX(yhjbxx.YHID, Request["YHXXID"]));
+            YHJBXX YHJBXX = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            return Json(XXGLBLL.LoadUpYHXXMX(YHJBXX.YHID, Request["YHXXID"]));
         }
 
         public JsonResult LoadDownYHXXMX()
         {
-            YHJBXX yhjbxx = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            return Json(XXGLBLL.LoadDownYHXXMX(yhjbxx.YHID, Request["YHXXID"]));
+            YHJBXX YHJBXX = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            return Json(XXGLBLL.LoadDownYHXXMX(YHJBXX.YHID, Request["YHXXID"]));
         }
 
         public JsonResult DeleteYHXX()

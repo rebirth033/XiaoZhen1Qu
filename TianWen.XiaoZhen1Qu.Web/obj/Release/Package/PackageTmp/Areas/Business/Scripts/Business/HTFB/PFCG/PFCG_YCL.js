@@ -17,14 +17,14 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 4 === 3 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -58,8 +58,6 @@ function LoadJBXX() {
                 $("#spanLB").html(xml.Value.PFCG_YCLJBXX.LB);
                 $("#spanQY").html(xml.Value.PFCG_YCLJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_YCLJBXX.DD);
-                if (xml.Value.PFCG_YCLJBXX.FWFW !== null)
-                    SetDuoX("FWFW", xml.Value.PFCG_YCLJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -78,7 +76,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

@@ -49,7 +49,7 @@ function GetHeadNav() {
 }
 //加载条件
 function LoadQZZPCondition() {
-    LoadConditionByTypeNames("'" + (getUrlParam("ZWLB") === null ? "行业" : getUrlParam("ZWLB")) + "类别','每月薪资','职位福利'", "CODES_QZZP", "类别,薪资,福利", "ZWLB,MYXZ,ZWFL", "100,100,100");
+    LoadConditionByTypeNames("'" + (getUrlParam("ZWLB") == null ? "行业" : getUrlParam("ZWLB")) + "类别','每月薪资','职位福利'", "CODES_QZZP", "类别,薪资,福利", "ZWLB,MYXZ,ZWFL", "100,100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
@@ -98,8 +98,11 @@ function LoadCondition(array, name, id, length) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("ZWMC,MYXZ,ZWFL,QY");
-    condition += ",ZWLB:" + getUrlParam("ZWLB");
+    var condition = GetAllCondition("ZWMC,MYXZ,ZWFL,QY,ZWLB");
+    if(getUrlParam("ZWLB") != null){
+        condition += getUrlParam("ZWLB");
+    }
+    
     $.ajax({
         type: "POST",
         url: getRootPath() + "/QZZPCX/LoadQZZPXX",
@@ -128,10 +131,20 @@ function LoadBody(TYPE, PageIndex) {
 //加载单条信息
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left" onclick="OpenXXXX(\'QZZPXX_QZZP\',\'' + obj.ID + '\')">');
-    html += ('<div class="div_li_body_left_left">' + obj.MYXZ + '</div>');
-    html += ('<div class="div_li_body_left_center">' + obj.BT + '</div>');
-    html += ('<div class="div_li_body_left_right">' + obj.ZXGXSJ.ToString("MM月dd日") + '</div>');
+    html += ('<li class="li_body_left">');
+    html += ('<div class="div_li_body_left_left">');
+    html += ('<span class="span_li_body_left_left_top" onclick="OpenXXXX(\'QZZPXX_QZZP\',\'' + obj.ID + '\')">' + obj.BT + '</span>');
+    html += ('<span class="span_li_body_left_left_middle">' + obj.ZWMC + '</span><span class="span_li_body_left_left_middle">|</span><span class="span_li_body_left_left_middle">' + obj.XLYQ + '</span><span class="span_li_body_left_left_middle">|</span><span class="span_li_body_left_left_middle">' + obj.GZNX + '</span><br/>');  
+    var zwfls = obj.ZWFL.split(',');
+    for(var i=0;i<(zwfls.length > 7 ? 7 : zwfls.length);i++){
+        html += ('<span class="span_li_body_left_left_bottom">' + zwfls[i] + '</span>');
+    }
+    html += ('</div>');
+    html += ('<div class="div_li_body_left_center">');
+    html += ('<span class="span_li_body_left_center_top">' + obj.GSMC + '</span>');
+    html += ('<span class="span_li_body_left_center_center">' + obj.QY + '</span><span class="span_li_body_left_center_center">' + obj.DD + '</span></div>');
+    html += ('<div class="div_li_body_left_right">' + obj.MYXZ + '</div>');
+    //.ToString("MM月dd日")
     html += ('</li>');
     $("#ul_body_left").append(html);
 }
@@ -167,7 +180,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'QZZPXX_QZZP\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + ValidateNull(obj.QY) + ' - ' + ValidateNull(obj.DD) + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

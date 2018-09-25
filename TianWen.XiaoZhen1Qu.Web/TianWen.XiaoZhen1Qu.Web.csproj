@@ -246,39 +246,18 @@
     <Content Include="Areas\Business\Css\images\info_purple.png" />
     <Content Include="Areas\Business\Css\images\info_blue.png" />
     <Content Include="Areas\Business\Css\images\left.png" />
-    <Content Include="Areas\Business\Css\images\logo_purple - 朦胧水黑.png" />
     <Content Include="Areas\Business\Css\images\logo_purple.png" />
     <Content Include="Areas\Business\Css\images\lxdh.png" />
     <Content Include="Areas\Business\Css\images\one-purple.png" />
     <Content Include="Areas\Business\Css\images\radio_purple.png" />
     <Content Include="Areas\Business\Css\images\right.png" />
     <Content Include="Areas\Business\Css\images\SY\BMFW\sy_bmfw_kdcx.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cl2.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cl3.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cl4.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cw.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cw2.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cw3.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_es2.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_es3.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_essc.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_fc.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_fc2.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_jypx.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_jypx2.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_jypx3.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_pfcg.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_pfcg2.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_shfw.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_shfw2.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_shfw3.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_swfw.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_swfw2.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_swfw3.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_zp.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_zp2.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_zsjm2.png" />
-    <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_zsjm3.png" />
     <Content Include="Areas\Business\Css\images\SY\WZJB\QQ图片20171101223257.png" />
     <Content Include="Areas\Business\Css\images\SY\WZJB\QQ图片20171101223339.png" />
     <Content Include="Areas\Business\Css\images\SY\WZJB\QQ图片20171101223342.png" />
@@ -379,7 +358,6 @@
     <Content Include="Areas\Business\Css\images\head_nav_up.png" />
     <Content Include="Areas\Business\Css\images\icon.png" />
     <Content Include="Areas\Business\Css\images\logo.png" />
-    <Content Include="Areas\Business\Css\images\logo_blue.png" />
     <Content Include="Areas\Business\Css\images\mosaic.png" />
     <Content Include="Areas\Business\Css\images\no.png" />
     <Content Include="Areas\Business\Css\images\ok.png" />
@@ -2008,7 +1986,6 @@
     <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\video-js.min.css" />
     <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\video-js.swf" />
     <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\video.dev.js" />
-    <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\video.js" />
     <Content Include="Areas\Business\Scripts\UEditor\third-party\webuploader\Uploader.swf" />
     <Content Include="Areas\Business\Scripts\UEditor\third-party\webuploader\webuploader.css" />
     <Content Include="Areas\Business\Scripts\UEditor\third-party\webuploader\webuploader.custom.js" />
@@ -2138,7 +2115,7 @@
     <Compile Include="Areas\Business\Controllers\XXXX\FCXXController.cs" />
     <Compile Include="Areas\Business\Controllers\OTHER\YHDLController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\HTGLController.cs" />
-    <Compile Include="Areas\Business\Controllers\OTHER\YHJBXXController.cs" />
+    <Compile Include="Areas\Business\Controllers\OTHER\YHZCController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\YXCZController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\ZHBDController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\ZHMMController.cs" />
@@ -2160,7 +2137,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Business\Views\YHJBXX\YHJBXX.cshtml" />
+    <Content Include="Areas\Business\Views\YHZC\YHZC.cshtml" />
     <Content Include="Config\log4net.Config" />
     <Content Include="DataSources.config">
       <SubType>Designer</SubType>
@@ -2873,6 +2850,7 @@
     <Content Include="Areas\Business\Views\BZZX\BZZX_GYWM.cshtml" />
     <None Include="Areas\Business\Views\SHFWXX\SHFWXX_ESHS.cshtml" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\flw.pubxml" />
     <None Include="Properties\PublishProfiles\xxxz.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

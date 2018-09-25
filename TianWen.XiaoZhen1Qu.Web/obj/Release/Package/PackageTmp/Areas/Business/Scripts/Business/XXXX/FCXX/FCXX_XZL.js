@@ -1,5 +1,4 @@
-﻿var right = 0;
-$(document).ready(function () {
+﻿$(document).ready(function () {
 
 });
 //加载默认
@@ -36,16 +35,17 @@ function LoadJBXX(obj) {
     html += ('<p class="p_div_body_left_head_ll">' + obj.ZXGXSJ.ToString('yyyy年MM月dd日') + '  ' + obj.LLCS + '次浏览 <span id="span_div_body_left_head_jb" class="span_div_body_left_head_jb">举报</span><span class="span_div_body_left_head_split">|</span><span id="span_div_body_left_head_sc" onclick="SCXX(\'' + obj.JCXXID + '\')" class="span_div_body_left_head_sc">收藏</span></p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
-    html += ('<div class="div_body_left_body_left">');    html += ('<div class="div_body_left_body_left_img">');
-    html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<div class="div_body_left_body_left">');    
+    html += ('<div class="div_body_left_body_left_img">');
+    html += ('<img id="img_body_left_body_left_show" onload="DrawImage(this,460,350)" onclick="ImgShow(this)" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('</div>');
-    html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
+    html += ('<span onclick="LeftImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
     html += ('<div class="div_body_left_body_left_list">');
     html += ('<ul id="ul_body_left_body_left_list" class="ul_body_left_body_left_list">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_left_list_tp">');
         html += ('<img class="img_body_left_body_left_list_tp" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
-        html += ('<div class="div_img_body_left_body_left_list_tp"></div>');
+        html += ('<div class="div_img_body_left_body_left_list_tp" onmouseover="ClickShowImg(this,'+i+')"></div>');
         html += ('</li>');
     }
     html += ('</ul>');
@@ -57,35 +57,30 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_zj">' + (obj.GQ === "出租" ? GetJG(obj.ZJ, obj.ZJDW) : GetJG(obj.SJ, obj.ZJDW)) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">类型：</span>');
+    html += ('<span class="span_body_left_body_right_left">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.XZLLX + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">写字楼名称：</span>');
+    html += ('<span class="span_body_left_body_right_left">名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.LPMC + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">可注册公司：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.KZCGS + '</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">面积：</span>');
+    html += ('<span class="span_body_left_body_right_left">面&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;积：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.MJ + '平米</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">具体地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + '[' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '] ' + obj.JTDZ + '</span>');
+    html += ('<span class="span_body_left_body_right_left" style="width:90px !important;margin-left:0px;">可注册公司：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.KZCGS + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">联系人：</span>');
+    html += ('<span class="span_body_left_body_right_left">联&nbsp;&nbsp;系&nbsp;&nbsp;人：</span>');
     html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.LXR) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
-    html += ('<span class="span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 4) + '****' + '</span>');
-    html += ('<span class="span_body_left_body_right_right_ckwzdh" onclick="ShowWZDH()">完整电话</span>');
-    html += ('<span class="span_body_left_body_right_wzdh"><span class="span_body_left_body_right_wzdh_lxdh"><i class="i_body_left_body_right_wzdh_lxdh"></i>' + obj.LXDH + '</span><span class="span_body_left_body_right_wzdh_ts">联系时请一定说明在风铃网上看到的哈，谢谢^_^</span><i class="i_body_left_body_right_wzdh_close" onclick="HideWZDH()">×</i></span>');
+    html += ('<span class="span_body_left_body_right_left">具体地址：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + '[' + ValidateNull(obj.QY) + ' - ' + ValidateNull(obj.DD) + '] ' + obj.JTDZ + '</span>');
     html += ('</p>');
+    html += ('<div class="div_body_left_body_right_lxdh" id="div_body_left_body_right_lxdh" onclick="ShowLXDH(\''+obj.LXDH+'\')"><img class="img_body_left_body_right_lxdh"  src="' + getRootPath() + "/Areas/Business/Css/images/XXXX/GY/xxxx_gy_lxdh.png" + '" /><span class="span_body_left_body_right_lxdh">联系电话</span></div>');
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
@@ -109,7 +104,7 @@ function LoadXQ(obj, BCMSString) {
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_xq_xx">');
-        html += ('<img id="img_body_left_body_xq_xx' + i + '" class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<img id="img_body_left_body_xq_xx' + i + '" onload="DrawImage(this,403,348)" onclick="ImgShow(this)" class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
         html += ('</li>');
     }
     html += ('</ul>');
@@ -227,7 +222,7 @@ function LoadJJRTJFY(TYPE, GQ) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1,GQ:" + GQ,
-            PageSize: 100,
+            PageSize: 4,
             PageIndex: 1
         },
         success: function (xml) {

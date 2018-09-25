@@ -26,14 +26,14 @@ function LoadZHFS() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liZHFS' onclick='SelectDuoX(this)'><img class='img_ZHFS'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 4 === 3 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divZHFS").css("height", parseInt(xml.list.length / 4) * 50 + "px");
+                    $("#divZHFS").css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#divZHFS").css("height", (parseInt(xml.list.length / 4) + 1) * 50 + "px");
+                    $("#divZHFS").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divZHFSText").html(html);
                 $(".img_ZHFS").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -62,14 +62,14 @@ function LoadHWZL() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liHWZL' onclick='SelectDuoX(this)'><img class='img_HWZL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 4 === 3 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divHWZL").css("height", parseInt(xml.list.length / 4) * 50 + "px");
+                    $("#divHWZL").css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#divHWZL").css("height", (parseInt(xml.list.length / 4) + 1) * 50 + "px");
+                    $("#divHWZL").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divHWZLText").html(html);
                 $(".img_HWZL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -98,14 +98,14 @@ function LoadFWYS() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liFWYS' onclick='SelectDuoX(this)'><img class='img_FWYS'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 4 === 3 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divFWYS").css("height", parseInt(xml.list.length / 4) * 60 + "px");
+                    $("#divFWYS").css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#divFWYS").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
+                    $("#divFWYS").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divFWYSText").html(html);
                 $(".img_FWYS").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");

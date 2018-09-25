@@ -6,6 +6,7 @@
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
     //LoadDefault();
+    LoadHeadSearch();
 });
 //打开查询列表
 function OpenCXLB(lbid, lburl, condition) {
@@ -17,6 +18,20 @@ function OpenCXLB(lbid, lburl, condition) {
 //打开详细页面
 function OpenXXXX(TYPE, ID, LBID) {
     window.open(getRootPath() + "/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
+}
+//加载头部搜索栏关键字
+function LoadHeadSearch() {
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(185,\'/CLCX/CLCX_JC\',\'PP=65\')">大众</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(185,\'/CLCX/CLCX_JC\',\'PP=31\')">奥迪</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(185,\'/CLCX/CLCX_JC\',\'PP=79\')">丰田</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(185,\'/CLCX/CLCX_JC\',\'PP=79\')">标致</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(185,\'/CLCX/CLCX_JC\',\'PP=82\')">福特</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(185,\'/CLCX/CLCX_JC\',\'PP=170\')">起亚</span>');
 }
 //加载默认
 function LoadDefault() {

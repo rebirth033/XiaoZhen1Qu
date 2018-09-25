@@ -25,14 +25,14 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 6 === 5) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    if (i % 5 === 4 && i != xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -61,8 +61,8 @@ function LoadDuoX(type, id) {
 //                var html = "<ul class='ulFWPZ'>";
 //                for (var i = 0; i < xml.list.length; i++) {
 //                    html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-//                    if (i % 6 === 5) {
-//                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+//                    if (i % 6 === 5 && i != xml.list.length - 1) {
+//                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
 //                    }
 //                }
 //                if (parseInt(xml.list.length % 6) === 0)
@@ -108,8 +108,6 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.PFCG_HZPJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_HZPJBXX.DD);
                 //LoadXL(xml.Value.PFCG_HZPJBXX.LB, xml.Value.PFCG_HZPJBXX.XL);
-                if (xml.Value.PFCG_HZPJBXX.FWFW !== null)
-                    SetDuoX("FWFW", xml.Value.PFCG_HZPJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
                 //$("#divXLText").css("display", "");
             }
@@ -130,7 +128,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

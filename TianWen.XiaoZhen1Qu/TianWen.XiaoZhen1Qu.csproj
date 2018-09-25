@@ -101,7 +101,7 @@
     <Compile Include="BLL\WZCXBLL.cs" />
     <Compile Include="BLL\XXGLBLL.cs" />
     <Compile Include="BLL\YHDLBLL.cs" />
-    <Compile Include="BLL\YHJBXXBLL.cs" />
+    <Compile Include="BLL\YHZCBLL.cs" />
     <Compile Include="BLL\YXCZBLL.cs" />
     <Compile Include="BLL\ZHBDBLL.cs" />
     <Compile Include="DAO\DAOBase.cs" />

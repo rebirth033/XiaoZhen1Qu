@@ -9,7 +9,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class YHDLController : BaseController
     {
-        public IYHJBXXBLL YHJBXXBLL { get; set; }
+        public IYHZCBLL YHZCBLL { get; set; }
         public IYHDLBLL YHDLBLL { get; set; }
 
         public ActionResult YHDL()
@@ -33,12 +33,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 string checkcode = Session["CheckCode"].ToString();
                 if (YZM == checkcode)
                 {
-                    YHJBXX obj = YHJBXXBLL.GetObjBySJ(Request["SJ"]);
+                    YHJBXX obj = YHZCBLL.GetObjBySJ(Request["SJ"]);
                     if (obj == null)
                     {
-                        YHJBXX yhjbxx = YHDLBLL.AddUserBySJ(Request["SJ"]);
-                        Session["YHM"] = yhjbxx.YHM;
-                        return Json(new { Result = EnResultType.Success, Message = "登录成功", YHID = yhjbxx.YHID });
+                        YHJBXX YHJBXX = YHDLBLL.AddUserBySJ(Request["SJ"]);
+                        Session["YHM"] = YHJBXX.YHM;
+                        return Json(new { Result = EnResultType.Success, Message = "登录成功", YHID = YHJBXX.YHID });
                     }
                     else
                     {

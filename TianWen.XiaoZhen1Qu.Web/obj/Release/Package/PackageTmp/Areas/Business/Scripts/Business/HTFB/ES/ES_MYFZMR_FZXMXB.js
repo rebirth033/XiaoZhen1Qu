@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadDuoX("配送方式", "PSFS");
+    LoadDuoX("配送方式", "PSFS", "CODES_ES_SJSM");
     BindClick("LB");
     BindClick("XJ");
 });
@@ -20,42 +20,6 @@ function BindClick(type) {
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
-        }
-    });
-}
-//加载多选
-function LoadDuoX(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type,
-            TBName: "CODES_ES_SJSM"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 5 === 4) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
-                    }
-                }
-                if (parseInt(xml.list.length % 5) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 60 + "px");
-                else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
-                html += "</ul>";
-                $("#div" + id + "Text").html(html);
-                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
-                LoadJBXX();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }

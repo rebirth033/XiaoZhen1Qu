@@ -2,12 +2,11 @@
     BindClick("LB");
     LoadJBXX();
 });
-
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadXL($("#spanLB").html());
+    LoadXL("一对一"+$("#spanLB").html());
     $("#divXL").css("display", "");
 }
 //加载小类
@@ -27,13 +26,13 @@ function LoadXL(lbmc, xl) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liXL' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 4 === 3 && i !== (xml.list.length - 1)) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -78,7 +77,7 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.JYPX_ZXXYDYJBXX.QY);
                 $("#spanDD").html(xml.Value.JYPX_ZXXYDYJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                LoadXL(xml.Value.JYPX_ZXXYDYJBXX.LB, xml.Value.JYPX_ZXXYDYJBXX.XL);
+                LoadXL("一对一"+xml.Value.JYPX_ZXXYDYJBXX.LB, xml.Value.JYPX_ZXXYDYJBXX.XL);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

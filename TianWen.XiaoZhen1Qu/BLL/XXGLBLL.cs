@@ -161,7 +161,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "删除失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Error("YHZCBLL", "删除失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                     return new
                     {
                         Result = EnResultType.Failed,
@@ -193,7 +193,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Error("YHZCBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                     return new
                     {
                         Result = EnResultType.Failed,

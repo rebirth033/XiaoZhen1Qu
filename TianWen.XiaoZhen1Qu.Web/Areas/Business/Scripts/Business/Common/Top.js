@@ -13,7 +13,7 @@ function OpenDL() {
 }
 //注册
 function OpenZC() {
-    window.location.href = getRootPath() + "/YHJBXX/YHJBXX";
+    window.location.href = getRootPath() + "/YHZC/YHZC";
 }
 //个人中心
 function OpenGRZX() {

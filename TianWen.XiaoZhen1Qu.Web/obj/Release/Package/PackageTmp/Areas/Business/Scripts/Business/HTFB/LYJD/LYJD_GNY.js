@@ -67,8 +67,6 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.LYJD_GNYJBXX.QY);
                 $("#spanDD").html(xml.Value.LYJD_GNYJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.LYJD_GNYJBXX.CYLB !== null)
-                    SetDX("CYLB", xml.Value.LYJD_GNYJBXX.CYLB);
                 if (xml.Value.LYJD_GNYJBXX.CYFS !== null)
                     SetDX("CYFS", xml.Value.LYJD_GNYJBXX.CYFS);
             }
@@ -91,7 +89,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "CYLB", "'" + GetDX("CYLB") + "'");
     obj = jsonObj.AddJson(obj, "CYFS", "'" + GetDX("CYFS") + "'");
 
     if (getUrlParam("ID") !== null)

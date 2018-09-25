@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadDuoX("配送方式", "PSFS");
+    LoadDuoX("配送方式", "PSFS", "CODES_ES_SJSM");
     BindClick("LB");
     BindClick("XL");
     BindClick("XJ");
@@ -18,46 +18,38 @@ function BindClick(type) {
         }
     });
 }
-//加载多选
-function LoadDuoX(type, id) {
+//选择类别下拉框
+function SelectLB(obj, type, id) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    if(type === "LB") HasXL(id);
+}
+//判断是否有小类
+function HasXL(codeid){
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            TYPENAME: type,
-            TBName: "CODES_ES_SJSM"
+            ParentID: codeid,
+            TBName: "CODES_ES_MYFZMR"
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 5 === 4) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
-                    }
-                }
-                if (parseInt(xml.list.length % 5) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 60 + "px");
-                else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
-                html += "</ul>";
-                $("#div" + id + "Text").html(html);
-                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
-                LoadJBXX();
+		if(xml.list.length>0){
+		    $("#divXLText").css("display", "inline-block");
+		    $("#spanXL").html("请选择小类");
+		}
+		else{
+		    $("#divXLText").css("display", "none");
+		}
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//选择类别下拉框
-function SelectLB(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
 }
 //加载二手_手机数码_母婴/服装/美容基本信息
 function LoadJBXX() {

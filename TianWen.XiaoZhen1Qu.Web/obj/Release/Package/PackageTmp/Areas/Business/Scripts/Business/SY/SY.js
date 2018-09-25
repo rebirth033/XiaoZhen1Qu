@@ -9,13 +9,25 @@ $(document).ready(function () {
     $(".img_head_hide_logo").css("margin-left", (document.documentElement.clientWidth - 1100) / 2);
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
-    $("#li_top_right_yhm_wdxx").bind("click", ShowWDXX);
-    $("#li_top_right_yhm_wdzh").bind("click", ShowWDXX);
-    $("#li_top_right_yhm_wdzj").bind("click", ShowWDXX);
     $("#span_hide_fbxx").bind("click", FBXX);
     $("body").bind("click", function () { CloseByClassID("div_select_dropdown"); });
+    $(".li_head_nav_dropdown").bind("mouseover", function () { ShowMenu(this); });
+    $(".li_head_nav_dropdown").bind("mouseleave", function () { HideMenu(this); });
     LoadDefault();
+    LoadHeadSearch();
 });
+//显示菜单项
+function ShowMenu(obj){
+    $(obj).find(".i_head_nav").css("background-image","url(" + getRootPath() + "/Areas/Business/Css/images/head_nav_up.png)");
+    $(obj).css("border-color","#bc6bca");
+    $(obj).find(".div_head_nav_dropdown").css("display","block");
+}
+//隐藏菜单项
+function HideMenu(obj){
+    $(obj).find(".i_head_nav").css("background-image","url(" + getRootPath() + "/Areas/Business/Css/images/head_nav_down.png)");
+    $(obj).css("border-color","#ffffff");
+    $(obj).find(".div_head_nav_dropdown").css("display","none");
+}
 //首页获取title
 function GetHeadNav() {
     document.title = "风铃网_首页";
@@ -27,7 +39,9 @@ function FBXX() {
 //加载默认
 function LoadDefault() {
     LoadSY_ML();
-    LoadHeadSearch();
+    $("#img_div_bottom_wljbappxz").bind("click", function(){window.open("http://report.12377.cn:13225/toreportinputNormal_anis.do");});
+    $("#img_div_bottom_wsyhxxjbzq").bind("click", function(){window.open("http://www.12377.cn/node_548446.htm?PGTID=0d100000-0013-0d7a-7a03-2802f15ed53d&ClickID=13");});
+    $("#img_div_bottom_qyxyxx").bind("click", function(){window.open( getRootPath() + "/BZZX/BZZX_QYXY");});
 }
 //加载头部搜索栏关键字
 function LoadHeadSearch() {
@@ -35,13 +49,13 @@ function LoadHeadSearch() {
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'CLCX\',\'CLCX_JC\',\'185\')">二手车</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'QZZPCX\',\'QZZPCX_JZ\',\'89\')">兼职</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'QZZPCX\',\'QZZPCX_JZZP\',\'90\')">兼职</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'ZXJCCX\',\'ZXJCCX_JZFW\',\'130\')">装修服务</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'ZXJCCX\',\'ZXJCCX_JZFW\',\'130\')">家装服务</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'LYJDCX\',\'LYJDCX_GNY\',\'124\')">旅游度假</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'LYJDCX\',\'LYJDCX_JDZSYD\',\'127\')">酒店住宿</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'SHFWCX\',\'SHFWCX_GNY\',\'172\')">居民搬家</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'SHFWCX\',\'SHFWCX_BJ\',\'172\')">居民搬家</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'HQSYCX\',\'HQSYCX_HQGS\',\'136\')">婚庆公司</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
@@ -94,27 +108,16 @@ function LoadSY_ML() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadSY_MLInfo(xml.list, xml.xzq, "FC");
-                LoadSY_MLInfo(xml.list, xml.xzq, "CL");
-                LoadSY_ML_CWInfo(xml.list, xml.xzq, "CW");
-                LoadSY_MLInfo(xml.list, xml.xzq, "ZP");
-                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "ZSJM");
-                LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SHFW");
-                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JYPX");
-                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PFCG");
-                LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SWFW");
-                LoadSY_MLInfo(xml.list, xml.xzq, "ES");
-                $("#p_body_middle_left_title_FC").css("border-bottom", "2px solid #59d072");
-                $("#p_body_middle_left_title_CL").css("border-bottom", "2px solid #44eea6");
-                $("#p_body_middle_left_title_CW").css("border-bottom", "2px solid #f473de");
-                $("#p_body_middle_left_title_ZP").css("border-bottom", "2px solid #00bfe1");
-                $("#p_body_middle_left_title_ZSJM").css("border-bottom", "2px solid #abc466");
-                $("#p_body_middle_left_title_PX").css("border-bottom", "2px solid #c49966");
-                $("#p_body_middle_left_title_SHFW").css("border-bottom", "2px solid #3dbfe1");
-                $("#p_body_middle_left_title_JYPX").css("border-bottom", "2px solid #fda19d");
-                $("#p_body_middle_left_title_PFCG").css("border-bottom", "2px solid #eb437e");
-                $("#p_body_middle_left_title_SWFW").css("border-bottom", "2px solid #d323e1");
-                $("#p_body_middle_left_title_ES").css("border-bottom", "2px solid #64f4de");
+                //LoadSY_MLInfo(xml.list, xml.xzq, "FC");
+                //LoadSY_MLInfo(xml.list, xml.xzq, "CL");
+                //LoadSY_ML_CWInfo(xml.list, xml.xzq, "CW");
+                //LoadSY_MLInfo(xml.list, xml.xzq, "ZP");
+                //LoadSY_ML_WXLInfo(xml.list, xml.xzq, "ZSJM");
+                //LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SHFW");
+                //LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JYPX");
+                //LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PFCG");
+                //LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SWFW");
+                //LoadSY_MLInfo(xml.list, xml.xzq, "ES");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

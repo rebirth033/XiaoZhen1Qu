@@ -69,8 +69,11 @@
             <span class="span_fbxx" id="span_fbxx">免费发布信息</span>
         </div>
     </div>
-    <div class="div_shadow" id="div_shadow"></div>
-    <div class="div_close" id="div_close" style="display: none;">×</div>
+    <div class="div_shadow" id="div_shadow">
+    </div>
+    <div class="div_show" id="div_show">
+    </div>
+    <div class="div_close" id="div_close" onclick="ImgHide()"></div>
     @RenderSection("Section_Body", false)
 }
 @RenderBody()

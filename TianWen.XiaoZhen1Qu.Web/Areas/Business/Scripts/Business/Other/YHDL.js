@@ -17,8 +17,8 @@ $(document).ready(function () {
     $("#liSJDL").bind("click", Showcellphone);
     $("#liMMDL").bind("click", Showusername);
     $("#aWJMM").attr("href", getRootPath() + "/ZHMM/ZHMM");
-    $("#aYHZC1").attr("href", getRootPath() + "/YHJBXX/YHJBXX");
-    $("#aYHZC2").attr("href", getRootPath() + "/YHJBXX/YHJBXX");
+    $("#aYHJBXX1").attr("href", getRootPath() + "/YHZC/YHZC");
+    $("#aYHJBXX2").attr("href", getRootPath() + "/YHZC/YHZC");
     $("#username input").keydown(function (e) {
         var curKey = e.which;
         if (curKey === 13) MMDL();

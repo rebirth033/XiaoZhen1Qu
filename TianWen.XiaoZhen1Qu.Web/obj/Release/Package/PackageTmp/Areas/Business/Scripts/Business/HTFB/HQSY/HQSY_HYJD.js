@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     BindClick("HLLX");
     BindClick("JDXJ");
-    LoadJBXX();
+    LoadFWFW();
 });
 //绑定下拉框
 function BindClick(type) {

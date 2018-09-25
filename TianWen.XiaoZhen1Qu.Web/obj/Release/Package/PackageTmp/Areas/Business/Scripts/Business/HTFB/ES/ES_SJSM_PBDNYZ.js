@@ -19,7 +19,8 @@ function ValidateAll() {
     if ($("#spanLB").html() === "平板电脑") {
         if (ValidateRadio("SF", "忘记选择身份啦")
             & ValidatePBLB()
-            //& ValidateSelect("XJCD", "XJ", "请选择新旧")
+            & ValidateSelect("XJCD", "XJ", "请选择新旧")
+            & ValidateCheck("PSFS", "忘记选择配送方式啦")
             & ValidateBCMS("BCMS", "忘记填写详情描述啦")
             & ValidateXXDZ()
             & ValidateJG()
@@ -31,7 +32,8 @@ function ValidateAll() {
     else {
         if (ValidateRadio("SF", "忘记选择身份啦")
             & ValidatePBPJLB()
-            //& ValidateSelect("XJCD", "XJ", "请选择新旧")
+            & ValidateSelect("XJCD", "XJ", "请选择新旧")
+            & ValidateCheck("PSFS", "忘记选择配送方式啦")
             & ValidateBCMS("BCMS", "忘记填写详情描述啦")
             & ValidateXXDZ()
             & ValidateJG()

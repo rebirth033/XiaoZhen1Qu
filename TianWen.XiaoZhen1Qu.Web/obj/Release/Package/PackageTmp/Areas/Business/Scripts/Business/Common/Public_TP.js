@@ -291,9 +291,9 @@ function CloseWindow() {
 }
 //激活上传按钮样式
 function GetUploadCss() {
-    $("#div_upload").css("border", "2px solid #bc6ba6");
+    $("#div_upload").css("border", "1px solid #bc6ba6");
 }
 //取消上传按钮样式
 function LeaveUploadCss() {
-    $("#div_upload").css("border", "2px solid #cccccc");
+    $("#div_upload").css("border", "1px solid #cccccc");
 }

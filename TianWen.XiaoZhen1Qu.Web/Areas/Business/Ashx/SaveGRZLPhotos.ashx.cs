@@ -16,7 +16,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
     /// </summary>
     public class SaveGRZLPhotos : IHttpHandler, System.Web.SessionState.IRequiresSessionState
     {
-        IYHJBXXBLL YHJBXXBLL = SpringHelper.GetSpringObject<IYHJBXXBLL>("YHJBXXBLL");
+        IYHZCBLL YHZCBLL = SpringHelper.GetSpringObject<IYHZCBLL>("YHZCBLL");
 
         public void ProcessRequest(HttpContext context)
         {
@@ -39,12 +39,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
                     {
                         int width = Convert.ToInt32(context.Request.Form["width"]);
                         int height = Convert.ToInt32(context.Request.Form["height"]);
-                        YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
-                        YHJBXXBLL.UpdateTX(yhjbxx.YHID);
+                        YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
+                        YHZCBLL.UpdateTX(YHJBXX.YHID);
                         string type = context.Request.Form["type"];
                         string filename = context.Request.Form["filename"];
-                        YHJBXXBLL.UpdateTX(yhjbxx.YHID);
-                        return ResizeImg(file.InputStream, width, height, yhjbxx.YHID, type, filename);
+                        YHZCBLL.UpdateTX(YHJBXX.YHID);
+                        return ResizeImg(file.InputStream, width, height, YHJBXX.YHID, type, filename);
                     }
                 }
             }
@@ -105,8 +105,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             byte[] bytes = Convert.FromBase64String(context.Request["data"]);
             fs.Write(bytes, 0, bytes.Length);
             fs.Close();
-            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
-            YHJBXXBLL.UpdateTX(yhjbxx.YHID);
+            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
+            YHZCBLL.UpdateTX(YHJBXX.YHID);
             return string.Empty;
         }
 

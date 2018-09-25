@@ -2,7 +2,14 @@
     $(".span_body_nav").bind("click", GoToTip);
     $("#div_rtop").bind("mouseover", TopShow);
     $("#div_rtop").bind("mouseleave", TopHide);
+    var id = getUrlParam("id");
+    if(id !== "") GoToTipByID(id);
 });
+
+function GoToTipByID(id) {
+    var len = document.getElementById("div_body_nav_title_" + id).offsetTop;//获取div层到页面顶部的高度 
+    $("html,body").stop().animate({ scrollTop: len }, 300, "swing", function () { });
+}
 
 function GoToTip() {
     var len = document.getElementById("div_body_nav_title_" + this.id).offsetTop;//获取div层到页面顶部的高度 

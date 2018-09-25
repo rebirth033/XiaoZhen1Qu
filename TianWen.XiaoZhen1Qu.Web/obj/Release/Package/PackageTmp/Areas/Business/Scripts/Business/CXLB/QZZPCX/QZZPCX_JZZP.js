@@ -139,10 +139,15 @@ function LoadBody(TYPE, PageIndex) {
 //加载单条信息
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left" onclick="OpenXXXX(\'QZZPXX_JZZP\',\'' + obj.ID + '\')">');
-    html += ('<div class="div_li_body_left_left">' + obj.XZ + obj.XZDW  + ' </div>');
-    html += ('<div class="div_li_body_left_center">' + obj.BT + '</div>');
-    html += ('<div class="div_li_body_left_right">' + obj.ZXGXSJ.ToString("yyyy年MM月dd日") + '</div>');
+    html += ('<li class="li_body_left">');
+    html += ('<div class="div_li_body_left_left">');
+    html += ('<span class="span_li_body_left_left_top" onclick="OpenXXXX(\'QZZPXX_JZZP\',\'' + obj.ID + '\')">' + obj.BT + '</span>');
+    html += ('<span class="span_li_body_left_left_middle">' + obj.JZLB + '</span><span class="span_li_body_left_left_middle">|</span><span class="span_li_body_left_left_middle">' + obj.ZPRS + '人' + '</span><span class="span_li_body_left_left_middle">|</span><span class="span_li_body_left_left_middle">'+ obj.XZJS + '</span><br/>');
+    html += ('<span class="span_li_body_left_left_bottom" style="color:#999;">' + obj.ZXGXSJ.ToString("MM月dd日") + '</span></div>');    
+    html += ('<div class="div_li_body_left_center">');    
+    html += ('<span class="span_li_body_left_center_top">工作区域 : ' + obj.QY + ' - ' + obj.DD + '</span>');
+    html += ('<span class="span_li_body_left_center_center">公司名称 : ' + obj.GSMC + '</span></div>');
+    html += ('<div class="div_li_body_left_right">' + obj.XZ + obj.XZDW + '</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
 }
@@ -178,7 +183,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'QZZPXX_JZZP\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + ValidateNull(obj.QY) + ' - ' + ValidateNull(obj.DD) + '</p>');
     html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);

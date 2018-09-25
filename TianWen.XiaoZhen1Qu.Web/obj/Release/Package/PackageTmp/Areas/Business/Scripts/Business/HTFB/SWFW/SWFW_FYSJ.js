@@ -92,13 +92,13 @@ function LoadDuoX(type, id) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 5 === 4 && i !== xml.list.length - 1) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -128,13 +128,13 @@ function LoadZYLY() {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liZYLY' onclick='SelectDuoX(this)'><img class='img_ZYLY'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 6 === 5 && i !== (xml.list.length - 1)) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#divZYLY").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#divZYLY").css("height", parseInt(xml.list.length / 6) * 40 + "px");
                 else
-                    $("#divZYLY").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#divZYLY").css("height", (parseInt(xml.list.length / 6) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divZYLYText").html(html);
                 $(".img_ZYLY").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -167,13 +167,13 @@ function LoadWJLX() {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liWJLX' style='width:130px;' onclick='SelectDuoX(this)'><img class='img_WJLX'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 5 === 4 && i !== (xml.list.length - 1)) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
-                    $("#divWJLX").css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                    $("#divWJLX").css("height", parseInt(xml.list.length / 5) * 40 + "px");
                 else
-                    $("#divWJLX").css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
+                    $("#divWJLX").css("height", (parseInt(xml.list.length / 5) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divWJLXText").html(html);
                 $(".img_WJLX").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -207,13 +207,14 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.SWFW_FYSJJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                $("#spanLB").html(xml.Value.SWFW_FYSJJBXX.LB);
                 $("#spanYZ").html(xml.Value.SWFW_FYSJJBXX.YZ);
                 $("#spanQY").html(xml.Value.SWFW_FYSJJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_FYSJJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
                 SetDuoX("ZYLY", xml.Value.SWFW_FYSJJBXX.ZYLY);
                 SetDuoX("WJLX", xml.Value.SWFW_FYSJJBXX.WJLX);
+		SetDuoX("LB", xml.Value.SWFW_FYSJJBXX.LB);
+		SetDuoX("FWFW", xml.Value.SWFW_FYSJJBXX.FWFW);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -227,13 +228,14 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
     obj = jsonObj.AddJson(obj, "YZ", "'" + $("#spanYZ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "ZYLY", "'" + GetDuoX("ZYLY") + "'");
     obj = jsonObj.AddJson(obj, "WJLX", "'" + GetDuoX("WJLX") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

@@ -34,11 +34,12 @@ function LoadXL() {
         }
     });
 }
-//选择品种下拉框
+//选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     $("#LBID").val(id);
+    $("#spanXL").html("请选择小类");
 }
 //绑定下拉框
 function BindClick(type) {
@@ -71,6 +72,8 @@ function LoadJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.CW_HNYCJBXX.LB);
                 $("#spanXL").html(xml.Value.CW_HNYCJBXX.XL);
+                $("#spanQY").html(xml.Value.CW_HNYCJBXX.QY);
+                $("#spanDD").html(xml.Value.CW_HNYCJBXX.DD);
                 if (xml.Value.CW_HNYCJBXX.SF !== null)
                     SetDX("SF", xml.Value.CW_HNYCJBXX.SF);
                 LoadPhotos(xml.Value.Photos);
@@ -89,6 +92,8 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 

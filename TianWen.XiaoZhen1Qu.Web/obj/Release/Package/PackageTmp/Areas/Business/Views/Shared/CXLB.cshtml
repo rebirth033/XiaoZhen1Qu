@@ -73,8 +73,17 @@
     </div>
     @RenderSection("Section_Body", false)
     <div class="div_bottom">
-        <p class="p_div_bottom">©2018 福建沐晗信息技术有限公司 客服电话：13675017762（周一至周日，8:00-22:00）</p>
+        <p class="p_div_bottom">©2018 福建沐晗信息技术有限公司</p>
         <p class="p_div_bottom reduce">闽ICP备18003746号</p>
+    </div>
+    <div class="div_shadow" id="div_shadow">
+    </div>
+    <div class="div_show" id="div_show">
+	<img class="img_show_close" src="@Url.Content("~/Areas/Business/Css/images/close.png")" />
+	<div class="div_show_lxdh" id="div_show_lxdh"></div>
+	<div class="div_show_tip">您还可通过微型扫描如下二维码获取号码至手机</div>
+	<div class="div_show_tip2">微信扫码 —> 点击关注 —> 获取号码拨打</div>
+	<img class="img_show_qrcode" id="img_show_qrcode" />
     </div>
 }
 @RenderBody()

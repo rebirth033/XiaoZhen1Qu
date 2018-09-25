@@ -10,7 +10,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     {
         public IBZZXBLL BZZXBLL { get; set; }
 
-        public IYHJBXXBLL YHJBXXBLL { get; set; }
+        public IYHZCBLL YHZCBLL { get; set; }
 
         public ActionResult BZZX() { return View(); }
         public ActionResult BZZX_SY() { return View(); }
@@ -26,7 +26,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult BZZX_SY_FTBG() { return View(); }
         public ActionResult BZZX_SY_KSDH_XXFBYGL() { return View(); }
         public ActionResult BZZX_SY_KSDH_RZXGWT() { return View(); }
-        public ActionResult BZZX_SY_KSDH_YHZCYDL() { return View(); }
+        public ActionResult BZZX_SY_KSDH_YHJBXXYDL() { return View(); }
         public ActionResult BZZX_SY_KSDH_ZHDJYXY() { return View(); }
         public ActionResult BZZX_SY_KSDH_FPTSYAL() { return View(); }
         public ActionResult BZZX_SY_KSDH_JBYSS() { return View(); }
@@ -42,7 +42,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 string checkcode = Session["TXCheckCode"].ToString();
                 if (TXYZM == checkcode)
                 {
-                    string result = YHJBXXBLL.GetObjByYHMOrSJ(SJ);
+                    string result = YHZCBLL.GetObjByYHMOrSJ(SJ);
                     if (!string.IsNullOrEmpty(result))
                     {
                         return Json(new { Result = EnResultType.Success, Message = "验证成功" });
@@ -72,7 +72,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 string checkcode = Session["CheckCode"].ToString();
                 if (YZM == checkcode)
                 {
-                    string result = YHJBXXBLL.GetObjByYHMOrSJ(SJ);
+                    string result = YHZCBLL.GetObjByYHMOrSJ(SJ);
                     if (!string.IsNullOrEmpty(result))
                     {
                         Session["SJ"] = SJ;
@@ -96,7 +96,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult SaveTJWT()
         {
-            YHJBXX yhjbxx = BZZXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = BZZXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string wtlx = Request["WTLX"];
             string xxbh = Request["XXBH"];
             string wtms = Request["WTMS"];
@@ -104,7 +104,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             BZZX_TJWT tjwt = new BZZX_TJWT();
 
             tjwt.YJNR = wtms;
-            tjwt.YHID = yhjbxx.YHID;
+            tjwt.YHID = YHJBXX.YHID;
             tjwt.XXBH = xxbh;
             tjwt.LB = wtlx;
             List<PHOTOS> photos = GetTP(fwzp);
@@ -114,12 +114,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult SaveWZJY()
         {
-            YHJBXX yhjbxx = BZZXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = BZZXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string yjnr = Request["YJNR"];
             string fwzp = Request["FWZP"];
             BZZX_WZJY wzjy = new BZZX_WZJY();
             wzjy.YJNR = yjnr;
-            wzjy.YHID = yhjbxx.YHID;
+            wzjy.YHID = YHJBXX.YHID;
             List<PHOTOS> photos = GetTP(fwzp);
             object result = BZZXBLL.SaveWZJY(wzjy, photos);
             return Json(result);

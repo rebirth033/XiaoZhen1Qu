@@ -8,7 +8,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class GRZLController : BaseController
     {
-        public IYHJBXXBLL YHJBXXBLL { get; set; }
+        public IYHZCBLL YHZCBLL { get; set; }
 
         public ActionResult GRZL()
         {
@@ -37,60 +37,60 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult SaveXTTX()
         {
-            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            object result = YHJBXXBLL.UpdateTX(yhjbxx.YHID, Request["TX"]);
+            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            object result = YHZCBLL.UpdateTX(YHJBXX.YHID, Request["TX"]);
             return Json(result);
         }
 
         public JsonResult GetGRZL()
         {
-            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            return Json(new { Result = EnResultType.Success, YHJBXX = yhjbxx });
+            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            return Json(new { Result = EnResultType.Success, YHJBXX = YHJBXX });
         }
 
         public JsonResult UpdateYHM()
         {
-            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            object result = YHJBXXBLL.UpdateYHM(yhjbxx.YHID, Request["YHM"]);
+            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            object result = YHZCBLL.UpdateYHM(YHJBXX.YHID, Request["YHM"]);
             return Json(result);
         }
 
         public JsonResult UpdateSJ()
         {
-            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            object result = YHJBXXBLL.UpdateSJ(yhjbxx.YHID, Request["SJ"]);
+            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            object result = YHZCBLL.UpdateSJ(YHJBXX.YHID, Request["SJ"]);
             return Json(result);
         }
 
         public JsonResult UpdateQQ()
         {
-            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            object result = YHJBXXBLL.UpdateQQ(yhjbxx.YHID, Request["SJ"]);
+            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            object result = YHZCBLL.UpdateQQ(YHJBXX.YHID, Request["SJ"]);
             return Json(result);
         }
 
         public JsonResult UpdateWB()
         {
-            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            object result = YHJBXXBLL.UpdateWB(yhjbxx.YHID, Request["WB"]);
+            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            object result = YHZCBLL.UpdateWB(YHJBXX.YHID, Request["WB"]);
             return Json(result);
         }
 
         public JsonResult UpdateWX()
         {
-            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            object result = YHJBXXBLL.UpdateWX(yhjbxx.YHID, Request["WX"]);
+            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            object result = YHZCBLL.UpdateWX(YHJBXX.YHID, Request["WX"]);
             return Json(result);
         }
 
         public JsonResult SendEmail()
         {
             Session["YX"] = Request["YX"];
-            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             Random random = new Random();
             string CheckCode = random.Next(100000, 999999).ToString();//6位验证码
             Session["YX"] = Request["YX"];
-            object result = YHJBXXBLL.SendEmail(yhjbxx.YHID, Request["YX"], CheckCode);
+            object result = YHZCBLL.SendEmail(YHJBXX.YHID, Request["YX"], CheckCode);
             return Json(result);
         }
 
@@ -102,7 +102,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 string YHID_Cryptograph = values[0];
                 string CheckCode_Cryptograph = values[1];
 
-                object result = YHJBXXBLL.YHYZ(YHID_Cryptograph, CheckCode_Cryptograph,Session["YX"].ToString());
+                object result = YHZCBLL.YHYZ(YHID_Cryptograph, CheckCode_Cryptograph,Session["YX"].ToString());
 
                 return Json(result);
             }
@@ -114,8 +114,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult MMCZ()
         {
-            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            object result = YHJBXXBLL.MMCZ(yhjbxx.YHID, Request["JMM"], Request["XMM"]);
+            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            object result = YHZCBLL.MMCZ(YHJBXX.YHID, Request["JMM"], Request["XMM"]);
             return Json(result);
         }
     }

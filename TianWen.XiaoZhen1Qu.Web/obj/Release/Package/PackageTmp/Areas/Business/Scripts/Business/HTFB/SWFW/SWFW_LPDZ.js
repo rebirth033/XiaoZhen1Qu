@@ -18,13 +18,13 @@ function LoadDuoX(type, id) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 5 === 4 && i !== xml.list.length - 1) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -55,9 +55,10 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.SWFW_LPDZJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                $("#spanLB").html(xml.Value.SWFW_LPDZJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_LPDZJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_LPDZJBXX.DD);
+		SetDuoX("LB", xml.Value.SWFW_LPDZJBXX.LB)
+		SetDuoX("FWFW", xml.Value.SWFW_LPDZJBXX.FWFW)
                 LoadPhotos(xml.Value.Photos);
                 LoadXL(xml.Value.SWFW_LPDZJBXX.LB, xml.Value.SWFW_LPDZJBXX.XL);
             }
@@ -73,10 +74,11 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

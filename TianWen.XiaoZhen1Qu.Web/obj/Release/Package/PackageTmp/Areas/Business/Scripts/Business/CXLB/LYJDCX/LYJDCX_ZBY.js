@@ -9,6 +9,16 @@ function LoadLYJDCondition() {
     LoadConditionByTypeNames("'周边游行程天数','游玩项目','出游方式','适合人群','周边游价格'", "CODES_LYJD", "行程天数,游玩项目,出游方式,适合人群,价格", "XCTS_R,YWXM,CYFS,SHRQ,MSJ", "100,100,100,100,15");
     LoadBody("LYJDXX_ZBY", currentIndex);
 }
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("YWXM") !== null) {
+        SelectURLCondition(getUrlParam("YWXM"));
+    }
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("LYJDXX_ZBY", currentIndex);
+}
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
@@ -21,6 +31,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("LYJDXX_ZBY", currentIndex);
+    ShowSelectCondition("LYJDXX_ZBY");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("LYJDXX_ZBY", currentIndex);
     ShowSelectCondition("LYJDXX_ZBY");
 }
@@ -56,18 +75,18 @@ function LoadBody(TYPE, PageIndex) {
 //加载单条信息
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left" onclick="OpenXXXX(\'LYJDXX_ZBY\',\'' + obj.ID + '\')">');
+    html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'LYJDXX_ZBY\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'LYJDXX_ZBY\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
-    html += ('<p class="p_li_body_left_center_dz">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + ValidateNull(obj.QY) + ' - ' + ValidateNull(obj.DD) + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">联系商家</span></p>');
+    html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right" onclick="ShowLXDH(\''+obj.LXDH+'\')">联系商家</span></p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -104,7 +123,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'LYJDXX_ZBY\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + ValidateNull(obj.QY) + ' - ' + ValidateNull(obj.DD) + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

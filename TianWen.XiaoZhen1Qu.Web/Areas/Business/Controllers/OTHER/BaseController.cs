@@ -48,15 +48,15 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return photos;
         }
 
-        public JCXX CreateJCXX(YHJBXX yhjbxx, string json)
+        public JCXX CreateJCXX(YHJBXX YHJBXX, string json)
         {
             JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
-            jcxx.YHID = yhjbxx.YHID;
+            jcxx.YHID = YHJBXX.YHID;
             jcxx.LLCS = 0;
             jcxx.STATUS = 3;//待审核
             jcxx.ZXGXSJ = DateTime.Now;
             jcxx.CJSJ = DateTime.Now;
-            jcxx.LXDZ = yhjbxx.TXDZ;
+            jcxx.LXDZ = YHJBXX.TXDZ;
             jcxx.DH = Session["XZQ"] + "-" + GetLBQCByLBID(jcxx.LBID);
             jcxx.XZQDM = int.Parse(Session["XZQDM"].ToString());
             return jcxx;

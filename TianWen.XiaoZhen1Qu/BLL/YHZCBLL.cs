@@ -15,7 +15,7 @@ using System.Text;
 
 namespace TianWen.XiaoZhen1Qu.BLL
 {
-    public class YHJBXXBLL : BaseBLL, IYHJBXXBLL
+    public class YHZCBLL : BaseBLL, IYHZCBLL
     {
         public DataTable GetYHJBXXListByPage()
         {
@@ -37,38 +37,38 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object CreateBasic(YHJBXX yhjbxx)
+        public object CreateBasic(YHJBXX YHJBXX)
         {
-            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}'", yhjbxx.YHM));
+            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}'", YHJBXX.YHM));
 
             if (o1 != null && int.Parse(o1.ToString()) > 0)
             {
-                LoggerManager.Info("用户创建", "用户：" + yhjbxx.YHM + "用户名已存在");
+                LoggerManager.Info("用户创建", "用户：" + YHJBXX.YHM + "用户名已存在");
                 return new { Result = EnResultType.Failed, Message = "用户名已存在!", Type = 2 };
             }
-            o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE SJ='{0}'", yhjbxx.SJ));
+            o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE SJ='{0}'", YHJBXX.SJ));
 
             if (o1 != null && int.Parse(o1.ToString()) > 0)
             {
-                LoggerManager.Info("用户创建", "手机号：" + yhjbxx.SJ + "该手机号已注册过");
+                LoggerManager.Info("用户创建", "手机号：" + YHJBXX.SJ + "该手机号已注册过");
                 return new { Result = EnResultType.Failed, Message = "该手机号已注册过!", Type = 4 };
             }
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
                 {
-                    yhjbxx.MM = EncryptionHelper.MD5Encrypt64(yhjbxx.MM);
-                    yhjbxx.SQRQ = DateTime.Now;
-                    DAO.Save(yhjbxx);
+                    YHJBXX.MM = EncryptionHelper.MD5Encrypt64(YHJBXX.MM);
+                    YHJBXX.SQRQ = DateTime.Now;
+                    DAO.Save(YHJBXX);
                     DAO.Repository.Session.Flush();
                     transaction.Commit();
-                    LoggerManager.Info("用户创建", "用户：" + yhjbxx.YHM + "创建成功");
-                    return new { Result = EnResultType.Success, Message = "保存成功!", Value = new { YHID = yhjbxx.YHID } };
+                    LoggerManager.Info("用户创建", "用户：" + YHJBXX.YHM + "创建成功");
+                    return new { Result = EnResultType.Success, Message = "保存成功!", Value = new { YHID = YHJBXX.YHID } };
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Info("用户创建", "用户：" + yhjbxx.YHM + "创建失败");
+                    LoggerManager.Info("用户创建", "用户：" + YHJBXX.YHM + "创建失败");
                     return new
                     {
                         Result = EnResultType.Failed,
@@ -112,15 +112,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
-                    YHJBXX yhjbxx = GetObjBySJ(SJ);
-                    if (yhjbxx != null)
+                    YHJBXX YHJBXX = GetObjBySJ(SJ);
+                    if (YHJBXX != null)
                     {
-                        yhjbxx.MM = EncryptionHelper.MD5Encrypt64(MM);
-                        DAO.Update(yhjbxx);
+                        YHJBXX.MM = EncryptionHelper.MD5Encrypt64(MM);
+                        DAO.Update(YHJBXX);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
-                        LoggerManager.Info("修改密码", "用户：" + yhjbxx.YHM + "修改密码成功");
-                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                        LoggerManager.Info("修改密码", "用户：" + YHJBXX.YHM + "修改密码成功");
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = YHJBXX.YHID } };
                     }
                     else
                     {
@@ -150,15 +150,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
-                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-                    if (yhjbxx != null)
+                    YHJBXX YHJBXX = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (YHJBXX != null)
                     {
-                        yhjbxx.YHM = YHM;
-                        DAO.Update(yhjbxx);
+                        YHJBXX.YHM = YHM;
+                        DAO.Update(YHJBXX);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
                         LoggerManager.Info("修改用户名", "用户：" + YHM + "修改用户名成功");
-                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = YHJBXX.YHID } };
                     }
                     else
                     {
@@ -187,15 +187,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
-                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-                    if (yhjbxx != null)
+                    YHJBXX YHJBXX = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (YHJBXX != null)
                     {
-                        yhjbxx.QQ = QQ;
-                        DAO.Update(yhjbxx);
+                        YHJBXX.QQ = QQ;
+                        DAO.Update(YHJBXX);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
-                        LoggerManager.Info("修改QQ", "用户：" + yhjbxx.YHM + "修改QQ成功");
-                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                        LoggerManager.Info("修改QQ", "用户：" + YHJBXX.YHM + "修改QQ成功");
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = YHJBXX.YHID } };
                     }
                     else
                     {
@@ -224,15 +224,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
-                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-                    if (yhjbxx != null)
+                    YHJBXX YHJBXX = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (YHJBXX != null)
                     {
-                        yhjbxx.SJ = SJ;
-                        DAO.Update(yhjbxx);
+                        YHJBXX.SJ = SJ;
+                        DAO.Update(YHJBXX);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
                         LoggerManager.Info("绑定手机号", "用户：" + YHID + "绑定手机号成功");
-                        return new { Result = EnResultType.Success, Message = "绑定成功", Value = new { YHID = yhjbxx.YHID } };
+                        return new { Result = EnResultType.Success, Message = "绑定成功", Value = new { YHID = YHJBXX.YHID } };
                     }
                     else
                     {
@@ -261,15 +261,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
-                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-                    if (yhjbxx != null)
+                    YHJBXX YHJBXX = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (YHJBXX != null)
                     {
-                        yhjbxx.WB = WB;
-                        DAO.Update(yhjbxx);
+                        YHJBXX.WB = WB;
+                        DAO.Update(YHJBXX);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
                         LoggerManager.Info("修改微博", "用户：" + YHID + "修改微博成功");
-                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = YHJBXX.YHID } };
                     }
                     else
                     {
@@ -298,15 +298,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
-                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-                    if (yhjbxx != null)
+                    YHJBXX YHJBXX = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (YHJBXX != null)
                     {
-                        yhjbxx.DZYX = YX;
-                        DAO.Update(yhjbxx);
+                        YHJBXX.DZYX = YX;
+                        DAO.Update(YHJBXX);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
                         LoggerManager.Info("修改邮箱", "用户：" + YHID + "修改邮箱成功");
-                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = YHJBXX.YHID } };
                     }
                     else
                     {
@@ -335,15 +335,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
-                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-                    if (yhjbxx != null)
+                    YHJBXX YHJBXX = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (YHJBXX != null)
                     {
-                        yhjbxx.WX = WX;
-                        DAO.Update(yhjbxx);
+                        YHJBXX.WX = WX;
+                        DAO.Update(YHJBXX);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
                         LoggerManager.Info("修改微信", "用户：" + YHID + "修改微信成功");
-                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = YHJBXX.YHID } };
                     }
                     else
                     {
@@ -372,17 +372,17 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
-                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-                    if (yhjbxx != null)
+                    YHJBXX YHJBXX = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (YHJBXX != null)
                     {
-                        if (yhjbxx.MM == EncryptionHelper.MD5Encrypt64(JMM))
+                        if (YHJBXX.MM == EncryptionHelper.MD5Encrypt64(JMM))
                         {
-                            yhjbxx.MM = EncryptionHelper.MD5Encrypt64(XMM);
-                            DAO.Update(yhjbxx);
+                            YHJBXX.MM = EncryptionHelper.MD5Encrypt64(XMM);
+                            DAO.Update(YHJBXX);
                             DAO.Repository.Session.Flush();
                             transaction.Commit();
                             LoggerManager.Info("修改密码", "用户：" + YHID + "修改密码成功");
-                            return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                            return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = YHJBXX.YHID } };
                         }
                         else
                         {
@@ -417,14 +417,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
-                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-                    if (yhjbxx != null)
+                    YHJBXX YHJBXX = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (YHJBXX != null)
                     {
-                        yhjbxx.DZYXYZM = YXYZM;
-                        DAO.Update(yhjbxx);
+                        YHJBXX.DZYXYZM = YXYZM;
+                        DAO.Update(YHJBXX);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = YHJBXX.YHID } };
                     }
                     else
                     {
@@ -458,12 +458,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
-                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-                    if (yhjbxx != null)
+                    YHJBXX YHJBXX = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (YHJBXX != null)
                     {
-                        yhjbxx.TX = "TX.jpg";
+                        YHJBXX.TX = "TX.jpg";
 
-                        DAO.Update(yhjbxx);
+                        DAO.Update(YHJBXX);
 
                         Bitmap bm = Common.ReadImageFile(copypath + copyfilename);
 
@@ -478,7 +478,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
                         LoggerManager.Info("修改头像", "用户：" + YHID + "上传头像成功");
-                        return new { Result = EnResultType.Success, Message = "上传头像成功", Value = new { YHID = yhjbxx.YHID } };
+                        return new { Result = EnResultType.Success, Message = "上传头像成功", Value = new { YHID = YHJBXX.YHID } };
                     }
                     else
                     {
@@ -503,12 +503,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
         //修改头像
         public void UpdateTX(string YHID)
         {
-            YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-            if (yhjbxx != null)
+            YHJBXX YHJBXX = DAO.GetObjectByID<YHJBXX>(YHID);
+            if (YHJBXX != null)
             {
-                yhjbxx.TX = "TX.jpg";
+                YHJBXX.TX = "TX.jpg";
 
-                DAO.Update(yhjbxx);
+                DAO.Update(YHJBXX);
             }
         }
 
@@ -575,8 +575,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-                if (yhjbxx != null)
+                YHJBXX YHJBXX = DAO.GetObjectByID<YHJBXX>(YHID);
+                if (YHJBXX != null)
                 {
                     UpdateYXYZM(YHID, EncryptionHelper.MD5Encrypt64(CheckCode));
                     MailMessage msg = new MailMessage();
@@ -604,7 +604,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                     <p style='text-align: right'>风铃网邮件中心</p>
                                     <p style='text-align: right'> {2}</p>
                                 </div>
-                                </div>'", yhjbxx.YHM, url, DateTime.Now.ToString("yyyy年MM月dd日"));
+                                </div>'", YHJBXX.YHM, url, DateTime.Now.ToString("yyyy年MM月dd日"));
                     msg.Body = sb.ToString();
                     msg.BodyEncoding = Encoding.UTF8;//邮件内容编码 
                     msg.IsBodyHtml = true;//是否是HTML邮件
@@ -618,7 +618,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     object userState = msg;
                     client.SendAsync(msg, userState);
                     LoggerManager.Info("发送邮件", "用户：" + YHID + "发送邮件成功");
-                    return new { Result = EnResultType.Success, Message = "发送成功", Value = new { YHID = yhjbxx.YHID } };
+                    return new { Result = EnResultType.Success, Message = "发送成功", Value = new { YHID = YHJBXX.YHID } };
                 }
                 else
                 {
@@ -636,20 +636,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
-
+        //用户验证
         public object YHYZ(string YHID_Cryptograph, string CheckCode_Cryptograph, string YX)
         {
             try
             {
-                List<YHJBXX> yhjbxxs = DAO.GetObjectList<YHJBXX>(string.Format("FROM YHJBXX")).ToList();
-                foreach (var yhjbxx in yhjbxxs)
+                List<YHJBXX> YHJBXXs = DAO.GetObjectList<YHJBXX>(string.Format("FROM YHJBXX")).ToList();
+                foreach (var YHJBXX in YHJBXXs)
                 {
-                    if (EncryptionHelper.MD5Encrypt64(yhjbxx.YHID) == YHID_Cryptograph)
+                    if (EncryptionHelper.MD5Encrypt64(YHJBXX.YHID) == YHID_Cryptograph)
                     {
-                        if (yhjbxx.DZYXYZM == CheckCode_Cryptograph)
+                        if (YHJBXX.DZYXYZM == CheckCode_Cryptograph)
                         {
-                            UpdateYX(yhjbxx.YHID, YX);
-                            return new { Result = EnResultType.Success, Message = "验证成功", Value = new { YHM = yhjbxx.YHM, DZYX = yhjbxx.DZYX } };
+                            UpdateYX(YHJBXX.YHID, YX);
+                            return new { Result = EnResultType.Success, Message = "验证成功", Value = new { YHM = YHJBXX.YHM, DZYX = YHJBXX.DZYX } };
                         }
                         else
                         {
@@ -661,7 +661,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
             catch (Exception ex)
             {
-                LoggerManager.Error("YHJBXXBLL", "验证失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                LoggerManager.Error("YHZCBLL", "验证失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                 return new
                 {
                     Result = EnResultType.Failed,

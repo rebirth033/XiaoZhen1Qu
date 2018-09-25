@@ -38,8 +38,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
                     {
                         int width = Convert.ToInt32(context.Request.Form["width"]);
                         int height = Convert.ToInt32(context.Request.Form["height"]);
-                        YHJBXX yhjbxx = FC_BLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
-                        return ResizeImg(file.InputStream, width, height, yhjbxx.YHID);
+                        YHJBXX YHJBXX = FC_BLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
+                        return ResizeImg(file.InputStream, width, height, YHJBXX.YHID);
                     }
                 }
             }
@@ -92,11 +92,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
         //保存照片文件
         public string SavePhoto64(HttpContext context)
         {
-            YHJBXX yhjbxx = FC_BLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
+            YHJBXX YHJBXX = FC_BLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
             string RootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录 
             string virtualpath = context.Request["filepath"];
             string filename = virtualpath.Substring(virtualpath.LastIndexOf('/') + 1, virtualpath.Length - virtualpath.LastIndexOf('/') - 1);
-            string physicalpath = RootDir + @"\Areas\Business\Photos\" + yhjbxx.YHID + @"\" + filename;
+            string physicalpath = RootDir + @"\Areas\Business\Photos\" + YHJBXX.YHID + @"\" + filename;
             FileStream fs = File.Create(physicalpath);
             byte[] bytes = Convert.FromBase64String(context.Request["data"]);
             fs.Write(bytes, 0, bytes.Length);
