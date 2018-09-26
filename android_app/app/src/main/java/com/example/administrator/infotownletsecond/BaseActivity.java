@@ -1,12 +1,11 @@
 package com.example.administrator.infotownletsecond;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -14,6 +13,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class BaseActivity extends Activity implements View.OnClickListener {
+
+    public String YHM;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
 //    @Override
 //    public void finish() {

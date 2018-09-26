@@ -15,26 +15,39 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.content.Intent;
+
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.CookieStore;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class YHZCActivity extends AppCompatActivity implements OnClickListener {
     private EditText metSJH;
-    private EditText metDTM;
+    private EditText metYZM;
     private EditText metMM;
     private TextView mtvHQYZM;
     private TextView mtvDL;
     private TextView mtvGB;
     private TextView mbtnZC;
+
+    private static String JSESSIONID; //定义一个静态的字段，保存sessionID
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.yhzc);
         metSJH = (EditText) findViewById(R.id.etSJH);
-        metDTM = (EditText) findViewById(R.id.etDTM);
+        metYZM = (EditText) findViewById(R.id.etYZM);
         metMM = (EditText) findViewById(R.id.etMM);
         mtvHQYZM = (TextView) findViewById(R.id.tvHQYZM);
         mtvDL = (TextView) findViewById(R.id.tvDL);
@@ -45,6 +58,7 @@ public class YHZCActivity extends AppCompatActivity implements OnClickListener {
         mbtnZC.setOnClickListener(this);
         BindSJ();
     }
+
     //绑定手机
     public void BindSJ() {
         metSJH.addTextChangedListener(new TextWatcher() {
@@ -52,9 +66,11 @@ public class YHZCActivity extends AppCompatActivity implements OnClickListener {
                 if (metSJH.getText().length() == 11)
                     mtvHQYZM.setTextColor(Color.parseColor("#bc6ba6"));
             }
+
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
+
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
             }
@@ -84,16 +100,33 @@ public class YHZCActivity extends AppCompatActivity implements OnClickListener {
             protected void onPostExecute(Object result) {
                 super.onPostExecute(result);
             }
+
             //该方法运行在后台线程中，因此不能在该线程中更新UI，UI线程为主线程
             protected Object doInBackground(String... params) {
                 Object result = null;
-                String targeturl = "http://www.915fl.com/YHJBXX/GetYZM?SJ=" + metSJH.getText();
-                HttpGet getMethod = new HttpGet(targeturl);
-                DefaultHttpClient httpClient = new DefaultHttpClient();
+                String targeturl = "http://www.915fl.com/YHZC/GetYZM";
                 try {
-                    HttpResponse response = httpClient.execute(getMethod); //发起GET请求
+                    HttpPost httpRequest = new HttpPost(targeturl);
+                    NameValuePair SJ = new BasicNameValuePair("SJ", metSJH.getText().toString());
+                    List<NameValuePair> parameters = new ArrayList<NameValuePair>();//创建一个集合，存NameValuePair对象的
+                    parameters.add(SJ);
+                    HttpGet getMethod = new HttpGet(targeturl);
+                    httpRequest.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
+                    DefaultHttpClient httpClient = new DefaultHttpClient();
+                    HttpResponse response = httpClient.execute(httpRequest); //发起GET请求
                     int rescode = response.getStatusLine().getStatusCode(); //获取响应码
                     result = EntityUtils.toString(response.getEntity(), "utf-8");//获取服务器响应内容
+
+                    /* 获取cookieStore ASP.NET_SessionId就是通过上面的方法获取到。*/
+                    CookieStore cookieStore = httpClient.getCookieStore();
+                    List<Cookie> cookies = cookieStore.getCookies();
+                    for (int i = 0; i < cookies.size(); i++) {
+                        if ("ASP.NET_SessionId".equals(cookies.get(i).getName())) {
+                            JSESSIONID = cookies.get(i).getValue();
+                            break;
+                        }
+                    }
+                    String temp = JSESSIONID;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -103,11 +136,13 @@ public class YHZCActivity extends AppCompatActivity implements OnClickListener {
 
         CountDownTimer cdt = new CountDownTimer(60000, 1000) {
             int count = 60;
+
             @Override
             public void onTick(long millisUntilFinished) {
                 count = count - 1;
                 mtvHQYZM.setText(count + "S后重发");
             }
+
             @Override
             public void onFinish() {
                 mtvHQYZM.setText("重新获取");
@@ -125,9 +160,8 @@ public class YHZCActivity extends AppCompatActivity implements OnClickListener {
                 try {
                     JSONObject jsonobject = new JSONObject(result.toString());
                     String Result = jsonobject.getString("Result");
-                    String Message = jsonobject.getString("Message");
-                    if(Result == "1") ZCCG();
-                    else ZCSB(Message);
+                    if (Result == "1") ZCCG();
+                    else ZCSB(jsonobject.getString("Message"));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -135,12 +169,23 @@ public class YHZCActivity extends AppCompatActivity implements OnClickListener {
 
             protected Object doInBackground(String... params) {
                 Object result = null;
-                String targeturl = "http://www.915fl.com.com/YHJBXX/SJRegister?SJ=" + metSJH.getText() + "&YZM=" + metDTM.getText() + "&MM=" + metMM.getText();
+                String targeturl = "http://www.915fl.com/YHZC/SJRegister";
                 //将URL与参数拼接
-                HttpGet getMethod = new HttpGet(targeturl);
-                DefaultHttpClient httpClient = new DefaultHttpClient();
                 try {
-                    HttpResponse response = httpClient.execute(getMethod); //发起GET请求
+                    HttpPost httpRequest = new HttpPost(targeturl);
+                    NameValuePair SJ = new BasicNameValuePair("SJ", metSJH.getText().toString());
+                    NameValuePair YZM = new BasicNameValuePair("YZM", metYZM.getText().toString());
+                    NameValuePair MM = new BasicNameValuePair("MM", metMM.getText().toString());
+                    List<NameValuePair> parameters = new ArrayList<NameValuePair>();//创建一个集合，存NameValuePair对象的
+                    parameters.add(SJ);
+                    parameters.add(YZM);
+                    parameters.add(MM);
+                    httpRequest.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
+                    DefaultHttpClient httpClient = new DefaultHttpClient();
+                    if(null != JSESSIONID){
+                        httpRequest.setHeader("Cookie", "ASP.NET_SessionId=" + JSESSIONID);
+                    }
+                    HttpResponse response = httpClient.execute(httpRequest); //发起GET请求
                     int rescode = response.getStatusLine().getStatusCode(); //获取响应码
                     result = EntityUtils.toString(response.getEntity(), "utf-8");//获取服务器响应内容
                 } catch (Exception e) {
@@ -150,20 +195,23 @@ public class YHZCActivity extends AppCompatActivity implements OnClickListener {
             }
         }.execute();
     }
+
     //跳转登录页
     public void TZDLY() {
         Intent intent = new Intent(YHZCActivity.this, YHDLActivity.class);
         startActivity(intent);
         finish();//关闭当前页面
     }
+
     //注册成功
-    public void ZCCG(){
+    public void ZCCG() {
         Intent intent = new Intent(YHZCActivity.this, GRZX_MainActivity.class);
         startActivity(intent);
         finish();//关闭当前页面
     }
+
     //注册成功
-    public void ZCSB(String message){
+    public void ZCSB(String message) {
         final AlertDialog dialog = new AlertDialog.Builder(YHZCActivity.this).create();
         dialog.setTitle("提示");
         dialog.setMessage("注册失败:" + message);
@@ -171,7 +219,9 @@ public class YHZCActivity extends AppCompatActivity implements OnClickListener {
         dialog.show();
         new Handler().postDelayed(new Runnable() {
             @Override
-            public void run() {dialog.dismiss();}
+            public void run() {
+                dialog.dismiss();
+            }
         }, 3000);
     }
 }

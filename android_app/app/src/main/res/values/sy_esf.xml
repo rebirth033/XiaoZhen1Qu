@@ -50,7 +50,7 @@
         <item name="android:layout_gravity">bottom</item>
         <item name="android:orientation">horizontal</item>
     </style>
-    <style name="ll_sy_esc_fl_item">
+    <style name="ll_sy_esf_fl_item">
         <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">75dp</item>
         <item name="android:layout_gravity">left|bottom</item>

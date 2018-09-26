@@ -6,45 +6,45 @@
         <LinearLayout style="@style/ll_sy_esf_main">
 
             <LinearLayout style="@style/ll_sy_esf_top">
-                <ImageView android:id="@+id/ivBACK" style="@style/iv_sy_esc_back" android:src="@drawable/arrow_back" />
-                <TextView android:id="@+id/etTitle" style="@style/tv_sy_esc_title" android:text="二手房" />
+                <ImageView android:id="@+id/ivBACK" style="@style/iv_sy_esf_back" android:src="@drawable/arrow_back" />
+                <TextView android:id="@+id/etTitle" style="@style/tv_sy_esf_title" android:text="二手房" />
             </LinearLayout>
 
-            <LinearLayout style="@style/ll_sy_esc_fl_row">
-                <LinearLayout android:id="@+id/llSY_ZF_ZZ" style="@style/ll_sy_esc_fl_item">
-                    <ImageView android:id="@+id/ivSY_ZF_ZZ" style="@style/iv_sy_esc_fl_item" android:src="@drawable/sy_esf_esf" />
-                    <TextView android:id="@+id/tvSY_ZF_ZZ" style="@style/tv_sy_esc_fl_item" android:text="二手房" />
+            <LinearLayout style="@style/ll_sy_esf_fl_row">
+                <LinearLayout android:id="@+id/llSY_ZF_ZZ" style="@style/ll_sy_esf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_ZZ" style="@style/iv_sy_esf_fl_item" android:src="@drawable/sy_esf_esf" />
+                    <TextView android:id="@+id/tvSY_ZF_ZZ" style="@style/tv_sy_esf_fl_item" android:text="二手房" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/llSY_ZF_XF" style="@style/ll_sy_esc_fl_item">
-                    <ImageView android:id="@+id/ivSY_ZF_XF" style="@style/iv_sy_esc_fl_item" android:src="@drawable/sy_esf_xf" />
-                    <TextView android:id="@+id/tvSY_ZF_XF" style="@style/tv_sy_esc_fl_item" android:text="新房" />
+                <LinearLayout android:id="@+id/llSY_ZF_XF" style="@style/ll_sy_esf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_XF" style="@style/iv_sy_esf_fl_item" android:src="@drawable/sy_esf_xf" />
+                    <TextView android:id="@+id/tvSY_ZF_XF" style="@style/tv_sy_esf_fl_item" android:text="新房" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/llZP" style="@style/ll_sy_esc_fl_item">
-                    <ImageView android:id="@+id/ivSY_ZF_HZ" style="@style/iv_sy_esc_fl_item" android:src="@drawable/sy_esf_sp" />
-                    <TextView android:id="@+id/tvSY_ZF_HZ" style="@style/tv_sy_esc_fl_item" android:text="商铺" />
+                <LinearLayout android:id="@+id/llZP" style="@style/ll_sy_esf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_HZ" style="@style/iv_sy_esf_fl_item" android:src="@drawable/sy_esf_sp" />
+                    <TextView android:id="@+id/tvSY_ZF_HZ" style="@style/tv_sy_esf_fl_item" android:text="商铺" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/llSY_ZF_DZ" style="@style/ll_sy_esc_fl_item">
-                    <ImageView android:id="@+id/ivSY_ZF_DZ" style="@style/iv_sy_esc_fl_item" android:src="@drawable/sy_esf_xzl" />
-                    <TextView android:id="@+id/tvSY_ZF_DZ" style="@style/tv_sy_esc_fl_item" android:text="写字楼" />
+                <LinearLayout android:id="@+id/llSY_ZF_DZ" style="@style/ll_sy_esf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_DZ" style="@style/iv_sy_esf_fl_item" android:src="@drawable/sy_esf_xzl" />
+                    <TextView android:id="@+id/tvSY_ZF_DZ" style="@style/tv_sy_esf_fl_item" android:text="写字楼" />
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout style="@style/ll_sy_esc_fl_row">
-                <LinearLayout android:id="@+id/llSY_ZF_CF" style="@style/ll_sy_esc_fl_item">
-                    <ImageView android:id="@+id/ivSY_ZF_CF" style="@style/iv_sy_esc_fl_item" android:src="@drawable/sy_esf_cf" />
-                    <TextView android:id="@+id/tvSY_ZF_CF" style="@style/tv_sy_esc_fl_item" android:text="厂房" />
+            <LinearLayout style="@style/ll_sy_esf_fl_row">
+                <LinearLayout android:id="@+id/llSY_ZF_CF" style="@style/ll_sy_esf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_CF" style="@style/iv_sy_esf_fl_item" android:src="@drawable/sy_esf_cf" />
+                    <TextView android:id="@+id/tvSY_ZF_CF" style="@style/tv_sy_esf_fl_item" android:text="厂房" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/llSY_ZF_XZL" style="@style/ll_sy_esc_fl_item">
-                    <ImageView android:id="@+id/ivSY_ZF_XZL" style="@style/iv_sy_esc_fl_item" android:src="@drawable/sy_esf_ck" />
-                    <TextView android:id="@+id/tvSY_ZF_XZL" style="@style/tv_sy_esc_fl_item" android:text="仓库" />
+                <LinearLayout android:id="@+id/llSY_ZF_XZL" style="@style/ll_sy_esf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_XZL" style="@style/iv_sy_esf_fl_item" android:src="@drawable/sy_esf_ck" />
+                    <TextView android:id="@+id/tvSY_ZF_XZL" style="@style/tv_sy_esf_fl_item" android:text="仓库" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/llSY_ZF_CW" style="@style/ll_sy_esc_fl_item">
-                    <ImageView android:id="@+id/ivSY_ZF_CW" style="@style/iv_sy_esc_fl_item" android:src="@drawable/sy_esf_cw" />
-                    <TextView android:id="@+id/tvSY_ZF_CW" style="@style/tv_sy_esc_fl_item" android:text="车位" />
+                <LinearLayout android:id="@+id/llSY_ZF_CW" style="@style/ll_sy_esf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_CW" style="@style/iv_sy_esf_fl_item" android:src="@drawable/sy_esf_cw" />
+                    <TextView android:id="@+id/tvSY_ZF_CW" style="@style/tv_sy_esf_fl_item" android:text="车位" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/llSY_ZF_TD" style="@style/ll_sy_esc_fl_item">
-                    <ImageView android:id="@+id/ivSY_ZF_TD" style="@style/iv_sy_esc_fl_item" android:src="@drawable/sy_esf_td" />
-                    <TextView android:id="@+id/tvSY_ZF_TD" style="@style/tv_sy_esc_fl_item" android:text="土地" />
+                <LinearLayout android:id="@+id/llSY_ZF_TD" style="@style/ll_sy_esf_fl_item">
+                    <ImageView android:id="@+id/ivSY_ZF_TD" style="@style/iv_sy_esf_fl_item" android:src="@drawable/sy_esf_td" />
+                    <TextView android:id="@+id/tvSY_ZF_TD" style="@style/tv_sy_esf_fl_item" android:text="土地" />
                 </LinearLayout>
             </LinearLayout>
 

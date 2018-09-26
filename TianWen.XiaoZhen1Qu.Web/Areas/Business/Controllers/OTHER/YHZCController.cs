@@ -13,11 +13,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class YHZCController : BaseController
     {
         public IYHZCBLL YHZCBLL { get; set; }
+
         public ActionResult YHZC()
         {
             return View();
         }
 
+        //用户名密码注册
         public JsonResult Register()
         {
             string YZM = Request["YZM"];
@@ -40,33 +42,34 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 return Json(new { Result = EnResultType.Failed, Message = "请点击获取验证码按钮", Type = 1 });
         }
 
+        //手机号注册
         public JsonResult SJRegister()
         {
             try
             {
-                //string YZM = Request["YZM"];
-                ////生成的验证码被保存到session中
-                //if (Session["CheckCode"] != null)
-                //{
-                //string checkcode = Session["CheckCode"].ToString();
-                //if (YZM == checkcode)
-                //{
-                YHJBXX YHJBXX = YHZCBLL.CreateBasicBySJ(Request["SJ"], Request["MM"]);
-                Session["YHM"] = YHJBXX.YHM;
-                LoggerManager.Info("用户注册成功", "用户：" + YHJBXX.YHM + "创建成功");
-                return Json(new { Result = EnResultType.Success });
-                //}
-                //else
-                //{
-                //    LoggerManager.Info("用户注册失败", "验证码错误或过期，请重新获取");
-                //    return Json(new { Result = EnResultType.Failed, Message = "验证码错误或过期，请重新获取", Type = 1 });
-                //}
-                //}
-                //else
-                //{
-                //    LoggerManager.Info("用户注册失败", "请点击获取验证码按钮");
-                //    return Json(new { Result = EnResultType.Failed, Message = "请点击获取验证码按钮", Type = 1 });
-                //}
+                string YZM = Request["YZM"];
+                //生成的验证码被保存到session中
+                if (Session["CheckCode"] != null)
+                {
+                    string checkcode = Session["CheckCode"].ToString();
+                    if (YZM == checkcode)
+                    {
+                        YHJBXX YHJBXX = YHZCBLL.CreateBasicBySJ(Request["SJ"], Request["MM"]);
+                        Session["YHM"] = YHJBXX.YHM;
+                        LoggerManager.Info("用户注册成功", "用户：" + YHJBXX.YHM + "创建成功");
+                        return Json(new { Result = EnResultType.Success });
+                    }
+                    else
+                    {
+                        LoggerManager.Info("用户注册失败", "验证码错误或过期，请重新获取");
+                        return Json(new { Result = EnResultType.Failed, Message = "验证码错误或过期，请重新获取", Type = 1 });
+                    }
+                }
+                else
+                {
+                    LoggerManager.Info("用户注册失败", "请点击获取验证码按钮");
+                    return Json(new { Result = EnResultType.Failed, Message = "请点击获取验证码按钮", Type = 1 });
+                }
             }
             catch (Exception ex)
             {
@@ -75,6 +78,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             }
         }
 
+        //获取验证码
         public JsonResult GetYZM()
         {
             string SJ = Request["SJ"];
@@ -96,10 +100,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             StreamReader ser = new StreamReader(sr, Encoding.Default);
             string strRet = ser.ReadToEnd();
 
-            //return Json(new { Result = EnResultType.Success, YZM = checkcode });
+            return Json(new { Result = EnResultType.Success, YZM = checkcode });
             return Json(new { Result = EnResultType.Success });
         }
 
+        //验证手机号是否存在
         public JsonResult ValidateSJ()
         {
             string SJ = Request["SJ"];

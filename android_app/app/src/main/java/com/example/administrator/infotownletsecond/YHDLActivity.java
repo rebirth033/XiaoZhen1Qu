@@ -22,12 +22,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class YHDLActivity extends AppCompatActivity implements OnClickListener {
+public class YHDLActivity extends BaseActivity implements OnClickListener {
+
     private EditText metSJH;
     private EditText metMM;
     private TextView mtvGB;
     private TextView mtvZC;
     private TextView mbtnDL;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,13 +96,11 @@ public class YHDLActivity extends AppCompatActivity implements OnClickListener {
                     HttpResponse response = httpClient.execute(httpRequest); //发起GET请求
                     int rescode = response.getStatusLine().getStatusCode(); //获取响应码
                     result = EntityUtils.toString(response.getEntity(), "utf-8");//获取服务器响应内容
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 return result;
             }
-
         }.execute();
     }
     //登录成功

@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" style="@style/ll_yhdl_root" tools:context="com.example.administrator.infotownletsecond.YHDLActivity">
 
     <LinearLayout style="@style/ll_yhdl_top">
-        <TextView android:id="@+id/tvGB" style="@style/tv_top_gb" android:text="X" />
+        <TextView android:id="@+id/tvGB" style="@style/tv_top_gb" android:background="@drawable/close" />
         <TextView android:id="@+id/tvZC" style="@style/tv_top_zc" android:text="注册" />
     </LinearLayout>
 

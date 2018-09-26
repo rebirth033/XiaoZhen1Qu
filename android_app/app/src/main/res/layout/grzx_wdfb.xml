@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/llSY_JZ" style="@style/ll_grzx_wdfb_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_grzx_wdfb_channel">
+
+        <LinearLayout style="@style/ll_grzx_wdfb_main">
+
+            <LinearLayout style="@style/ll_grzx_wdfb_top">
+                <ImageView android:id="@+id/ivBACK" style="@style/iv_grzx_wdfb_back" android:src="@drawable/arrow_back_black" />
+                <TextView android:id="@+id/tvTitle" style="@style/tv_grzx_wdfb_title"  android:text="我的发布" />
+                <TextView android:id="@+id/tvFBXX" style="@style/tv_grzx_wdfb_fbxx"  android:text="发布信息" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/llWDFB" style="@style/ll_grzx_wdfb_content">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

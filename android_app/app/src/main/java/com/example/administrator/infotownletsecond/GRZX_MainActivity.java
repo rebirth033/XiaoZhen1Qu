@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import java.net.URL;
 
 public class GRZX_MainActivity extends BaseActivity implements OnClickListener {
@@ -27,10 +28,12 @@ public class GRZX_MainActivity extends BaseActivity implements OnClickListener {
         ViewGroup vgxx = (ViewGroup) findViewById(R.id.llXX);
         ViewGroup vgsy = (ViewGroup) findViewById(R.id.llSY);
         ImageView iv_grzx_djtxdl = (ImageView) findViewById(R.id.ivDJTXDL);
+        LinearLayout ll_grzx_wdfb = (LinearLayout) findViewById(R.id.llWDFB);
         vgfb.setOnClickListener(this);
         vgxx.setOnClickListener(this);
         vgsy.setOnClickListener(this);
         iv_grzx_djtxdl.setOnClickListener(this);
+        ll_grzx_wdfb.setOnClickListener(this);
 
         try {
             URL picUrl = new URL("http://www.915fl.com/Areas/Business/Photos/5d14677c5a024ac1bd4c6b7eaa3cce99/GRZL/TX.jpg?j=" + Math.random());
@@ -60,6 +63,12 @@ public class GRZX_MainActivity extends BaseActivity implements OnClickListener {
             case R.id.ivDJTXDL:
                 YMTZ("YHDL");
                 break;
+            case R.id.llWDFB:
+                if(YHM != null)
+                    YMTZ("WDFB");
+                else
+                    YMTZ("YHDL");
+                break;
         }
     }
 
@@ -82,6 +91,11 @@ public class GRZX_MainActivity extends BaseActivity implements OnClickListener {
         }
         if(id == "YHDL") {
             Intent intent = new Intent(GRZX_MainActivity.this, YHDLActivity.class);
+            startActivity(intent);
+            finish();//关闭当前页面
+        }
+        if(id == "WDFB") {
+            Intent intent = new Intent(GRZX_MainActivity.this, GRZX_WDFBActivity.class);
             startActivity(intent);
             finish();//关闭当前页面
         }

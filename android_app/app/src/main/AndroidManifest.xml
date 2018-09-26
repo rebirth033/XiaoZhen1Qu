@@ -75,7 +75,8 @@
         <activity android:name=".SY_ZPActivity" />
         <activity android:name=".SY_JZActivity" />
         <activity android:name=".SY_ESCActivity" />
-        <activity android:name=".SY_XCActivity"></activity>
+        <activity android:name=".SY_XCActivity" />
+        <activity android:name=".GRZX_WDFBActivity"></activity>
     </application>
 
 </manifest>
