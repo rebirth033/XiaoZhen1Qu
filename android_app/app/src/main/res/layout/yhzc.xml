@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/ll_yhzc_root"
-    tools:context="com.example.administrator.infotownletsecond.YHZCActivity">
+    tools:context="com.example.administrator.infotownletsecond.YHZC">
 
     <LinearLayout style="@style/ll_yhzc_top">
 

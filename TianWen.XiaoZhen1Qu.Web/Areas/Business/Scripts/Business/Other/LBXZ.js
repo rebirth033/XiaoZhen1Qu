@@ -54,7 +54,7 @@ function LoadXL(LBID, LBNAME) {
         success: function (xml) {
             if (xml.Result === 1) {
                 var XLhtml = "", trhtml = "";
-                if (LBNAME === "二手" || LBNAME === "生活服务" || LBNAME === "商务服务" || LBNAME === "车辆") {
+                if (LBNAME === "二手物品" || LBNAME === "生活服务" || LBNAME === "商务服务" || LBNAME === "车辆") {
                     for (var i = 0; i < xml.list.length; i++) {
                         if (xml.list[i].CODES_XXLBS.length > 5)
                             trhtml = "<tr class=\"trXL\" style=\"border-bottom:none;\"><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";
@@ -85,14 +85,14 @@ function LoadXL(LBID, LBNAME) {
                                 trhtml = "<tr class=\"trXL\" style=\"border-bottom:none;\"><td class=\"LBFirst\"></td>";
                             }
                             if (j === 10) {
-				if(xml.list[i].CODES_XXLBS.length < 15)
+                                if (xml.list[i].CODES_XXLBS.length < 15)
                                     trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\"></td>";
-				if(xml.list[i].CODES_XXLBS.length > 15)
+                                if (xml.list[i].CODES_XXLBS.length > 15)
                                     trhtml = "<tr class=\"trXL\" style=\"border-bottom:none;\"><td class=\"LBFirst\"></td>";
                             }
-			    if(j === 20){
-				trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\"></td>";
-			    }
+                            if (j === 20) {
+                                trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\"></td>";
+                            }
                             trhtml += "<td class=\"LB\" onclick=\"FBXX('" + xml.list[i].CODES_XXLBS[j].FBYM + "','" + xml.list[i].CODES_XXLBS[j].LBID + "')\">" + xml.list[i].CODES_XXLBS[j].LBNAME + "</td>";
                             if ((j === 4 || j === 9 || j === 14 || j === 19) && j !== (xml.list[i].CODES_XXLBS.length - 1)) {
                                 trhtml += "</tr>";

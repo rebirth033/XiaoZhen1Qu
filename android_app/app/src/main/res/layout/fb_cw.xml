@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_cw_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_fb_cw_main">
+
+        <LinearLayout style="@style/ll_fb_cw_main">
+
+            <LinearLayout style="@style/ll_fb_cw_top">
+                <ImageView android:id="@+id/ivBACK" style="@style/iv_fb_cw_back" android:src="@drawable/arrow_back_black" />
+                <TextView android:id="@+id/tvTitle" style="@style/tv_fb_cw_title" android:text="选择发布类别" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_fb_cw_row">
+                <LinearLayout android:id="@+id/llCWG" style="@style/ll_fb_cw_item">
+                    <ImageView android:id="@+id/ivCWG" style="@style/iv_fb_cw_item" android:src="@drawable/fb_cw_cwg" />
+                    <LinearLayout style="@style/ll_fb_cw_item_text">
+                        <TextView style="@style/tv_fb_cw_item" android:text="宠物狗" />
+                        <TextView style="@style/tv_fb_cw_item_remark" android:text="金毛、哈士奇、泰迪、拉布拉多" />
+                    </LinearLayout>
+                    <ImageView style="@style/iv_fb_cw_forward" android:src="@drawable/arrow_forward_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llCWM" style="@style/ll_fb_cw_item">
+                    <ImageView android:id="@+id/ivCWM" style="@style/iv_fb_cw_item" android:src="@drawable/fb_cw_cwm" />
+                    <LinearLayout style="@style/ll_fb_cw_item_text">
+                        <TextView style="@style/tv_fb_cw_item" android:text="宠物猫" />
+                        <TextView style="@style/tv_fb_cw_item_remark" android:text="蓝猫、折耳猫、加菲猫" />
+                    </LinearLayout>
+                    <ImageView style="@style/iv_fb_cw_forward" android:src="@drawable/arrow_forward_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llHNYC" style="@style/ll_fb_cw_item">
+                    <ImageView android:id="@+id/ivHNYC" style="@style/iv_fb_cw_item" android:src="@drawable/fb_cw_hnyc" />
+                    <LinearLayout style="@style/ll_fb_cw_item_text">
+                        <TextView style="@style/tv_fb_cw_item" android:text="花鸟鱼虫" />
+                        <TextView style="@style/tv_fb_cw_item_remark" android:text="鱼、鸟、龟" />
+                    </LinearLayout>
+                    <ImageView style="@style/iv_fb_cw_forward" android:src="@drawable/arrow_forward_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llCWYP" style="@style/ll_fb_cw_item">
+                    <ImageView android:id="@+id/ivCWYP" style="@style/iv_fb_cw_item" android:src="@drawable/fb_cw_cwyp" />
+                    <LinearLayout style="@style/ll_fb_cw_item_text">
+                        <TextView style="@style/tv_fb_cw_item" android:text="宠物用品" />
+                        <TextView style="@style/tv_fb_cw_item_remark" android:text="狗用品、猫用品" />
+                    </LinearLayout>
+                    <ImageView style="@style/iv_fb_cw_forward" android:src="@drawable/arrow_forward_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llCWFW" style="@style/ll_fb_cw_item">
+                    <ImageView android:id="@+id/ivCWFW" style="@style/iv_fb_cw_item" android:src="@drawable/fb_cw_cwfw" />
+                    <LinearLayout style="@style/ll_fb_cw_item_text">
+                        <TextView style="@style/tv_fb_cw_item" android:text="宠物服务" />
+                        <TextView style="@style/tv_fb_cw_item_remark" android:text="配种、训练、托运、医疗、美容、寄养" />
+                    </LinearLayout>
+                    <ImageView style="@style/iv_fb_cw_forward" android:src="@drawable/arrow_forward_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llZSLY" style="@style/ll_fb_cw_item">
+                    <ImageView android:id="@+id/ivZSLY" style="@style/iv_fb_cw_item" android:src="@drawable/fb_cw_zsly" />
+                    <LinearLayout style="@style/ll_fb_cw_item_text">
+                        <TextView style="@style/tv_fb_cw_item" android:text="赠送领养" />
+                        <TextView style="@style/tv_fb_cw_item_remark" android:text="赠送、领养、寻宠启示" />
+                    </LinearLayout>
+                    <ImageView style="@style/iv_fb_cw_forward" android:src="@drawable/arrow_forward_black" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

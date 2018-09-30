@@ -22,17 +22,18 @@
         <item name="android:orientation">horizontal</item>
     </style>
     <style name="tv_xzfblb_title">
-        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_width">330dp</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:paddingLeft">50dp</item>
+        <item name="android:paddingLeft">80dp</item>
         <item name="android:textSize">20dp</item>
         <item name="android:gravity">center</item>
     </style>
     <style name="tv_xzfblb_wdfb">
-        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_width">80dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">14dp</item>
+        <item name="android:textAlignment">center</item>
     </style>
     <style name="ll_xzfblb_row">
         <item name="android:layout_width">match_parent</item>
@@ -56,6 +57,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">25dp</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginTop">5dp</item>
     </style>
 
 </resources>

@@ -37,7 +37,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult SaveXTTX()
         {
-            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX YHJBXX = YHZCBLL.GetYHJBXXByYHM(Session["YHM"] == null ? "" : Session["YHM"].ToString());
             object result = YHZCBLL.UpdateTX(YHJBXX.YHID, Request["TX"]);
             return Json(result);
         }
@@ -102,7 +102,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 string YHID_Cryptograph = values[0];
                 string CheckCode_Cryptograph = values[1];
 
-                object result = YHZCBLL.YHYZ(YHID_Cryptograph, CheckCode_Cryptograph,Session["YX"].ToString());
+                object result = YHZCBLL.YHYZ(YHID_Cryptograph, CheckCode_Cryptograph, Session["YX"].ToString());
 
                 return Json(result);
             }

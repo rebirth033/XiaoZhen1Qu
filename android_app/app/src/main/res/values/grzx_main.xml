@@ -26,9 +26,18 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_gravity">center|center</item>
-        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingTop">10dp</item>
         <item name="android:background">@drawable/grzx_bj</item>
         <item name="android:orientation">vertical</item>
+    </style>
+    <style name="tv_head_djtxdl">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_gravity">center|center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14dp</item>
+        <!--<item name="android:text">123abcd</item>-->
     </style>
     <style name="iv_head_djtxdl">
         <item name="android:layout_width">80dp</item>
@@ -60,6 +69,7 @@
         <item name="android:layout_height">25dp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:layout_marginTop">8dp</item>
+        <!--<item name="android:background">@drawable/button_edge</item>-->
     </style>
     <style name="ll_content_middle_split">
         <item name="android:layout_width">match_parent</item>

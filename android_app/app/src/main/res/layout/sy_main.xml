@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_sy_main_root" xmlns:tools="http://schemas.android.com/tools" tools:context="com.example.administrator.infotownletsecond.SY_MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_sy_main_root" xmlns:tools="http://schemas.android.com/tools" tools:context="com.example.administrator.infotownletsecond.SY_Main">
 
     <ScrollView android:id="@+id/sv_channel" style="@style/sv_sy_main">
 

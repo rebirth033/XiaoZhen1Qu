@@ -15,24 +15,24 @@
                     <ImageView android:id="@+id/ivFC" style="@style/iv_xzfblb_item" android:src="@drawable/fc" />
                     <TextView android:id="@+id/tvFC" style="@style/tv_xzfblb_item" android:text="房产" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/llZP" style="@style/ll_xzfblb_item">
-                    <ImageView android:id="@+id/ivZP" style="@style/iv_xzfblb_item" android:src="@drawable/zp" />
-                    <TextView android:id="@+id/tvZP" style="@style/tv_xzfblb_item" android:text="招聘" />
+                <LinearLayout android:id="@+id/llCL" style="@style/ll_xzfblb_item">
+                    <ImageView android:id="@+id/ivCL" style="@style/iv_xzfblb_item" android:src="@drawable/esc" />
+                    <TextView android:id="@+id/tvCL" style="@style/tv_xzfblb_item" android:text="车辆" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/llJZ" style="@style/ll_xzfblb_item">
-                    <ImageView android:id="@+id/ivJZ" style="@style/iv_xzfblb_item" android:src="@drawable/jz" />
-                    <TextView android:id="@+id/tvJZ" style="@style/tv_xzfblb_item" android:text="兼职" />
+                <LinearLayout android:id="@+id/llESWP" style="@style/ll_xzfblb_item">
+                    <ImageView android:id="@+id/ivESWP" style="@style/iv_xzfblb_item" android:src="@drawable/es" />
+                    <TextView android:id="@+id/tvESWP" style="@style/tv_xzfblb_item" android:text="二手物品" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout style="@style/ll_xzfblb_row">
-                <LinearLayout android:id="@+id/llES" style="@style/ll_xzfblb_item">
-                    <ImageView android:id="@+id/ivES" style="@style/iv_xzfblb_item" android:src="@drawable/es" />
-                    <TextView android:id="@+id/tvES" style="@style/tv_xzfblb_item" android:text="二手" />
+                <LinearLayout android:id="@+id/llCW" style="@style/ll_xzfblb_item">
+                    <ImageView android:id="@+id/ivCW" style="@style/iv_xzfblb_item" android:src="@drawable/cw" />
+                    <TextView android:id="@+id/tvCW" style="@style/tv_xzfblb_item" android:text="宠物" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/llCL" style="@style/ll_xzfblb_item">
-                    <ImageView android:id="@+id/ivCL" style="@style/iv_xzfblb_item" android:src="@drawable/esc" />
-                    <TextView android:id="@+id/tvCL" style="@style/tv_xzfblb_item" android:text="车辆" />
+                <LinearLayout android:id="@+id/llZP" style="@style/ll_xzfblb_item">
+                    <ImageView android:id="@+id/ivZP" style="@style/iv_xzfblb_item" android:src="@drawable/zp" />
+                    <TextView android:id="@+id/tvZP" style="@style/tv_xzfblb_item" android:text="招聘兼职" />
                 </LinearLayout>
                 <LinearLayout android:id="@+id/llSHFW" style="@style/ll_xzfblb_item">
                     <ImageView android:id="@+id/ivSHFW" style="@style/iv_xzfblb_item" android:src="@drawable/shfw" />
@@ -45,20 +45,45 @@
                     <ImageView android:id="@+id/ivSWFW" style="@style/iv_xzfblb_item" android:src="@drawable/swfw" />
                     <TextView android:id="@+id/tvSWFW" style="@style/tv_xzfblb_item" android:text="商务服务" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/llCW" style="@style/ll_xzfblb_item">
-                    <ImageView android:id="@+id/ivCW" style="@style/iv_xzfblb_item" android:src="@drawable/cw" />
-                    <TextView android:id="@+id/tvCW" style="@style/tv_xzfblb_item" android:text="宠物" />
-                </LinearLayout>
+
                 <LinearLayout android:id="@+id/llJYPX" style="@style/ll_xzfblb_item">
                     <ImageView android:id="@+id/ivJYPX" style="@style/iv_xzfblb_item" android:src="@drawable/jypx" />
                     <TextView android:id="@+id/tvJYPX" style="@style/tv_xzfblb_item" android:text="教育培训" />
                 </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout style="@style/ll_xzfblb_row">
                 <LinearLayout android:id="@+id/llZXJC" style="@style/ll_xzfblb_item">
                     <ImageView android:id="@+id/ivZXJC" style="@style/iv_xzfblb_item" android:src="@drawable/zxjc" />
                     <TextView android:id="@+id/tvZXJC" style="@style/tv_xzfblb_item" android:text="装修建材" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_xzfblb_row">
+                <LinearLayout android:id="@+id/llXXYL" style="@style/ll_xzfblb_item">
+                    <ImageView android:id="@+id/ivXXYL" style="@style/iv_xzfblb_item" android:src="@drawable/zxjc" />
+                    <TextView android:id="@+id/tvXXYL" style="@style/tv_xzfblb_item" android:text="休闲娱乐" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llLR" style="@style/ll_xzfblb_item">
+                    <ImageView android:id="@+id/ivLR" style="@style/iv_xzfblb_item" android:src="@drawable/zxjc" />
+                    <TextView android:id="@+id/tvLR" style="@style/tv_xzfblb_item" android:text="丽人" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llLYJD" style="@style/ll_xzfblb_item">
+                    <ImageView android:id="@+id/ivLYJD" style="@style/iv_xzfblb_item" android:src="@drawable/zxjc" />
+                    <TextView android:id="@+id/tvLYJD" style="@style/tv_xzfblb_item" android:text="旅游酒店" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_xzfblb_row">
+
+                <LinearLayout android:id="@+id/llZSJM" style="@style/ll_xzfblb_item">
+                    <ImageView android:id="@+id/ivZSJM" style="@style/iv_xzfblb_item" android:src="@drawable/zxjc" />
+                    <TextView android:id="@+id/tvZSJM" style="@style/tv_xzfblb_item" android:text="招商加盟" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llPFCG" style="@style/ll_xzfblb_item">
+                    <ImageView android:id="@+id/ivPFCG" style="@style/iv_xzfblb_item" android:src="@drawable/zxjc" />
+                    <TextView android:id="@+id/tvPFCG" style="@style/tv_xzfblb_item" android:text="批发采购" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llNLMY" style="@style/ll_xzfblb_item">
+                    <ImageView android:id="@+id/ivNLMY" style="@style/iv_xzfblb_item" android:src="@drawable/zxjc" />
+                    <TextView android:id="@+id/tvNLMY" style="@style/tv_xzfblb_item" android:text="农林牧渔" />
                 </LinearLayout>
             </LinearLayout>
 

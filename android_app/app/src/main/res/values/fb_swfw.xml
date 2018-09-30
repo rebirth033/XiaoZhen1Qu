@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ll_fb_swfw_root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="sv_fb_swfw_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">600dp</item>
+        <item name="android:fillViewport">false</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+    <style name="ll_fb_swfw_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="ll_fb_swfw_top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="iv_fb_swfw_back">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+    <style name="tv_fb_swfw_title">
+        <item name="android:layout_width">330dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="ll_content_fb_swfw_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+    <style name="tv_content_fb_swfw_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <!--<item name="android:layout_marginBottom">1dp</item>-->
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+    <style name="tv_fb_swfw_wdfb">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="ll_fb_swfw_row">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">75dp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="ll_fb_swfw_item">
+        <item name="android:layout_width">130dp</item>
+        <item name="android:layout_height">75dp</item>
+        <item name="android:layout_gravity">left|bottom</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="iv_fb_swfw_item">
+        <item name="android:layout_width">38dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_gravity">center|bottom</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+    <style name="tv_fb_swfw_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+</resources>

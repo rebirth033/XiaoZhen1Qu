@@ -7,6 +7,7 @@
 
             <LinearLayout style="@style/ll_head">
                 <LinearLayout style="@style/ll_head_tp">
+                    <TextView android:id="@+id/tvDJTXDL" style="@style/tv_head_djtxdl" />
                     <ImageView android:id="@+id/ivDJTXDL" style="@style/iv_head_djtxdl" android:src="@drawable/grzx_djtxdl_blue" />
                 </LinearLayout>
             </LinearLayout>
