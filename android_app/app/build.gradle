@@ -19,6 +19,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    //在layout文件夹下建立子文件夹
+    sourceSets {
+        main{
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/res/layout',
+                    'src/main/res/layout/lbxz',
+                    'src/main/res/layout/lbcx',
+                    'src/main/res/drawable',
+                    'src/main/res/drawable/lbxz',
+                    'src/main/res/drawable/lbcx',
+                    'src/main/res/values',
+                    'src/main/res/values/lbxz',
+                    'src/main/res/values/lbcx'
+            ]
+        }
+    }
     dexOptions {
     }
 }

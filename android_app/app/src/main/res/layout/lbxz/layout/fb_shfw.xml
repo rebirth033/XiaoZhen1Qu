@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_shfw_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_fb_shfw_main">
+
+        <LinearLayout style="@style/ll_fb_shfw_main">
+
+            <LinearLayout style="@style/ll_fb_shfw_top">
+                <ImageView android:id="@+id/ivBACK" style="@style/iv_fb_shfw_back" android:src="@drawable/arrow_back_black" />
+                <TextView android:id="@+id/tvTitle" style="@style/tv_fb_shfw_title" android:text="生活服务" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/LL_FB_SHFW_ROW" style="@style/ll_fb_shfw_row">
+                
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

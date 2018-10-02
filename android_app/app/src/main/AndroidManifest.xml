@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.administrator.infotownletsecond">
-
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.administrator.Public">
     <!-- To auto-complete the email text field in the yhdl form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -34,55 +32,49 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".SY_Main"
-            android:label="@string/app_name">
+        <activity android:name="LBCX.SY_Main" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".YHDL"
-            android:label="@string/app_name" />
-        <activity
-            android:name=".YHZC"
-            android:label="@string/app_name" />
 
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote" />
 
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="w7NQOKL8SpxHrs6lixBNoe90" />
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote" />
 
-        <activity android:name=".GRZX_Main" />
-        <activity android:name=".FB_Main" />
-        <activity android:name=".XX_Main" />
-        <activity android:name=".SY_ZF" />
-        <activity
-            android:name=".Base"
-            android:label="@string/title_activity_base"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".SY_ESF" />
-        <activity android:name=".SY_CW" />
-        <activity android:name=".SY_SHFW" />
-        <activity android:name=".SY_SWFW" />
-        <activity android:name=".SY_ESWP" />
-        <activity android:name=".SY_ZP" />
-        <activity android:name=".SY_JZ" />
-        <activity android:name=".SY_ESC" />
-        <activity android:name=".SY_XC" />
-        <activity android:name=".GRZX_WDFB" />
-        <activity android:name=".FB_FC" />
-        <activity android:name=".FB_ESWPActivity" />
-        <activity android:name=".FB_ESWP" />
-        <activity android:name=".FB_CL" />
-        <activity android:name=".FB_CW" />
-        <activity android:name=".FB_SWFW"></activity>
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="w7NQOKL8SpxHrs6lixBNoe90" />
+
+        <activity android:name="COMMON.YHDL" android:label="@string/app_name" />
+        <activity android:name="COMMON.YHZC" android:label="@string/app_name" />
+        <activity android:name="COMMON.GRZX_Main" />
+        <activity android:name="COMMON.XX_Main" />
+        <activity android:name="COMMON.Base" android:label="@string/title_activity_base" android:theme="@style/AppTheme" />
+        <activity android:name="COMMON.GRZX_WDFB" />
+        <activity android:name="LBXZ.FB_Main" />
+        <activity android:name="LBCX.SY_ZF" />
+        <activity android:name="LBCX.SY_ESF" />
+        <activity android:name="LBCX.SY_CW" />
+        <activity android:name="LBCX.SY_SHFW" />
+        <activity android:name="LBCX.SY_SWFW" />
+        <activity android:name="LBCX.SY_ESWP" />
+        <activity android:name="LBCX.SY_ZP" />
+        <activity android:name="LBCX.SY_JZ" />
+        <activity android:name="LBCX.SY_ESC" />
+        <activity android:name="LBCX.SY_XC" />
+        <activity android:name="LBXZ.FB_FC" />
+        <activity android:name="LBXZ.FB_ESWP" />
+        <activity android:name="LBXZ.FB_CL" />
+        <activity android:name="LBXZ.FB_CW" />
+        <activity android:name="LBXZ.FB_SWFW" />
+        <activity android:name="LBXZ.FB_ZSJM" />
+        <activity android:name="LBXZ.FB_PFCG" />
+        <activity android:name="LBXZ.FB_JYPX" />
+        <activity android:name="LBXZ.FB_ZXJC" />
+        <activity android:name="LBXZ.FB_XXYL" />
+        <activity android:name="LBXZ.FB_LR" />
+        <activity android:name="LBXZ.FB_LYJD" />
+        <activity android:name="LBXZ.FB_NLMY" />
+        <activity android:name="LBXZ.FB_SHFW" />
     </application>
 
 </manifest>

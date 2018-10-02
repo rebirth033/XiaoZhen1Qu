@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_swfw_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_fb_swfw_main">
+
+        <LinearLayout style="@style/ll_fb_swfw_main">
+
+            <LinearLayout style="@style/ll_fb_swfw_top">
+                <ImageView android:id="@+id/ivBACK" style="@style/iv_fb_swfw_back" android:src="@drawable/arrow_back_black" />
+                <TextView android:id="@+id/tvTitle" style="@style/tv_fb_swfw_title" android:text="选择发布类别" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_fb_swfw_row">
+                <LinearLayout android:id="@+id/llCWG" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivCWG" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_gszc" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="工商注册" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llCWM" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivCWM" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_cwkj" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="财务会计" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llTZDB" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivHNYC" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_tzdb" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="投资担保" />
+                </LinearLayout>
+            </LinearLayout>
+
+         <LinearLayout style="@style/ll_fb_swfw_row">
+            <LinearLayout android:id="@+id/llCWYP" style="@style/ll_fb_swfw_item">
+                <ImageView android:id="@+id/ivCWYP" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_hywl" />
+                <TextView style="@style/tv_fb_swfw_item" android:text="货运物流" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/llKD" style="@style/ll_fb_swfw_item">
+                <ImageView android:id="@+id/ivKD" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_kd" />
+                <TextView style="@style/tv_fb_swfw_item" android:text="快递" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/llZL" style="@style/ll_fb_swfw_item">
+                <ImageView android:id="@+id/ivZL" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_zl" />
+                <TextView style="@style/tv_fb_swfw_item" android:text="租赁" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_fb_swfw_row">
+            <LinearLayout android:id="@+id/llSBZL" style="@style/ll_fb_swfw_item">
+                <ImageView android:id="@+id/ivSBZL" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_sbzl" />
+                <TextView style="@style/tv_fb_swfw_item" android:text="商标专利" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/llFLZX" style="@style/ll_fb_swfw_item">
+                <ImageView android:id="@+id/ivFLZX" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_flzx" />
+                <TextView style="@style/tv_fb_swfw_item" android:text="法律咨询" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/llSJCH" style="@style/ll_fb_swfw_item">
+                <ImageView android:id="@+id/ivSJCH" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_sjch" />
+                <TextView style="@style/tv_fb_swfw_item" android:text="设计策划" />
+            </LinearLayout>
+        </LinearLayout>
+
+            <LinearLayout style="@style/ll_fb_swfw_row">
+                <LinearLayout android:id="@+id/llJXWX" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivJXWX" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_jxwx" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="机械维修" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llBGWX" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivBGWX" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_bgwx" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="办公维修" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llJJWX" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivJJWX" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_jjwx" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="家具维修" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_fb_swfw_row">
+                <LinearLayout android:id="@+id/llPHZP" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivPHZP" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_phzp" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="喷绘招牌" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llZHFW" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivZHFW" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_zhfw" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="展会服务" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llWZJS" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivWZJS" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_wzjs" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="网站建设" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_fb_swfw_row">
+                <LinearLayout android:id="@+id/llWLBX" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivWLBX" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_wlbx" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="网络布线" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llYSBZ" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivYSBZ" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_ysbz" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="印刷包装" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llGGCM" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivGGCM" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_ggcm" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="广告传媒" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_fb_swfw_row">
+                <LinearLayout android:id="@+id/llZK" style="@style/ll_fb_swfw_item">
+                    <ImageView android:id="@+id/ivZK" style="@style/iv_fb_swfw_item" android:src="@drawable/fb_swfw_zk" />
+                    <TextView style="@style/tv_fb_swfw_item" android:text="制卡" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
