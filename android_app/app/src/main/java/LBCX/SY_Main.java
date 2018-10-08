@@ -24,11 +24,12 @@ import COMMON.LocationService;
 import com.example.administrator.Public.R;
 import COMMON.XX_Main;
 import COMMON.YHDL;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
@@ -36,7 +37,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
-
 import LBXZ.FB_Main;
 
 public class SY_Main extends Base implements OnClickListener {
@@ -54,15 +54,12 @@ public class SY_Main extends Base implements OnClickListener {
         setContentView(R.layout.sy_main);
         findById();
         init();
-        //HQDQSZD();
-        GetWZJX();
+        HQDQSZD();
     }
 
     private void findById() {
         mtvSZCS = (TextView) findViewById(R.id.tvSZCS);
-        mtvSZCS.setText("福州");
         mllWZJX = (LinearLayout) findViewById(R.id.llWZJX);
-
         ViewGroup vgsy_zf = (ViewGroup) findViewById(R.id.llSY_ZF);
         ViewGroup vgsy_esf = (ViewGroup) findViewById(R.id.llSY_ESF);
         ViewGroup vgsy_cw = (ViewGroup) findViewById(R.id.llSY_CW);
@@ -73,6 +70,10 @@ public class SY_Main extends Base implements OnClickListener {
         ViewGroup vgsy_jz = (ViewGroup) findViewById(R.id.llSY_JZ);
         ViewGroup vgsy_esc = (ViewGroup) findViewById(R.id.llSY_ESC);
         ViewGroup vgsy_xc = (ViewGroup) findViewById(R.id.llSY_XC);
+        ViewGroup vgfb = (ViewGroup) findViewById(R.id.llFB);
+        ViewGroup vgxx = (ViewGroup) findViewById(R.id.llXX);
+        ViewGroup vggrzx = (ViewGroup) findViewById(R.id.llGRZX);
+
         vgsy_zf.setOnClickListener(this);
         vgsy_esf.setOnClickListener(this);
         vgsy_cw.setOnClickListener(this);
@@ -83,15 +84,12 @@ public class SY_Main extends Base implements OnClickListener {
         vgsy_jz.setOnClickListener(this);
         vgsy_esc.setOnClickListener(this);
         vgsy_xc.setOnClickListener(this);
-
-        ViewGroup vgfb = (ViewGroup) findViewById(R.id.llFB);
-        ViewGroup vgxx = (ViewGroup) findViewById(R.id.llXX);
-        ViewGroup vggrzx = (ViewGroup) findViewById(R.id.llGRZX);
         vgfb.setOnClickListener(this);
         vgxx.setOnClickListener(this);
         vggrzx.setOnClickListener(this);
     }
 
+    //初始化
     private void init() {
         //解决获取网站资源图片报错问题
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
@@ -165,24 +163,21 @@ public class SY_Main extends Base implements OnClickListener {
 
             protected Object doInBackground(String... params) {
                 Object result = null;
-                String targeturl = "http://www.915fl.com/FCCX/LoadFCXXWithoutXZQ";
+                String targeturl = "http://www.915fl.com/FCCX/LoadFCXX";
                 try {
                     HttpPost httpRequest = new HttpPost(targeturl);
                     NameValuePair TYPE = new BasicNameValuePair("TYPE", "FCXX_ZZF");
                     NameValuePair Condition = new BasicNameValuePair("Condition", "STATUS:1,ISHOT:1");
                     NameValuePair PageIndex = new BasicNameValuePair("PageIndex", "1");
                     NameValuePair PageSize = new BasicNameValuePair("PageSize", "10");
-                    NameValuePair XZQ = new BasicNameValuePair("XZQ", "福州");
-                    NameValuePair XZQDM = new BasicNameValuePair("XZQDM", "350100");
                     List<NameValuePair> parameters = new ArrayList<NameValuePair>();//创建一个集合，存NameValuePair对象的
                     parameters.add(TYPE);
                     parameters.add(Condition);
                     parameters.add(PageIndex);
                     parameters.add(PageSize);
-                    parameters.add(XZQ);
-                    parameters.add(XZQDM);
                     httpRequest.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
                     DefaultHttpClient httpClient = new DefaultHttpClient();
+                    if (null != JSESSIONID) httpRequest.setHeader("Cookie", "ASP.NET_SessionId=" + JSESSIONID);
 
                     HttpResponse response = httpClient.execute(httpRequest); //发起GET请求
                     int rescode = response.getStatusLine().getStatusCode(); //获取响应码
@@ -312,9 +307,55 @@ public class SY_Main extends Base implements OnClickListener {
 
     //获取当前所在地
     public void HQDQSZD() {
-        SY_Main.context = getApplicationContext();
-        LocationService.getInstance(SY_Main.context).start();
-        LocationService.getInstance(SY_Main.context).registerListener(new MyLocationListener());// 注册监听函数
+
+        new AsyncTask<String, Void, Object>() {
+            protected void onPostExecute(Object result) {
+                try {
+                    JSONObject jsonobject = new JSONObject(result.toString());
+                    String JResult = jsonobject.getString("Result");
+                    mtvSZCS.setText("福州");
+                    GetWZJX();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            protected Object doInBackground(String... params) {
+                Object result = null;
+                String targeturl = "http://www.915fl.com/Common/QHXZQ";
+                try {
+                    HttpPost httpRequest = new HttpPost(targeturl);
+                    NameValuePair XZQ = new BasicNameValuePair("XZQ", "福州");
+                    NameValuePair XZQDM = new BasicNameValuePair("XZQDM", "145");
+                    List<NameValuePair> parameters = new ArrayList<NameValuePair>();//创建一个集合，存NameValuePair对象的
+                    parameters.add(XZQ);
+                    parameters.add(XZQDM);
+                    httpRequest.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
+                    DefaultHttpClient httpClient = new DefaultHttpClient();
+
+                    HttpResponse response = httpClient.execute(httpRequest); //发起GET请求
+                    int rescode = response.getStatusLine().getStatusCode(); //获取响应码
+                    result = EntityUtils.toString(response.getEntity(), "utf-8");//获取服务器响应内容
+
+                    /* 获取cookieStore ASP.NET_SessionId就是通过上面的方法获取到。*/
+                    CookieStore cookieStore = httpClient.getCookieStore();
+                    List<Cookie> cookies = cookieStore.getCookies();
+                    for (int i = 0; i < cookies.size(); i++) {
+                        if ("ASP.NET_SessionId".equals(cookies.get(i).getName())) {
+                            JSESSIONID = cookies.get(i).getValue();
+                            break;
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return result;
+            }
+        }.execute();
+
+//        SY_Main.context = getApplicationContext();
+//        LocationService.getInstance(SY_Main.context).start();
+//        LocationService.getInstance(SY_Main.context).registerListener(new MyLocationListener());// 注册监听函数
     }
 
     //定位监听

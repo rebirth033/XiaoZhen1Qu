@@ -1,52 +1,51 @@
-package LBXZ;
+package FBXX.FC;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import COMMON.Base;
-import FBXX.FC.FB_FC_ZZ;
-
 import com.example.administrator.Public.R;
+import COMMON.Base;
+import LBXZ.FB_FC;
 
-public class FB_FC extends Base implements View.OnClickListener {
+public class FB_FC_ZZ extends Base implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fb_fc);
+        setContentView(R.layout.fb_fc_zz);
         findById();
     }
 
     private void findById() {
         ImageView ivBack = (ImageView) findViewById(R.id.ivBACK);
-        ViewGroup zzxx = (ViewGroup) findViewById(R.id.llZZ);
+        ViewGroup mllxq = (ViewGroup) findViewById(R.id.llXQ);
         ivBack.setOnClickListener(this);
-        zzxx.setOnClickListener(this);
+        mllxq.setOnClickListener(this);
     }
 
     //事件监听
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ivBACK:
-                YMTZ("FB_Main");
+                YMTZ("FB_FC");
                 break;
-            case R.id.llZZ:
-                YMTZ("FB_FC_ZZ");
+            case R.id.llXQ:
+                YMTZ("FB_FC_XQCX");
                 break;
         }
     }
 
     //个人中心
     public void YMTZ(String id) {
-        if (id == "FB_Main") {
-            Intent intent = new Intent(FB_FC.this, FB_Main.class);
+        if (id == "FB_FC") {
+            Intent intent = new Intent(FB_FC_ZZ.this, FB_FC.class);
             startActivity(intent);
             finish();//关闭当前页面
         }
-        if (id == "FB_FC_ZZ") {
-            Intent intent = new Intent(FB_FC.this, FB_FC_ZZ.class);
+        if (id == "FB_FC_XQCX") {
+            Intent intent = new Intent(FB_FC_ZZ.this, FB_FC_XQCX.class);
             startActivity(intent);
             finish();//关闭当前页面
         }

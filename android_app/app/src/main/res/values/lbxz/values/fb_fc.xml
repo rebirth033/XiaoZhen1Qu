@@ -64,18 +64,17 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">top</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:background">@color/colorWhite</item>
-        <item name="android:paddingLeft">10dp</item>
-        <item name="android:paddingRight">10dp</item>
+        <item name="android:background">@color/colorGray</item>
     </style>
     <style name="ll_fb_fc_item">
-        <item name="android:layout_width">400dp</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">70dp</item>
-        <item name="android:layout_gravity">left|bottom</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingLeft">20dp</item>
         <item name="android:paddingTop">10dp</item>
-        <item name="android:background">@drawable/border</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <!--<item name="android:background">@drawable/border</item>-->
     </style>
     <style name="iv_fb_fc_item">
         <item name="android:layout_width">38dp</item>

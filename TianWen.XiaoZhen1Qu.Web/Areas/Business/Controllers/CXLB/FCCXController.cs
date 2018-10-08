@@ -21,10 +21,5 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(FCCXBLL.LoadFCXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"], Session["XZQ"].ToString(), Request["OrderColumn"], Request["OrderType"], Session["XZQDM"].ToString()));
         }
-
-        public JsonResult LoadFCXXWithoutXZQ()
-        {
-            return Json(FCCXBLL.LoadFCXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"], Request["XZQ"], Request["OrderColumn"], Request["OrderType"], Request["XZQDM"]));
-        }
     }
 }

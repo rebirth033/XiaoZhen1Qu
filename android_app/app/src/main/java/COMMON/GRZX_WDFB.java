@@ -99,9 +99,8 @@ public class GRZX_WDFB extends Base implements View.OnClickListener {
                     parameters.add(PageSize);
                     httpRequest.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
                     DefaultHttpClient httpClient = new DefaultHttpClient();
-                    if (null != JSESSIONID) {
-                        httpRequest.setHeader("Cookie", "ASP.NET_SessionId=" + JSESSIONID);
-                    }
+                    if (null != JSESSIONID) httpRequest.setHeader("Cookie", "ASP.NET_SessionId=" + JSESSIONID);
+
                     HttpResponse response = httpClient.execute(httpRequest); //发起GET请求
                     int rescode = response.getStatusLine().getStatusCode(); //获取响应码
                     result = EntityUtils.toString(response.getEntity(), "utf-8");//获取服务器响应内容

@@ -15,7 +15,7 @@ import java.util.Date;
 
 public class Base extends Activity implements View.OnClickListener {
 
-    public String YHM;
+    public static String YHM;
     public static String JSESSIONID; //定义一个静态的字段，保存sessionID
 
     @Override
