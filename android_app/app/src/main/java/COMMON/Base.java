@@ -5,13 +5,16 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.example.administrator.Public.R;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Base extends Activity implements View.OnClickListener {
 
@@ -102,5 +105,19 @@ public class Base extends Activity implements View.OnClickListener {
         ivsy_xx.setImageResource(R.drawable.dbcd_xx);
         ImageView ivsy_grzx = (ImageView) findViewById(R.id.ivGRZX);
         ivsy_grzx.setImageResource(R.drawable.dbcd_grzx);
+    }
+
+    public List<View> getAllChildViews(View view) {
+        List<View> allchildren = new ArrayList<View>();
+        if (view instanceof ViewGroup) {
+            ViewGroup vp = (ViewGroup) view;
+            for (int i = 0; i < vp.getChildCount(); i++) {
+                View viewchild = vp.getChildAt(i);
+                allchildren.add(viewchild);
+                //再次 调用本身（递归）
+                allchildren.addAll(getAllChildViews(viewchild));
+            }
+        }
+        return allchildren;
     }
 }

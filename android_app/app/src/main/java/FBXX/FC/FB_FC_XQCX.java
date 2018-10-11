@@ -68,6 +68,8 @@ public class FB_FC_XQCX extends Base implements View.OnClickListener {
     public void YMTZ(String id) {
         if (id == "FB_FC_ZZ") {
             Intent intent = new Intent(FB_FC_XQCX.this, FB_FC_ZZ.class);
+            intent.putExtra("YMMC", "FB_FC_XQCX");//设置参数
+            intent.putExtra("YMMC", "FB_FC_XQCX");//设置参数
             startActivity(intent);
             finish();//关闭当前页面
         }
@@ -126,13 +128,6 @@ public class FB_FC_XQCX extends Base implements View.OnClickListener {
                 llouter.setLayoutParams(layoutParams);
                 llouter.setOrientation(LinearLayout.VERTICAL);
                 llouter.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.border));
-                llouter.setOnKeyListener(new View.OnKeyListener() {
-                    @Override
-                    public boolean onKey(View v, int keyCode, KeyEvent event) {
-                        GetXQLB();
-                        return false;
-                    }
-                });
 
                 TextView tvmc = new TextView(this);
                 tvmc.setWidth(1600);
@@ -153,6 +148,17 @@ public class FB_FC_XQCX extends Base implements View.OnClickListener {
                 llouter.addView(tvmc);
                 llouter.addView(tvdz);
                 mllXQLB.addView(llouter);
+                llouter.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        List<View> viewList = getAllChildViews(v);
+                        TextView tvxqmc = (TextView)viewList.get(0);
+                        Intent intent = new Intent(FB_FC_XQCX.this, FB_FC_ZZ.class);
+                        intent.putExtra("XQMC", tvxqmc.getText());//设置参数
+                        intent.putExtra("YMMC", "FB_FC_XQCX");//设置参数
+                        startActivity(intent);
+                        finish();//关闭当前页面
+                    }
+                });
             }
         } catch (Exception e) {
             e.printStackTrace();

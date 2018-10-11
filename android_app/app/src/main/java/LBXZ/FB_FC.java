@@ -47,6 +47,7 @@ public class FB_FC extends Base implements View.OnClickListener {
         }
         if (id == "FB_FC_ZZ") {
             Intent intent = new Intent(FB_FC.this, FB_FC_ZZ.class);
+            intent.putExtra("YMMC", "FB_FC");//设置参数
             startActivity(intent);
             finish();//关闭当前页面
         }

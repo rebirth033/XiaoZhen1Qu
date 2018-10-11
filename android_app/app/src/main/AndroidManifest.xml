@@ -92,7 +92,8 @@
         <activity android:name="LBXZ.FB_NLMY" />
         <activity android:name="LBXZ.FB_SHFW" />
         <activity android:name="FBXX.FC.FB_FC_ZZ" />
-        <activity android:name="FBXX.FC.FB_FC_XQCX"></activity>
+        <activity android:name="FBXX.FC.FB_FC_XQCX" />
+        <activity android:name="FBXX.FC.FB_FC_MJ"></activity>
     </application>
 
 </manifest>

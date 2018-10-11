@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_fc_zz_root">
+<LinearLayout android:id="@+id/fb_fc_zz" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_fc_zz_root">
 
     <ScrollView android:id="@+id/sv_channel" style="@style/sv_fb_fc_zz_main">
 
@@ -25,37 +25,46 @@
                 <TextView android:text="基本信息" style="@style/tv_content_middle_title" />
             </LinearLayout>
 
-            <LinearLayout android:id="@+id/llXQ" style="@style/ll_content_middle_vertical">
+            <LinearLayout android:id="@+id/ll_xq" style="@style/ll_content_middle_vertical">
                 <TextView android:text="小区" style="@style/tv_content_middle_vertical_text" />
-                <TextView android:id="@+id/tv_xq" android:text="填写小区名称" style="@style/tv_content_middle_vertical_value" />
+                <TextView android:id="@+id/tv_xqmc" android:text="请选择小区" style="@style/tv_content_middle_vertical_value" />
             </LinearLayout>
 
             <LinearLayout android:id="@+id/ll_mj" style="@style/ll_content_middle_vertical">
                 <TextView android:text="面积" style="@style/tv_content_middle_vertical_text" />
-                <TextView android:text="请填写面积" style="@style/tv_content_middle_vertical_value" />
+                <TextView android:id="@+id/tv_mj" android:text="请填写面积" style="@style/tv_content_middle_vertical_value" />
             </LinearLayout>
 
             <LinearLayout style="@style/ll_content_middle_horizontal">
-                <LinearLayout android:id="@+id/ll_ts" style="@style/ll_content_middle_vertical" android:layout_width="130dp">
+                <LinearLayout android:id="@+id/ll_ts" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
                     <TextView android:text="厅室" style="@style/tv_content_middle_vertical_text" />
                     <TextView android:text="请选择" style="@style/tv_content_middle_vertical_value" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/ll_cx" style="@style/ll_content_middle_vertical" android:layout_width="130dp">
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_cx" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
                     <TextView android:text="朝向" style="@style/tv_content_middle_vertical_text" />
                     <TextView android:text="请选择" style="@style/tv_content_middle_vertical_value" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/ll_lc" style="@style/ll_content_middle_vertical" android:layout_width="130dp">
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_lc" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
                     <TextView android:text="楼层" style="@style/tv_content_middle_vertical_text" />
                     <TextView android:text="请选择" style="@style/tv_content_middle_vertical_value" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout style="@style/ll_content_middle_horizontal">
-                <LinearLayout android:id="@+id/ll_cw" style="@style/ll_content_middle_vertical" android:layout_width="195dp">
+                <LinearLayout android:id="@+id/ll_cw" style="@style/ll_content_middle_vertical" android:layout_width="204dp">
                     <TextView android:text="车位" style="@style/tv_content_middle_vertical_text" />
                     <TextView android:text="请选择" style="@style/tv_content_middle_vertical_value" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/ll_dt" style="@style/ll_content_middle_vertical" android:layout_width="195dp">
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_dt" style="@style/ll_content_middle_vertical" android:layout_width="204dp">
                     <TextView android:text="电梯" style="@style/tv_content_middle_vertical_text" />
                     <TextView android:text="请选择" style="@style/tv_content_middle_vertical_value" />
                 </LinearLayout>
@@ -70,7 +79,10 @@
             </LinearLayout>
 
             <LinearLayout android:id="@+id/ll_zj" style="@style/ll_content_middle_vertical">
-                <TextView android:text="月租金" style="@style/tv_content_middle_vertical_text" />
+
+                <TextView
+                    style="@style/tv_content_middle_vertical_text"
+                    android:text="月租金" />
                 <TextView android:text="请填写" style="@style/tv_content_middle_vertical_value" />
             </LinearLayout>
 
@@ -87,11 +99,14 @@
                 <TextView android:text="联系人" style="@style/tv_content_middle_title" />
             </LinearLayout>
 
-            <LinearLayout style="@style/ll_content_middle_horizontal">
-                <LinearLayout android:id="@+id/ll_lxrmc" style="@style/ll_content_middle_vertical" android:layout_width="195dp">
+            <LinearLayout style="@style/ll_content_middle_horizontal" android:layout_height="60dp">
+                <LinearLayout android:id="@+id/ll_lxrmc" style="@style/ll_content_middle_vertical" android:layout_width="204dp" android:layout_height="60dp">
                     <TextView android:text="请填写姓名" style="@style/tv_content_middle_vertical_value" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/ll_lxrxb" style="@style/ll_content_middle_vertical" android:layout_width="195dp">
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_lxrxb" style="@style/ll_content_middle_vertical" android:layout_width="204dp" android:layout_height="60dp">
                     <TextView android:text="请填写性别" style="@style/tv_content_middle_vertical_value" />
                 </LinearLayout>
             </LinearLayout>

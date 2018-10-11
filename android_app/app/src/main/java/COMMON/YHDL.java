@@ -72,7 +72,7 @@ public class YHDL extends Base implements OnClickListener {
                     JSONObject jsonobject = new JSONObject(result.toString());
                     String Result = jsonobject.getString("Result");
                     String Message = jsonobject.getString("Message");
-                    if(Result.indexOf("1") != -1) {
+                    if(Result.equalsIgnoreCase("1")) {
                         DLCG();
                     }
                     else {
