@@ -1,13 +1,17 @@
 package FBXX.FC;
 
-import android.content.Intent;
+import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import com.example.administrator.Public.R;
 import org.apache.http.HttpResponse;
@@ -23,67 +27,58 @@ import java.util.ArrayList;
 import java.util.List;
 import COMMON.Base;
 
-public class FB_FC_XQCX extends Base implements View.OnClickListener {
+public class FB_FC_XQCX extends PopupWindow {
 
-    private EditText metXQMC;
+    public EditText metXQMC;
     private LinearLayout mllXQLB;
     private TextView mtvQX;
+    private View mMenuView;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fb_fc_xqcx);
-        findById();
-        GetXQLB();
+    public FB_FC_XQCX(Activity context, View.OnClickListener itemsOnClick) {
+        super(context);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mMenuView = inflater.inflate(R.layout.fb_fc_xqcx, null);
+        //设置SelectPicPopupWindow的View
+        this.setContentView(mMenuView);
+        //设置SelectPicPopupWindow弹出窗体的宽
+        this.setWidth(ViewGroup.LayoutParams.FILL_PARENT);
+        //设置SelectPicPopupWindow弹出窗体的高
+        this.setHeight(ViewGroup.LayoutParams.FILL_PARENT);
+        //设置SelectPicPopupWindow弹出窗体可点击
+        this.setFocusable(true);
+        //设置SelectPicPopupWindow弹出窗体动画效果
+        this.setAnimationStyle(R.style.AnimBottom);
+        //实例化一个ColorDrawable颜色为半透明
+        ColorDrawable dw = new ColorDrawable(0xb0000000);
+        //设置SelectPicPopupWindow弹出窗体的背景
+        this.setBackgroundDrawable(dw);
+        findById(itemsOnClick);
+        GetXQLB(itemsOnClick);
     }
 
-    private void findById() {
-        mtvQX = (TextView) findViewById(R.id.tvQX);
-        metXQMC = (EditText) findViewById(R.id.etXQMC);
-        mllXQLB = (LinearLayout) findViewById(R.id.llXQLB);
-        metXQMC.setOnClickListener(this);
+    private void findById(final View.OnClickListener itemsOnClick) {
+        mtvQX = (TextView) mMenuView.findViewById(R.id.tvqx);
+        metXQMC = (EditText) mMenuView.findViewById(R.id.etxqmc);
+        mllXQLB = (LinearLayout) mMenuView.findViewById(R.id.llXQLB);
         metXQMC.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                GetXQLB();
+                GetXQLB(itemsOnClick);
                 return false;
             }
         });
-        mtvQX.setOnClickListener(this);
-    }
-
-    //事件监听
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.tvQX:
-                YMTZ("FB_FC_ZZ");
-                break;
-            case R.id.llXQLB:
-                YMTZ("FB_FC_ZZ");
-                break;
-        }
-    }
-
-    //个人中心
-    public void YMTZ(String id) {
-        if (id == "FB_FC_ZZ") {
-            Intent intent = new Intent(FB_FC_XQCX.this, FB_FC_ZZ.class);
-            intent.putExtra("YMMC", "FB_FC_XQCX");//设置参数
-            intent.putExtra("YMMC", "FB_FC_XQCX");//设置参数
-            startActivity(intent);
-            finish();//关闭当前页面
-        }
+        mtvQX.setOnClickListener(itemsOnClick);
     }
 
     //获取小区列表
-    public void GetXQLB() {
+    public void GetXQLB(final View.OnClickListener itemsOnClick) {
         new AsyncTask<String, Void, Object>() {
             protected void onPostExecute(Object result) {
                 try {
                     JSONObject jsonobject = new JSONObject(result.toString());
                     String JResult = jsonobject.getString("Result");
                     String JList = jsonobject.getString("list");
-                    HandlerXQLB(JList);
+                    HandlerXQLB(JList,itemsOnClick);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -100,7 +95,7 @@ public class FB_FC_XQCX extends Base implements View.OnClickListener {
                     parameters.add(XQMC);
                     httpRequest.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
                     DefaultHttpClient httpClient = new DefaultHttpClient();
-                    if (null != JSESSIONID) httpRequest.setHeader("Cookie", "ASP.NET_SessionId=" + JSESSIONID);
+                    if (null != Base.JSESSIONID) httpRequest.setHeader("Cookie", "ASP.NET_SessionId=" + Base.JSESSIONID);
 
                     HttpResponse response = httpClient.execute(httpRequest); //发起GET请求
                     int rescode = response.getStatusLine().getStatusCode(); //获取响应码
@@ -114,7 +109,7 @@ public class FB_FC_XQCX extends Base implements View.OnClickListener {
     }
 
     //处理小区列表
-    public void HandlerXQLB(String JList) {
+    public void HandlerXQLB(String JList,View.OnClickListener itemsOnClick) {
         try {
             mllXQLB.removeAllViews();//清空布局
             JSONArray jsonarray = new JSONArray(JList);
@@ -123,13 +118,13 @@ public class FB_FC_XQCX extends Base implements View.OnClickListener {
                 String XQMC = jsonObject.getString("XQMC");
                 String XQDZ = jsonObject.getString("XQDZ");
 
-                LinearLayout llouter = new LinearLayout(this);
+                LinearLayout llouter = new LinearLayout(mMenuView.getContext());
                 LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(1600, 240);
                 llouter.setLayoutParams(layoutParams);
                 llouter.setOrientation(LinearLayout.VERTICAL);
-                llouter.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.border));
+                llouter.setBackgroundDrawable(mMenuView.getResources().getDrawable(R.drawable.border));
 
-                TextView tvmc = new TextView(this);
+                TextView tvmc = new TextView(mMenuView.getContext());
                 tvmc.setWidth(1600);
                 tvmc.setHeight(100);
                 tvmc.setPadding(80,30,0,0);
@@ -137,7 +132,7 @@ public class FB_FC_XQCX extends Base implements View.OnClickListener {
                 tvmc.setTextColor(Color.parseColor("#000000"));
                 tvmc.setText(XQMC);
 
-                TextView tvdz = new TextView(this);
+                TextView tvdz = new TextView(mMenuView.getContext());
                 tvdz.setWidth(1600);
                 tvdz.setHeight(120);
                 tvdz.setPadding(50,0,0,0);
@@ -148,17 +143,7 @@ public class FB_FC_XQCX extends Base implements View.OnClickListener {
                 llouter.addView(tvmc);
                 llouter.addView(tvdz);
                 mllXQLB.addView(llouter);
-                llouter.setOnClickListener(new View.OnClickListener() {
-                    public void onClick(View v) {
-                        List<View> viewList = getAllChildViews(v);
-                        TextView tvxqmc = (TextView)viewList.get(0);
-                        Intent intent = new Intent(FB_FC_XQCX.this, FB_FC_ZZ.class);
-                        intent.putExtra("XQMC", tvxqmc.getText());//设置参数
-                        intent.putExtra("YMMC", "FB_FC_XQCX");//设置参数
-                        startActivity(intent);
-                        finish();//关闭当前页面
-                    }
-                });
+                llouter.setOnClickListener(itemsOnClick);
             }
         } catch (Exception e) {
             e.printStackTrace();

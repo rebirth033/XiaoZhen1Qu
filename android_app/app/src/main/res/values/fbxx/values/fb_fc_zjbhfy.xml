@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="rl_fb_fc_zjbhfy_root">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <style name="ll_fb_fc_zjbhfy_root">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="ll_fb_fc_zjbhfy_top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+    <style name="tv_fb_fc_zjbhfy">
+        <item name="android:layout_width">328dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="tv_fb_fc_zjbhfy_wc">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#bc6ba6</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="tv_fb_fc_zjbhfy_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+    <style name="ll_fb_fc_zjbhfy_body">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">300dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+</resources>

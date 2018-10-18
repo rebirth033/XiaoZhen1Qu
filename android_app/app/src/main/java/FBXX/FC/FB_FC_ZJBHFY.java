@@ -12,15 +12,15 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import com.example.administrator.Public.R;
 
-public class FB_FC_MJ extends PopupWindow implements View.OnClickListener {
+public class FB_FC_ZJBHFY extends PopupWindow implements View.OnClickListener {
 
     private View mMenuView;
     public EditText metMJ;
 
-    public FB_FC_MJ(Activity context, View.OnClickListener itemsOnClick) {
+    public FB_FC_ZJBHFY(Activity context, View.OnClickListener itemsOnClick) {
         super(context);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mMenuView = inflater.inflate(R.layout.fb_fc_mj, null);
+        mMenuView = inflater.inflate(R.layout.fb_fc_zjbhfy, null);
         //设置SelectPicPopupWindow的View
         this.setContentView(mMenuView);
         //设置SelectPicPopupWindow弹出窗体的宽

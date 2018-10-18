@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/rl_fb_fc_zjbhfy" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/rl_fb_fc_zjbhfy_root">
+
+    <LinearLayout style="@style/ll_fb_fc_zjbhfy_root">
+
+        <LinearLayout style="@style/ll_fb_fc_zjbhfy_top">
+            <TextView style="@style/tv_fb_fc_zjbhfy" android:text="租金包含费用" />
+            <TextView style="@style/tv_fb_fc_zjbhfy_wc" android:text="完成" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/ll_fb_fc_zjbhfy_body" style="@style/ll_fb_fc_zjbhfy_body">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

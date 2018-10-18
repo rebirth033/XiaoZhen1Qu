@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/rl_fb_fc_fwqk" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/rl_fb_fc_fwqk_root">
+
+    <LinearLayout style="@style/ll_fb_fc_fwqk_root">
+
+        <LinearLayout style="@style/ll_fb_fc_fwqk_top_item" android:id="@+id/llts">
+            <TextView style="@style/tv_fb_fc_fwqk" android:text="厅室" />
+            <TextView style="@style/tv_fb_fc_fwqk_value" android:id="@+id/tvts" android:textColor="#bc6ba6" android:textColorHint="#bc6ba6" android:hint="请选择" />
+        </LinearLayout>
+        <LinearLayout style="@style/ll_fb_fc_fwqk_top_item" android:id="@+id/llcx">
+            <TextView style="@style/tv_fb_fc_fwqk" android:text="朝向" />
+            <TextView style="@style/tv_fb_fc_fwqk_value" android:id="@+id/tvcx" android:hint="请选择" />
+        </LinearLayout>
+        <LinearLayout style="@style/ll_fb_fc_fwqk_top_item" android:id="@+id/lllc">
+            <TextView style="@style/tv_fb_fc_fwqk" android:text="楼层" />
+            <TextView style="@style/tv_fb_fc_fwqk_value" android:id="@+id/tvlc" android:hint="请选择" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_fb_fc_fwqk_body">
+
+            <android.support.design.widget.TabLayout style="@style/tb_fb_fc_fwqk" android:id="@+id/tb_body">
+
+            </android.support.design.widget.TabLayout>
+
+
+            <!--<FBXX.FC.WheelView android:id="@+id/wvs" android:layout_width="137dp" android:layout_height="220dp" />-->
+            <!--<FBXX.FC.WheelView android:id="@+id/wvt" android:layout_width="137dp" android:layout_height="220dp" />-->
+            <!--<FBXX.FC.WheelView android:id="@+id/wvw" android:layout_width="136dp" android:layout_height="220dp" />-->
+            <!--<FBXX.FC.WheelView android:id="@+id/wvcx" android:layout_width="410dp" android:layout_height="220dp" />-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager android:id="@+id/vp_body" android:layout_width="410dp" android:layout_height="300dp" />
+
+</RelativeLayout>

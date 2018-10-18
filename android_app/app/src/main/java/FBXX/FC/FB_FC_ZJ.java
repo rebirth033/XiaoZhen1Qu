@@ -2,6 +2,7 @@ package FBXX.FC;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,15 +13,20 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import com.example.administrator.Public.R;
 
-public class FB_FC_MJ extends PopupWindow implements View.OnClickListener {
+public class FB_FC_ZJ extends PopupWindow  implements View.OnClickListener {
 
     private View mMenuView;
-    public EditText metMJ;
+    public EditText metZJ;
+    private TextView mtvy1f1;
+    private TextView mtvy1f3;
+    private TextView mtvbnf;
+    private TextView mtvnf;
+    public String yffs = new String();
 
-    public FB_FC_MJ(Activity context, View.OnClickListener itemsOnClick) {
+    public FB_FC_ZJ(Activity context, View.OnClickListener itemsOnClick) {
         super(context);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mMenuView = inflater.inflate(R.layout.fb_fc_mj, null);
+        mMenuView = inflater.inflate(R.layout.fb_fc_zj, null);
         //设置SelectPicPopupWindow的View
         this.setContentView(mMenuView);
         //设置SelectPicPopupWindow弹出窗体的宽
@@ -52,9 +58,13 @@ public class FB_FC_MJ extends PopupWindow implements View.OnClickListener {
         TextView mtv9 = (TextView) mMenuView.findViewById(R.id.tv9);
         TextView mtvpoint = (TextView) mMenuView.findViewById(R.id.tvpoint);
         TextView mtvsc = (TextView) mMenuView.findViewById(R.id.tvsc);
+        mtvy1f1 = (TextView) mMenuView.findViewById(R.id.tvy1f1);
+        mtvy1f3 = (TextView) mMenuView.findViewById(R.id.tvy1f3);
+        mtvbnf = (TextView) mMenuView.findViewById(R.id.tvbnf);
+        mtvnf = (TextView) mMenuView.findViewById(R.id.tvnf);
         ImageView mivqx = (ImageView) mMenuView.findViewById(R.id.ivqx);
         TextView mtvqd = (TextView) mMenuView.findViewById(R.id.tvqd);
-        metMJ = (EditText) mMenuView.findViewById(R.id.etmj);
+        metZJ = (EditText) mMenuView.findViewById(R.id.etzj);
         mtv0.setOnClickListener(this);
         mtv1.setOnClickListener(this);
         mtv2.setOnClickListener(this);
@@ -67,9 +77,13 @@ public class FB_FC_MJ extends PopupWindow implements View.OnClickListener {
         mtv9.setOnClickListener(this);
         mtvpoint.setOnClickListener(this);
         mtvsc.setOnClickListener(this);
+        mtvy1f1.setOnClickListener(this);
+        mtvy1f3.setOnClickListener(this);
+        mtvbnf.setOnClickListener(this);
+        mtvnf.setOnClickListener(this);
         mivqx.setOnClickListener(itemsOnClick);
         mtvqd.setOnClickListener(itemsOnClick);
-        metMJ.setOnClickListener(itemsOnClick);
+        metZJ.setOnClickListener(itemsOnClick);
     }
 
     //事件监听
@@ -111,21 +125,47 @@ public class FB_FC_MJ extends PopupWindow implements View.OnClickListener {
             case R.id.tvsc:
                 Delete();
                 break;
+            case R.id.tvy1f1:
+                SetYFFS("y1f1");
+                break;
+            case R.id.tvy1f3:
+                SetYFFS("y1f3");
+                break;
+            case R.id.tvbnf:
+                SetYFFS("bnf");
+                break;
+            case R.id.tvnf:
+                SetYFFS("nf");
+                break;
         }
     }
 
     //输入
-    public void Input(String value) {
-        if(metMJ.getText().toString() == "")
-            metMJ.setText(value + "㎡");
+    private void Input(String value) {
+        if(metZJ.getText().toString() == "")
+            metZJ.setText(value + "㎡");
         else
-            metMJ.setText(metMJ.getText().toString().replaceAll("㎡","") + value + "㎡");
+            metZJ.setText(metZJ.getText().toString().replaceAll("元","") + value + "元");
     }
     //删除
-    public void Delete() {
-        if(metMJ.length() == 2)
-            metMJ.setText("");
+    private void Delete() {
+        if(metZJ.length() == 2)
+            metZJ.setText("");
         else
-            metMJ.setText(metMJ.getText().toString().substring(0,metMJ.length() - 2) + "㎡");
+            metZJ.setText(metZJ.getText().toString().substring(0,metZJ.length() - 2) + "元");
+    }
+    //选择押付方式
+    private void SetYFFS(String value){
+        if(value == "y1f1") {ReSetYFFS();mtvy1f1.setBackgroundColor(Color.parseColor("#bc6ba6"));yffs = "押一付一";}
+        if(value == "y1f3") {ReSetYFFS();mtvy1f3.setBackgroundColor(Color.parseColor("#bc6ba6"));yffs = "押一付三";}
+        if(value == "bnf") {ReSetYFFS();mtvbnf.setBackgroundColor(Color.parseColor("#bc6ba6"));yffs = "半年付";}
+        if(value == "nf") {ReSetYFFS();mtvnf.setBackgroundColor(Color.parseColor("#bc6ba6"));yffs = "年付";}
+    }
+
+    private void ReSetYFFS(){
+        mtvy1f1.setBackgroundColor(Color.parseColor("#ececec"));
+        mtvy1f3.setBackgroundColor(Color.parseColor("#ececec"));
+        mtvbnf.setBackgroundColor(Color.parseColor("#ececec"));
+        mtvnf.setBackgroundColor(Color.parseColor("#ececec"));
     }
 }

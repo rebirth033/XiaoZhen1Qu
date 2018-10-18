@@ -79,16 +79,16 @@
             </LinearLayout>
 
             <LinearLayout android:id="@+id/ll_zj" style="@style/ll_content_middle_vertical">
-
-                <TextView
-                    style="@style/tv_content_middle_vertical_text"
-                    android:text="月租金" />
-                <TextView android:text="请填写" style="@style/tv_content_middle_vertical_value" />
+                <TextView style="@style/tv_content_middle_vertical_text" android:text="月租金" />
+                <LinearLayout style="@style/ll_content_middle_horizontal">
+                    <TextView style="@style/tv_content_middle_vertical_value" android:id="@+id/tv_zj" android:layout_width="100dp" android:layout_marginLeft="142dp" android:text="请填写" />
+                    <TextView style="@style/tv_content_middle_vertical_yffs" android:id="@+id/tv_yffs" android:text="押一付三" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout android:id="@+id/ll_zjbhfy" style="@style/ll_content_middle_vertical">
                 <TextView android:text="租金包含费用" style="@style/tv_content_middle_vertical_text" />
-                <TextView android:text="请填写" style="@style/tv_content_middle_vertical_value" />
+                <TextView android:id="@+id/tv_zjbhfy" android:text="请填写" style="@style/tv_content_middle_vertical_value" />
             </LinearLayout>
 
             <LinearLayout style="@style/ll_content_middle_split">

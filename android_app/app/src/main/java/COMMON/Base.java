@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Base extends Activity implements View.OnClickListener {
+public class Base extends FragmentActivity implements View.OnClickListener {
 
     public static String YHM;
     public static String JSESSIONID; //定义一个静态的字段，保存sessionID
@@ -107,7 +108,7 @@ public class Base extends Activity implements View.OnClickListener {
         ivsy_grzx.setImageResource(R.drawable.dbcd_grzx);
     }
 
-    public List<View> getAllChildViews(View view) {
+    public static List<View> getAllChildViews(View view) {
         List<View> allchildren = new ArrayList<View>();
         if (view instanceof ViewGroup) {
             ViewGroup vp = (ViewGroup) view;

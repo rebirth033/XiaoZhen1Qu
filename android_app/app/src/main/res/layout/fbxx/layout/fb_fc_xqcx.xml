@@ -6,8 +6,8 @@
         <LinearLayout style="@style/ll_fb_fc_xqcx_main">
 
             <LinearLayout style="@style/ll_fb_fc_xqcx_main_top">
-                <EditText android:id="@+id/etXQMC" style="@style/et_fb_fc_xqcx_xqmc" android:hint="请输入小区名称" />
-                <TextView android:id="@+id/tvQX" style="@style/iv_fb_fc_xqcx_qx" android:text="取消" />
+                <EditText android:id="@+id/etxqmc" style="@style/et_fb_fc_xqcx_xqmc" android:hint="请输入小区名称" />
+                <TextView android:id="@+id/tvqx" style="@style/iv_fb_fc_xqcx_qx" android:text="取消" />
             </LinearLayout>
 
             <LinearLayout android:id="@+id/llXQLB" style="@style/ll_fb_fc_xqcx_xqlb">

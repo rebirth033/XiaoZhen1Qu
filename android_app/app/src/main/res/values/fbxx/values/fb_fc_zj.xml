@@ -1,54 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="rl_fb_fc_mj_root">
+    <style name="rl_fb_fc_zj_root">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
         <item name="android:gravity">center_horizontal</item>
     </style>
-    <style name="ll_fb_fc_mj_root">
+    <style name="ll_fb_fc_zj_root">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:layout_alignParentBottom">true</item>
     </style>
-    <style name="ll_fb_fc_mj_top">
+    <style name="ll_fb_fc_zj_top">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">80dp</item>
         <item name="android:orientation">vertical</item>
         <item name="android:background">@color/colorWhite</item>
     </style>
-    <style name="tv_fb_fc_mj">
+    <style name="tv_fb_fc_zj">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">40dp</item>
         <item name="android:gravity">center</item>
     </style>
-    <style name="et_fb_fc_mj">
+    <style name="et_fb_fc_zj">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">40dp</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@null</item>
     </style>
-    <style name="tv_fb_fc_mj_title">
+    <style name="tv_fb_fc_zj_title">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">40dp</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@color/colorGray</item>
     </style>
-    <style name="ll_fb_fc_mj_body">
+    <style name="ll_fb_fc_zj_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="tv_fb_fc_yffs">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+    <style name="ll_fb_fc_zj_body">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">225dp</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@color/colorGray</item>
     </style>
-    <style name="ll_fb_fc_mj_body_column">
+    <style name="ll_fb_fc_zj_body_column">
         <item name="android:layout_width">90dp</item>
         <item name="android:layout_height">225dp</item>
         <item name="android:orientation">vertical</item>
         <item name="android:gravity">center</item>
     </style>
-    <style name="tv_fb_fc_mj_body_item">
+    <style name="tv_fb_fc_zj_body_item">
         <item name="android:layout_width">85dp</item>
         <item name="android:layout_height">45dp</item>
         <item name="android:gravity">center</item>

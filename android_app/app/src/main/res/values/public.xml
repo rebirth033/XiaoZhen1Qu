@@ -51,13 +51,19 @@
         <item name="android:textAlignment">center</item>
     </style>
 
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#bc6ba6</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorGray">#ececec</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="font_color_gray">#999999</color>
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
 </resources>
