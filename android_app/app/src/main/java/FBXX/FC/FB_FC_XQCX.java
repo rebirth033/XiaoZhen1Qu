@@ -52,11 +52,11 @@ public class FB_FC_XQCX extends PopupWindow {
         ColorDrawable dw = new ColorDrawable(0xb0000000);
         //设置SelectPicPopupWindow弹出窗体的背景
         this.setBackgroundDrawable(dw);
-        findById(itemsOnClick);
+        initView(itemsOnClick);
         GetXQLB(itemsOnClick);
     }
 
-    private void findById(final View.OnClickListener itemsOnClick) {
+    private void initView(final View.OnClickListener itemsOnClick) {
         mtvQX = (TextView) mMenuView.findViewById(R.id.tvqx);
         metXQMC = (EditText) mMenuView.findViewById(R.id.etxqmc);
         mllXQLB = (LinearLayout) mMenuView.findViewById(R.id.llXQLB);

@@ -2,18 +2,13 @@ package FBXX.FC;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.administrator.Public.R;
-
-import java.util.ArrayList;
 import java.util.List;
-
 import COMMON.Base;
 import LBXZ.FB_FC;
 
@@ -29,6 +24,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
     FB_FC_MJ mjWindow;
     FB_FC_ZJ zjWindow;
     FB_FC_FWQK fwqkWindow;
+    FB_FC_ZJBHFY zjbhfyWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +38,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
             mtvxqmc.setText(XQMC);
     }
 
+    //小区查询页面按钮监听
     private View.OnClickListener xqcxOnClick = new View.OnClickListener(){
         public void onClick(View v) {
             switch (v.getId()) {
@@ -58,6 +55,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
         }
     };
 
+    //面积页面按钮监听
     private View.OnClickListener mjOnClick = new View.OnClickListener(){
         public void onClick(View v) {
             switch (v.getId()) {
@@ -72,6 +70,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
         }
     };
 
+    //租金页面按钮监听
     private View.OnClickListener zjOnClick = new View.OnClickListener(){
         public void onClick(View v) {
             switch (v.getId()) {
@@ -87,6 +86,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
         }
     };
 
+    //房屋情况页面按钮监听
     private View.OnClickListener fwqkOnClick = new View.OnClickListener(){
         public void onClick(View v) {
             switch (v.getId()) {
@@ -96,6 +96,18 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                 case R.id.tvqd:
                     fwqkWindow.dismiss();
                     mtvmj.setText(mjWindow.metMJ.getText());
+                    break;
+            }
+        }
+    };
+
+    //租金包含费用页面按钮监听
+    private View.OnClickListener zjbhfyOnClick = new View.OnClickListener(){
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.tvwc:
+                    zjbhfyWindow.dismiss();
+                    mtvzjbhfy.setText(zjbhfyWindow.bhfy);
                     break;
             }
         }
@@ -176,7 +188,11 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
         }
         if (id == "FB_FC_FWQK") {
             fwqkWindow = new FB_FC_FWQK(FB_FC_ZZ.this, fwqkOnClick, getSupportFragmentManager());
-            fwqkWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0); //设置layout在PopupWindow中显示的位置
+            fwqkWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        }
+        if (id == "FB_FC_ZJBHFY") {
+            zjbhfyWindow = new FB_FC_ZJBHFY(FB_FC_ZZ.this, zjbhfyOnClick);
+            zjbhfyWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
         }
     }
 }
