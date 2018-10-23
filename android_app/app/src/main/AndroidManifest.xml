@@ -96,7 +96,10 @@
         <activity android:name="FBXX.FC.FB_FC_MJ" />
         <activity android:name="FBXX.FC.FB_FC_FWQK" />
         <activity android:name="FBXX.FC.FB_FC_ZJ" />
-        <activity android:name="FBXX.FC.FB_FC_ZJBHFY"></activity>
+        <activity android:name="FBXX.FC.FB_FC_ZJBHFY" />
+        <activity android:name="FBXX.FC.FB_FC_LXRSF" />
+        <activity android:name="FBXX.FC.FB_FC_LXRLXDH" />
+        <activity android:name="FBXX.FC.FB_FC_CWDT"></activity>
     </application>
 
 </manifest>

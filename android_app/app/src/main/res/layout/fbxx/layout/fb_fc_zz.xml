@@ -37,36 +37,36 @@
 
             <LinearLayout style="@style/ll_content_middle_horizontal">
                 <LinearLayout android:id="@+id/ll_ts" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
-                    <TextView android:text="厅室" style="@style/tv_content_middle_vertical_text" />
-                    <TextView android:text="请选择" style="@style/tv_content_middle_vertical_value" />
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="厅室" />
+                    <TextView android:id="@+id/tv_ts" style="@style/tv_content_middle_vertical_value" android:text="请选择" />
                 </LinearLayout>
                 <LinearLayout style="@style/ll_content_middle_vertical_split">
 
                 </LinearLayout>
                 <LinearLayout android:id="@+id/ll_cx" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
-                    <TextView android:text="朝向" style="@style/tv_content_middle_vertical_text" />
-                    <TextView android:text="请选择" style="@style/tv_content_middle_vertical_value" />
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="朝向" />
+                    <TextView android:id="@+id/tv_cx" style="@style/tv_content_middle_vertical_value" android:text="请选择" />
                 </LinearLayout>
                 <LinearLayout style="@style/ll_content_middle_vertical_split">
 
                 </LinearLayout>
                 <LinearLayout android:id="@+id/ll_lc" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
-                    <TextView android:text="楼层" style="@style/tv_content_middle_vertical_text" />
-                    <TextView android:text="请选择" style="@style/tv_content_middle_vertical_value" />
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="楼层" />
+                    <TextView android:id="@+id/tv_lc" style="@style/tv_content_middle_vertical_value" android:text="请选择" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout style="@style/ll_content_middle_horizontal">
                 <LinearLayout android:id="@+id/ll_cw" style="@style/ll_content_middle_vertical" android:layout_width="204dp">
-                    <TextView android:text="车位" style="@style/tv_content_middle_vertical_text" />
-                    <TextView android:text="请选择" style="@style/tv_content_middle_vertical_value" />
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="车位" />
+                    <TextView android:id="@+id/tv_cw" style="@style/tv_content_middle_vertical_value" android:text="请选择" />
                 </LinearLayout>
                 <LinearLayout style="@style/ll_content_middle_vertical_split">
 
                 </LinearLayout>
                 <LinearLayout android:id="@+id/ll_dt" style="@style/ll_content_middle_vertical" android:layout_width="204dp">
-                    <TextView android:text="电梯" style="@style/tv_content_middle_vertical_text" />
-                    <TextView android:text="请选择" style="@style/tv_content_middle_vertical_value" />
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="电梯" />
+                    <TextView android:id="@+id/tv_dt" style="@style/tv_content_middle_vertical_value" android:text="请选择" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -101,19 +101,19 @@
 
             <LinearLayout style="@style/ll_content_middle_horizontal" android:layout_height="60dp">
                 <LinearLayout android:id="@+id/ll_lxrmc" style="@style/ll_content_middle_vertical" android:layout_width="204dp" android:layout_height="60dp">
-                    <TextView android:text="请填写姓名" style="@style/tv_content_middle_vertical_value" />
+                    <EditText android:id="@+id/et_lxrmc" style="@style/tv_content_middle_vertical_value" android:hint="请填写姓名" />
                 </LinearLayout>
                 <LinearLayout style="@style/ll_content_middle_vertical_split">
 
                 </LinearLayout>
-                <LinearLayout android:id="@+id/ll_lxrxb" style="@style/ll_content_middle_vertical" android:layout_width="204dp" android:layout_height="60dp">
-                    <TextView android:text="请填写性别" style="@style/tv_content_middle_vertical_value" />
+                <LinearLayout android:id="@+id/ll_lxrsf" style="@style/ll_content_middle_vertical" android:layout_width="204dp" android:layout_height="60dp">
+                    <TextView android:id="@+id/tv_lxrsf" style="@style/tv_content_middle_vertical_value" android:text="请选择身份" />
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout android:id="@+id/ll_sjh" style="@style/ll_content_middle_vertical">
-                <TextView android:text="为保护隐私，您的真实号码将被隐藏" style="@style/tv_content_middle_vertical_text" />
-                <TextView android:text="请填写手机号" style="@style/tv_content_middle_vertical_value" />
+            <LinearLayout android:id="@+id/ll_lxrlxdh" style="@style/ll_content_middle_vertical">
+                <TextView style="@style/tv_content_middle_vertical_text" android:text="为保护隐私，您的真实号码将被隐藏" />
+                <TextView android:id="@+id/tv_lxrlxdh" style="@style/tv_content_middle_vertical_value" android:text="请填写手机号" />
             </LinearLayout>
 
         </LinearLayout>

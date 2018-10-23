@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_fc_fwqk_body" android:id="@+id/fragment_ts">
-        <LinearLayout style="@style/ll_fb_fc_fwqk_middle">
-            <TextView android:id="@+id/tvtitle" style="@style/tv_fb_fc_fwqk_title" android:text="请输入厅室数量" />
-            <TextView android:id="@+id/tvqd" style="@style/tv_fb_fc_fwqk_title_qd"  android:text="确定" />
-        </LinearLayout>
-        <FBXX.FC.WheelView android:id="@+id/wvs" android:layout_width="137dp" android:layout_height="220dp" />
-        <FBXX.FC.WheelView android:id="@+id/wvt" android:layout_width="137dp" android:layout_height="220dp" />
-        <FBXX.FC.WheelView android:id="@+id/wvw" android:layout_width="136dp" android:layout_height="220dp" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_fc_fwqk_body" android:id="@+id/fragment_ts" android:orientation="vertical" android:layout_height="225dp">
+    <LinearLayout style="@style/ll_fb_fc_fwqk_middle" android:layout_height="40dp">
+        <TextView android:id="@+id/tvtitle" style="@style/tv_fb_fc_fwqk_title" android:text="请输入厅室数量" />
+        <TextView android:id="@+id/tv_ts_qd" style="@style/tv_fb_fc_fwqk_title_qd"  android:text="确定" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/ll_fb_fc_fwqk_middle" android:layout_width="410dp" android:layout_height="185dp">
+        <FBXX.FC.WheelView android:id="@+id/wvs" android:layout_width="137dp" android:layout_height="185dp" />
+        <FBXX.FC.WheelView android:id="@+id/wvt" android:layout_width="137dp" android:layout_height="185dp" />
+        <FBXX.FC.WheelView android:id="@+id/wvw" android:layout_width="136dp" android:layout_height="185dp" />
+    </LinearLayout>
 </LinearLayout>

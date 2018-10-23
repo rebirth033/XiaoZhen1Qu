@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="rl_fb_fc_lxrsf_root">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <style name="ll_fb_fc_lxrsf_root">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="ll_fb_fc_lxrsf_top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/colorGray</item>
+        <item name="android:paddingLeft">25dp</item>
+    </style>
+    <style name="tv_fb_fc_lxrsf">
+        <item name="android:layout_width">338dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="tv_fb_fc_lxrsf_wc">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#bc6ba6</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="tv_fb_fc_lxrsf_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+    <style name="ll_fb_fc_lxrsf_body">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">300dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+    <style name="sv_fb_fc_lxrsf_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">300dp</item>
+        <item name="android:fillViewport">false</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+</resources>

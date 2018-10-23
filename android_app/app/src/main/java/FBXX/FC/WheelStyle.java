@@ -34,4 +34,18 @@ public class WheelStyle {
         }
         return wheelString;
     }
+    public static List<String> createCString() {
+        List<String> wheelString = new ArrayList<>();
+        for (int i = -2; i < 100; i++) {
+            wheelString.add( i + "层");
+        }
+        return wheelString;
+    }
+    public static List<String> createGJCString() {
+        List<String> wheelString = new ArrayList<>();
+        for (int i = 1; i < 100; i++) {
+            wheelString.add("共" + i + "层");
+        }
+        return wheelString;
+    }
 }

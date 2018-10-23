@@ -27,15 +27,15 @@ import java.util.ArrayList;
 import java.util.List;
 import COMMON.Base;
 
-public class FB_FC_ZJBHFY extends PopupWindow implements View.OnClickListener {
+public class FB_FC_LXRSF extends PopupWindow implements View.OnClickListener {
 
     private View mMenuView;
-    private LinearLayout mllFYLB;
+    private LinearLayout mllSFLB;
 
-    public FB_FC_ZJBHFY(Activity context, View.OnClickListener itemsOnClick) {
+    public FB_FC_LXRSF(Activity context, View.OnClickListener itemsOnClick) {
         super(context);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mMenuView = inflater.inflate(R.layout.fb_fc_zjbhfy, null);
+        mMenuView = inflater.inflate(R.layout.fb_fc_lxrsf, null);
         //设置SelectPicPopupWindow的View
         this.setContentView(mMenuView);
         //设置SelectPicPopupWindow弹出窗体的宽
@@ -52,13 +52,13 @@ public class FB_FC_ZJBHFY extends PopupWindow implements View.OnClickListener {
         this.setBackgroundDrawable(dw);
         //初始化视图
         initView(itemsOnClick);
-        //获取费用
-        GetFY();
+        //获取身份
+        HandlerLXRSF();
     }
 
     private void initView(View.OnClickListener itemsOnClick) {
         TextView mtvwc = (TextView) mMenuView.findViewById(R.id.tvwc);
-        mllFYLB = (LinearLayout) mMenuView.findViewById(R.id.ll_fb_fc_zjbhfy_body);
+        mllSFLB = (LinearLayout) mMenuView.findViewById(R.id.ll_fb_fc_lxrsf_body);
         mtvwc.setOnClickListener(itemsOnClick);
     }
 
@@ -71,49 +71,10 @@ public class FB_FC_ZJBHFY extends PopupWindow implements View.OnClickListener {
         }
     }
 
-    //获取费用
-    public void GetFY() {
-        new AsyncTask<String, Void, Object>() {
-            protected void onPostExecute(Object result) {
-                try {
-                    JSONObject jsonobject = new JSONObject(result.toString());
-                    String JResult = jsonobject.getString("Result");
-                    String JList = jsonobject.getString("list");
-                    HandlerFY(JList);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            protected Object doInBackground(String... params) {
-                Object result = null;
-
-                String targeturl = "http://www.915fl.com/Common/LoadCODESByTYPENAME";
-                try {
-                    HttpPost httpRequest = new HttpPost(targeturl);
-                    NameValuePair TYPENAME = new BasicNameValuePair("TYPENAME", "包含费用");
-                    NameValuePair TBName = new BasicNameValuePair("TBName", "CODES_FC");
-                    List<NameValuePair> parameters = new ArrayList<NameValuePair>();//创建一个集合，存NameValuePair对象的
-                    parameters.add(TYPENAME);
-                    parameters.add(TBName);
-                    httpRequest.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
-                    DefaultHttpClient httpClient = new DefaultHttpClient();
-                    if (null != Base.JSESSIONID) httpRequest.setHeader("Cookie", "ASP.NET_SessionId=" + Base.JSESSIONID);
-
-                    HttpResponse response = httpClient.execute(httpRequest); //发起GET请求
-                    int rescode = response.getStatusLine().getStatusCode(); //获取响应码
-                    result = EntityUtils.toString(response.getEntity(), "utf-8");//获取服务器响应内容
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                return result;
-            }
-        }.execute();
-    }
-
-    //处理费用
-    public void HandlerFY(String JList) {
+    //处理身份
+    public void HandlerLXRSF() {
         try {
+            String JList = "[{\"CODENAME\":\"个人房东\"},{\"CODENAME\":\"个人转租\"},{\"CODENAME\":\"职业房东\"},{\"CODENAME\":\"经纪人\"}]";
             JSONArray jsonarray = new JSONArray(JList);
             for (int i = 0; i < jsonarray.length(); i++) {
                 JSONObject jsonObject = jsonarray.getJSONObject(i);
@@ -142,20 +103,14 @@ public class FB_FC_ZJBHFY extends PopupWindow implements View.OnClickListener {
                 ivmc.setTag(R.drawable.check_gray);
                 llouter.addView(tvmc);
                 llouter.addView(ivmc);
-                mllFYLB.addView(llouter);
+                mllSFLB.addView(llouter);
                 llouter.setOnClickListener(new View.OnClickListener(){
                     public void onClick(View v) {
+                        ResetCheck();
                         List<View> viewList = Base.getAllChildViews(v);
                         ImageView ivxqmc = (ImageView)viewList.get(1);
-                        int res = (int) ivxqmc.getTag();
-                        if(res == R.drawable.check_gray) {
-                            ivxqmc.setImageResource(R.drawable.check_purple);
-                            ivxqmc.setTag(R.drawable.check_purple);
-                        }
-                        else {
-                            ivxqmc.setImageResource(R.drawable.check_gray);
-                            ivxqmc.setTag(R.drawable.check_gray);
-                        }
+                        ivxqmc.setImageResource(R.drawable.check_purple);
+                        ivxqmc.setTag(R.drawable.check_purple);
                     }
                 });
             }
@@ -164,10 +119,10 @@ public class FB_FC_ZJBHFY extends PopupWindow implements View.OnClickListener {
         }
     }
 
-    //获取费用
+    //获取身份
     public String GetCheck(){
         String bhfy = new String();
-        List<View> viewList = Base.getAllChildViews(mllFYLB);
+        List<View> viewList = Base.getAllChildViews(mllSFLB);
         for(int i=0;i<viewList.size();i++){
             if(viewList.get(i).getClass().toString().contains("LinearLayout")){
                 List<View> vs = Base.getAllChildViews(viewList.get(i));
@@ -182,14 +137,15 @@ public class FB_FC_ZJBHFY extends PopupWindow implements View.OnClickListener {
         return bhfy.substring(0,bhfy.length()-1);
     }
 
-//    //实现单选效果
-//    public void ResetCheck(){
-//        List<View> viewList = Base.getAllChildViews(mllFYLB);
-//        for(int i=0;i<viewList.size();i++){
-//            if(viewList.get(i).getClass().toString().contains("ImageView")){
-//                ImageView vs = (ImageView)viewList.get(i);
-//                vs.setImageResource(R.drawable.check_gray);
-//            }
-//        }
-//    }
+    //实现单选效果
+    public void ResetCheck(){
+        List<View> viewList = Base.getAllChildViews(mllSFLB);
+        for(int i=0;i<viewList.size();i++){
+            if(viewList.get(i).getClass().toString().contains("ImageView")){
+                ImageView iv = (ImageView)viewList.get(i);
+                iv.setImageResource(R.drawable.check_gray);
+                iv.setTag(R.drawable.check_gray);
+            }
+        }
+    }
 }

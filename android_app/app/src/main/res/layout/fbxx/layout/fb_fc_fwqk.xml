@@ -23,16 +23,10 @@
 
             </android.support.design.widget.TabLayout>
 
-
-            <!--<FBXX.FC.WheelView android:id="@+id/wvs" android:layout_width="137dp" android:layout_height="220dp" />-->
-            <!--<FBXX.FC.WheelView android:id="@+id/wvt" android:layout_width="137dp" android:layout_height="220dp" />-->
-            <!--<FBXX.FC.WheelView android:id="@+id/wvw" android:layout_width="136dp" android:layout_height="220dp" />-->
-            <!--<FBXX.FC.WheelView android:id="@+id/wvcx" android:layout_width="410dp" android:layout_height="220dp" />-->
-
         </LinearLayout>
 
     </LinearLayout>
 
-    <android.support.v4.view.ViewPager android:id="@+id/vp_body" android:layout_width="410dp" android:layout_height="300dp" />
+    <android.support.v4.view.ViewPager android:id="@+id/vp_body" android:layout_width="410dp" android:layout_height="230dp" android:layout_marginTop="440dp" />
 
 </RelativeLayout>

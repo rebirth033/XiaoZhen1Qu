@@ -3,10 +3,7 @@ package FBXX.FC;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.util.Pair;
-
 import java.util.List;
-
 
 public class FragmentAdapter extends FragmentPagerAdapter {
     private List<Fragment> mFragmentPair;

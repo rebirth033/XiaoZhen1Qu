@@ -159,7 +159,6 @@ public class WheelView extends View {
 
         timer = new Timer();
         itemList = new ArrayList<>();
-
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStyle(Style.FILL);
         mPaint.setTextAlign(Align.CENTER);

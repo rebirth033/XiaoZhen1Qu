@@ -5,11 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +13,7 @@ import android.view.ViewGroup;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
 
@@ -28,19 +21,25 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
     private ViewGroup mllts; //厅室
     private ViewGroup mllcx; //朝向
     private ViewGroup mlllc; //楼层
-    private TextView tvts; //厅室
-    private TextView tvcx; //朝向
-    private TextView tvlc; //楼层
-    private TabLayout.Tab tabts;
-    private TabLayout.Tab tabcx;
-    private TabLayout.Tab tablc;
-
-    private ArrayList<Fragment> frag_list;
+    private TextView mtvts; //厅室
+    private TextView mtvcx; //朝向
+    private TextView mtvlc; //楼层
+    private TabLayout.Tab tabts; //厅室
+    private TabLayout.Tab tabcx; //朝向
+    private TabLayout.Tab tablc; //楼层
+    private TextView mtvtsqd; //厅室
+    private TextView mtvcxqd; //朝向
+    private TextView mtvlcqd; //楼层
     private TabLayout mtbbody;
     private ViewPager mvpbody;
-    private FragmentAdapter adapter;
+    private WheelView mwvs;
+    private WheelView mwvt;
+    private WheelView mwvw;
+    private WheelView mwvcx;
+    private WheelView mwvc;
+    private WheelView mwvgjc;
 
-    public FB_FC_FWQK(Activity context, View.OnClickListener itemsOnClick,FragmentManager fm) {
+    public FB_FC_FWQK(Activity context, View.OnClickListener itemsOnClick) {
         super(context);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mMenuView = inflater.inflate(R.layout.fb_fc_fwqk, null);
@@ -59,17 +58,17 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
         //设置SelectPicPopupWindow弹出窗体的背景
         this.setBackgroundDrawable(dw);
 
-        initView(itemsOnClick,fm);
+        initView(itemsOnClick,context);
     }
 
-    private void initView(View.OnClickListener itemsOnClick, FragmentManager fm) {
+    private void initView(View.OnClickListener itemsOnClick,Activity context) {
 
         mllts = (ViewGroup) mMenuView.findViewById(R.id.llts);
         mllcx = (ViewGroup) mMenuView.findViewById(R.id.llcx);
         mlllc = (ViewGroup) mMenuView.findViewById(R.id.lllc);
-        tvts = (TextView) mMenuView.findViewById(R.id.tvts);
-        tvcx = (TextView) mMenuView.findViewById(R.id.tvcx);
-        tvlc = (TextView) mMenuView.findViewById(R.id.tvlc);
+        mtvts = (TextView) mMenuView.findViewById(R.id.tvts);
+        mtvcx = (TextView) mMenuView.findViewById(R.id.tvcx);
+        mtvlc = (TextView) mMenuView.findViewById(R.id.tvlc);
 
         mtbbody = (TabLayout) mMenuView.findViewById(R.id.tb_body);
         mvpbody = (ViewPager) mMenuView.findViewById(R.id.vp_body);
@@ -85,200 +84,78 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
         tablc = mtbbody.newTab().setCustomView(mlllc);
         mtbbody.addTab(tablc);
 
-//       frag_list = new ArrayList<Fragment>();
-//       frag_list.add(new Fragment_TS());
-//       frag_list.add(new Fragment_CX());
-//       adapter = new FragmentAdapter(fm,frag_list);
-        List<View> pages = new List<View>() {
-            @Override
-            public int size() {
-                return 0;
-            }
+        List<View> viewList = new ArrayList<>();
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View vts = inflater.inflate(R.layout.fragment_ts, null);
+        View vcx = inflater.inflate(R.layout.fragment_cx, null);
+        View vlc = inflater.inflate(R.layout.fragment_lc, null);
+        viewList.add(vts);
+        viewList.add(vcx);
+        viewList.add(vlc);
 
-            @Override
-            public boolean isEmpty() {
-                return false;
-            }
-
-            @Override
-            public boolean contains(Object o) {
-                return false;
-            }
-
-            @NonNull
-            @Override
-            public Iterator<View> iterator() {
-                return null;
-            }
-
-            @NonNull
-            @Override
-            public Object[] toArray() {
-                return new Object[0];
-            }
-
-            @NonNull
-            @Override
-            public <T> T[] toArray(@NonNull T[] a) {
-                return null;
-            }
-
-            @Override
-            public boolean add(View view) {
-                return false;
-            }
-
-            @Override
-            public boolean remove(Object o) {
-                return false;
-            }
-
-            @Override
-            public boolean containsAll(@NonNull Collection<?> c) {
-                return false;
-            }
-
-            @Override
-            public boolean addAll(@NonNull Collection<? extends View> c) {
-                return false;
-            }
-
-            @Override
-            public boolean addAll(int index, @NonNull Collection<? extends View> c) {
-                return false;
-            }
-
-            @Override
-            public boolean removeAll(@NonNull Collection<?> c) {
-                return false;
-            }
-
-            @Override
-            public boolean retainAll(@NonNull Collection<?> c) {
-                return false;
-            }
-
-            @Override
-            public void clear() {
-
-            }
-
-            @Override
-            public View get(int index) {
-                return null;
-            }
-
-            @Override
-            public View set(int index, View element) {
-                return null;
-            }
-
-            @Override
-            public void add(int index, View element) {
-
-            }
-
-            @Override
-            public View remove(int index) {
-                return null;
-            }
-
-            @Override
-            public int indexOf(Object o) {
-                return 0;
-            }
-
-            @Override
-            public int lastIndexOf(Object o) {
-                return 0;
-            }
-
-            @NonNull
-            @Override
-            public ListIterator<View> listIterator() {
-                return null;
-            }
-
-            @NonNull
-            @Override
-            public ListIterator<View> listIterator(int index) {
-                return null;
-            }
-
-            @NonNull
-            @Override
-            public List<View> subList(int fromIndex, int toIndex) {
-                return null;
-            }
-        };
-        View ts = mMenuView.findViewById(R.id.fragment_ts);
-        View cx = mMenuView.findViewById(R.id.fragment_cx);
-        pages.add(ts);
-        pages.add(cx);
-        PagerAdapter adapter = new ViewAdapter(pages);
+        ViewAdapter adapter = new ViewAdapter(viewList);
         mvpbody.setAdapter(adapter);
-        mvpbody.setCurrentItem(0);
-    }
-
-    public class ViewAdapter extends PagerAdapter {
-        private List<View> datas;
-
-        public ViewAdapter(List<View> list) {
-            datas=list;
-        }
-
-        @Override
-        public int getCount() {
-            return datas.size();
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view==object;
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            View view=datas.get(position);
-            container.addView(view);
-            return view;
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            container.removeView(datas.get(position));
-        }
     }
 
     //事件监听
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.llts:
-                tvts.setHintTextColor(Color.parseColor("#bc6ba6"));
-                tvts.setTextColor(Color.parseColor("#bc6ba6"));
-                tvcx.setHintTextColor(Color.parseColor("#999999"));
-                tvcx.setTextColor(Color.parseColor("#000000"));
-                tvlc.setHintTextColor(Color.parseColor("#999999"));
-                tvlc.setTextColor(Color.parseColor("#000000"));
+                mtvts.setHintTextColor(Color.parseColor("#bc6ba6"));
+                mtvts.setTextColor(Color.parseColor("#bc6ba6"));
+                mtvcx.setHintTextColor(Color.parseColor("#999999"));
+                mtvcx.setTextColor(Color.parseColor("#000000"));
+                mtvlc.setHintTextColor(Color.parseColor("#999999"));
+                mtvlc.setTextColor(Color.parseColor("#000000"));
                 tabts.select();
+                mvpbody.setCurrentItem(0);
+                mwvs = (WheelView) mMenuView.findViewById(R.id.wvs);
+                mwvt = (WheelView) mMenuView.findViewById(R.id.wvt);
+                mwvw = (WheelView) mMenuView.findViewById(R.id.wvw);
+                mwvs.setWheelItemList(WheelStyle.createSString());
+                mwvt.setWheelItemList(WheelStyle.createTString());
+                mwvw.setWheelItemList(WheelStyle.createWString());
+                mtvtsqd = (TextView) mMenuView.findViewById(R.id.tv_ts_qd);
+                mtvtsqd.setOnClickListener(this);
                 break;
             case R.id.llcx:
-                tvts.setHintTextColor(Color.parseColor("#999999"));
-                tvts.setTextColor(Color.parseColor("#000000"));
-                tvcx.setHintTextColor(Color.parseColor("#bc6ba6"));
-                tvcx.setTextColor(Color.parseColor("#bc6ba6"));
-                tvlc.setHintTextColor(Color.parseColor("#999999"));
-                tvlc.setTextColor(Color.parseColor("#000000"));
+                mtvts.setHintTextColor(Color.parseColor("#999999"));
+                mtvts.setTextColor(Color.parseColor("#000000"));
+                mtvcx.setHintTextColor(Color.parseColor("#bc6ba6"));
+                mtvcx.setTextColor(Color.parseColor("#bc6ba6"));
+                mtvlc.setHintTextColor(Color.parseColor("#999999"));
+                mtvlc.setTextColor(Color.parseColor("#000000"));
                 tabcx.select();
+                mvpbody.setCurrentItem(1);
+                mwvcx = (WheelView) mMenuView.findViewById(R.id.wvcx);
+                mwvcx.setWheelItemList(WheelStyle.createCXString());
+                mtvcxqd = (TextView) mMenuView.findViewById(R.id.tv_cx_qd);
+                mtvcxqd.setOnClickListener(this);
                 break;
             case R.id.lllc:
-                tvts.setHintTextColor(Color.parseColor("#999999"));
-                tvts.setTextColor(Color.parseColor("#000000"));
-                tvcx.setHintTextColor(Color.parseColor("#999999"));
-                tvcx.setTextColor(Color.parseColor("#000000"));
-                tvlc.setHintTextColor(Color.parseColor("#bc6ba6"));
-                tvlc.setTextColor(Color.parseColor("#bc6ba6"));
+                mtvts.setHintTextColor(Color.parseColor("#999999"));
+                mtvts.setTextColor(Color.parseColor("#000000"));
+                mtvcx.setHintTextColor(Color.parseColor("#999999"));
+                mtvcx.setTextColor(Color.parseColor("#000000"));
+                mtvlc.setHintTextColor(Color.parseColor("#bc6ba6"));
+                mtvlc.setTextColor(Color.parseColor("#bc6ba6"));
                 tablc.select();
+                mvpbody.setCurrentItem(2);
+                mwvc = (WheelView) mMenuView.findViewById(R.id.wvc);
+                mwvgjc = (WheelView) mMenuView.findViewById(R.id.wvgjc);
+                mwvc.setWheelItemList(WheelStyle.createCString());
+                mwvgjc.setWheelItemList(WheelStyle.createGJCString());
+                mtvlcqd = (TextView) mMenuView.findViewById(R.id.tv_lc_qd);
+                mtvlcqd.setOnClickListener(this);
+                break;
+            case R.id.tv_ts_qd:
+                mtvts.setText(mwvs.getCurrentItem() + "室" + mwvt.getCurrentItem() + "厅" + mwvw.getCurrentItem() + "卫");
+                break;
+            case R.id.tv_cx_qd:
+                mtvcx.setText(WheelStyle.createCXString().get(mwvcx.getCurrentItem()));
+                break;
+            case R.id.tv_lc_qd:
+                mtvlc.setText(mwvc.getCurrentItem() + "层，共" + mwvgjc.getCurrentItem() + "层");
                 break;
         }
     }

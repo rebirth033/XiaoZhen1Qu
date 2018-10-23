@@ -44,7 +44,7 @@
         <item name="android:layout_marginLeft">10dp</item>
     </style>
     <style name="ll_fb_fc_xqcx_xqlb">
-        <item name="android:layout_width">400dp</item>
+        <item name="android:layout_width">410dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">vertical</item>
     </style>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/rl_fb_fc_lxrsf" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/rl_fb_fc_lxrsf_root">
+
+    <LinearLayout style="@style/ll_fb_fc_lxrsf_root">
+
+        <LinearLayout style="@style/ll_fb_fc_lxrsf_top">
+            <TextView style="@style/tv_fb_fc_lxrsf" android:text="联系人身份" />
+            <TextView android:id="@+id/tvwc" style="@style/tv_fb_fc_lxrsf_wc" android:text="完成" />
+        </LinearLayout>
+
+        <ScrollView android:id="@+id/sv_channel" style="@style/sv_fb_fc_lxrsf_main">
+
+            <LinearLayout android:id="@+id/ll_fb_fc_lxrsf_body" style="@style/ll_fb_fc_lxrsf_body">
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
