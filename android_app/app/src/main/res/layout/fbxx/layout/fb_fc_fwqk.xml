@@ -4,17 +4,17 @@
 
     <LinearLayout style="@style/ll_fb_fc_fwqk_root">
 
-        <LinearLayout style="@style/ll_fb_fc_fwqk_top_item" android:id="@+id/llts">
+        <LinearLayout style="@style/ll_fb_fc_fwqk_top_item" android:id="@+id/ll_fwqk_ts">
             <TextView style="@style/tv_fb_fc_fwqk" android:text="厅室" />
-            <TextView style="@style/tv_fb_fc_fwqk_value" android:id="@+id/tvts" android:textColor="#bc6ba6" android:textColorHint="#bc6ba6" android:hint="请选择" />
+            <TextView style="@style/tv_fb_fc_fwqk_value" android:id="@+id/tv_fwqk_ts" android:textColor="#bc6ba6" android:textColorHint="#bc6ba6" android:hint="请选择" />
         </LinearLayout>
-        <LinearLayout style="@style/ll_fb_fc_fwqk_top_item" android:id="@+id/llcx">
+        <LinearLayout style="@style/ll_fb_fc_fwqk_top_item" android:id="@+id/ll_fwqk_cx">
             <TextView style="@style/tv_fb_fc_fwqk" android:text="朝向" />
-            <TextView style="@style/tv_fb_fc_fwqk_value" android:id="@+id/tvcx" android:hint="请选择" />
+            <TextView style="@style/tv_fb_fc_fwqk_value" android:id="@+id/tv_fwqk_cx" android:hint="请选择" />
         </LinearLayout>
-        <LinearLayout style="@style/ll_fb_fc_fwqk_top_item" android:id="@+id/lllc">
+        <LinearLayout style="@style/ll_fb_fc_fwqk_top_item" android:id="@+id/ll_fwqk_lc">
             <TextView style="@style/tv_fb_fc_fwqk" android:text="楼层" />
-            <TextView style="@style/tv_fb_fc_fwqk_value" android:id="@+id/tvlc" android:hint="请选择" />
+            <TextView style="@style/tv_fb_fc_fwqk_value" android:id="@+id/tv_fwqk_lc" android:hint="请选择" />
         </LinearLayout>
 
         <LinearLayout style="@style/ll_fb_fc_fwqk_body">

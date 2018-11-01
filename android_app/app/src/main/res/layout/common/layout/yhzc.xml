@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" style="@style/ll_yhzc_root" tools:context="com.example.administrator.Public.COMMON.YHZC">
+
+    <LinearLayout style="@style/ll_yhzc_top">
+        <TextView android:id="@+id/tvGB" style="@style/tv_top_gb" android:background="@drawable/close" />
+        <TextView android:id="@+id/tvDL" style="@style/tv_top_zc" android:text="登录" />
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvLOGO" style="@style/tv_yhzc_logo" android:text="风铃网" />
+
+    <LinearLayout style="@style/ll_yhzc_sjh">
+        <EditText android:id="@+id/etSJH" style="@style/et_yhzc_sjh" android:background="@drawable/border" android:hint="手机号" />
+        <TextView android:id="@+id/tvHQYZM" style="@style/tv_yhzc_hqyzm" android:background="@drawable/border" android:text="获取验证码" />
+    </LinearLayout>
+
+    <EditText android:id="@+id/etYZM" style="@style/et_yhzc_dtm" android:background="@drawable/border" android:hint="验证码" />
+    <EditText android:id="@+id/etMM" style="@style/et_yhzc_mm" android:background="@drawable/border" android:hint="密码" />
+    <Button android:id="@+id/btnZC" style="@style/btn_zc" android:text="注册" />
+    <TextView android:id="@+id/tvZCTS" style="@style/tv_zcts" android:text="注册前请阅读《风铃网服务协议》,注册即表示同意此协议" />
+
+</LinearLayout>

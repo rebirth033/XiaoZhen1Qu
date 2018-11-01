@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_grzx_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_grzx_main">
+
+        <LinearLayout style="@style/ll_main">
+
+            <LinearLayout style="@style/ll_head">
+                <LinearLayout style="@style/ll_head_tp">
+                    <TextView android:id="@+id/tvDJTXDL" style="@style/tv_head_djtxdl" />
+                    <ImageView android:id="@+id/ivDJTXDL" style="@style/iv_head_djtxdl" android:src="@drawable/grzx_djtxdl_blue" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_top">
+                <LinearLayout android:id="@+id/llWDFB" style="@style/ll_content_top_item">
+                    <ImageView android:id="@+id/ivWDFB" style="@style/iv_content_top_item" android:src="@drawable/grzx_wdfb" />
+                    <TextView android:id="@+id/tvWDFB" style="@style/tv_content_top_item" android:text="我的发布" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llWDSC" style="@style/ll_content_top_item">
+                    <ImageView android:id="@+id/ivWDSC" style="@style/iv_content_top_item" android:src="@drawable/grzx_wdsc" />
+                    <TextView android:id="@+id/tvWDSC" style="@style/tv_content_top_item" android:text="我的收藏" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llWDDY" style="@style/ll_content_top_item">
+                    <ImageView android:id="@+id/ivWDDY" style="@style/iv_content_top_item" android:src="@drawable/grzx_wddy" />
+                    <TextView android:id="@+id/tvWDDY" style="@style/tv_content_top_item" android:text="我的订阅" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llWDZJ" style="@style/ll_content_top_item">
+                    <ImageView android:id="@+id/ivWDZJ" style="@style/iv_content_top_item" android:src="@drawable/grzx_wdzj" />
+                    <TextView android:id="@+id/tvWDZJ" style="@style/tv_content_top_item" android:text="我的足迹" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_grfw">
+                <TextView android:text="个人服务" style="@style/tv_content_middle_grfw" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_wdfw">
+                <LinearLayout style="@style/ll_content_middle_item">
+                    <ImageView android:id="@+id/ivWDZF" style="@style/iv_content_middle_item" android:src="@drawable/grzx_wdzf"/>
+                    <TextView android:id="@+id/tvWDZF" style="@style/tv_content_middle_item" android:text="我的租房" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_item">
+                    <ImageView android:id="@+id/ivWDFWPJ" style="@style/iv_content_middle_item" android:src="@drawable/grzx_wdpj" />
+                    <TextView android:id="@+id/tvWDFWPJ" style="@style/tv_content_middle_item" android:text="我的评价" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_wdfw">
+                <LinearLayout style="@style/ll_content_middle_item">
+                    <ImageView android:id="@+id/ivWDHB" style="@style/iv_content_middle_item" android:src="@drawable/grzx_wdhb" />
+                    <TextView android:id="@+id/tvWDHB" style="@style/tv_content_middle_item" android:text="我的红包" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_item">
+                    <ImageView android:id="@+id/ivWDES" style="@style/iv_content_middle_item" android:src="@drawable/grzx_wdes" />
+                    <TextView android:id="@+id/tvWDES" style="@style/tv_content_middle_item" android:text="我的二手" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_wdfw">
+                <LinearLayout style="@style/ll_content_middle_item">
+                    <ImageView android:id="@+id/ivWDRZ" style="@style/iv_content_middle_item" android:src="@drawable/grzx_wdrz" />
+                    <TextView android:id="@+id/tvWDRZ" style="@style/tv_content_middle_item" android:text="我的认证" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_item">
+                    <ImageView android:id="@+id/ivWDQZ" style="@style/iv_content_middle_item" android:src="@drawable/grzx_wdqz" />
+                    <TextView android:id="@+id/tvWDQZ" style="@style/tv_content_middle_item" android:text="我的求职" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout style="@style/ll_dbcd">
+        <LinearLayout android:id="@+id/llSY" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivSY" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_sy" />
+            <TextView android:id="@+id/tvSY" style="@style/tv_dbcd_item" android:text="首页" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/llFB" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivFB" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_fb" />
+            <TextView android:id="@+id/tvFB" style="@style/tv_dbcd_item" android:text="发布" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/llXX" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivXX" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_xx" />
+            <TextView android:id="@+id/tvXX" style="@style/tv_dbcd_item" android:text="消息" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/llGRZX" style="@style/ll_dbcd_item">
+            <ImageView android:id="@+id/ivGRZX" style="@style/iv_dbcd_item" android:src="@drawable/dbcd_grzx" />
+            <TextView android:id="@+id/tvGRZX" style="@style/tv_dbcd_item" android:text="个人中心" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

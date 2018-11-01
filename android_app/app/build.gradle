@@ -8,7 +8,7 @@ android {
     defaultConfig {
         applicationId "com.example.administrator.infotownletsecond"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -25,6 +25,7 @@ android {
             res.srcDirs = [
                     'src/main/res',
                     'src/main/res/layout',
+                    'src/main/res/layout/common',
                     'src/main/res/layout/lbxz',
                     'src/main/res/layout/lbcx',
                     'src/main/res/layout/fbxx',
@@ -33,6 +34,7 @@ android {
                     'src/main/res/drawable/lbcx',
                     'src/main/res/drawable/fbxx',
                     'src/main/res/values',
+                    'src/main/res/values/common',
                     'src/main/res/values/lbxz',
                     'src/main/res/values/lbcx',
                     'src/main/res/values/fbxx'

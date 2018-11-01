@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/container" style="@style/rl_editpicture_root" tools:ignore="MergeRootFrame">
+    <!-- 顶部添加文字 -->
+    <LinearLayout android:id="@+id/Layout_top" style="@style/ll_showpicture_top">
+        <ImageView android:id="@+id/iv_back" style="@style/iv_showpicture_back" android:src="@drawable/arrow_back_black" />
+        <TextView style="@style/tv_showpicture_top" android:text="图片预览" />
+        <ImageView android:id="@+id/ivSelect" style="@style/iv_showpiecture_select"  android:src="@drawable/unselect" />
+    </LinearLayout>
+    <!-- 显示图片 -->
+    <LinearLayout android:id="@+id/Content_Layout" style="@style/rl_showpicture_body">
+        <LinearLayout android:id="@+id/ll_showpicture_body" style="@style/ll_showpicture_body">
+            <ImageView android:id="@+id/image" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 底部按钮 -->
+    <LinearLayout android:id="@+id/Layout_bottom" style="@style/ll_showpicture_bottom">
+        <TextView android:id="@+id/button2" style="@style/tv_showpicture_bottom" android:text="完成" />
+    </LinearLayout>
+</RelativeLayout>

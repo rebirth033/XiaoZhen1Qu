@@ -1,13 +1,23 @@
 package COMMON;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.ContentUris;
+import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.DocumentsContract;
+import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.example.administrator.Public.R;
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -16,10 +26,18 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Base extends Activity implements View.OnClickListener {
+public class Base extends Activity {
 
     public static String YHM;
     public static String JSESSIONID; //定义一个静态的字段，保存sessionID
+    private Uri imageUri;
+    private String photoPath;
+    private String bitmapToString;
+    private Bitmap bitmap;
+    public ImageView img_fengmian;
+    private static final int IMAGE_REQUEST_CODE = 0;
+    private static final int CAMERA_REQUEST_CODE = 1;
+    private static final int RESULT_REQUEST_CODE = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,24 +56,12 @@ public class Base extends Activity implements View.OnClickListener {
 //        //overridePendingTransitionEnter();
 //    }
 
-    //事件监听
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.tvSZCS:
-                break;
-        }
-    }
-
-//    /**
-//     * Overrides the pending Activity transition by performing the "Enter" animation.
-//     */
+//    //Overrides the pending Activity transition by performing the "Enter" animation.
 //    protected void overridePendingTransitionEnter() {
 //        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
 //    }
 //
-//    /**
-//     * Overrides the pending Activity transition by performing the "Exit" animation.
-//     */
+//    //Overrides the pending Activity transition by performing the "Exit" animation.
 //    protected void overridePendingTransitionExit() {
 //        overridePendingTransition(R.anim.slide_left_in, R.anim.slide_right_out);
 //    }
@@ -82,8 +88,6 @@ public class Base extends Activity implements View.OnClickListener {
             conn.setDoInput(true);
             //不使用缓存
             conn.setUseCaches(false);
-            //这句可有可无，没有影响
-            //conn.connect();
             //得到数据流
             InputStream is = conn.getInputStream();
             //解析得到图片
@@ -96,7 +100,8 @@ public class Base extends Activity implements View.OnClickListener {
         return bitmap;
     }
 
-    public void resetBottomMenu(){
+    //重置底部菜单
+    public void resetBottomMenu() {
         ImageView ivsy_sy = (ImageView) findViewById(R.id.ivSY);
         ivsy_sy.setImageResource(R.drawable.dbcd_sy);
         ImageView ivsy_fb = (ImageView) findViewById(R.id.ivFB);
@@ -107,6 +112,7 @@ public class Base extends Activity implements View.OnClickListener {
         ivsy_grzx.setImageResource(R.drawable.dbcd_grzx);
     }
 
+    //获取所有子元素
     public static List<View> getAllChildViews(View view) {
         List<View> allchildren = new ArrayList<View>();
         if (view instanceof ViewGroup) {

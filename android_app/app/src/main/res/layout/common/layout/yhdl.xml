@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" style="@style/ll_yhdl_root" tools:context="com.example.administrator.Public.COMMON.YHDL">
+
+    <LinearLayout style="@style/ll_yhdl_top">
+        <TextView android:id="@+id/tvGB" style="@style/tv_top_gb" android:background="@drawable/close" />
+        <TextView android:id="@+id/tvZC" style="@style/tv_top_zc" android:text="注册" />
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvlogo" style="@style/tv_yhdl_logo" android:text="风铃网" />
+
+    <EditText android:id="@+id/etSJH" style="@style/et_sjh" android:hint="手机号/用户名/邮箱" android:background="@drawable/border" />
+
+    <EditText android:id="@+id/etMM" style="@style/et_mm" android:hint="密码" android:background="@drawable/border" />
+
+    <Button android:id="@+id/btnDL" style="@style/btn_dl" android:text="登录" />
+
+    <LinearLayout style="@style/ll_bottom">
+        <TextView android:id="@+id/tvSJDTMDL" style="@style/tv_sjdtmdl" android:text="手机动态码登录" />
+        <TextView android:id="@+id/tvWJMM" style="@style/tv_wjmm" android:text="忘记密码" />
+    </LinearLayout>
+
+</LinearLayout>

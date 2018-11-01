@@ -21,9 +21,9 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
     private ViewGroup mllts; //厅室
     private ViewGroup mllcx; //朝向
     private ViewGroup mlllc; //楼层
-    private TextView mtvts; //厅室
-    private TextView mtvcx; //朝向
-    private TextView mtvlc; //楼层
+    public TextView mtvts; //厅室
+    public TextView mtvcx; //朝向
+    public TextView mtvlc; //楼层
     private TabLayout.Tab tabts; //厅室
     private TabLayout.Tab tabcx; //朝向
     private TabLayout.Tab tablc; //楼层
@@ -32,12 +32,13 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
     private TextView mtvlcqd; //楼层
     private TabLayout mtbbody;
     private ViewPager mvpbody;
-    private WheelView mwvs;
-    private WheelView mwvt;
-    private WheelView mwvw;
-    private WheelView mwvcx;
-    private WheelView mwvc;
-    private WheelView mwvgjc;
+    public WheelView mwvs;//室
+    public WheelView mwvt;//厅
+    public WheelView mwvw;//卫
+    public WheelView mwvcx;//朝向
+    public WheelView mwvc;//层
+    public WheelView mwvgjc;//共几层
+    private View.OnClickListener ParentClick;
 
     public FB_FC_FWQK(Activity context, View.OnClickListener itemsOnClick) {
         super(context);
@@ -57,18 +58,18 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
         ColorDrawable dw = new ColorDrawable(0xb0000000);
         //设置SelectPicPopupWindow弹出窗体的背景
         this.setBackgroundDrawable(dw);
-
+        ParentClick = itemsOnClick;
         initView(itemsOnClick,context);
     }
 
     private void initView(View.OnClickListener itemsOnClick,Activity context) {
 
-        mllts = (ViewGroup) mMenuView.findViewById(R.id.llts);
-        mllcx = (ViewGroup) mMenuView.findViewById(R.id.llcx);
-        mlllc = (ViewGroup) mMenuView.findViewById(R.id.lllc);
-        mtvts = (TextView) mMenuView.findViewById(R.id.tvts);
-        mtvcx = (TextView) mMenuView.findViewById(R.id.tvcx);
-        mtvlc = (TextView) mMenuView.findViewById(R.id.tvlc);
+        mllts = (ViewGroup) mMenuView.findViewById(R.id.ll_fwqk_ts);
+        mllcx = (ViewGroup) mMenuView.findViewById(R.id.ll_fwqk_cx);
+        mlllc = (ViewGroup) mMenuView.findViewById(R.id.ll_fwqk_lc);
+        mtvts = (TextView) mMenuView.findViewById(R.id.tv_fwqk_ts);
+        mtvcx = (TextView) mMenuView.findViewById(R.id.tv_fwqk_cx);
+        mtvlc = (TextView) mMenuView.findViewById(R.id.tv_fwqk_lc);
 
         mtbbody = (TabLayout) mMenuView.findViewById(R.id.tb_body);
         mvpbody = (ViewPager) mMenuView.findViewById(R.id.vp_body);
@@ -78,10 +79,10 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
         mlllc.setOnClickListener(this);
 
         tabts = mtbbody.newTab().setCustomView(mllts);
-        mtbbody.addTab(tabts);
         tabcx = mtbbody.newTab().setCustomView(mllcx);
-        mtbbody.addTab(tabcx);
         tablc = mtbbody.newTab().setCustomView(mlllc);
+        mtbbody.addTab(tabts);
+        mtbbody.addTab(tabcx);
         mtbbody.addTab(tablc);
 
         List<View> viewList = new ArrayList<>();
@@ -100,7 +101,7 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
     //事件监听
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.llts:
+            case R.id.ll_fwqk_ts:
                 mtvts.setHintTextColor(Color.parseColor("#bc6ba6"));
                 mtvts.setTextColor(Color.parseColor("#bc6ba6"));
                 mtvcx.setHintTextColor(Color.parseColor("#999999"));
@@ -118,7 +119,7 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
                 mtvtsqd = (TextView) mMenuView.findViewById(R.id.tv_ts_qd);
                 mtvtsqd.setOnClickListener(this);
                 break;
-            case R.id.llcx:
+            case R.id.ll_fwqk_cx:
                 mtvts.setHintTextColor(Color.parseColor("#999999"));
                 mtvts.setTextColor(Color.parseColor("#000000"));
                 mtvcx.setHintTextColor(Color.parseColor("#bc6ba6"));
@@ -132,7 +133,7 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
                 mtvcxqd = (TextView) mMenuView.findViewById(R.id.tv_cx_qd);
                 mtvcxqd.setOnClickListener(this);
                 break;
-            case R.id.lllc:
+            case R.id.ll_fwqk_lc:
                 mtvts.setHintTextColor(Color.parseColor("#999999"));
                 mtvts.setTextColor(Color.parseColor("#000000"));
                 mtvcx.setHintTextColor(Color.parseColor("#999999"));
@@ -146,16 +147,13 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
                 mwvc.setWheelItemList(WheelStyle.createCString());
                 mwvgjc.setWheelItemList(WheelStyle.createGJCString());
                 mtvlcqd = (TextView) mMenuView.findViewById(R.id.tv_lc_qd);
-                mtvlcqd.setOnClickListener(this);
+                mtvlcqd.setOnClickListener(ParentClick);
                 break;
             case R.id.tv_ts_qd:
-                mtvts.setText(mwvs.getCurrentItem() + "室" + mwvt.getCurrentItem() + "厅" + mwvw.getCurrentItem() + "卫");
+                mtvts.setText(WheelStyle.createSString().get(mwvs.getCurrentItem()) + WheelStyle.createTString().get(mwvt.getCurrentItem()) + WheelStyle.createWString().get(mwvw.getCurrentItem()));
                 break;
             case R.id.tv_cx_qd:
                 mtvcx.setText(WheelStyle.createCXString().get(mwvcx.getCurrentItem()));
-                break;
-            case R.id.tv_lc_qd:
-                mtvlc.setText(mwvc.getCurrentItem() + "层，共" + mwvgjc.getCurrentItem() + "层");
                 break;
         }
     }

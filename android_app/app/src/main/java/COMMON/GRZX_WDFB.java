@@ -33,11 +33,11 @@ public class GRZX_WDFB extends Base implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grzx_wdfb);
-        findById();
+        initView();
         GetWDFB();
     }
 
-    private void findById() {
+    private void initView() {
         mivBACK = (ImageView) findViewById(R.id.ivBACK);
         mllWDFB = (LinearLayout) findViewById(R.id.llWDFB);
         mtvFBXX = (TextView) findViewById(R.id.tvFBXX);

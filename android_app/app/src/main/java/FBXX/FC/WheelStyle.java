@@ -48,4 +48,20 @@ public class WheelStyle {
         }
         return wheelString;
     }
+    public static List<String> createCWString() {
+        List<String> wheelString = new ArrayList<>();
+        String[] array = new String[]{"有车位","无车位"};
+        for (int i = 0; i < array.length; i++) {
+            wheelString.add(array[i].toString());
+        }
+        return wheelString;
+    }
+    public static List<String> createDTString() {
+        List<String> wheelString = new ArrayList<>();
+        String[] array = new String[]{"有电梯","无电梯"};
+        for (int i = 0; i < array.length; i++) {
+            wheelString.add(array[i].toString());
+        }
+        return wheelString;
+    }
 }

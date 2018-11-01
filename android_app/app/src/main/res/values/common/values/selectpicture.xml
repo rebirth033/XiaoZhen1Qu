@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="rl_selectpicture_root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="rl_selectpicture_top">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tv_selectpicture_top">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="rl_selectpicture_bottom">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:gravity">right</item>
+    </style>
+    <style name="tv_selectpicture_bottom">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">5dp</item>
+    </style>
+    <style name="rl_selectpicture_body">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_above">@id/Layout_bottom</item>
+        <item name="android:layout_below">@id/Layout_top</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="ll_selectpicture_body">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="gv_selectpicture_body">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">420dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">#EFDFDF</item>
+        <item name="android:horizontalSpacing">5dp</item>
+        <item name="android:verticalSpacing">5dp</item>
+        <item name="android:numColumns">4</item>
+        <item name="android:columnWidth">90dp</item>
+        <item name="android:stretchMode">columnWidth</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="iv_selectpicture_close">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+</resources>

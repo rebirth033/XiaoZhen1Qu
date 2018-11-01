@@ -6,11 +6,11 @@
 
         <LinearLayout style="@style/ll_fb_fc_cwdt_top_item" android:id="@+id/llcw">
             <TextView style="@style/tv_fb_fc_cwdt" android:text="车位" />
-            <TextView style="@style/tv_fb_fc_cwdt_value" android:id="@+id/tvts" android:textColor="#bc6ba6" android:textColorHint="#bc6ba6" android:hint="请选择" />
+            <TextView style="@style/tv_fb_fc_cwdt_value" android:id="@+id/tv_cw" android:textColor="#bc6ba6" android:textColorHint="#bc6ba6" android:hint="请选择" />
         </LinearLayout>
         <LinearLayout style="@style/ll_fb_fc_cwdt_top_item" android:id="@+id/lldt">
             <TextView style="@style/tv_fb_fc_cwdt" android:text="电梯" />
-            <TextView style="@style/tv_fb_fc_cwdt_value" android:id="@+id/tvcx" android:hint="请选择" />
+            <TextView style="@style/tv_fb_fc_cwdt_value" android:id="@+id/tv_dt" android:hint="请选择" />
         </LinearLayout>
 
         <LinearLayout style="@style/ll_fb_fc_cwdt_body">
@@ -19,12 +19,10 @@
 
             </android.support.design.widget.TabLayout>
 
-            <android.support.v4.view.ViewPager android:id="@+id/vp_body" android:layout_width="410dp" android:layout_height="300dp" />
-
         </LinearLayout>
 
     </LinearLayout>
 
-
+    <android.support.v4.view.ViewPager android:id="@+id/vp_body" android:layout_width="410dp" android:layout_height="230dp" android:layout_marginTop="440dp" />
 
 </RelativeLayout>
