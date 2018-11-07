@@ -62,7 +62,7 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
         initView(itemsOnClick,context);
     }
 
-    private void initView(View.OnClickListener itemsOnClick,Activity context) {
+    private void initView(View.OnClickListener itemsOnClick, Activity context) {
 
         mllts = (ViewGroup) mMenuView.findViewById(R.id.ll_fwqk_ts);
         mllcx = (ViewGroup) mMenuView.findViewById(R.id.ll_fwqk_cx);

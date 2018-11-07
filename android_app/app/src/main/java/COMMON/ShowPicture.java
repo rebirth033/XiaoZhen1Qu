@@ -40,7 +40,7 @@ public class ShowPicture extends Base implements View.OnClickListener {
     //个人中心
     public void YMTZ(String id) {
         if (id == "SelectPicture") {
-            Intent intent = new Intent(ShowPicture.this, SelectPicture.class);
+            Intent intent = new Intent(ShowPicture.this, EditPicture.class);
             startActivity(intent);
             finish();//关闭当前页面
         }

@@ -147,7 +147,6 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
         if (id == "EditPicture") {
             Intent intent = new Intent(FB_FC_ZZ.this, EditPicture.class);
             startActivity(intent);
-            finish();//关闭当前页面
         }
         if (id == "FB_FC_XQCX") {
             xqcxWindow = new FB_FC_XQCX(FB_FC_ZZ.this, xqcxOnClick);

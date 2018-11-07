@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/container" style="@style/rl_selectpicture_root" tools:ignore="MergeRootFrame">
     <!-- 顶部添加文字 -->
-    <RelativeLayout android:id="@+id/Layout_top" style="@style/rl_selectpicture_top">
+    <LinearLayout android:id="@+id/Layout_top" style="@style/rl_selectpicture_top">
         <ImageView android:id="@+id/iv_close" style="@style/iv_selectpicture_close" android:src="@drawable/close" />
         <TextView style="@style/tv_selectpicture_top" android:text="选择照片" />
-    </RelativeLayout>
-    <!-- 底部按钮 -->
-    <RelativeLayout android:id="@+id/Layout_bottom" style="@style/rl_selectpicture_bottom">
-        <TextView android:id="@+id/button_wc" style="@style/tv_selectpicture_bottom" android:text="完成" />
-    </RelativeLayout>
+    </LinearLayout>
     <!-- 显示图片 -->
-    <RelativeLayout android:id="@+id/layout_body" style="@style/rl_selectpicture_body">
+    <LinearLayout android:id="@+id/layout_body" style="@style/rl_selectpicture_body">
         <LinearLayout android:id="@+id/ll_selectpicture_body" style="@style/ll_selectpicture_body">
             <!--<RelativeLayout android:layout_width="102dp" android:layout_height="102dp">-->
                 <!--<ImageView style="@style/iv_showpiecture_select" android:layout_width="102dp" android:layout_height="102dp" android:src="@drawable/esf" ></ImageView>-->
@@ -18,5 +14,9 @@
                 <!--<ImageView android:id="@+id/ivSelect" style="@style/iv_showpiecture_select" android:src="@drawable/select" android:layout_marginLeft="77dp" android:layout_marginTop="2dp" />-->
             <!--</RelativeLayout>-->
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
+    <!-- 底部按钮 -->
+    <LinearLayout android:id="@+id/Layout_bottom" style="@style/rl_selectpicture_bottom">
+        <TextView android:id="@+id/button_wc" style="@style/tv_selectpicture_bottom" android:text="完成" />
+    </LinearLayout>
 </RelativeLayout>

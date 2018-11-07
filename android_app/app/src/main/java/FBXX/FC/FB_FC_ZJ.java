@@ -42,10 +42,10 @@ public class FB_FC_ZJ extends PopupWindow  implements View.OnClickListener {
         //设置SelectPicPopupWindow弹出窗体的背景
         this.setBackgroundDrawable(dw);
 
-        findById(itemsOnClick);
+        initView(itemsOnClick);
     }
 
-    private void findById(View.OnClickListener itemsOnClick) {
+    private void initView(View.OnClickListener itemsOnClick) {
         TextView mtv0 = (TextView) mMenuView.findViewById(R.id.tv0);
         TextView mtv1 = (TextView) mMenuView.findViewById(R.id.tv1);
         TextView mtv2 = (TextView) mMenuView.findViewById(R.id.tv2);

@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/container" style="@style/rl_editpicture_root" tools:ignore="MergeRootFrame">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/editpicture" style="@style/rl_editpicture_root" tools:ignore="MergeRootFrame">
     <!-- 顶部添加文字 -->
-    <RelativeLayout android:id="@+id/Layout_top" style="@style/rl_editpicture_top">
+    <LinearLayout android:id="@+id/Layout_top" style="@style/rl_editpicture_top">
         <TextView style="@style/tv_editpicture_top" android:text="编辑图片" />
-    </RelativeLayout>
-    <!-- 底部按钮 -->
-    <RelativeLayout android:id="@+id/Layout_bottom" style="@style/rl_editpicture_bottom">
-        <TextView android:id="@+id/button" style="@style/tv_editpicture_bottom" android:text="完成" />
-    </RelativeLayout>
+    </LinearLayout>
     <!-- 显示图片 -->
-    <RelativeLayout android:id="@+id/layout_body" style="@style/rl_editpicture_body">
+    <LinearLayout android:id="@+id/layout_body" style="@style/rl_editpicture_body">
         <LinearLayout android:id="@+id/ll_editpicture_body" style="@style/ll_editpicture_body">
-            <RelativeLayout android:layout_width="102dp" android:layout_height="102dp">
-            <ImageView android:id="@+id/iv_editpicture_add" style="@style/iv_showpiecture_select" android:layout_width="102dp" android:layout_height="102dp" android:src="@drawable/gridview_addpic" ></ImageView>
-            </RelativeLayout>
+            
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
+    <!-- 底部按钮 -->
+    <LinearLayout android:id="@+id/Layout_bottom" style="@style/rl_editpicture_bottom">
+        <TextView android:id="@+id/tv_editpicture_wc" style="@style/tv_editpicture_bottom" android:text="完成" />
+    </LinearLayout>
 </RelativeLayout>

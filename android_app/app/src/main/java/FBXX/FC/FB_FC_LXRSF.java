@@ -123,7 +123,7 @@ public class FB_FC_LXRSF extends PopupWindow implements View.OnClickListener {
     public String GetCheck(){
         String bhfy = new String();
         List<View> viewList = Base.getAllChildViews(mllSFLB);
-        for(int i=0;i<viewList.size();i++){
+        for(int i = 0; i < viewList.size(); i++) {
             if(viewList.get(i).getClass().toString().contains("LinearLayout")){
                 List<View> vs = Base.getAllChildViews(viewList.get(i));
                 TextView tv = (TextView)vs.get(0);
