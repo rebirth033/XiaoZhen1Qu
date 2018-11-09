@@ -120,4 +120,8 @@
 
     </ScrollView>
 
+    <LinearLayout style="@style/ll_dbcd_nextstep">
+        <TextView android:id="@+id/tv_dbcd_nextstep" style="@style/tv_dbcd_nextstep" android:text="下一步" />
+    </LinearLayout>
+
 </LinearLayout>

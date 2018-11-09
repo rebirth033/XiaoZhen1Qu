@@ -50,6 +50,20 @@
         <item name="android:layout_height">25dp</item>
         <item name="android:textAlignment">center</item>
     </style>
+    <style name="ll_dbcd_nextstep">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+    <style name="tv_dbcd_nextstep">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
 
     <color name="colorPrimary">#bc6ba6</color>
     <color name="colorPrimaryDark">#303F9F</color>

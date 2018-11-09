@@ -11,11 +11,12 @@ import com.example.administrator.Public.R;
 import java.util.List;
 import COMMON.Base;
 import COMMON.EditPicture;
-import COMMON.SelectPicture;
+import Entities.FB_FC_ZZ_Model;
 import LBXZ.FB_FC;
 
 public class FB_FC_ZZ extends Base implements View.OnClickListener {
 
+    public FB_FC_ZZ_Model fb_fc_zz = new FB_FC_ZZ_Model();
     public TextView mtvxqmc;
     public TextView mtvmj;
     public TextView mtvzj;
@@ -65,6 +66,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
         ViewGroup mllzjbhfy = (ViewGroup) findViewById(R.id.ll_zz_zjbhfy);
         ViewGroup mlllxrsf = (ViewGroup) findViewById(R.id.ll_zz_lxrsf);
         ViewGroup mlllxrlxdh = (ViewGroup) findViewById(R.id.ll_zz_lxrlxdh);
+        TextView mtvnext = (TextView) findViewById(R.id.tv_dbcd_nextstep);
         mtvxqmc = (TextView) findViewById(R.id.tv_zz_xqmc);
         mtvmj = (TextView) findViewById(R.id.tv_zz_mj);
         mtvts = (TextView) findViewById(R.id.tv_zz_ts);
@@ -90,6 +92,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
         mllzjbhfy.setOnClickListener(this);
         mlllxrsf.setOnClickListener(this);
         mlllxrlxdh.setOnClickListener(this);
+        mtvnext.setOnClickListener(this);
     }
 
     //事件监听
@@ -133,6 +136,9 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                 break;
             case R.id.ll_zz_lxrlxdh:
                 YMTZ("FB_FC_LXRLXDH");
+                break;
+            case R.id.tv_dbcd_nextstep:
+                YMTZ("NextStep");
                 break;
         }
     }
@@ -197,6 +203,8 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     List<View> viewList = Base.getAllChildViews(v);
                     TextView tvxqmc = (TextView)viewList.get(0);
                     mtvxqmc.setText(tvxqmc.getText());
+
+                    fb_fc_zz.setXQMC(tvxqmc.getText().toString());
                     break;
             }
         }
@@ -212,6 +220,8 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                 case R.id.tvqd:
                     mjWindow.dismiss();
                     mtvmj.setText(mjWindow.metMJ.getText());
+
+                    fb_fc_zz.setPFM(mjWindow.metMJ.getText().toString());
                     break;
             }
         }
@@ -228,6 +238,9 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     zjWindow.dismiss();
                     mtvzj.setText(zjWindow.metZJ.getText());
                     mtvyffs.setText(zjWindow.yffs.toString());
+
+                    fb_fc_zz.setZJ(zjWindow.metZJ.getText().toString());
+                    fb_fc_zz.setYFFS(zjWindow.yffs.toString());
                     break;
             }
         }
@@ -242,6 +255,13 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     mtvts.setText(fwqkWindow.mtvts.getText());
                     mtvcx.setText(fwqkWindow.mtvcx.getText());
                     mtvlc.setText(WheelStyle.createCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层","") + "/" + WheelStyle.createGJCString().get(fwqkWindow.mwvgjc.getCurrentItem()).replace("共","").replace("层",""));
+
+                    fb_fc_zz.setS(WheelStyle.createSString().get(fwqkWindow.mwvs.getCurrentItem()));
+                    fb_fc_zz.setT(WheelStyle.createTString().get(fwqkWindow.mwvt.getCurrentItem()));
+                    fb_fc_zz.setW(WheelStyle.createWString().get(fwqkWindow.mwvw.getCurrentItem()));
+                    fb_fc_zz.setCX(fwqkWindow.mtvcx.getText().toString());
+                    fb_fc_zz.setC(WheelStyle.createCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层",""));
+                    fb_fc_zz.setGJC(WheelStyle.createGJCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层",""));
                     break;
             }
         }
@@ -267,6 +287,8 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                 case R.id.tvwc:
                     zjbhfyWindow.dismiss();
                     mtvzjbhfy.setText(zjbhfyWindow.GetCheck());
+
+                    fb_fc_zz.setZJYBHFY(zjbhfyWindow.GetCheck());
                     break;
             }
         }

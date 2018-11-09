@@ -33,7 +33,7 @@ public class FB_FC extends Base implements View.OnClickListener {
                 YMTZ("FB_Main");
                 break;
             case R.id.llZZ:
-                YMTZ("FB_FC_ZZ");
+                YMTZ("FB_FC_ZZ_Model");
                 break;
         }
     }
@@ -45,7 +45,7 @@ public class FB_FC extends Base implements View.OnClickListener {
             startActivity(intent);
             finish();//关闭当前页面
         }
-        if (id == "FB_FC_ZZ") {
+        if (id == "FB_FC_ZZ_Model") {
             Intent intent = new Intent(FB_FC.this, FB_FC_ZZ.class);
             intent.putExtra("YMMC", "FB_FC");//设置参数
             startActivity(intent);

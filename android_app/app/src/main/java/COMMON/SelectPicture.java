@@ -86,16 +86,6 @@ public class SelectPicture extends PopupWindow implements View.OnClickListener {
         cursor.close();
     }
 
-    //把bitmap转换成字符串
-    public static String bitmapToString(Bitmap bitmap) {
-        String string = null;
-        ByteArrayOutputStream btString = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, btString);
-        byte[] bytes = btString.toByteArray();
-        string = Base64.encodeToString(bytes, Base64.DEFAULT);
-        return string;
-    }
-
     //显示图片
     private void diaplayImage(final String imagePath, final Activity context, List<View> editlist){
         if (imagePath != null){
@@ -147,6 +137,7 @@ public class SelectPicture extends PopupWindow implements View.OnClickListener {
                 }
             });
 
+            //判断图片是否已经选择
             for (int i = 0; i < editlist.size(); i++) {
                 if (editlist.get(i).getClass().toString().contains("RelativeLayout")) {
                     List<View> vs = Base.getAllChildViews(editlist.get(i));

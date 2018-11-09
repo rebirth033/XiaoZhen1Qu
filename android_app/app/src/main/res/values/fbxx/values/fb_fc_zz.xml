@@ -7,7 +7,7 @@
     </style>
     <style name="sv_fb_fc_zz_main">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">600dp</item>
+        <item name="android:layout_height">525dp</item>
         <item name="android:fillViewport">false</item>
         <item name="android:scrollbars">none</item>
     </style>
@@ -143,6 +143,12 @@
     </style>
     <style name="ll_content_middle_vertical_split">
         <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+    <style name="ll_fb_bottom">
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:background">@color/colorGray</item>

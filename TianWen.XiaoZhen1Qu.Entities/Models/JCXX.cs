@@ -102,6 +102,9 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         [Property]
         public virtual int ISHOT { get; set; }
 
+        /// <summary>
+        /// 照片
+        /// </summary>
         public virtual IList<PHOTOS> PHOTOS { get; set; }
     }
 }

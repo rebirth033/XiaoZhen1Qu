@@ -73,6 +73,7 @@ public class YHDL extends Base implements OnClickListener {
                     String Result = jsonobject.getString("Result");
                     String Message = jsonobject.getString("Message");
                     if(Result.equalsIgnoreCase("1")) {
+                        Base.YHM = metSJH.getText().toString();
                         DLCG();
                     }
                     else {

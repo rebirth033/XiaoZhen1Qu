@@ -10,9 +10,7 @@ using TianWen.XiaoZhen1Qu.Entities.Common;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 {
-    /// <summary>
-    /// 保存图片
-    /// </summary>
+    //保存图片
     public class SavePhotos : IHttpHandler, System.Web.SessionState.IRequiresSessionState
     {
         IFC_BLL FC_BLL = SpringHelper.GetSpringObject<IFC_BLL>("FC_BLL");
@@ -72,7 +70,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 
             gbmPhoto.FillRectangle(new SolidBrush(color), new Rectangle(0, 0, iWidth, iHeight));
             
-            //imgPhoto = WaterMark.AddImageText(imgPhoto, "风铃网", 9, 50, 30, "微软雅黑");//给图片添加文字水印
+            imgPhoto = WaterMark.AddImageText(imgPhoto, "风铃网", 9, 50, 30, "微软雅黑");//给图片添加文字水印
 
             gbmPhoto.DrawImage(imgPhoto, new Rectangle(0, 0, iWidth, iHeight), new Rectangle(0, 0, imgPhoto.Width, imgPhoto.Height), GraphicsUnit.Pixel);
 
