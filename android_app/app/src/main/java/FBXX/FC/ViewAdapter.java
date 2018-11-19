@@ -10,7 +10,7 @@ public class ViewAdapter extends PagerAdapter {
     private List<View> datas;
 
     public ViewAdapter(List<View> list) {
-        datas=list;
+        datas = list;
     }
 
     @Override
@@ -20,12 +20,12 @@ public class ViewAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view==object;
+        return view == object;
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        View view=datas.get(position);
+        View view = datas.get(position);
         container.addView(view);
         return view;
     }

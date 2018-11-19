@@ -1,4 +1,4 @@
-package COMMON;
+package Common;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,7 +10,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.provider.MediaStore;
-import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +19,7 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.example.administrator.Public.R;
-import java.io.ByteArrayOutputStream;
+
 import java.util.List;
 
 public class SelectPicture extends PopupWindow implements View.OnClickListener {

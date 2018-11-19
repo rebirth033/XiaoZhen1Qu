@@ -64,4 +64,41 @@ public class WheelStyle {
         }
         return wheelString;
     }
+    public static List<String> createKFSJString() {
+        List<String> wheelString = new ArrayList<>();
+        String[] array = new String[]{"随时看房","仅周末","仅工作日"};
+        for (int i = 0; i < array.length; i++) {
+            wheelString.add(array[i].toString());
+        }
+        return wheelString;
+    }
+    public static List<String> createYZRSString() {
+        List<String> wheelString = new ArrayList<>();
+        for (int i = 1; i <= 10; i++) {
+            wheelString.add(i + "人");
+        }
+        return wheelString;
+    }
+    public static List<String> createYearString() {
+        List<String> wheelString = new ArrayList<>();
+        String[] array = new String[]{"2018","2019"};
+        for (int i = 0; i < array.length; i++) {
+            wheelString.add(array[i].toString() + "年");
+        }
+        return wheelString;
+    }
+    public static List<String> createMonthString() {
+        List<String> wheelString = new ArrayList<>();
+        for (int i = 1; i <= 12; i++) {
+            wheelString.add(i + "月");
+        }
+        return wheelString;
+    }
+    public static List<String> createDayString() {
+        List<String> wheelString = new ArrayList<>();
+        for (int i = 1; i <= 31; i++) {
+            wheelString.add(i + "日");
+        }
+        return wheelString;
+    }
 }

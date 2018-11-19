@@ -30,9 +30,8 @@ public class FB_FC_CWDT extends PopupWindow implements View.OnClickListener {
     private ViewPager mvpbody;
     public WheelView mwvcw;//车位
     public WheelView mwvdt;//电梯
-    private View.OnClickListener ParentClick;
 
-    public FB_FC_CWDT(Activity context, View.OnClickListener itemsOnClick) {
+    public FB_FC_CWDT(Activity context, View.OnClickListener itemsOnClick, String type) {
         super(context);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mMenuView = inflater.inflate(R.layout.fb_fc_cwdt, null);
@@ -50,11 +49,11 @@ public class FB_FC_CWDT extends PopupWindow implements View.OnClickListener {
         ColorDrawable dw = new ColorDrawable(0xb0000000);
         //设置SelectPicPopupWindow弹出窗体的背景
         this.setBackgroundDrawable(dw);
-        ParentClick = itemsOnClick;
-        initView(itemsOnClick,context);
+        //初始化页面
+        initView(itemsOnClick,context, type);
     }
 
-    private void initView(View.OnClickListener itemsOnClick,Activity context) {
+    private void initView(View.OnClickListener itemsOnClick, Activity context, String type) {
 
         mllcw = (ViewGroup) mMenuView.findViewById(R.id.llcw);
         mlldt = (ViewGroup) mMenuView.findViewById(R.id.lldt);
@@ -79,8 +78,24 @@ public class FB_FC_CWDT extends PopupWindow implements View.OnClickListener {
         viewList.add(vcw);
         viewList.add(vdt);
 
+        mwvcw = (WheelView) vcw.findViewById(R.id.wvcw);
+        mwvdt = (WheelView) vdt.findViewById(R.id.wvdt);
+
+        mtvcwqd = (TextView) vcw.findViewById(R.id.tv_cw_qd);
+        mtvdtqd = (TextView) vdt.findViewById(R.id.tv_dt_qd);
+
+        mtvcwqd.setOnClickListener(this);
+        mtvdtqd.setOnClickListener(itemsOnClick);
+
         ViewAdapter adapter = new ViewAdapter(viewList);
         mvpbody.setAdapter(adapter);
+
+        mllcw.performClick();
+
+        if(type == "CW")
+            mllcw.performClick();
+        if(type == "DT")
+            mlldt.performClick();
     }
 
     //事件监听
@@ -93,10 +108,7 @@ public class FB_FC_CWDT extends PopupWindow implements View.OnClickListener {
                 mtvdt.setTextColor(Color.parseColor("#000000"));
                 tabcw.select();
                 mvpbody.setCurrentItem(0);
-                mwvcw = (WheelView) mMenuView.findViewById(R.id.wvcw);
                 mwvcw.setWheelItemList(WheelStyle.createCWString());
-                mtvcwqd = (TextView) mMenuView.findViewById(R.id.tv_cw_qd);
-                mtvcwqd.setOnClickListener(this);
                 break;
             case R.id.lldt:
                 mtvcw.setHintTextColor(Color.parseColor("#999999"));
@@ -104,14 +116,12 @@ public class FB_FC_CWDT extends PopupWindow implements View.OnClickListener {
                 mtvdt.setHintTextColor(Color.parseColor("#bc6ba6"));
                 mtvdt.setTextColor(Color.parseColor("#000000"));
                 tabdt.select();
-                mvpbody.setCurrentItem(2);
-                mwvdt = (WheelView) mMenuView.findViewById(R.id.wvdt);
+                mvpbody.setCurrentItem(1);
                 mwvdt.setWheelItemList(WheelStyle.createDTString());
-                mtvdtqd = (TextView) mMenuView.findViewById(R.id.tv_dt_qd);
-                mtvdtqd.setOnClickListener(ParentClick);
                 break;
             case R.id.tv_cw_qd:
                 mtvcw.setText(WheelStyle.createCWString().get(mwvcw.getCurrentItem()));
+                mlldt.performClick();
                 break;
         }
     }

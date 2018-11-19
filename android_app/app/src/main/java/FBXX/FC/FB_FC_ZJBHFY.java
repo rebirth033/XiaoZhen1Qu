@@ -25,7 +25,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
-import COMMON.Base;
+import Common.Base;
 
 public class FB_FC_ZJBHFY extends PopupWindow implements View.OnClickListener {
 

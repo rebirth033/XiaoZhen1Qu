@@ -1,23 +1,15 @@
-package COMMON;
+package Common;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.ContentUris;
-import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.DocumentsContract;
-import android.provider.MediaStore;
-import android.util.Base64;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.example.administrator.Public.R;
-import java.io.ByteArrayOutputStream;
+
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;

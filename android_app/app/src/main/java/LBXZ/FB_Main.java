@@ -6,13 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import COMMON.Base;
-import COMMON.GRZX_Main;
-import COMMON.GRZX_WDFB;
+import Common.Base;
+import Common.GRZX_Main;
+import Common.GRZX_WDFB;
 import com.example.administrator.Public.R;
 import LBCX.SY_Main;
-import COMMON.XX_Main;
-import COMMON.YHDL;
+import Common.XX_Main;
+import Common.YHDL;
 
 public class FB_Main extends Base implements View.OnClickListener {
 
@@ -159,16 +159,16 @@ public class FB_Main extends Base implements View.OnClickListener {
             finish();//关闭当前页面
         }
         if (id == "FC") {
-            if(Base.YHM == null) {
-                Intent intent = new Intent(FB_Main.this, YHDL.class);
-                startActivity(intent);
-                finish();//关闭当前页面
-            }
-            else {
+//            if(Base.YHM == null) {
+//                Intent intent = new Intent(FB_Main.this, YHDL.class);
+//                startActivity(intent);
+//                finish();//关闭当前页面
+//            }
+//            else {
                 Intent intent = new Intent(FB_Main.this, FB_FC.class);
                 startActivity(intent);
                 finish();//关闭当前页面
-            }
+//            }
         }
         if (id == "ESWP") {
             Intent intent = new Intent(FB_Main.this, FB_ESWP.class);

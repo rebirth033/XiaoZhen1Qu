@@ -1,4 +1,4 @@
-package COMMON;
+package Common;
 
 import android.content.Intent;
 import android.graphics.Bitmap;

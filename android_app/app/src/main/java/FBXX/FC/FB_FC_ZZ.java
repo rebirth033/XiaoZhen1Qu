@@ -8,9 +8,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.administrator.Public.R;
+import java.math.BigDecimal;
 import java.util.List;
-import COMMON.Base;
-import COMMON.EditPicture;
+import Common.Base;
+import Common.EditPicture;
 import Entities.FB_FC_ZZ_Model;
 import LBXZ.FB_FC;
 
@@ -111,19 +112,19 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                 YMTZ("FB_FC_MJ");
                 break;
             case R.id.ll_zz_ts:
-                YMTZ("FB_FC_FWQK");
+                YMTZ("FB_FC_FWQK_TS");
                 break;
             case R.id.ll_zz_cx:
-                YMTZ("FB_FC_FWQK");
+                YMTZ("FB_FC_FWQK_CX");
                 break;
             case R.id.ll_zz_lc:
-                YMTZ("FB_FC_FWQK");
+                YMTZ("FB_FC_FWQK_LC");
                 break;
             case R.id.ll_zz_cw:
-                YMTZ("FB_FC_CWDT");
+                YMTZ("FB_FC_CWDT_CW");
                 break;
             case R.id.ll_zz_dt:
-                YMTZ("FB_FC_CWDT");
+                YMTZ("FB_FC_CWDT_DT");
                 break;
             case R.id.ll_zz_zj:
                 YMTZ("FB_FC_ZJ");
@@ -166,16 +167,77 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
             zjWindow = new FB_FC_ZJ(FB_FC_ZZ.this, zjOnClick);
             zjWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
         }
-        if (id == "FB_FC_FWQK") {
-            fwqkWindow = new FB_FC_FWQK(FB_FC_ZZ.this, fwqkOnClick);
+        if (id == "FB_FC_FWQK_TS") {
+            fwqkWindow = new FB_FC_FWQK(FB_FC_ZZ.this, fwqkOnClick, "TS");
             fwqkWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
             fwqkWindow.mtvts.setText(mtvts.getText());
             fwqkWindow.mtvcx.setText(mtvcx.getText());
             fwqkWindow.mtvlc.setText(mtvlc.getText());
+
+            fwqkWindow.mwvcx.setCurrentItem(WheelStyle.createCXString().indexOf(mtvcx.getText()));
+            if(mtvts.getText().toString().indexOf("请选择") == -1) {
+                fwqkWindow.mwvs.setCurrentItem(WheelStyle.createSString().indexOf(mtvts.getText().toString().substring(0, mtvts.getText().toString().indexOf("室") + 1)));
+                fwqkWindow.mwvt.setCurrentItem(WheelStyle.createTString().indexOf(mtvts.getText().toString().substring(2, mtvts.getText().toString().indexOf("厅") + 1)));
+                fwqkWindow.mwvw.setCurrentItem(WheelStyle.createWString().indexOf(mtvts.getText().toString().substring(4, mtvts.getText().toString().indexOf("卫") + 1)));
+            }
+            if(mtvlc.getText().toString().indexOf("请选择") == -1) {
+                //fwqkWindow.mwvc.setCurrentItem(WheelStyle.createCString().indexOf(mtvlc.getText().toString().substring(0, mtvlc.getText().toString().indexOf("/")) + "层"));
+                //fwqkWindow.mwvgjc.setCurrentItem(WheelStyle.createGJCString().indexOf("共" + mtvlc.getText().toString().substring(2, 3) + "层"));
+                fwqkWindow.mwvc.setCurrentItem(1);
+                fwqkWindow.mwvgjc.setCurrentItem(5);
+            }
         }
-        if (id == "FB_FC_CWDT") {
-            cwdtWindow = new FB_FC_CWDT(FB_FC_ZZ.this, cwdtOnClick);
+        if (id == "FB_FC_FWQK_CX") {
+            fwqkWindow = new FB_FC_FWQK(FB_FC_ZZ.this, fwqkOnClick, "CX");
+            fwqkWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            fwqkWindow.mtvts.setText(mtvts.getText());
+            fwqkWindow.mtvcx.setText(mtvcx.getText());
+            fwqkWindow.mtvlc.setText(mtvlc.getText());
+
+            fwqkWindow.mwvcx.setCurrentItem(WheelStyle.createCXString().indexOf(mtvcx.getText()));
+            if(mtvts.getText().toString().indexOf("请选择") == -1) {
+                fwqkWindow.mwvs.setCurrentItem(WheelStyle.createSString().indexOf(mtvts.getText().toString().substring(0, mtvts.getText().toString().indexOf("室") + 1)));
+                fwqkWindow.mwvt.setCurrentItem(WheelStyle.createTString().indexOf(mtvts.getText().toString().substring(2, mtvts.getText().toString().indexOf("厅") + 1)));
+                fwqkWindow.mwvw.setCurrentItem(WheelStyle.createWString().indexOf(mtvts.getText().toString().substring(4, mtvts.getText().toString().indexOf("卫") + 1)));
+            }
+            if(mtvlc.getText().toString().indexOf("请选择") == -1) {
+                fwqkWindow.mwvc.setCurrentItem(WheelStyle.createCString().indexOf(mtvlc.getText().toString().substring(0, mtvlc.getText().toString().indexOf("/")) + "层"));
+                fwqkWindow.mwvgjc.setCurrentItem(WheelStyle.createGJCString().indexOf("共" + mtvlc.getText().toString().substring(2, 3) + "层"));
+            }
+        }
+        if (id == "FB_FC_FWQK_LC") {
+            fwqkWindow = new FB_FC_FWQK(FB_FC_ZZ.this, fwqkOnClick, "LC");
+            fwqkWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            fwqkWindow.mtvts.setText(mtvts.getText());
+            fwqkWindow.mtvcx.setText(mtvcx.getText());
+            fwqkWindow.mtvlc.setText(mtvlc.getText());
+
+            fwqkWindow.mwvcx.setCurrentItem(WheelStyle.createCXString().indexOf(mtvcx.getText()));
+            if(mtvts.getText().toString().indexOf("请选择") == -1) {
+                fwqkWindow.mwvs.setCurrentItem(WheelStyle.createSString().indexOf(mtvts.getText().toString().substring(0, mtvts.getText().toString().indexOf("室") + 1)));
+                fwqkWindow.mwvt.setCurrentItem(WheelStyle.createTString().indexOf(mtvts.getText().toString().substring(2, mtvts.getText().toString().indexOf("厅") + 1)));
+                fwqkWindow.mwvw.setCurrentItem(WheelStyle.createWString().indexOf(mtvts.getText().toString().substring(4, mtvts.getText().toString().indexOf("卫") + 1)));
+            }
+            if(mtvlc.getText().toString().indexOf("请选择") == -1) {
+                fwqkWindow.mwvc.setCurrentItem(WheelStyle.createCString().indexOf(mtvlc.getText().toString().substring(0, mtvlc.getText().toString().indexOf("/")) + "层"));
+                fwqkWindow.mwvgjc.setCurrentItem(WheelStyle.createGJCString().indexOf("共" + mtvlc.getText().toString().substring(2, 3) + "层"));
+            }
+        }
+        if (id == "FB_FC_CWDT_CW") {
+            cwdtWindow = new FB_FC_CWDT(FB_FC_ZZ.this, cwdtOnClick, "CW");
             cwdtWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            cwdtWindow.mtvcw.setText(mtvcw.getText());
+            cwdtWindow.mtvdt.setText(mtvdt.getText());
+            cwdtWindow.mwvcw.setCurrentItem(WheelStyle.createCWString().indexOf(mtvcw.getText()));
+            cwdtWindow.mwvdt.setCurrentItem(WheelStyle.createDTString().indexOf(mtvdt.getText()));
+        }
+        if (id == "FB_FC_CWDT_DT") {
+            cwdtWindow = new FB_FC_CWDT(FB_FC_ZZ.this, cwdtOnClick, "DT");
+            cwdtWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            cwdtWindow.mtvcw.setText(mtvcw.getText());
+            cwdtWindow.mtvdt.setText(mtvdt.getText());
+            cwdtWindow.mwvcw.setCurrentItem(WheelStyle.createCWString().indexOf(mtvcw.getText()));
+            cwdtWindow.mwvdt.setCurrentItem(WheelStyle.createDTString().indexOf(mtvdt.getText()));
         }
         if (id == "FB_FC_ZJBHFY") {
             zjbhfyWindow = new FB_FC_ZJBHFY(FB_FC_ZZ.this, zjbhfyOnClick);
@@ -188,6 +250,13 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
         if (id == "FB_FC_LXRLXDH") {
             lxrlxdhWindow = new FB_FC_LXRLXDH(FB_FC_ZZ.this, lxrlxdhOnClick);
             lxrlxdhWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        }
+        if (id == "NextStep") {
+            Intent intent = new Intent(FB_FC_ZZ.this, FB_FC_ZZ2.class);
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("fb_fc_zz", fb_fc_zz);
+            intent.putExtras(bundle);
+            startActivity(intent);
         }
     }
 
@@ -204,7 +273,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     TextView tvxqmc = (TextView)viewList.get(0);
                     mtvxqmc.setText(tvxqmc.getText());
 
-                    fb_fc_zz.setXQMC(tvxqmc.getText().toString());
+                    fb_fc_zz.XQMC = tvxqmc.getText().toString();
                     break;
             }
         }
@@ -221,7 +290,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     mjWindow.dismiss();
                     mtvmj.setText(mjWindow.metMJ.getText());
 
-                    fb_fc_zz.setPFM(mjWindow.metMJ.getText().toString());
+                    fb_fc_zz.PFM = mjWindow.metMJ.getText().toString();
                     break;
             }
         }
@@ -239,8 +308,8 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     mtvzj.setText(zjWindow.metZJ.getText());
                     mtvyffs.setText(zjWindow.yffs.toString());
 
-                    fb_fc_zz.setZJ(zjWindow.metZJ.getText().toString());
-                    fb_fc_zz.setYFFS(zjWindow.yffs.toString());
+                    fb_fc_zz.ZJ = new BigDecimal(zjWindow.metZJ.getText().toString());
+                    fb_fc_zz.YFFS = zjWindow.yffs.toString();
                     break;
             }
         }
@@ -256,12 +325,12 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     mtvcx.setText(fwqkWindow.mtvcx.getText());
                     mtvlc.setText(WheelStyle.createCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层","") + "/" + WheelStyle.createGJCString().get(fwqkWindow.mwvgjc.getCurrentItem()).replace("共","").replace("层",""));
 
-                    fb_fc_zz.setS(WheelStyle.createSString().get(fwqkWindow.mwvs.getCurrentItem()));
-                    fb_fc_zz.setT(WheelStyle.createTString().get(fwqkWindow.mwvt.getCurrentItem()));
-                    fb_fc_zz.setW(WheelStyle.createWString().get(fwqkWindow.mwvw.getCurrentItem()));
-                    fb_fc_zz.setCX(fwqkWindow.mtvcx.getText().toString());
-                    fb_fc_zz.setC(WheelStyle.createCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层",""));
-                    fb_fc_zz.setGJC(WheelStyle.createGJCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层",""));
+                    fb_fc_zz.S = WheelStyle.createSString().get(fwqkWindow.mwvs.getCurrentItem());
+                    fb_fc_zz.T = WheelStyle.createTString().get(fwqkWindow.mwvt.getCurrentItem());
+                    fb_fc_zz.W = WheelStyle.createWString().get(fwqkWindow.mwvw.getCurrentItem());
+                    fb_fc_zz.CX = fwqkWindow.mtvcx.getText().toString();
+                    fb_fc_zz.C = WheelStyle.createCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层","");
+                    fb_fc_zz.GJC = WheelStyle.createGJCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层","");
                     break;
             }
         }
@@ -288,7 +357,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     zjbhfyWindow.dismiss();
                     mtvzjbhfy.setText(zjbhfyWindow.GetCheck());
 
-                    fb_fc_zz.setZJYBHFY(zjbhfyWindow.GetCheck());
+                    fb_fc_zz.ZJYBHFY = zjbhfyWindow.GetCheck();
                     break;
             }
         }
@@ -301,6 +370,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                 case R.id.tvwc:
                     lxrsfWindow.dismiss();
                     mtvlxrsf.setText(lxrsfWindow.GetCheck());
+
                     break;
             }
         }
@@ -316,6 +386,8 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                 case R.id.tvqd:
                     lxrlxdhWindow.dismiss();
                     mtvlxrlxdh.setText(lxrlxdhWindow.metLXDH.getText());
+
+                    fb_fc_zz.LXDH = lxrlxdhWindow.metLXDH.getText().toString();
                     break;
             }
         }

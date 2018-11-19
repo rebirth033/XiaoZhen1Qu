@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import COMMON.Base;
+import Common.Base;
 import com.example.administrator.Public.R;
 
 public class FB_CL extends Base implements View.OnClickListener {

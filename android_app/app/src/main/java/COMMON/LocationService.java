@@ -1,4 +1,4 @@
-package COMMON;
+package Common;
 
 import android.content.Context;
 import com.baidu.location.BDLocationListener;

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import COMMON.Base;
+import Common.Base;
 import FBXX.FC.FB_FC_ZZ;
 
 import com.example.administrator.Public.R;

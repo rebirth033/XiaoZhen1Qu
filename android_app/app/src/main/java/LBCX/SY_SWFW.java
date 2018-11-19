@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import COMMON.Base;
+import Common.Base;
 import com.example.administrator.Public.R;
 
 public class SY_SWFW extends Base implements View.OnClickListener {

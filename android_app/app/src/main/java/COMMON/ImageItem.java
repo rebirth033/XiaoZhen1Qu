@@ -1,4 +1,4 @@
-package COMMON;
+package Common;
 
 import android.graphics.Bitmap;
 

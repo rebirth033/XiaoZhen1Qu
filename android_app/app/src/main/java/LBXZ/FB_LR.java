@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import COMMON.Base;
+import Common.Base;
 import com.example.administrator.Public.R;
 
 import org.apache.http.HttpResponse;

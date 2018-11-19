@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="rl_fb_fc_rzxx_root">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <style name="ll_fb_fc_rzxx_root">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="ll_fb_fc_rzxx_top_item">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+    <style name="tv_fb_fc_rzxx">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tv_fb_fc_rzxx_value">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="ll_fb_fc_rzxx_middle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tv_fb_fc_rzxx_title">
+        <item name="android:layout_width">340dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:paddingLeft">65dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+    <style name="tv_fb_fc_rzxx_title_qd">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">#bc6ba6</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+    <style name="ll_fb_fc_rzxx_body">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">305dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+    <style name="sv_fb_fc_rzxx_channel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">220dp</item>
+        <item name="android:fillViewport">false</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+    <style name="ll_fb_fc_rzxx_body_column">
+        <item name="android:layout_width">137dp</item>
+        <item name="android:layout_height">225dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tv_fb_fc_rzxx_body_item">
+        <item name="android:layout_width">85dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:topRightRadius">20dp</item>
+        <item name="android:topLeftRadius">20dp</item>
+        <item name="android:bottomRightRadius">20dp</item>
+        <item name="android:bottomLeftRadius">20dp</item>
+    </style>
+    <style name="tb_fb_fc_rzxx">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+</resources>

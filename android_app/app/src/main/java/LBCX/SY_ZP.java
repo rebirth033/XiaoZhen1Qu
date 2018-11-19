@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import COMMON.Base;
+import Common.Base;
 import com.example.administrator.Public.R;
 
 public class SY_ZP extends Base implements View.OnClickListener {

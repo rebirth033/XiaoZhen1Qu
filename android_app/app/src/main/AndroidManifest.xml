@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.administrator.Public">
-
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.administrator.Public">
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -27,9 +25,8 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <!-- 授予该程序使用读取文件的权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <!-- SD卡读取权限，用户写入离线定位数据 -->
-    <!-- <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> -->
+     <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -40,28 +37,20 @@
         <activity android:name="LBCX.SY_Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote" />
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote" />
 
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="w7NQOKL8SpxHrs6lixBNoe90" />
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="w7NQOKL8SpxHrs6lixBNoe90" />
 
-        <activity android:name="COMMON.YHDL" />
-        <activity android:name="COMMON.YHZC" />
-        <activity android:name="COMMON.GRZX_Main" />
-        <activity android:name="COMMON.XX_Main" />
-        <activity
-            android:name="COMMON.Base"
-            android:theme="@style/AppTheme" />
-        <activity android:name="COMMON.GRZX_WDFB" />
+        <activity android:name="Common.YHDL" />
+        <activity android:name="Common.YHZC" />
+        <activity android:name="Common.GRZX_Main" />
+        <activity android:name="Common.XX_Main" />
+        <activity android:name="Common.Base" android:theme="@style/AppTheme" />
+        <activity android:name="Common.GRZX_WDFB" />
         <activity android:name="LBXZ.FB_Main" />
         <activity android:name="LBCX.SY_ZF" />
         <activity android:name="LBCX.SY_ESF" />
@@ -87,18 +76,19 @@
         <activity android:name="LBXZ.FB_LYJD" />
         <activity android:name="LBXZ.FB_NLMY" />
         <activity android:name="LBXZ.FB_SHFW" />
-        <activity android:name="FBXX.FC.FB_FC_ZZ" />
         <activity android:name="FBXX.FC.FB_FC_XQCX" />
         <activity android:name="FBXX.FC.FB_FC_MJ" />
-        <activity android:name="FBXX.FC.FB_FC_FWQK" />
+        <activity android:name="FBXX.FC.FB_FC_FWQK" android:launchMode="singleInstance" />
         <activity android:name="FBXX.FC.FB_FC_ZJ" />
         <activity android:name="FBXX.FC.FB_FC_ZJBHFY" />
         <activity android:name="FBXX.FC.FB_FC_LXRSF" />
         <activity android:name="FBXX.FC.FB_FC_LXRLXDH" />
         <activity android:name="FBXX.FC.FB_FC_CWDT" />
-        <activity android:name="COMMON.EditPicture" />
-        <activity android:name="COMMON.SelectPicture" />
-        <activity android:name="COMMON.ShowPicture"></activity>
+        <activity android:name="Common.EditPicture" />
+        <activity android:name="Common.SelectPicture" />
+        <activity android:name="Common.ShowPicture" />
+        <activity android:name="FBXX.FC.FB_FC_ZZ" android:launchMode="singleInstance" />
+        <activity android:name="FBXX.FC.FB_FC_ZZ2" android:launchMode="singleInstance" />
+        <activity android:name="FBXX.FC.FB_FC_RZXX"></activity>
     </application>
-
 </manifest>
