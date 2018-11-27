@@ -15,7 +15,7 @@ import com.example.administrator.Public.R;
 public class FB_FC_MJ extends PopupWindow implements View.OnClickListener {
 
     private View mMenuView;
-    public EditText metMJ;
+    public EditText metmj;
 
     public FB_FC_MJ(Activity context, View.OnClickListener itemsOnClick) {
         super(context);
@@ -54,7 +54,7 @@ public class FB_FC_MJ extends PopupWindow implements View.OnClickListener {
         TextView mtvsc = (TextView) mMenuView.findViewById(R.id.tvsc);
         ImageView mivqx = (ImageView) mMenuView.findViewById(R.id.ivqx);
         TextView mtvqd = (TextView) mMenuView.findViewById(R.id.tvqd);
-        metMJ = (EditText) mMenuView.findViewById(R.id.etmj);
+        metmj = (EditText) mMenuView.findViewById(R.id.etmj);
         mtv0.setOnClickListener(this);
         mtv1.setOnClickListener(this);
         mtv2.setOnClickListener(this);
@@ -69,7 +69,7 @@ public class FB_FC_MJ extends PopupWindow implements View.OnClickListener {
         mtvsc.setOnClickListener(this);
         mivqx.setOnClickListener(itemsOnClick);
         mtvqd.setOnClickListener(itemsOnClick);
-        metMJ.setOnClickListener(itemsOnClick);
+        metmj.setOnClickListener(itemsOnClick);
     }
 
     //事件监听
@@ -116,16 +116,16 @@ public class FB_FC_MJ extends PopupWindow implements View.OnClickListener {
 
     //输入
     public void Input(String value) {
-        if(metMJ.getText().toString() == "")
-            metMJ.setText(value + "㎡");
+        if(metmj.getText().toString() == "")
+            metmj.setText(value + "㎡");
         else
-            metMJ.setText(metMJ.getText().toString().replaceAll("㎡","") + value + "㎡");
+            metmj.setText(metmj.getText().toString().replaceAll("㎡","") + value + "㎡");
     }
     //删除
     public void Delete() {
-        if(metMJ.length() == 2)
-            metMJ.setText("");
+        if(metmj.length() == 2)
+            metmj.setText("");
         else
-            metMJ.setText(metMJ.getText().toString().substring(0,metMJ.length() - 2) + "㎡");
+            metmj.setText(metmj.getText().toString().substring(0, metmj.length() - 2) + "㎡");
     }
 }

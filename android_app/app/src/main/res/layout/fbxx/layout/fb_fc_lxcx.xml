@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/rl_fb_fc_lxcx" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/rl_fb_fc_fwqk_root">
+
+    <LinearLayout style="@style/ll_fb_fc_fwqk_root">
+
+        <LinearLayout style="@style/ll_fb_fc_fwqk_top_item" android:id="@+id/ll_fwqk_wslx">
+            <TextView style="@style/tv_fb_fc_fwqk" android:text="卧室类型" />
+            <TextView style="@style/tv_fb_fc_fwqk_value" android:id="@+id/tv_fwqk_wslx" android:textColor="#bc6ba6" android:textColorHint="#bc6ba6" android:hint="请选择" />
+        </LinearLayout>
+        <LinearLayout style="@style/ll_fb_fc_fwqk_top_item" android:id="@+id/ll_fwqk_cx">
+            <TextView style="@style/tv_fb_fc_fwqk" android:text="卧室朝向" />
+            <TextView style="@style/tv_fb_fc_fwqk_value" android:id="@+id/tv_fwqk_cx" android:hint="请选择" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_fb_fc_fwqk_body">
+
+            <android.support.design.widget.TabLayout style="@style/tb_fb_fc_fwqk" android:id="@+id/tb_body">
+
+            </android.support.design.widget.TabLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager android:id="@+id/vp_body" android:layout_width="410dp" android:layout_height="230dp" android:layout_marginTop="440dp" />
+
+</RelativeLayout>

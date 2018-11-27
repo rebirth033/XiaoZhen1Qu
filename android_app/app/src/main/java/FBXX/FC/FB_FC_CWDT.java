@@ -90,8 +90,6 @@ public class FB_FC_CWDT extends PopupWindow implements View.OnClickListener {
         ViewAdapter adapter = new ViewAdapter(viewList);
         mvpbody.setAdapter(adapter);
 
-        mllcw.performClick();
-
         if(type == "CW")
             mllcw.performClick();
         if(type == "DT")
@@ -108,7 +106,6 @@ public class FB_FC_CWDT extends PopupWindow implements View.OnClickListener {
                 mtvdt.setTextColor(Color.parseColor("#000000"));
                 tabcw.select();
                 mvpbody.setCurrentItem(0);
-                mwvcw.setWheelItemList(WheelStyle.createCWString());
                 break;
             case R.id.lldt:
                 mtvcw.setHintTextColor(Color.parseColor("#999999"));
@@ -117,7 +114,6 @@ public class FB_FC_CWDT extends PopupWindow implements View.OnClickListener {
                 mtvdt.setTextColor(Color.parseColor("#000000"));
                 tabdt.select();
                 mvpbody.setCurrentItem(1);
-                mwvdt.setWheelItemList(WheelStyle.createDTString());
                 break;
             case R.id.tv_cw_qd:
                 mtvcw.setText(WheelStyle.createCWString().get(mwvcw.getCurrentItem()));

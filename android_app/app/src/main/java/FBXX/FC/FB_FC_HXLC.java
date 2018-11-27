@@ -15,34 +15,29 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
+public class FB_FC_HXLC extends PopupWindow implements View.OnClickListener {
 
     private View mMenuView;
     private ViewGroup mllts; //厅室
-    private ViewGroup mllcx; //朝向
     private ViewGroup mlllc; //楼层
     public TextView mtvts; //厅室
-    public TextView mtvcx; //朝向
     public TextView mtvlc; //楼层
     private TabLayout.Tab tabts; //厅室
-    private TabLayout.Tab tabcx; //朝向
     private TabLayout.Tab tablc; //楼层
     private TextView mtvtsqd; //厅室
-    private TextView mtvcxqd; //朝向
     private TextView mtvlcqd; //楼层
     private TabLayout mtbbody;
     private ViewPager mvpbody;
     public WheelView mwvs;//室
     public WheelView mwvt;//厅
     public WheelView mwvw;//卫
-    public WheelView mwvcx;//朝向
     public WheelView mwvc;//层
     public WheelView mwvgjc;//共几层
 
-    public FB_FC_FWQK(Activity context, View.OnClickListener itemsOnClick, String type) {
+    public FB_FC_HXLC(Activity context, View.OnClickListener itemsOnClick, String type) {
         super(context);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mMenuView = inflater.inflate(R.layout.fb_fc_fwqk, null);
+        mMenuView = inflater.inflate(R.layout.fb_fc_hxlc, null);
         //设置SelectPicPopupWindow的View
         this.setContentView(mMenuView);
         //设置SelectPicPopupWindow弹出窗体的宽
@@ -65,48 +60,38 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
     private void initView(View.OnClickListener itemsOnClick, Activity context, String type) {
 
         mllts = (ViewGroup) mMenuView.findViewById(R.id.ll_fwqk_ts);
-        mllcx = (ViewGroup) mMenuView.findViewById(R.id.ll_fwqk_cx);
         mlllc = (ViewGroup) mMenuView.findViewById(R.id.ll_fwqk_lc);
         mtvts = (TextView) mMenuView.findViewById(R.id.tv_fwqk_ts);
-        mtvcx = (TextView) mMenuView.findViewById(R.id.tv_fwqk_cx);
         mtvlc = (TextView) mMenuView.findViewById(R.id.tv_fwqk_lc);
 
         mtbbody = (TabLayout) mMenuView.findViewById(R.id.tb_body);
         mvpbody = (ViewPager) mMenuView.findViewById(R.id.vp_body);
 
         mllts.setOnClickListener(this);
-        mllcx.setOnClickListener(this);
         mlllc.setOnClickListener(this);
 
         tabts = mtbbody.newTab().setCustomView(mllts);
-        tabcx = mtbbody.newTab().setCustomView(mllcx);
         tablc = mtbbody.newTab().setCustomView(mlllc);
         mtbbody.addTab(tabts);
-        mtbbody.addTab(tabcx);
         mtbbody.addTab(tablc);
 
         List<View> viewList = new ArrayList<>();
         LayoutInflater inflater = LayoutInflater.from(context);
         View vts = inflater.inflate(R.layout.fragment_ts, null);
-        View vcx = inflater.inflate(R.layout.fragment_cx, null);
         View vlc = inflater.inflate(R.layout.fragment_lc, null);
         viewList.add(vts);
-        viewList.add(vcx);
         viewList.add(vlc);
 
         mwvs = (WheelView) vts.findViewById(R.id.wvs);
         mwvt = (WheelView) vts.findViewById(R.id.wvt);
         mwvw = (WheelView) vts.findViewById(R.id.wvw);
-        mwvcx = (WheelView) vcx.findViewById(R.id.wvcx);
         mwvc = (WheelView) vlc.findViewById(R.id.wvc);
         mwvgjc = (WheelView) vlc.findViewById(R.id.wvgjc);
 
         mtvtsqd = (TextView) vts.findViewById(R.id.tv_ts_qd);
-        mtvcxqd = (TextView) vcx.findViewById(R.id.tv_cx_qd);
         mtvlcqd = (TextView) vlc.findViewById(R.id.tv_lc_qd);
 
         mtvtsqd.setOnClickListener(this);
-        mtvcxqd.setOnClickListener(this);
         mtvlcqd.setOnClickListener(itemsOnClick);
 
         ViewAdapter adapter = new ViewAdapter(viewList);
@@ -114,8 +99,6 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
 
         if(type == "TS")
             mllts.performClick();
-        if(type == "CX")
-            mllcx.performClick();
         if(type == "LC")
             mlllc.performClick();
     }
@@ -126,28 +109,14 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
             case R.id.ll_fwqk_ts:
                 mtvts.setHintTextColor(Color.parseColor("#bc6ba6"));
                 mtvts.setTextColor(Color.parseColor("#bc6ba6"));
-                mtvcx.setHintTextColor(Color.parseColor("#999999"));
-                mtvcx.setTextColor(Color.parseColor("#000000"));
                 mtvlc.setHintTextColor(Color.parseColor("#999999"));
                 mtvlc.setTextColor(Color.parseColor("#000000"));
                 tabts.select();
                 mvpbody.setCurrentItem(0);
                 break;
-            case R.id.ll_fwqk_cx:
-                mtvts.setHintTextColor(Color.parseColor("#999999"));
-                mtvts.setTextColor(Color.parseColor("#000000"));
-                mtvcx.setHintTextColor(Color.parseColor("#bc6ba6"));
-                mtvcx.setTextColor(Color.parseColor("#bc6ba6"));
-                mtvlc.setHintTextColor(Color.parseColor("#999999"));
-                mtvlc.setTextColor(Color.parseColor("#000000"));
-                tabcx.select();
-                mvpbody.setCurrentItem(1);
-                break;
             case R.id.ll_fwqk_lc:
                 mtvts.setHintTextColor(Color.parseColor("#999999"));
                 mtvts.setTextColor(Color.parseColor("#000000"));
-                mtvcx.setHintTextColor(Color.parseColor("#999999"));
-                mtvcx.setTextColor(Color.parseColor("#000000"));
                 mtvlc.setHintTextColor(Color.parseColor("#bc6ba6"));
                 mtvlc.setTextColor(Color.parseColor("#bc6ba6"));
                 tablc.select();
@@ -155,10 +124,6 @@ public class FB_FC_FWQK extends PopupWindow implements View.OnClickListener {
                 break;
             case R.id.tv_ts_qd:
                 mtvts.setText(WheelStyle.createSString().get(mwvs.getCurrentItem()) + WheelStyle.createTString().get(mwvt.getCurrentItem()) + WheelStyle.createWString().get(mwvw.getCurrentItem()));
-                mllcx.performClick();
-                break;
-            case R.id.tv_cx_qd:
-                mtvcx.setText(WheelStyle.createCXString().get(mwvcx.getCurrentItem()));
                 mlllc.performClick();
                 break;
             case R.id.tv_lc_qd:

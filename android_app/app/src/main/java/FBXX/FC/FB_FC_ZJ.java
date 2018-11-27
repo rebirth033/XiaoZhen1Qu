@@ -16,7 +16,7 @@ import com.example.administrator.Public.R;
 public class FB_FC_ZJ extends PopupWindow  implements View.OnClickListener {
 
     private View mMenuView;
-    public EditText metZJ;
+    public EditText metzj;
     private TextView mtvy1f1;
     private TextView mtvy1f3;
     private TextView mtvbnf;
@@ -64,7 +64,7 @@ public class FB_FC_ZJ extends PopupWindow  implements View.OnClickListener {
         mtvnf = (TextView) mMenuView.findViewById(R.id.tvnf);
         ImageView mivqx = (ImageView) mMenuView.findViewById(R.id.ivqx);
         TextView mtvqd = (TextView) mMenuView.findViewById(R.id.tvqd);
-        metZJ = (EditText) mMenuView.findViewById(R.id.etzj);
+        metzj = (EditText) mMenuView.findViewById(R.id.etzj);
         mtv0.setOnClickListener(this);
         mtv1.setOnClickListener(this);
         mtv2.setOnClickListener(this);
@@ -83,7 +83,7 @@ public class FB_FC_ZJ extends PopupWindow  implements View.OnClickListener {
         mtvnf.setOnClickListener(this);
         mivqx.setOnClickListener(itemsOnClick);
         mtvqd.setOnClickListener(itemsOnClick);
-        metZJ.setOnClickListener(itemsOnClick);
+        metzj.setOnClickListener(itemsOnClick);
     }
 
     //事件监听
@@ -142,17 +142,17 @@ public class FB_FC_ZJ extends PopupWindow  implements View.OnClickListener {
 
     //输入
     private void Input(String value) {
-        if(metZJ.getText().toString() == "")
-            metZJ.setText(value + "㎡");
+        if(metzj.getText().toString() == "")
+            metzj.setText(value + "㎡");
         else
-            metZJ.setText(metZJ.getText().toString().replaceAll("元","") + value + "元");
+            metzj.setText(metzj.getText().toString().replaceAll("元","") + value + "元");
     }
     //删除
     private void Delete() {
-        if(metZJ.length() == 2)
-            metZJ.setText("");
+        if(metzj.length() == 2)
+            metzj.setText("");
         else
-            metZJ.setText(metZJ.getText().toString().substring(0,metZJ.length() - 2) + "元");
+            metzj.setText(metzj.getText().toString().substring(0,metzj.length() - 2) + "元");
     }
     //选择押付方式
     private void SetYFFS(String value){

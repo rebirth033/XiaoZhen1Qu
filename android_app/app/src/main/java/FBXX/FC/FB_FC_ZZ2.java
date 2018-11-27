@@ -88,13 +88,13 @@ public class FB_FC_ZZ2 extends Base implements View.OnClickListener {
                 FB();
                 break;
             case R.id.ll_zz_kfsj:
-                YMTZ("FB_FC_RZXX");
+                YMTZ("FB_FC_RZXX_KFSJ");
                 break;
             case R.id.ll_zz_yzrs:
-                YMTZ("FB_FC_RZXX");
+                YMTZ("FB_FC_RZXX_YZRS");
                 break;
             case R.id.ll_zz_rzsj:
-                YMTZ("FB_FC_RZXX");
+                YMTZ("FB_FC_RZXX_RZSJ");
                 break;
         }
     }
@@ -106,12 +106,62 @@ public class FB_FC_ZZ2 extends Base implements View.OnClickListener {
             intent.putExtra("YMMC", "FB_FC_ZZ2");//设置参数
             startActivity(intent);
         }
-        if (id == "FB_FC_RZXX") {
-            rzxxWindow = new FB_FC_RZXX(FB_FC_ZZ2.this, rzxxOnClick);
+        if (id == "FB_FC_RZXX_KFSJ") {
+            rzxxWindow = new FB_FC_RZXX(FB_FC_ZZ2.this, rzxxOnClick, "KFSJ");
             rzxxWindow.showAtLocation(FB_FC_ZZ2.this.findViewById(R.id.fb_fc_zz2), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
-//            rzxxWindow.mtvkfsj.setText(mtvkfsj.getText());
-//            rzxxWindow.mtvyzrs.setText(mtvyzrs.getText());
-//            rzxxWindow.mtvrzsj.setText(mtvrzsj.getText());
+            rzxxWindow.mtvkfsj.setText(mtvkfsj.getText());
+            rzxxWindow.mtvyzrs.setText(mtvyzrs.getText());
+            rzxxWindow.mtvrzsj.setText(mtvrzsj.getText());
+            rzxxWindow.mwvkfsj.setWheelItemList(WheelStyle.createKFSJString());
+            rzxxWindow.mwvyzrs.setWheelItemList(WheelStyle.createYZRSString());
+            rzxxWindow.mwvyear.setWheelItemList(WheelStyle.createYearString());
+            rzxxWindow.mwvmonth.setWheelItemList(WheelStyle.createMonthString());
+            rzxxWindow.mwvday.setWheelItemList(WheelStyle.createDayString());
+            rzxxWindow.mwvkfsj.setCurrentItem(WheelStyle.createKFSJString().indexOf(mtvkfsj.getText()));
+            rzxxWindow.mwvyzrs.setCurrentItem(WheelStyle.createYZRSString().indexOf(mtvyzrs.getText()));
+            if(mtvrzsj.getText().toString().indexOf("请选择") == -1) {
+                rzxxWindow.mwvyear.setCurrentItem(WheelStyle.createYearString().indexOf(mtvrzsj.getText().toString().substring(0, mtvrzsj.getText().toString().indexOf("年") + 1)));
+                rzxxWindow.mwvmonth.setCurrentItem(WheelStyle.createMonthString().indexOf(mtvrzsj.getText().toString().substring(5, mtvrzsj.getText().toString().indexOf("月") + 1)));
+                rzxxWindow.mwvday.setCurrentItem(WheelStyle.createDayString().indexOf(mtvrzsj.getText().toString().substring(7, mtvrzsj.getText().toString().indexOf("日") + 1)));
+            }
+        }
+        if (id == "FB_FC_RZXX_YZRS") {
+            rzxxWindow = new FB_FC_RZXX(FB_FC_ZZ2.this, rzxxOnClick, "YZRS");
+            rzxxWindow.showAtLocation(FB_FC_ZZ2.this.findViewById(R.id.fb_fc_zz2), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            rzxxWindow.mtvkfsj.setText(mtvkfsj.getText());
+            rzxxWindow.mtvyzrs.setText(mtvyzrs.getText());
+            rzxxWindow.mtvrzsj.setText(mtvrzsj.getText());
+            rzxxWindow.mwvkfsj.setWheelItemList(WheelStyle.createKFSJString());
+            rzxxWindow.mwvyzrs.setWheelItemList(WheelStyle.createYZRSString());
+            rzxxWindow.mwvyear.setWheelItemList(WheelStyle.createYearString());
+            rzxxWindow.mwvmonth.setWheelItemList(WheelStyle.createMonthString());
+            rzxxWindow.mwvday.setWheelItemList(WheelStyle.createDayString());
+            rzxxWindow.mwvkfsj.setCurrentItem(WheelStyle.createKFSJString().indexOf(mtvkfsj.getText()));
+            rzxxWindow.mwvyzrs.setCurrentItem(WheelStyle.createYZRSString().indexOf(mtvyzrs.getText()));
+            if(mtvrzsj.getText().toString().indexOf("请选择") == -1) {
+                rzxxWindow.mwvyear.setCurrentItem(WheelStyle.createYearString().indexOf(mtvrzsj.getText().toString().substring(0, mtvrzsj.getText().toString().indexOf("年") + 1)));
+                rzxxWindow.mwvmonth.setCurrentItem(WheelStyle.createMonthString().indexOf(mtvrzsj.getText().toString().substring(5, mtvrzsj.getText().toString().indexOf("月") + 1)));
+                rzxxWindow.mwvday.setCurrentItem(WheelStyle.createDayString().indexOf(mtvrzsj.getText().toString().substring(7, mtvrzsj.getText().toString().indexOf("日") + 1)));
+            }
+        }
+        if (id == "FB_FC_RZXX_RZSJ") {
+            rzxxWindow = new FB_FC_RZXX(FB_FC_ZZ2.this, rzxxOnClick, "RZSJ");
+            rzxxWindow.showAtLocation(FB_FC_ZZ2.this.findViewById(R.id.fb_fc_zz2), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            rzxxWindow.mtvkfsj.setText(mtvkfsj.getText());
+            rzxxWindow.mtvyzrs.setText(mtvyzrs.getText());
+            rzxxWindow.mtvrzsj.setText(mtvrzsj.getText());
+            rzxxWindow.mwvkfsj.setWheelItemList(WheelStyle.createKFSJString());
+            rzxxWindow.mwvyzrs.setWheelItemList(WheelStyle.createYZRSString());
+            rzxxWindow.mwvyear.setWheelItemList(WheelStyle.createYearString());
+            rzxxWindow.mwvmonth.setWheelItemList(WheelStyle.createMonthString());
+            rzxxWindow.mwvday.setWheelItemList(WheelStyle.createDayString());
+            rzxxWindow.mwvkfsj.setCurrentItem(WheelStyle.createKFSJString().indexOf(mtvkfsj.getText()));
+            rzxxWindow.mwvyzrs.setCurrentItem(WheelStyle.createYZRSString().indexOf(mtvyzrs.getText()));
+            if(mtvrzsj.getText().toString().indexOf("请选择") == -1) {
+                rzxxWindow.mwvyear.setCurrentItem(WheelStyle.createYearString().indexOf(mtvrzsj.getText().toString().substring(0, mtvrzsj.getText().toString().indexOf("年") + 1)));
+                rzxxWindow.mwvmonth.setCurrentItem(WheelStyle.createMonthString().indexOf(mtvrzsj.getText().toString().substring(5, mtvrzsj.getText().toString().indexOf("月") + 1)));
+                rzxxWindow.mwvday.setCurrentItem(WheelStyle.createDayString().indexOf(mtvrzsj.getText().toString().substring(7, mtvrzsj.getText().toString().indexOf("日") + 1)));
+            }
         }
     }
 
@@ -325,7 +375,7 @@ public class FB_FC_ZZ2 extends Base implements View.OnClickListener {
                     rzxxWindow.dismiss();
                     mtvkfsj.setText(rzxxWindow.mtvkfsj.getText());
                     mtvyzrs.setText(rzxxWindow.mtvyzrs.getText());
-                    mtvrzsj.setText(WheelStyle.createYearString().get(rzxxWindow.mwvyear.getCurrentItem()) + WheelStyle.createMonthString().get(rzxxWindow.mwvmonth.getCurrentItem()));
+                    mtvrzsj.setText(WheelStyle.createYearString().get(rzxxWindow.mwvyear.getCurrentItem()) + WheelStyle.createMonthString().get(rzxxWindow.mwvmonth.getCurrentItem()) + WheelStyle.createDayString().get(rzxxWindow.mwvday.getCurrentItem()));
                     break;
             }
         }

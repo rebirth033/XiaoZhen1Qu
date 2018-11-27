@@ -15,33 +15,33 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FB_FC_RZXX extends PopupWindow implements View.OnClickListener {
+public class FB_FC_ZKYQ extends PopupWindow implements View.OnClickListener {
 
     private View mMenuView;
     private ViewGroup mllkfsj; //看房时间
-    private ViewGroup mllyzrs; //宜住人数
+    private ViewGroup mllzkxb; //租客性别
     private ViewGroup mllrzsj; //入住时间
     public TextView mtvkfsj; //看房时间
-    public TextView mtvyzrs; //宜住人数
+    public TextView mtvzkxb; //租客性别
     public TextView mtvrzsj; //入住时间
     private TabLayout.Tab tabkfsj; //看房时间
-    private TabLayout.Tab tabyzrs; //宜住人数
+    private TabLayout.Tab tabzkxb; //租客性别
     private TabLayout.Tab tabrzsj; //入住时间
     public TextView mtvkfsjqd;//看房时间_确定按钮
-    public TextView mtvyzrsqd;//宜住人数_确定按钮
+    public TextView mtvzkxbqd;//租客性别_确定按钮
     public TextView mtvrzsjqd;//入住时间_确定按钮
     private TabLayout mtbbody;
     private ViewPager mvpbody;
     public WheelView mwvkfsj;//看房时间
-    public WheelView mwvyzrs;//宜住人数
+    public WheelView mwvzkxb;//租客性别
     public WheelView mwvyear;//年
     public WheelView mwvmonth;//月
     public WheelView mwvday;//日
 
-    public FB_FC_RZXX(Activity context, View.OnClickListener itemsOnClick, String type) {
+    public FB_FC_ZKYQ(Activity context, View.OnClickListener itemsOnClick, String type) {
         super(context);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mMenuView = inflater.inflate(R.layout.fb_fc_rzxx, null);
+        mMenuView = inflater.inflate(R.layout.fb_fc_zkyq, null);
         //设置SelectPicPopupWindow的View
         this.setContentView(mMenuView);
         //设置SelectPicPopupWindow弹出窗体的宽
@@ -63,46 +63,46 @@ public class FB_FC_RZXX extends PopupWindow implements View.OnClickListener {
     private void initView(View.OnClickListener itemsOnClick, Activity context, String type) {
 
         mllkfsj = (ViewGroup) mMenuView.findViewById(R.id.ll_rzxx_kfsj);
-        mllyzrs = (ViewGroup) mMenuView.findViewById(R.id.ll_rzxx_yzrs);
+        mllzkxb = (ViewGroup) mMenuView.findViewById(R.id.ll_rzxx_zkxb);
         mllrzsj = (ViewGroup) mMenuView.findViewById(R.id.ll_rzxx_rzsj);
         mtvkfsj = (TextView) mMenuView.findViewById(R.id.tv_rzxx_kfsj);
-        mtvyzrs = (TextView) mMenuView.findViewById(R.id.tv_rzxx_yzrs);
+        mtvzkxb = (TextView) mMenuView.findViewById(R.id.tv_rzxx_zkxb);
         mtvrzsj = (TextView) mMenuView.findViewById(R.id.tv_rzxx_rzsj);
 
         mtbbody = (TabLayout) mMenuView.findViewById(R.id.tb_body);
         mvpbody = (ViewPager) mMenuView.findViewById(R.id.vp_body);
 
         mllkfsj.setOnClickListener(this);
-        mllyzrs.setOnClickListener(this);
+        mllzkxb.setOnClickListener(this);
         mllrzsj.setOnClickListener(this);
 
         tabkfsj = mtbbody.newTab().setCustomView(mllkfsj);
-        tabyzrs = mtbbody.newTab().setCustomView(mllyzrs);
+        tabzkxb = mtbbody.newTab().setCustomView(mllzkxb);
         tabrzsj = mtbbody.newTab().setCustomView(mllrzsj);
         mtbbody.addTab(tabkfsj);
-        mtbbody.addTab(tabyzrs);
+        mtbbody.addTab(tabzkxb);
         mtbbody.addTab(tabrzsj);
 
         List<View> viewList = new ArrayList<>();
         LayoutInflater inflater = LayoutInflater.from(context);
         View vkfsj = inflater.inflate(R.layout.fragment_kfsj, null);
-        View vyzrs = inflater.inflate(R.layout.fragment_yzrs, null);
+        View vzkxb = inflater.inflate(R.layout.fragment_zkxb, null);
         View vrzsj = inflater.inflate(R.layout.fragment_rzsj, null);
         viewList.add(vkfsj);
-        viewList.add(vyzrs);
+        viewList.add(vzkxb);
         viewList.add(vrzsj);
 
         mwvkfsj = (WheelView) vkfsj.findViewById(R.id.wvkfsj);
-        mwvyzrs = (WheelView) vyzrs.findViewById(R.id.wvyzrs);
+        mwvzkxb = (WheelView) vzkxb.findViewById(R.id.wvzkxb);
         mwvyear = (WheelView) vrzsj.findViewById(R.id.wvyear);
         mwvmonth = (WheelView) vrzsj.findViewById(R.id.wvmonth);
         mwvday = (WheelView) vrzsj.findViewById(R.id.wvday);
 
         mtvkfsjqd = (TextView) vkfsj.findViewById(R.id.tv_kfsj_qd);
-        mtvyzrsqd = (TextView) vyzrs.findViewById(R.id.tv_yzrs_qd);
+        mtvzkxbqd = (TextView) vzkxb.findViewById(R.id.tv_zkxb_qd);
         mtvrzsjqd = (TextView) vrzsj.findViewById(R.id.tv_rzsj_qd);
         mtvkfsjqd.setOnClickListener(this);
-        mtvyzrsqd.setOnClickListener(this);
+        mtvzkxbqd.setOnClickListener(this);
         mtvrzsjqd.setOnClickListener(itemsOnClick);
 
         ViewAdapter adapter = new ViewAdapter(viewList);
@@ -110,8 +110,8 @@ public class FB_FC_RZXX extends PopupWindow implements View.OnClickListener {
 
         if(type == "KFSJ")
             mllkfsj.performClick();
-        if(type == "YZRS")
-            mllyzrs.performClick();
+        if(type == "ZKXB")
+            mllzkxb.performClick();
         if(type == "RZSJ")
             mllrzsj.performClick();
     }
@@ -122,28 +122,28 @@ public class FB_FC_RZXX extends PopupWindow implements View.OnClickListener {
             case R.id.ll_rzxx_kfsj:
                 mtvkfsj.setHintTextColor(Color.parseColor("#bc6ba6"));
                 mtvkfsj.setTextColor(Color.parseColor("#bc6ba6"));
-                mtvyzrs.setHintTextColor(Color.parseColor("#999999"));
-                mtvyzrs.setTextColor(Color.parseColor("#000000"));
+                mtvzkxb.setHintTextColor(Color.parseColor("#999999"));
+                mtvzkxb.setTextColor(Color.parseColor("#000000"));
                 mtvrzsj.setHintTextColor(Color.parseColor("#999999"));
                 mtvrzsj.setTextColor(Color.parseColor("#000000"));
                 tabkfsj.select();
                 mvpbody.setCurrentItem(0);
                 break;
-            case R.id.ll_rzxx_yzrs:
+            case R.id.ll_rzxx_zkxb:
                 mtvkfsj.setHintTextColor(Color.parseColor("#999999"));
                 mtvkfsj.setTextColor(Color.parseColor("#000000"));
-                mtvyzrs.setHintTextColor(Color.parseColor("#bc6ba6"));
-                mtvyzrs.setTextColor(Color.parseColor("#bc6ba6"));
+                mtvzkxb.setHintTextColor(Color.parseColor("#bc6ba6"));
+                mtvzkxb.setTextColor(Color.parseColor("#bc6ba6"));
                 mtvrzsj.setHintTextColor(Color.parseColor("#999999"));
                 mtvrzsj.setTextColor(Color.parseColor("#000000"));
-                tabyzrs.select();
+                tabzkxb.select();
                 mvpbody.setCurrentItem(1);
                 break;
             case R.id.ll_rzxx_rzsj:
                 mtvkfsj.setHintTextColor(Color.parseColor("#999999"));
                 mtvkfsj.setTextColor(Color.parseColor("#000000"));
-                mtvyzrs.setHintTextColor(Color.parseColor("#999999"));
-                mtvyzrs.setTextColor(Color.parseColor("#000000"));
+                mtvzkxb.setHintTextColor(Color.parseColor("#999999"));
+                mtvzkxb.setTextColor(Color.parseColor("#000000"));
                 mtvrzsj.setHintTextColor(Color.parseColor("#bc6ba6"));
                 mtvrzsj.setTextColor(Color.parseColor("#bc6ba6"));
                 tabrzsj.select();
@@ -151,10 +151,10 @@ public class FB_FC_RZXX extends PopupWindow implements View.OnClickListener {
                 break;
             case R.id.tv_kfsj_qd:
                 mtvkfsj.setText(WheelStyle.createKFSJString().get(mwvkfsj.getCurrentItem()));
-                mllyzrs.performClick();
+                mllzkxb.performClick();
                 break;
-            case R.id.tv_yzrs_qd:
-                mtvyzrs.setText(WheelStyle.createYZRSString().get(mwvyzrs.getCurrentItem()));
+            case R.id.tv_zkxb_qd:
+                mtvzkxb.setText(WheelStyle.createZKXBString().get(mwvzkxb.getCurrentItem()));
                 mllrzsj.performClick();
                 break;
         }

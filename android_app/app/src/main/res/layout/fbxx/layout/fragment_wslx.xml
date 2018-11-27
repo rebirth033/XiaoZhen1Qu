@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_fc_fwqk_body" android:id="@+id/fragment_cx" android:orientation="vertical">
+        <LinearLayout style="@style/ll_fb_fc_fwqk_middle">
+            <TextView android:id="@+id/tvtitle" style="@style/tv_fb_fc_fwqk_title" android:text="请选择卧室类型" />
+            <TextView android:id="@+id/tv_wslx_qd" style="@style/tv_fb_fc_fwqk_title_qd"  android:text="确定" />
+        </LinearLayout>
+    <LinearLayout style="@style/ll_fb_fc_fwqk_middle" android:layout_width="410dp" android:layout_height="185dp">
+        <FBXX.FC.WheelView android:id="@+id/wvwslx" android:layout_width="410dp" android:layout_height="185dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -6,7 +6,7 @@
 
         <LinearLayout style="@style/ll_fb_fc_mj_top">
             <TextView style="@style/tv_fb_fc_mj" android:text="面积" />
-            <EditText style="@style/et_fb_fc_mj" android:id="@+id/etmj" />
+            <EditText style="@style/et_fb_fc_mj" android:id="@+id/etmj" android:hint="请填写面积" />
         </LinearLayout>
 
         <TextView style="@style/tv_fb_fc_mj_title" android:text="请输入房屋面积" />

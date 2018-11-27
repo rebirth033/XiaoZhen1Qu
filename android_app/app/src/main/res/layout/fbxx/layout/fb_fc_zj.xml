@@ -6,10 +6,10 @@
 
         <LinearLayout style="@style/ll_fb_fc_zj_top">
             <TextView style="@style/tv_fb_fc_zj" android:text="租金" />
-            <EditText style="@style/et_fb_fc_zj" android:id="@+id/etzj" />
+            <EditText style="@style/et_fb_fc_zj" android:id="@+id/etzj" android:hint="请填写租金" />
         </LinearLayout>
 
-        <TextView style="@style/tv_fb_fc_zj_title" android:text="请输入月租金" />
+        <TextView style="@style/tv_fb_fc_zj_title" android:hint="请输入月租金" />
 
         <LinearLayout style="@style/ll_fb_fc_zj_horizontal">
             <TextView style="@style/tv_fb_fc_yffs" android:id="@+id/tvy1f1" android:text="押一付一" />

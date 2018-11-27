@@ -12,38 +12,38 @@ import java.math.BigDecimal;
 import java.util.List;
 import Common.Base;
 import Common.EditPicture;
-import Entities.FB_FC_ZZ_Model;
+import Entities.FB_FC_ESF_Model;
 import LBXZ.FB_FC;
 
-public class FB_FC_ZZ extends Base implements View.OnClickListener {
+public class FB_FC_ESF extends Base implements View.OnClickListener {
 
-    public FB_FC_ZZ_Model fb_fc_zz = new FB_FC_ZZ_Model();
+    public FB_FC_ESF_Model FB_FC_ESF = new FB_FC_ESF_Model();
     public TextView mtvxqmc;
     public TextView mtvmj;
-    public TextView mtvzj;
+    public TextView mtvsj;
     public TextView mtvts;
     public TextView mtvcx;
     public TextView mtvlc;
-    public TextView mtvcw;
-    public TextView mtvdt;
-    public TextView mtvyffs;
+    public TextView mtvfwlx;
+    public TextView mtvgnlx;
+    public TextView mtvcqnx;
+    public TextView mtvcqlx;
+    public TextView mtvzxqk;
     public TextView mtvzjbhfy;
-    public TextView mtvlxrsf;
-    public TextView mtvlxrlxdh;
+    public TextView mtvfwlxrsf;
+    public TextView mtvfwlxrlxdh;
     //自定义的弹出框类
     FB_FC_XQCX xqcxWindow;
     FB_FC_MJ mjWindow;
     FB_FC_ZJ zjWindow;
     FB_FC_FWQK fwqkWindow;
-    FB_FC_CWDT cwdtWindow;
-    FB_FC_ZJBHFY zjbhfyWindow;
-    FB_FC_LXRSF lxrsfWindow;
-    FB_FC_LXRLXDH lxrlxdhWindow;
+    FB_FC_ESF_LXGN lxgnWindow;
+    FB_FC_ESF_CQZX cqzxWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fb_fc_zz);
+        setContentView(R.layout.fb_fc_esf);
         Intent intent = getIntent();
         initView();
         String XQMC = intent.getStringExtra("XQMC");
@@ -56,43 +56,39 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
     private void initView() {
         ImageView mivback = (ImageView) findViewById(R.id.iv_back);
         ImageView mivsczp = (ImageView) findViewById(R.id.iv_sczp);
-        ViewGroup mllxq = (ViewGroup) findViewById(R.id.ll_zz_xqmc);
-        ViewGroup mllmj = (ViewGroup) findViewById(R.id.ll_zz_mj);
-        ViewGroup mllts = (ViewGroup) findViewById(R.id.ll_zz_ts);
-        ViewGroup mllcx = (ViewGroup) findViewById(R.id.ll_zz_cx);
-        ViewGroup mlllc = (ViewGroup) findViewById(R.id.ll_zz_lc);
-        ViewGroup mllcw = (ViewGroup) findViewById(R.id.ll_zz_cw);
-        ViewGroup mlldt = (ViewGroup) findViewById(R.id.ll_zz_dt);
-        ViewGroup mllzj = (ViewGroup) findViewById(R.id.ll_zz_zj);
-        ViewGroup mllzjbhfy = (ViewGroup) findViewById(R.id.ll_zz_zjbhfy);
-        ViewGroup mlllxrsf = (ViewGroup) findViewById(R.id.ll_zz_lxrsf);
-        ViewGroup mlllxrlxdh = (ViewGroup) findViewById(R.id.ll_zz_lxrlxdh);
+        ViewGroup mllxq = (ViewGroup) findViewById(R.id.ll_esf_xqmc);
+        ViewGroup mllts = (ViewGroup) findViewById(R.id.ll_esf_ts);
+        ViewGroup mllcx = (ViewGroup) findViewById(R.id.ll_esf_cx);
+        ViewGroup mlllc = (ViewGroup) findViewById(R.id.ll_esf_lc);
+        ViewGroup mllfwlx = (ViewGroup) findViewById(R.id.ll_esf_fwlx);
+        ViewGroup mllgnlx = (ViewGroup) findViewById(R.id.ll_esf_gnlx);
+        findViewById(R.id.ll_esf_cqnx).setOnClickListener(this);
+        findViewById(R.id.ll_esf_cqlx).setOnClickListener(this);
+        findViewById(R.id.ll_esf_zx).setOnClickListener(this);
+        ViewGroup mllmj = (ViewGroup) findViewById(R.id.ll_esf_mj);
+        ViewGroup mllsj = (ViewGroup) findViewById(R.id.ll_esf_sj);
         TextView mtvnext = (TextView) findViewById(R.id.tv_dbcd_nextstep);
-        mtvxqmc = (TextView) findViewById(R.id.tv_zz_xqmc);
-        mtvmj = (TextView) findViewById(R.id.tv_zz_mj);
-        mtvts = (TextView) findViewById(R.id.tv_zz_ts);
-        mtvcx= (TextView) findViewById(R.id.tv_zz_cx);
-        mtvlc = (TextView) findViewById(R.id.tv_zz_lc);
-        mtvcw = (TextView) findViewById(R.id.tv_zz_cw);
-        mtvdt = (TextView) findViewById(R.id.tv_zz_dt);
-        mtvzj = (TextView) findViewById(R.id.tv_zz_zj);
-        mtvyffs = (TextView) findViewById(R.id.tv_zz_yffs);
-        mtvzjbhfy = (TextView) findViewById(R.id.tv_zz_zjbhfy);
-        mtvlxrsf = (TextView) findViewById(R.id.tv_zz_lxrsf);
-        mtvlxrlxdh = (TextView) findViewById(R.id.tv_zz_lxrlxdh);
+        mtvxqmc = (TextView) findViewById(R.id.tv_esf_xqmc);
+        mtvts = (TextView) findViewById(R.id.tv_esf_ts);
+        mtvcx = (TextView) findViewById(R.id.tv_esf_cx);
+        mtvlc = (TextView) findViewById(R.id.tv_esf_lc);
+        mtvfwlx = (TextView) findViewById(R.id.tv_esf_fwlx);
+        mtvgnlx = (TextView) findViewById(R.id.tv_esf_gnlx);
+        mtvcqnx = (TextView) findViewById(R.id.tv_esf_cqnx);
+        mtvcqlx = (TextView) findViewById(R.id.tv_esf_cqlx);
+        mtvzxqk = (TextView) findViewById(R.id.tv_esf_zx);
+        mtvmj = (TextView) findViewById(R.id.tv_esf_mj);
+        mtvsj = (TextView) findViewById(R.id.tv_esf_sj);
         mivback.setOnClickListener(this);
         mivsczp.setOnClickListener(this);
         mllxq.setOnClickListener(this);
         mllmj.setOnClickListener(this);
+        mllsj.setOnClickListener(this);
         mllts.setOnClickListener(this);
         mllcx.setOnClickListener(this);
         mlllc.setOnClickListener(this);
-        mllcw.setOnClickListener(this);
-        mlldt.setOnClickListener(this);
-        mllzj.setOnClickListener(this);
-        mllzjbhfy.setOnClickListener(this);
-        mlllxrsf.setOnClickListener(this);
-        mlllxrlxdh.setOnClickListener(this);
+        mllfwlx.setOnClickListener(this);
+        mllgnlx.setOnClickListener(this);
         mtvnext.setOnClickListener(this);
     }
 
@@ -105,38 +101,38 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
             case R.id.iv_sczp:
                 YMTZ("EditPicture");
                 break;
-            case R.id.ll_zz_xqmc:
+            case R.id.ll_esf_xqmc:
                 YMTZ("FB_FC_XQCX");
                 break;
-            case R.id.ll_zz_mj:
+            case R.id.ll_esf_mj:
                 YMTZ("FB_FC_MJ");
                 break;
-            case R.id.ll_zz_ts:
+            case R.id.ll_esf_sj:
+                YMTZ("FB_FC_SJ");
+                break;
+            case R.id.ll_esf_ts:
                 YMTZ("FB_FC_FWQK_TS");
                 break;
-            case R.id.ll_zz_cx:
-                YMTZ("FB_FC_FWQK_CX");
+            case R.id.ll_esf_cx:
+                YMTZ("FB_FC_LXCX_CX");
                 break;
-            case R.id.ll_zz_lc:
+            case R.id.ll_esf_lc:
                 YMTZ("FB_FC_FWQK_LC");
                 break;
-            case R.id.ll_zz_cw:
-                YMTZ("FB_FC_CWDT_CW");
+            case R.id.ll_esf_fwlx:
+                YMTZ("FB_FC_LXGN_FWLX");
                 break;
-            case R.id.ll_zz_dt:
-                YMTZ("FB_FC_CWDT_DT");
+            case R.id.ll_esf_gnlx:
+                YMTZ("FB_FC_LXGN_FWLX");
                 break;
-            case R.id.ll_zz_zj:
-                YMTZ("FB_FC_ZJ");
+            case R.id.ll_esf_cqnx:
+                YMTZ("FB_FC_CQZX_CQNX");
                 break;
-            case R.id.ll_zz_zjbhfy:
-                YMTZ("FB_FC_ZJBHFY");
+            case R.id.ll_esf_cqlx:
+                YMTZ("FB_FC_CQZX_CQLX");
                 break;
-            case R.id.ll_zz_lxrsf:
-                YMTZ("FB_FC_LXRSF");
-                break;
-            case R.id.ll_zz_lxrlxdh:
-                YMTZ("FB_FC_LXRLXDH");
+            case R.id.ll_esf_zx:
+                YMTZ("FB_FC_CQZX_ZXQK");
                 break;
             case R.id.tv_dbcd_nextstep:
                 YMTZ("NextStep");
@@ -147,31 +143,32 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
     //页面跳转
     public void YMTZ(String id) {
         if (id == "FB_FC") {
-            Intent intent = new Intent(FB_FC_ZZ.this, FB_FC.class);
+            Intent intent = new Intent(FB_FC_ESF.this, FB_FC.class);
             startActivity(intent);
             finish();//关闭当前页面
         }
         if (id == "EditPicture") {
-            Intent intent = new Intent(FB_FC_ZZ.this, EditPicture.class);
+            Intent intent = new Intent(FB_FC_ESF.this, EditPicture.class);
             startActivity(intent);
         }
         if (id == "FB_FC_XQCX") {
-            xqcxWindow = new FB_FC_XQCX(FB_FC_ZZ.this, xqcxOnClick);
-            xqcxWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            xqcxWindow = new FB_FC_XQCX(FB_FC_ESF.this, xqcxOnClick);
+            xqcxWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
         }
         if (id == "FB_FC_MJ") {
-            mjWindow = new FB_FC_MJ(FB_FC_ZZ.this, mjOnClick);
-            mjWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            mjWindow = new FB_FC_MJ(FB_FC_ESF.this, mjOnClick);
+            mjWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            mjWindow.metmj.setText(mtvmj.getText());
         }
-        if (id == "FB_FC_ZJ") {
-            zjWindow = new FB_FC_ZJ(FB_FC_ZZ.this, zjOnClick);
-            zjWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        if (id == "FB_FC_SJ") {
+            zjWindow = new FB_FC_ZJ(FB_FC_ESF.this, zjOnClick);
+            zjWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            zjWindow.metzj.setText(mtvsj.getText());
         }
         if (id == "FB_FC_FWQK_TS") {
-            fwqkWindow = new FB_FC_FWQK(FB_FC_ZZ.this, fwqkOnClick, "TS");
-            fwqkWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            fwqkWindow = new FB_FC_FWQK(FB_FC_ESF.this, fwqkOnClick, "TS");
+            fwqkWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
             fwqkWindow.mtvts.setText(mtvts.getText());
-            fwqkWindow.mtvcx.setText(mtvcx.getText());
             fwqkWindow.mtvlc.setText(mtvlc.getText());
             fwqkWindow.mwvs.setWheelItemList(WheelStyle.createSString());
             fwqkWindow.mwvt.setWheelItemList(WheelStyle.createTString());
@@ -191,8 +188,8 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
             }
         }
         if (id == "FB_FC_FWQK_CX") {
-            fwqkWindow = new FB_FC_FWQK(FB_FC_ZZ.this, fwqkOnClick, "CX");
-            fwqkWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            fwqkWindow = new FB_FC_FWQK(FB_FC_ESF.this, fwqkOnClick, "CX");
+            fwqkWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
             fwqkWindow.mtvts.setText(mtvts.getText());
             fwqkWindow.mtvcx.setText(mtvcx.getText());
             fwqkWindow.mtvlc.setText(mtvlc.getText());
@@ -214,10 +211,9 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
             }
         }
         if (id == "FB_FC_FWQK_LC") {
-            fwqkWindow = new FB_FC_FWQK(FB_FC_ZZ.this, fwqkOnClick, "LC");
-            fwqkWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            fwqkWindow = new FB_FC_FWQK(FB_FC_ESF.this, fwqkOnClick, "LC");
+            fwqkWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
             fwqkWindow.mtvts.setText(mtvts.getText());
-            fwqkWindow.mtvcx.setText(mtvcx.getText());
             fwqkWindow.mtvlc.setText(mtvlc.getText());
             fwqkWindow.mwvs.setWheelItemList(WheelStyle.createSString());
             fwqkWindow.mwvt.setWheelItemList(WheelStyle.createTString());
@@ -236,42 +232,60 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                 fwqkWindow.mwvgjc.setCurrentItem(WheelStyle.createGJCString().indexOf("共" + mtvlc.getText().toString().substring(2, mtvlc.getText().length()) + "层"));
             }
         }
-        if (id == "FB_FC_CWDT_CW") {
-            cwdtWindow = new FB_FC_CWDT(FB_FC_ZZ.this, cwdtOnClick, "CW");
-            cwdtWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
-            cwdtWindow.mtvcw.setText(mtvcw.getText());
-            cwdtWindow.mtvdt.setText(mtvdt.getText());
-            cwdtWindow.mwvcw.setWheelItemList(WheelStyle.createCWString());
-            cwdtWindow.mwvdt.setWheelItemList(WheelStyle.createDTString());
-            cwdtWindow.mwvcw.setCurrentItem(WheelStyle.createCWString().indexOf(mtvcw.getText()));
-            cwdtWindow.mwvdt.setCurrentItem(WheelStyle.createDTString().indexOf(mtvdt.getText()));
+        if (id == "FB_FC_LXGN_FWLX") {
+            lxgnWindow = new FB_FC_ESF_LXGN(FB_FC_ESF.this, lxgnOnClick, "FWLX");
+            lxgnWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            lxgnWindow.mtvfwlx.setText(mtvfwlx.getText());
+            lxgnWindow.mtvgnlx.setText(mtvgnlx.getText());
+            lxgnWindow.mwvfwlx.setWheelItemList(WheelStyle.createFWLXString());
+            lxgnWindow.mwvgnlx.setWheelItemList(WheelStyle.createGNLXString());
+            lxgnWindow.mwvfwlx.setCurrentItem(WheelStyle.createFWLXString().indexOf(mtvfwlx.getText()));
+            lxgnWindow.mwvgnlx.setCurrentItem(WheelStyle.createGNLXString().indexOf(mtvgnlx.getText()));
         }
-        if (id == "FB_FC_CWDT_DT") {
-            cwdtWindow = new FB_FC_CWDT(FB_FC_ZZ.this, cwdtOnClick, "DT");
-            cwdtWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
-            cwdtWindow.mtvcw.setText(mtvcw.getText());
-            cwdtWindow.mtvdt.setText(mtvdt.getText());
-            cwdtWindow.mwvcw.setWheelItemList(WheelStyle.createCWString());
-            cwdtWindow.mwvdt.setWheelItemList(WheelStyle.createDTString());
-            cwdtWindow.mwvcw.setCurrentItem(WheelStyle.createCWString().indexOf(mtvcw.getText()));
-            cwdtWindow.mwvdt.setCurrentItem(WheelStyle.createDTString().indexOf(mtvdt.getText()));
+        if (id == "FB_FC_LXGN_GNLX") {
+            lxgnWindow = new FB_FC_ESF_LXGN(FB_FC_ESF.this, lxgnOnClick, "GNLX");
+            lxgnWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            lxgnWindow.mtvfwlx.setText(mtvfwlx.getText());
+            lxgnWindow.mtvgnlx.setText(mtvgnlx.getText());
+            lxgnWindow.mwvfwlx.setWheelItemList(WheelStyle.createFWLXString());
+            lxgnWindow.mwvgnlx.setWheelItemList(WheelStyle.createGNLXString());
+            lxgnWindow.mwvfwlx.setCurrentItem(WheelStyle.createFWLXString().indexOf(mtvfwlx.getText()));
+            lxgnWindow.mwvgnlx.setCurrentItem(WheelStyle.createGNLXString().indexOf(mtvgnlx.getText()));
         }
-        if (id == "FB_FC_ZJBHFY") {
-            zjbhfyWindow = new FB_FC_ZJBHFY(FB_FC_ZZ.this, zjbhfyOnClick);
-            zjbhfyWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        if (id == "FB_FC_CQZX_CQNX") {
+            cqzxWindow = new FB_FC_ESF_CQZX(FB_FC_ESF.this, cqzxOnClick, "CQNX");
+            cqzxWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            cqzxWindow.mtvcqnx.setText(mtvcqnx.getText());
+            cqzxWindow.mtvcqlx.setText(mtvcqlx.getText());
+            cqzxWindow.mtvzxqk.setText(mtvzxqk.getText());
+            cqzxWindow.mwvcqnx.setWheelItemList(WheelStyle.createCQNXString());
+            cqzxWindow.mwvcqlx.setWheelItemList(WheelStyle.createCQLXString());
+            cqzxWindow.mwvzxqk.setWheelItemList(WheelStyle.createZXQKString());
         }
-        if (id == "FB_FC_LXRSF") {
-            lxrsfWindow = new FB_FC_LXRSF(FB_FC_ZZ.this, lxrsfOnClick);
-            lxrsfWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        if (id == "FB_FC_CQZX_CQLX") {
+            cqzxWindow = new FB_FC_ESF_CQZX(FB_FC_ESF.this, cqzxOnClick, "CQLX");
+            cqzxWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            cqzxWindow.mtvcqnx.setText(mtvcqnx.getText());
+            cqzxWindow.mtvcqlx.setText(mtvcqlx.getText());
+            cqzxWindow.mtvzxqk.setText(mtvzxqk.getText());
+            cqzxWindow.mwvcqnx.setWheelItemList(WheelStyle.createCQNXString());
+            cqzxWindow.mwvcqlx.setWheelItemList(WheelStyle.createCQLXString());
+            cqzxWindow.mwvzxqk.setWheelItemList(WheelStyle.createZXQKString());
         }
-        if (id == "FB_FC_LXRLXDH") {
-            lxrlxdhWindow = new FB_FC_LXRLXDH(FB_FC_ZZ.this, lxrlxdhOnClick);
-            lxrlxdhWindow.showAtLocation(FB_FC_ZZ.this.findViewById(R.id.fb_fc_zz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        if (id == "FB_FC_CQZX_ZXQK") {
+            cqzxWindow = new FB_FC_ESF_CQZX(FB_FC_ESF.this, cqzxOnClick, "ZXQK");
+            cqzxWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            cqzxWindow.mtvcqnx.setText(mtvcqnx.getText());
+            cqzxWindow.mtvcqlx.setText(mtvcqlx.getText());
+            cqzxWindow.mtvzxqk.setText(mtvzxqk.getText());
+            cqzxWindow.mwvcqnx.setWheelItemList(WheelStyle.createCQNXString());
+            cqzxWindow.mwvcqlx.setWheelItemList(WheelStyle.createCQLXString());
+            cqzxWindow.mwvzxqk.setWheelItemList(WheelStyle.createZXQKString());
         }
         if (id == "NextStep") {
-            Intent intent = new Intent(FB_FC_ZZ.this, FB_FC_ZZ2.class);
+            Intent intent = new Intent(FB_FC_ESF.this, FB_FC_HZ2.class);
             Bundle bundle = new Bundle();
-            bundle.putSerializable("fb_fc_zz", fb_fc_zz);
+            bundle.putSerializable("FB_FC_HZ", FB_FC_ESF);
             intent.putExtras(bundle);
             startActivity(intent);
         }
@@ -290,7 +304,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     TextView tvxqmc = (TextView)viewList.get(0);
                     mtvxqmc.setText(tvxqmc.getText());
 
-                    fb_fc_zz.XQMC = tvxqmc.getText().toString();
+                    FB_FC_ESF.XQMC = tvxqmc.getText().toString();
                     break;
             }
         }
@@ -307,7 +321,7 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     mjWindow.dismiss();
                     mtvmj.setText(mjWindow.metmj.getText());
 
-                    fb_fc_zz.PFM = mjWindow.metmj.getText().toString();
+                    FB_FC_ESF.PFM = mjWindow.metmj.getText().toString();
                     break;
             }
         }
@@ -322,11 +336,9 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     break;
                 case R.id.tvqd:
                     zjWindow.dismiss();
-                    mtvzj.setText(zjWindow.metzj.getText());
-                    mtvyffs.setText(zjWindow.yffs.toString());
+                    mtvsj.setText(zjWindow.metzj.getText());
 
-                    fb_fc_zz.ZJ = new BigDecimal(zjWindow.metzj.getText().toString().replace("元",""));
-                    fb_fc_zz.YFFS = zjWindow.yffs.toString();
+                    FB_FC_ESF.ZJ = new BigDecimal(zjWindow.metzj.getText().toString().replace("元",""));
                     break;
             }
         }
@@ -342,69 +354,39 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
                     mtvcx.setText(fwqkWindow.mtvcx.getText());
                     mtvlc.setText(WheelStyle.createCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层","") + "/" + WheelStyle.createGJCString().get(fwqkWindow.mwvgjc.getCurrentItem()).replace("共","").replace("层",""));
 
-                    fb_fc_zz.S = WheelStyle.createSString().get(fwqkWindow.mwvs.getCurrentItem());
-                    fb_fc_zz.T = WheelStyle.createTString().get(fwqkWindow.mwvt.getCurrentItem());
-                    fb_fc_zz.W = WheelStyle.createWString().get(fwqkWindow.mwvw.getCurrentItem());
-                    fb_fc_zz.CX = fwqkWindow.mtvcx.getText().toString();
-                    fb_fc_zz.C = WheelStyle.createCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层","");
-                    fb_fc_zz.GJC = WheelStyle.createGJCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层","");
+                    FB_FC_ESF.S = WheelStyle.createSString().get(fwqkWindow.mwvs.getCurrentItem());
+                    FB_FC_ESF.T = WheelStyle.createTString().get(fwqkWindow.mwvt.getCurrentItem());
+                    FB_FC_ESF.W = WheelStyle.createWString().get(fwqkWindow.mwvw.getCurrentItem());
+                    FB_FC_ESF.CX = fwqkWindow.mtvcx.getText().toString();
+                    FB_FC_ESF.C = WheelStyle.createCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层","");
+                    FB_FC_ESF.GJC = WheelStyle.createGJCString().get(fwqkWindow.mwvc.getCurrentItem()).replace("层","");
                     break;
             }
         }
     };
 
-    //车位电梯页面按钮监听
-    private View.OnClickListener cwdtOnClick = new View.OnClickListener(){
+    //类型供暖页面按钮监听
+    private View.OnClickListener lxgnOnClick = new View.OnClickListener(){
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.tv_dt_qd:
-                    cwdtWindow.dismiss();
-                    mtvcw.setText(WheelStyle.createCWString().get(cwdtWindow.mwvcw.getCurrentItem()));
-                    mtvdt.setText(WheelStyle.createDTString().get(cwdtWindow.mwvdt.getCurrentItem()));
+                case R.id.tv_gnlx_qd:
+                    lxgnWindow.dismiss();
+                    mtvfwlx.setText(WheelStyle.createFWLXString().get(lxgnWindow.mwvfwlx.getCurrentItem()));
+                    mtvgnlx.setText(WheelStyle.createGNLXString().get(lxgnWindow.mwvgnlx.getCurrentItem()));
                     break;
             }
         }
     };
 
-    //租金包含费用页面按钮监听
-    private View.OnClickListener zjbhfyOnClick = new View.OnClickListener(){
+    //产权装修页面按钮监听
+    private View.OnClickListener cqzxOnClick = new View.OnClickListener(){
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.tvwc:
-                    zjbhfyWindow.dismiss();
-                    mtvzjbhfy.setText(zjbhfyWindow.GetCheck());
-
-                    fb_fc_zz.ZJYBHFY = zjbhfyWindow.GetCheck();
-                    break;
-            }
-        }
-    };
-
-    //联系人身份页面按钮监听
-    private View.OnClickListener lxrsfOnClick = new View.OnClickListener(){
-        public void onClick(View v) {
-            switch (v.getId()) {
-                case R.id.tvwc:
-                    lxrsfWindow.dismiss();
-                    mtvlxrsf.setText(lxrsfWindow.GetCheck());
-
-                    break;
-            }
-        }
-    };
-
-    //联系人联系电话页面按钮监听
-    private View.OnClickListener lxrlxdhOnClick = new View.OnClickListener(){
-        public void onClick(View v) {
-            switch (v.getId()) {
-                case R.id.ivqx:
-                    lxrlxdhWindow.dismiss();
-                    break;
-                case R.id.tvqd:
-                    lxrlxdhWindow.dismiss();
-                    mtvlxrlxdh.setText(lxrlxdhWindow.metLXDH.getText());
-
-                    fb_fc_zz.LXDH = lxrlxdhWindow.metLXDH.getText().toString();
+                case R.id.tv_zxqk_qd:
+                    cqzxWindow.dismiss();
+                    mtvcqnx.setText(cqzxWindow.mtvcqnx.getText());
+                    mtvcqlx.setText(cqzxWindow.mtvcqlx.getText());
+                    mtvzxqk.setText(cqzxWindow.mtvzxqk.getText());
                     break;
             }
         }

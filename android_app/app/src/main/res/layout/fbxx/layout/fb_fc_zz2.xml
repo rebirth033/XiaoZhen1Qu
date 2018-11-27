@@ -49,19 +49,7 @@
             </LinearLayout>
 
             <LinearLayout android:id="@+id/ll_zz_fwpz" style="@style/ll_content_middle_vertical" android:layout_height="wrap_content">
-                <!--<LinearLayout style="@style/ll_content_middle_horizontal" android:layout_height="50dp">-->
-                    <!--<TextView android:text="宽带" style="@style/tv_content_middle_item" />-->
-                    <!--<TextView android:text="床" style="@style/tv_content_middle_item" />-->
-                    <!--<TextView android:text="衣柜" style="@style/tv_content_middle_item" />-->
-                    <!--<TextView android:text="沙发" style="@style/tv_content_middle_item" />-->
-                    <!--<TextView android:text="冰箱" style="@style/tv_content_middle_item" />-->
-                <!--</LinearLayout>-->
-                <!--<LinearLayout style="@style/ll_content_middle_horizontal" android:layout_height="50dp">-->
-                    <!--<TextView android:text="洗衣机" style="@style/tv_content_middle_item" />-->
-                    <!--<TextView android:text="空调" style="@style/tv_content_middle_item" />-->
-                    <!--<TextView android:text="阳台" style="@style/tv_content_middle_item" />-->
-                    <!--<TextView android:text="独立卫生间" style="@style/tv_content_middle_item" />-->
-                <!--</LinearLayout>-->
+
             </LinearLayout>
 
             <LinearLayout style="@style/ll_content_middle_title">

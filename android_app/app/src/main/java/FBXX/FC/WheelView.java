@@ -299,7 +299,6 @@ public class WheelView extends View {
             currentItem--;
             if (currentItem < 0) {
                 currentItem = itemCount - 1;
-                //currentItem = 0;
             }
         } else if (mMoveLen < -itemHeight / 2) {
             // 往上滑超过离开距离
@@ -307,7 +306,6 @@ public class WheelView extends View {
             currentItem++;
             if (currentItem >= itemCount) {
                 currentItem = 0;
-                //currentItem = itemCount;
             }
         }
 
