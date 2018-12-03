@@ -1,14 +1,22 @@
 package FBXX.FC;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
+import com.alibaba.fastjson.JSONObject;
 import com.example.administrator.Public.R;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import Common.Base;
 import Common.EditPicture;
@@ -29,16 +37,18 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
     public TextView mtvcqnx;
     public TextView mtvcqlx;
     public TextView mtvzxqk;
-    public TextView mtvzjbhfy;
-    public TextView mtvfwlxrsf;
-    public TextView mtvfwlxrlxdh;
+    public TextView mtvfwms;
+    public TextView mtvlxrsf;
+    public TextView mtvlxrlxdh;
     //自定义的弹出框类
     FB_FC_XQCX xqcxWindow;
     FB_FC_MJ mjWindow;
-    FB_FC_ZJ zjWindow;
+    FB_FC_SJ sjWindow;
     FB_FC_FWQK fwqkWindow;
     FB_FC_ESF_LXGN lxgnWindow;
     FB_FC_ESF_CQZX cqzxWindow;
+    FB_FC_LXRSF lxrsfWindow;
+    FB_FC_LXRLXDH lxrlxdhWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,20 +64,6 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
 
     //初始化页面
     private void initView() {
-        ImageView mivback = (ImageView) findViewById(R.id.iv_back);
-        ImageView mivsczp = (ImageView) findViewById(R.id.iv_sczp);
-        ViewGroup mllxq = (ViewGroup) findViewById(R.id.ll_esf_xqmc);
-        ViewGroup mllts = (ViewGroup) findViewById(R.id.ll_esf_ts);
-        ViewGroup mllcx = (ViewGroup) findViewById(R.id.ll_esf_cx);
-        ViewGroup mlllc = (ViewGroup) findViewById(R.id.ll_esf_lc);
-        ViewGroup mllfwlx = (ViewGroup) findViewById(R.id.ll_esf_fwlx);
-        ViewGroup mllgnlx = (ViewGroup) findViewById(R.id.ll_esf_gnlx);
-        findViewById(R.id.ll_esf_cqnx).setOnClickListener(this);
-        findViewById(R.id.ll_esf_cqlx).setOnClickListener(this);
-        findViewById(R.id.ll_esf_zx).setOnClickListener(this);
-        ViewGroup mllmj = (ViewGroup) findViewById(R.id.ll_esf_mj);
-        ViewGroup mllsj = (ViewGroup) findViewById(R.id.ll_esf_sj);
-        TextView mtvnext = (TextView) findViewById(R.id.tv_dbcd_nextstep);
         mtvxqmc = (TextView) findViewById(R.id.tv_esf_xqmc);
         mtvts = (TextView) findViewById(R.id.tv_esf_ts);
         mtvcx = (TextView) findViewById(R.id.tv_esf_cx);
@@ -79,17 +75,25 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
         mtvzxqk = (TextView) findViewById(R.id.tv_esf_zx);
         mtvmj = (TextView) findViewById(R.id.tv_esf_mj);
         mtvsj = (TextView) findViewById(R.id.tv_esf_sj);
-        mivback.setOnClickListener(this);
-        mivsczp.setOnClickListener(this);
-        mllxq.setOnClickListener(this);
-        mllmj.setOnClickListener(this);
-        mllsj.setOnClickListener(this);
-        mllts.setOnClickListener(this);
-        mllcx.setOnClickListener(this);
-        mlllc.setOnClickListener(this);
-        mllfwlx.setOnClickListener(this);
-        mllgnlx.setOnClickListener(this);
-        mtvnext.setOnClickListener(this);
+        mtvfwms = (TextView) findViewById(R.id.tv_esf_fwms);
+        mtvlxrsf = (TextView) findViewById(R.id.tv_esf_lxrsf);
+        mtvlxrlxdh = (TextView) findViewById(R.id.tv_esf_lxrlxdh);
+        findViewById(R.id.iv_back).setOnClickListener(this);
+        findViewById(R.id.iv_sczp).setOnClickListener(this);
+        findViewById(R.id.ll_esf_xqmc).setOnClickListener(this);
+        findViewById(R.id.ll_esf_ts).setOnClickListener(this);
+        findViewById(R.id.ll_esf_cx).setOnClickListener(this);
+        findViewById(R.id.ll_esf_lc).setOnClickListener(this);
+        findViewById(R.id.ll_esf_fwlx).setOnClickListener(this);
+        findViewById(R.id.ll_esf_gnlx).setOnClickListener(this);
+        findViewById(R.id.ll_esf_cqnx).setOnClickListener(this);
+        findViewById(R.id.ll_esf_cqlx).setOnClickListener(this);
+        findViewById(R.id.ll_esf_zx).setOnClickListener(this);
+        findViewById(R.id.ll_esf_mj).setOnClickListener(this);
+        findViewById(R.id.ll_esf_sj).setOnClickListener(this);
+        findViewById(R.id.ll_esf_lxrsf).setOnClickListener(this);
+        findViewById(R.id.ll_esf_lxrlxdh).setOnClickListener(this);
+        findViewById(R.id.tv_dbcd_fb).setOnClickListener(this);
     }
 
     //事件监听
@@ -134,8 +138,14 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
             case R.id.ll_esf_zx:
                 YMTZ("FB_FC_CQZX_ZXQK");
                 break;
-            case R.id.tv_dbcd_nextstep:
-                YMTZ("NextStep");
+            case R.id.ll_esf_lxrsf:
+                YMTZ("FB_FC_LXRSF");
+                break;
+            case R.id.ll_esf_lxrlxdh:
+                YMTZ("FB_FC_LXRLXDH");
+                break;
+            case R.id.tv_dbcd_fb:
+                FB();
                 break;
         }
     }
@@ -161,9 +171,9 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
             mjWindow.metmj.setText(mtvmj.getText());
         }
         if (id == "FB_FC_SJ") {
-            zjWindow = new FB_FC_ZJ(FB_FC_ESF.this, zjOnClick);
-            zjWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
-            zjWindow.metzj.setText(mtvsj.getText());
+            sjWindow = new FB_FC_SJ(FB_FC_ESF.this, sjOnClick);
+            sjWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            sjWindow.metsj.setText(mtvsj.getText());
         }
         if (id == "FB_FC_FWQK_TS") {
             fwqkWindow = new FB_FC_FWQK(FB_FC_ESF.this, fwqkOnClick, "TS");
@@ -282,6 +292,14 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
             cqzxWindow.mwvcqlx.setWheelItemList(WheelStyle.createCQLXString());
             cqzxWindow.mwvzxqk.setWheelItemList(WheelStyle.createZXQKString());
         }
+        if (id == "FB_FC_LXRSF") {
+            lxrsfWindow = new FB_FC_LXRSF(FB_FC_ESF.this, lxrsfOnClick);
+            lxrsfWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        }
+        if (id == "FB_FC_LXRLXDH") {
+            lxrlxdhWindow = new FB_FC_LXRLXDH(FB_FC_ESF.this, lxrlxdhOnClick);
+            lxrlxdhWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        }
         if (id == "NextStep") {
             Intent intent = new Intent(FB_FC_ESF.this, FB_FC_HZ2.class);
             Bundle bundle = new Bundle();
@@ -289,6 +307,47 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
             intent.putExtras(bundle);
             startActivity(intent);
         }
+    }
+
+
+    //发布
+    public void FB(){
+        new AsyncTask<String, Void, Object>() {
+            protected void onPostExecute(Object result) {
+                try {
+                    String resultJson = JSONObject.toJSONString(result);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            protected Object doInBackground(String... params) {
+                Object result = null;
+                String targeturl = "http://www.915fl.com/FC/FB_FC_ESFJBXX";
+
+                try {
+                    String resultJson = JSONObject.toJSONString(FB_FC_ESF);
+                    HttpPost httpRequest = new HttpPost(targeturl);
+                    NameValuePair Json = new BasicNameValuePair("Json", resultJson);
+                    NameValuePair BCMS = new BasicNameValuePair("BCMS", mtvfwms.getText().toString());
+                    NameValuePair FWZP = new BasicNameValuePair("FWZP", "1");
+                    List<NameValuePair> parameters = new ArrayList<NameValuePair>();//创建一个集合，存NameValuePair对象的
+                    parameters.add(Json);
+                    parameters.add(BCMS);
+                    parameters.add(FWZP);
+                    httpRequest.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
+                    DefaultHttpClient httpClient = new DefaultHttpClient();
+                    if (null != JSESSIONID) httpRequest.setHeader("Cookie", "ASP.NET_SessionId=" + JSESSIONID);
+
+                    HttpResponse response = httpClient.execute(httpRequest); //发起GET请求
+                    int rescode = response.getStatusLine().getStatusCode(); //获取响应码
+                    result = EntityUtils.toString(response.getEntity(), "utf-8");//获取服务器响应内容
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return result;
+            }
+        }.execute();
     }
 
     //小区查询页面按钮监听
@@ -327,18 +386,18 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
         }
     };
 
-    //租金页面按钮监听
-    private View.OnClickListener zjOnClick = new View.OnClickListener(){
+    //售价页面按钮监听
+    private View.OnClickListener sjOnClick = new View.OnClickListener(){
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.ivqx:
-                    zjWindow.dismiss();
+                    sjWindow.dismiss();
                     break;
                 case R.id.tvqd:
-                    zjWindow.dismiss();
-                    mtvsj.setText(zjWindow.metzj.getText());
+                    sjWindow.dismiss();
+                    mtvsj.setText(sjWindow.metsj.getText());
 
-                    FB_FC_ESF.ZJ = new BigDecimal(zjWindow.metzj.getText().toString().replace("元",""));
+                    FB_FC_ESF.SJ = new BigDecimal(sjWindow.metsj.getText().toString().replace("元",""));
                     break;
             }
         }
@@ -386,7 +445,37 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
                     cqzxWindow.dismiss();
                     mtvcqnx.setText(cqzxWindow.mtvcqnx.getText());
                     mtvcqlx.setText(cqzxWindow.mtvcqlx.getText());
-                    mtvzxqk.setText(cqzxWindow.mtvzxqk.getText());
+                    mtvzxqk.setText(WheelStyle.createZXQKString().get(cqzxWindow.mwvzxqk.getCurrentItem()));
+                    break;
+            }
+        }
+    };
+
+    //联系人身份页面按钮监听
+    private View.OnClickListener lxrsfOnClick = new View.OnClickListener(){
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.tvwc:
+                    lxrsfWindow.dismiss();
+                    mtvlxrsf.setText(lxrsfWindow.GetCheck());
+
+                    break;
+            }
+        }
+    };
+
+    //联系人联系电话页面按钮监听
+    private View.OnClickListener lxrlxdhOnClick = new View.OnClickListener(){
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.ivqx:
+                    lxrlxdhWindow.dismiss();
+                    break;
+                case R.id.tvqd:
+                    lxrlxdhWindow.dismiss();
+                    mtvlxrlxdh.setText(lxrlxdhWindow.metLXDH.getText());
+
+                    FB_FC_ESF.LXDH = lxrlxdhWindow.metLXDH.getText().toString();
                     break;
             }
         }

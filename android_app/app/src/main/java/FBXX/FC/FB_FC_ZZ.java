@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.administrator.Public.R;
 import java.math.BigDecimal;
@@ -54,20 +52,6 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
 
     //初始化页面
     private void initView() {
-        ImageView mivback = (ImageView) findViewById(R.id.iv_back);
-        ImageView mivsczp = (ImageView) findViewById(R.id.iv_sczp);
-        ViewGroup mllxq = (ViewGroup) findViewById(R.id.ll_zz_xqmc);
-        ViewGroup mllmj = (ViewGroup) findViewById(R.id.ll_zz_mj);
-        ViewGroup mllts = (ViewGroup) findViewById(R.id.ll_zz_ts);
-        ViewGroup mllcx = (ViewGroup) findViewById(R.id.ll_zz_cx);
-        ViewGroup mlllc = (ViewGroup) findViewById(R.id.ll_zz_lc);
-        ViewGroup mllcw = (ViewGroup) findViewById(R.id.ll_zz_cw);
-        ViewGroup mlldt = (ViewGroup) findViewById(R.id.ll_zz_dt);
-        ViewGroup mllzj = (ViewGroup) findViewById(R.id.ll_zz_zj);
-        ViewGroup mllzjbhfy = (ViewGroup) findViewById(R.id.ll_zz_zjbhfy);
-        ViewGroup mlllxrsf = (ViewGroup) findViewById(R.id.ll_zz_lxrsf);
-        ViewGroup mlllxrlxdh = (ViewGroup) findViewById(R.id.ll_zz_lxrlxdh);
-        TextView mtvnext = (TextView) findViewById(R.id.tv_dbcd_nextstep);
         mtvxqmc = (TextView) findViewById(R.id.tv_zz_xqmc);
         mtvmj = (TextView) findViewById(R.id.tv_zz_mj);
         mtvts = (TextView) findViewById(R.id.tv_zz_ts);
@@ -80,20 +64,21 @@ public class FB_FC_ZZ extends Base implements View.OnClickListener {
         mtvzjbhfy = (TextView) findViewById(R.id.tv_zz_zjbhfy);
         mtvlxrsf = (TextView) findViewById(R.id.tv_zz_lxrsf);
         mtvlxrlxdh = (TextView) findViewById(R.id.tv_zz_lxrlxdh);
-        mivback.setOnClickListener(this);
-        mivsczp.setOnClickListener(this);
-        mllxq.setOnClickListener(this);
-        mllmj.setOnClickListener(this);
-        mllts.setOnClickListener(this);
-        mllcx.setOnClickListener(this);
-        mlllc.setOnClickListener(this);
-        mllcw.setOnClickListener(this);
-        mlldt.setOnClickListener(this);
-        mllzj.setOnClickListener(this);
-        mllzjbhfy.setOnClickListener(this);
-        mlllxrsf.setOnClickListener(this);
-        mlllxrlxdh.setOnClickListener(this);
-        mtvnext.setOnClickListener(this);
+
+        findViewById(R.id.iv_back).setOnClickListener(this);
+        findViewById(R.id.iv_sczp).setOnClickListener(this);
+        findViewById(R.id.ll_zz_xqmc).setOnClickListener(this);
+        findViewById(R.id.ll_zz_mj).setOnClickListener(this);
+        findViewById(R.id.ll_zz_ts).setOnClickListener(this);
+        findViewById(R.id.ll_zz_cx).setOnClickListener(this);
+        findViewById(R.id.ll_zz_lc).setOnClickListener(this);
+        findViewById(R.id.ll_zz_cw).setOnClickListener(this);
+        findViewById(R.id.ll_zz_dt).setOnClickListener(this);
+        findViewById(R.id.ll_zz_zj).setOnClickListener(this);
+        findViewById(R.id.ll_zz_zjbhfy).setOnClickListener(this);
+        findViewById(R.id.ll_zz_lxrsf).setOnClickListener(this);
+        findViewById(R.id.ll_zz_lxrlxdh).setOnClickListener(this);
+        findViewById(R.id.tv_dbcd_nextstep).setOnClickListener(this);
     }
 
     //事件监听

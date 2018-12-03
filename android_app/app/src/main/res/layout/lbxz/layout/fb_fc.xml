@@ -54,19 +54,19 @@
                     </LinearLayout>
                     <ImageView style="@style/iv_fb_fc_forward" android:src="@drawable/arrow_forward_black" />
                 </LinearLayout>
-                <LinearLayout android:id="@+id/llCF" style="@style/ll_fb_fc_item">
-                    <ImageView android:id="@+id/ivCF" style="@style/iv_fb_fc_item" android:src="@drawable/fb_fc_cf" />
-                    <LinearLayout style="@style/ll_fb_fc_item_text">
-                        <TextView style="@style/tv_fb_fc_item" android:text="厂房" />
-                        <TextView style="@style/tv_fb_fc_item_remark" android:text="厂房、车位、土地、仓库等" />
-                    </LinearLayout>
-                    <ImageView style="@style/iv_fb_fc_forward" android:src="@drawable/arrow_forward_black" />
-                </LinearLayout>
                 <LinearLayout android:id="@+id/llXZL" style="@style/ll_fb_fc_item">
                     <ImageView android:id="@+id/ivXZL" style="@style/iv_fb_fc_item" android:src="@drawable/fb_fc_xzl" />
                     <LinearLayout style="@style/ll_fb_fc_item_text">
                         <TextView style="@style/tv_fb_fc_item" android:text="写字楼" />
                         <TextView style="@style/tv_fb_fc_item_remark" android:text="写字楼、商务中心、商住公寓等" />
+                    </LinearLayout>
+                    <ImageView style="@style/iv_fb_fc_forward" android:src="@drawable/arrow_forward_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/llCF" style="@style/ll_fb_fc_item">
+                    <ImageView android:id="@+id/ivCF" style="@style/iv_fb_fc_item" android:src="@drawable/fb_fc_cf" />
+                    <LinearLayout style="@style/ll_fb_fc_item_text">
+                        <TextView style="@style/tv_fb_fc_item" android:text="厂房" />
+                        <TextView style="@style/tv_fb_fc_item_remark" android:text="厂房、车位、土地、仓库等" />
                     </LinearLayout>
                     <ImageView style="@style/iv_fb_fc_forward" android:src="@drawable/arrow_forward_black" />
                 </LinearLayout>

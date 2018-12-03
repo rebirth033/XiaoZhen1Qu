@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_fc_fwqk_body" android:id="@+id/fragment_mk" android:orientation="vertical">
+
+        <TextView android:id="@+id/tv_fb_fc_mj_title" style="@style/tv_fb_fc_mj_title" android:text="请填写面宽" />
+
+        <LinearLayout style="@style/ll_fb_fc_mj_body">
+
+            <LinearLayout style="@style/ll_fb_fc_mj_body_column">
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_1" android:text="1" />
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_4" android:text="4" />
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_7" android:text="7" />
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_point" android:text="." />
+            </LinearLayout>
+            <LinearLayout style="@style/ll_fb_fc_mj_body_column">
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_2" android:text="2" />
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_5" android:text="5" />
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_8" android:text="8" />
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_0" android:text="0" />
+            </LinearLayout>
+            <LinearLayout style="@style/ll_fb_fc_mj_body_column">
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_3" android:text="3" />
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_6" android:text="6" />
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_9" android:text="9" />
+                <ImageView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/iv_mk_qx" android:src="@drawable/fb_fc_zz_mj_qx" android:paddingLeft="28dp" android:paddingRight="28dp"/>
+            </LinearLayout>
+            <LinearLayout style="@style/ll_fb_fc_mj_body_column" android:layout_width="120dp">
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_sc" android:text="✖" android:layout_width="100dp" android:layout_height="100dp" android:background="#cccccc" />
+                <TextView style="@style/tv_fb_fc_mj_body_item" android:id="@+id/tv_mk_qd" android:text="确定" android:layout_width="100dp" android:layout_height="100dp" android:background="#bc6ba6" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

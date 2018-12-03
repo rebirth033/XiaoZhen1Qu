@@ -61,15 +61,16 @@ public class FB_FC_ESF_CQZX extends PopupWindow implements View.OnClickListener 
     //初始化页面
     private void initView(View.OnClickListener itemsOnClick, Activity context, String type) {
 
-        mllcqnx = (ViewGroup) mMenuView.findViewById(R.id.ll_fwqk_cqnx);
-        mllcqlx = (ViewGroup) mMenuView.findViewById(R.id.ll_fwqk_cqlx);
-        mllzxqk = (ViewGroup) mMenuView.findViewById(R.id.ll_fwqk_zxqk);
         mtvcqnx = (TextView) mMenuView.findViewById(R.id.tv_fwqk_cqnx);
         mtvcqlx = (TextView) mMenuView.findViewById(R.id.tv_fwqk_cqlx);
         mtvzxqk = (TextView) mMenuView.findViewById(R.id.tv_fwqk_zxqk);
 
         mtbbody = (TabLayout) mMenuView.findViewById(R.id.tb_body);
         mvpbody = (ViewPager) mMenuView.findViewById(R.id.vp_body);
+
+        mllcqnx = (ViewGroup)mMenuView.findViewById(R.id.ll_fwqk_cqnx);
+        mllcqlx = (ViewGroup)mMenuView.findViewById(R.id.ll_fwqk_cqlx);
+        mllzxqk = (ViewGroup)mMenuView.findViewById(R.id.ll_fwqk_zxqk);
 
         mllcqnx.setOnClickListener(this);
         mllcqlx.setOnClickListener(this);
@@ -117,7 +118,7 @@ public class FB_FC_ESF_CQZX extends PopupWindow implements View.OnClickListener 
     //事件监听
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.ll_fwqk_ts:
+            case R.id.ll_fwqk_cqnx:
                 mtvcqnx.setHintTextColor(Color.parseColor("#bc6ba6"));
                 mtvcqnx.setTextColor(Color.parseColor("#bc6ba6"));
                 mtvcqlx.setHintTextColor(Color.parseColor("#999999"));
@@ -127,7 +128,7 @@ public class FB_FC_ESF_CQZX extends PopupWindow implements View.OnClickListener 
                 tabcqnx.select();
                 mvpbody.setCurrentItem(0);
                 break;
-            case R.id.ll_fwqk_cx:
+            case R.id.ll_fwqk_cqlx:
                 mtvcqnx.setHintTextColor(Color.parseColor("#999999"));
                 mtvcqnx.setTextColor(Color.parseColor("#000000"));
                 mtvcqlx.setHintTextColor(Color.parseColor("#bc6ba6"));
@@ -137,7 +138,7 @@ public class FB_FC_ESF_CQZX extends PopupWindow implements View.OnClickListener 
                 tabcqlx.select();
                 mvpbody.setCurrentItem(1);
                 break;
-            case R.id.ll_fwqk_lc:
+            case R.id.ll_fwqk_zxqk:
                 mtvcqnx.setHintTextColor(Color.parseColor("#999999"));
                 mtvcqnx.setTextColor(Color.parseColor("#000000"));
                 mtvcqlx.setHintTextColor(Color.parseColor("#999999"));
@@ -147,16 +148,16 @@ public class FB_FC_ESF_CQZX extends PopupWindow implements View.OnClickListener 
                 tabzxqk.select();
                 mvpbody.setCurrentItem(2);
                 break;
-            case R.id.tv_ts_qd:
-                mtvcqnx.setText(WheelStyle.createSString().get(mwvcqnx.getCurrentItem()));
+            case R.id.tv_cqnx_qd:
+                mtvcqnx.setText(WheelStyle.createCQNXString().get(mwvcqnx.getCurrentItem()));
                 mllcqlx.performClick();
                 break;
-            case R.id.tv_cx_qd:
-                mtvcqlx.setText(WheelStyle.createCXString().get(mwvcqlx.getCurrentItem()));
+            case R.id.tv_cqlx_qd:
+                mtvcqlx.setText(WheelStyle.createCQLXString().get(mwvcqlx.getCurrentItem()));
                 mllzxqk.performClick();
                 break;
-            case R.id.tv_lc_qd:
-                mtvzxqk.setText(WheelStyle.createCString().get(mwvzxqk.getCurrentItem()));
+            case R.id.tv_zxqk_qd:
+                mtvzxqk.setText(WheelStyle.createZXQKString().get(mwvzxqk.getCurrentItem()));
                 mllcqnx.performClick();
                 break;
         }

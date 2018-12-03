@@ -3,11 +3,12 @@ package LBXZ;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 import Common.Base;
 import FBXX.FC.FB_FC_ESF;
 import FBXX.FC.FB_FC_HZ;
+import FBXX.FC.FB_FC_QT_LB;
+import FBXX.FC.FB_FC_SP_LB;
+import FBXX.FC.FB_FC_XZL_LB;
 import FBXX.FC.FB_FC_ZZ;
 import com.example.administrator.Public.R;
 
@@ -21,15 +22,13 @@ public class FB_FC extends Base implements View.OnClickListener {
     }
 
     private void findById() {
-        ImageView ivBack = (ImageView) findViewById(R.id.ivBACK);
-        ViewGroup zzxx = (ViewGroup) findViewById(R.id.llZZ);
-        ViewGroup hzxx = (ViewGroup) findViewById(R.id.llHZ);
-        ViewGroup esfxx = (ViewGroup) findViewById(R.id.llESF);
-
-        ivBack.setOnClickListener(this);
-        zzxx.setOnClickListener(this);
-        hzxx.setOnClickListener(this);
-        esfxx.setOnClickListener(this);
+        findViewById(R.id.ivBACK).setOnClickListener(this);
+        findViewById(R.id.llZZ).setOnClickListener(this);
+        findViewById(R.id.llHZ).setOnClickListener(this);
+        findViewById(R.id.llESF).setOnClickListener(this);
+        findViewById(R.id.llSP).setOnClickListener(this);
+        findViewById(R.id.llXZL).setOnClickListener(this);
+        findViewById(R.id.llCF).setOnClickListener(this);
     }
 
     //事件监听
@@ -46,6 +45,15 @@ public class FB_FC extends Base implements View.OnClickListener {
                 break;
             case R.id.llESF:
                 YMTZ("FB_FC_ESF");
+                break;
+            case R.id.llSP:
+                YMTZ("FB_FC_SP");
+                break;
+            case R.id.llXZL:
+                YMTZ("FB_FC_XZL");
+                break;
+            case R.id.llCF:
+                YMTZ("FB_FC_QT");
                 break;
         }
     }
@@ -71,6 +79,24 @@ public class FB_FC extends Base implements View.OnClickListener {
         }
         if (id == "FB_FC_ESF") {
             Intent intent = new Intent(FB_FC.this, FB_FC_ESF.class);
+            intent.putExtra("YMMC", "FB_FC");//设置参数
+            startActivity(intent);
+            finish();//关闭当前页面
+        }
+        if (id == "FB_FC_SP") {
+            Intent intent = new Intent(FB_FC.this, FB_FC_SP_LB.class);
+            intent.putExtra("YMMC", "FB_FC");//设置参数
+            startActivity(intent);
+            finish();//关闭当前页面
+        }
+        if (id == "FB_FC_XZL") {
+            Intent intent = new Intent(FB_FC.this, FB_FC_XZL_LB.class);
+            intent.putExtra("YMMC", "FB_FC");//设置参数
+            startActivity(intent);
+            finish();//关闭当前页面
+        }
+        if (id == "FB_FC_QT") {
+            Intent intent = new Intent(FB_FC.this, FB_FC_QT_LB.class);
             intent.putExtra("YMMC", "FB_FC");//设置参数
             startActivity(intent);
             finish();//关闭当前页面

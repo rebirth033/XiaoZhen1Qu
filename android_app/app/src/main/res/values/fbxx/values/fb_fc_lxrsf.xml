@@ -21,16 +21,22 @@
         <item name="android:paddingLeft">25dp</item>
     </style>
     <style name="tv_fb_fc_lxrsf">
-        <item name="android:layout_width">338dp</item>
+        <item name="android:layout_width">288dp</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">18dp</item>
     </style>
     <style name="tv_fb_fc_lxrsf_wc">
-        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_width">40dp</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">#bc6ba6</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="tv_fb_fc_lxrsf_qx">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">left</item>
         <item name="android:textSize">18dp</item>
     </style>
     <style name="tv_fb_fc_lxrsf_title">

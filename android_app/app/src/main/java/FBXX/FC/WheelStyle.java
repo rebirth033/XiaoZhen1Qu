@@ -176,4 +176,29 @@ public class WheelStyle {
         }
         return wheelString;
     }
+    //商铺类型
+    public static List<String> createSPLXString() {
+        List<String> wheelString = new ArrayList<>();
+        String[] array = new String[]{"商业街商铺","写字楼配套","社区底商","档口摊位","临街门面"};
+        for (int i = 0; i < array.length; i++) {
+            wheelString.add(array[i].toString());
+        }
+        return wheelString;
+    }
+    //押
+    public static List<String> createYString() {
+        List<String> wheelString = new ArrayList<>();
+        for (int i = 1; i < 10; i++) {
+            wheelString.add("押" + String.valueOf(i));
+        }
+        return wheelString;
+    }
+    //付
+    public static List<String> createFString() {
+        List<String> wheelString = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            wheelString.add("付" + String.valueOf(i));
+        }
+        return wheelString;
+    }
 }

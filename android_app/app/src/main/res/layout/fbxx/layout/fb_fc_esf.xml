@@ -91,14 +91,14 @@
             <LinearLayout android:id="@+id/ll_esf_sj" style="@style/ll_content_middle_vertical">
                 <TextView style="@style/tv_content_middle_vertical_text" android:text="售价" />
                 <LinearLayout style="@style/ll_content_middle_horizontal">
-                    <TextView android:id="@+id/tv_esf_sj" style="@style/tv_content_middle_vertical_value" android:layout_width="100dp" android:layout_marginLeft="142dp" android:hint="请填写租金" />
+                    <TextView android:id="@+id/tv_esf_sj" style="@style/tv_content_middle_vertical_value" android:layout_width="100dp" android:layout_marginLeft="142dp" android:hint="请填写售价" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout android:id="@+id/ll_esf_bt" style="@style/ll_content_middle_vertical">
                 <TextView style="@style/tv_content_middle_vertical_text" android:text="标题" />
                 <LinearLayout style="@style/ll_content_middle_horizontal">
-                    <TextView android:id="@+id/tv_esf_bt" style="@style/tv_content_middle_vertical_value" android:layout_width="100dp" android:layout_marginLeft="142dp" android:hint="请填写租金" />
+                    <EditText android:id="@+id/et_esf_bt" style="@style/tv_content_middle_vertical_value" android:layout_width="100dp" android:layout_marginLeft="142dp" android:hint="请填写标题" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -129,7 +129,7 @@
     </ScrollView>
 
     <LinearLayout style="@style/ll_dbcd_nextstep">
-        <TextView android:id="@+id/tv_dbcd_nextstep" style="@style/tv_dbcd_nextstep" android:text="下一步" />
+        <TextView android:id="@+id/tv_dbcd_fb" style="@style/tv_dbcd_nextstep" android:text="确定发布" />
     </LinearLayout>
 
 </LinearLayout>

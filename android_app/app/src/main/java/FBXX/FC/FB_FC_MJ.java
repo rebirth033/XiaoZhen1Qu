@@ -40,35 +40,22 @@ public class FB_FC_MJ extends PopupWindow implements View.OnClickListener {
     }
 
     private void findById(View.OnClickListener itemsOnClick) {
-        TextView mtv0 = (TextView) mMenuView.findViewById(R.id.tv0);
-        TextView mtv1 = (TextView) mMenuView.findViewById(R.id.tv1);
-        TextView mtv2 = (TextView) mMenuView.findViewById(R.id.tv2);
-        TextView mtv3 = (TextView) mMenuView.findViewById(R.id.tv3);
-        TextView mtv4 = (TextView) mMenuView.findViewById(R.id.tv4);
-        TextView mtv5 = (TextView) mMenuView.findViewById(R.id.tv5);
-        TextView mtv6 = (TextView) mMenuView.findViewById(R.id.tv6);
-        TextView mtv7 = (TextView) mMenuView.findViewById(R.id.tv7);
-        TextView mtv8 = (TextView) mMenuView.findViewById(R.id.tv8);
-        TextView mtv9 = (TextView) mMenuView.findViewById(R.id.tv9);
-        TextView mtvpoint = (TextView) mMenuView.findViewById(R.id.tvpoint);
-        TextView mtvsc = (TextView) mMenuView.findViewById(R.id.tvsc);
-        ImageView mivqx = (ImageView) mMenuView.findViewById(R.id.ivqx);
-        TextView mtvqd = (TextView) mMenuView.findViewById(R.id.tvqd);
+        mMenuView.findViewById(R.id.tv0).setOnClickListener(this);
+        mMenuView.findViewById(R.id.tv1).setOnClickListener(this);
+        mMenuView.findViewById(R.id.tv2).setOnClickListener(this);
+        mMenuView.findViewById(R.id.tv3).setOnClickListener(this);
+        mMenuView.findViewById(R.id.tv4).setOnClickListener(this);
+        mMenuView.findViewById(R.id.tv5).setOnClickListener(this);
+        mMenuView.findViewById(R.id.tv6).setOnClickListener(this);
+        mMenuView.findViewById(R.id.tv7).setOnClickListener(this);
+        mMenuView.findViewById(R.id.tv8).setOnClickListener(this);
+        mMenuView.findViewById(R.id.tv9).setOnClickListener(this);
+        mMenuView.findViewById(R.id.tvpoint).setOnClickListener(this);
+        mMenuView.findViewById(R.id.tvsc).setOnClickListener(this);
+        mMenuView.findViewById(R.id.ivqx).setOnClickListener(itemsOnClick);
+        mMenuView.findViewById(R.id.tvqd).setOnClickListener(itemsOnClick);
         metmj = (EditText) mMenuView.findViewById(R.id.etmj);
-        mtv0.setOnClickListener(this);
-        mtv1.setOnClickListener(this);
-        mtv2.setOnClickListener(this);
-        mtv3.setOnClickListener(this);
-        mtv4.setOnClickListener(this);
-        mtv5.setOnClickListener(this);
-        mtv6.setOnClickListener(this);
-        mtv7.setOnClickListener(this);
-        mtv8.setOnClickListener(this);
-        mtv9.setOnClickListener(this);
-        mtvpoint.setOnClickListener(this);
-        mtvsc.setOnClickListener(this);
-        mivqx.setOnClickListener(itemsOnClick);
-        mtvqd.setOnClickListener(itemsOnClick);
+
         metmj.setOnClickListener(itemsOnClick);
     }
 

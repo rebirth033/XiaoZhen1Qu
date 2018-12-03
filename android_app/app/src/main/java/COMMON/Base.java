@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import com.example.administrator.Public.R;
 
 import java.io.InputStream;
@@ -117,5 +120,23 @@ public class Base extends Activity {
             }
         }
         return allchildren;
+    }
+
+    //获取多选
+    public String GetDuoX(LinearLayout ll){
+        String fwpzs = "";
+        List<View> viewList = Base.getAllChildViews(ll);
+        for(int i = 0;i < viewList.size(); i++){
+            if(viewList.get(i).getClass().toString().contains("LinearLayout")){
+                List<View> vs = Base.getAllChildViews(viewList.get(i));
+                for(int j = 0; j < vs.size(); j++){
+                    TextView tv = (TextView)vs.get(j);
+                    int res = (int) tv.getTag();
+                    if(res == R.drawable.radius_select)
+                        fwpzs += tv.getText() + ",";
+                }
+            }
+        }
+        return fwpzs.substring(0, fwpzs.length() - 1);
     }
 }

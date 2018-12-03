@@ -33,7 +33,6 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -120,7 +119,34 @@
         <activity android:name="FBXX.FC.FB_FC_FWMS" />
         <activity android:name="FBXX.FC.FB_FC_ESF" />
         <activity android:name="FBXX.FC.FB_FC_ESF_LXGN" />
-        <activity android:name="FBXX.FC.FB_FC_ESF_CQZX"></activity>
+        <activity android:name="FBXX.FC.FB_FC_ESF_CQZX" />
+        <activity android:name="FBXX.FC.FB_FC_SJ" />
+        <activity android:name="FBXX.FC.FB_FC_SP_LB" />
+        <activity android:name="FBXX.FC.FB_FC_SP_SPLX" />
+        <activity android:name="FBXX.FC.FB_FC_SP_MKCGJS" />
+        <activity android:name="FBXX.FC.FB_FC_SP_JYZT" />
+        <activity android:name="FBXX.FC.FB_FC_SP_JYHY" />
+        <activity android:name="FBXX.FC.FB_FC_SP_YQSY" />
+        <activity android:name="FBXX.FC.FB_FC_SP_LC" />
+        <activity
+            android:name="FBXX.FC.FB_FC_SP_CS"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="FBXX.FC.FB_FC_SP_CS2"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="FBXX.FC.FB_FC_SP_CZ"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="FBXX.FC.FB_FC_SP_CZ2"
+            android:launchMode="singleInstance" />
+        <activity android:name="FBXX.FC.FB_FC_SP_WYFSFDF" />
+        <activity android:name="FBXX.FC.FB_FC_YFFS" />
+        <activity android:name="FBXX.FC.FB_FC_XZL_CZ" />
+        <activity android:name="FBXX.FC.FB_FC_XZL_LB" />
+        <activity android:name="FBXX.FC.FB_FC_XZL_CS" />
+        <activity android:name="FBXX.FC.FB_FC_QT_CZ" />
+        <activity android:name="FBXX.FC.FB_FC_QT_LB"></activity>
     </application>
 
 </manifest>

@@ -18,15 +18,15 @@ import org.json.JSONObject;
 import java.util.List;
 import Common.Base;
 
-public class FB_FC_LXRSF extends PopupWindow implements View.OnClickListener {
+public class FB_FC_SP_JYZT extends PopupWindow implements View.OnClickListener {
 
     private View mMenuView;
-    private LinearLayout mllSFLB;
+    private LinearLayout mllJYZTLB;
 
-    public FB_FC_LXRSF(Activity context, View.OnClickListener itemsOnClick) {
+    public FB_FC_SP_JYZT(Activity context, View.OnClickListener itemsOnClick) {
         super(context);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mMenuView = inflater.inflate(R.layout.fb_fc_lxrsf, null);
+        mMenuView = inflater.inflate(R.layout.fb_fc_sp_jyzt, null);
         //设置SelectPicPopupWindow的View
         this.setContentView(mMenuView);
         //设置SelectPicPopupWindow弹出窗体的宽
@@ -43,14 +43,15 @@ public class FB_FC_LXRSF extends PopupWindow implements View.OnClickListener {
         this.setBackgroundDrawable(dw);
         //初始化视图
         initView(itemsOnClick);
-        //获取身份
-        HandlerLXRSF();
+        //处理商铺类型
+        HandlerSPLX();
     }
 
     private void initView(View.OnClickListener itemsOnClick) {
-        TextView mtvwc = (TextView) mMenuView.findViewById(R.id.tvwc);
-        mllSFLB = (LinearLayout) mMenuView.findViewById(R.id.ll_fb_fc_lxrsf_body);
-        mtvwc.setOnClickListener(itemsOnClick);
+
+        mllJYZTLB = (LinearLayout) mMenuView.findViewById(R.id.ll_fb_fc_jyzt_body);
+
+        mMenuView.findViewById(R.id.tvwc).setOnClickListener(itemsOnClick);
     }
 
     //事件监听
@@ -62,10 +63,10 @@ public class FB_FC_LXRSF extends PopupWindow implements View.OnClickListener {
         }
     }
 
-    //处理身份
-    public void HandlerLXRSF() {
+    //处理商铺类型
+    public void HandlerSPLX() {
         try {
-            String JList = "[{\"CODENAME\":\"个人房东\"},{\"CODENAME\":\"个人转租\"},{\"CODENAME\":\"职业房东\"},{\"CODENAME\":\"经纪人\"}]";
+            String JList = "[{\"CODENAME\":\"经营中\"},{\"CODENAME\":\"空置中\"}]";
             JSONArray jsonarray = new JSONArray(JList);
             for (int i = 0; i < jsonarray.length(); i++) {
                 JSONObject jsonObject = jsonarray.getJSONObject(i);
@@ -94,7 +95,7 @@ public class FB_FC_LXRSF extends PopupWindow implements View.OnClickListener {
                 ivmc.setTag(R.drawable.check_gray);
                 llouter.addView(tvmc);
                 llouter.addView(ivmc);
-                mllSFLB.addView(llouter);
+                mllJYZTLB.addView(llouter);
                 llouter.setOnClickListener(new View.OnClickListener(){
                     public void onClick(View v) {
                         ResetCheck();
@@ -110,10 +111,10 @@ public class FB_FC_LXRSF extends PopupWindow implements View.OnClickListener {
         }
     }
 
-    //获取身份
+    //获取商铺类型
     public String GetCheck(){
         String bhfy = new String();
-        List<View> viewList = Base.getAllChildViews(mllSFLB);
+        List<View> viewList = Base.getAllChildViews(mllJYZTLB);
         for(int i = 0; i < viewList.size(); i++) {
             if(viewList.get(i).getClass().toString().contains("LinearLayout")){
                 List<View> vs = Base.getAllChildViews(viewList.get(i));
@@ -130,12 +131,27 @@ public class FB_FC_LXRSF extends PopupWindow implements View.OnClickListener {
 
     //实现单选效果
     public void ResetCheck(){
-        List<View> viewList = Base.getAllChildViews(mllSFLB);
+        List<View> viewList = Base.getAllChildViews(mllJYZTLB);
         for(int i=0;i<viewList.size();i++){
             if(viewList.get(i).getClass().toString().contains("ImageView")){
                 ImageView iv = (ImageView)viewList.get(i);
                 iv.setImageResource(R.drawable.check_gray);
                 iv.setTag(R.drawable.check_gray);
+            }
+        }
+    }
+    //设置商铺类型
+    public void SetCheck(String splx){
+        List<View> viewList = Base.getAllChildViews(mllJYZTLB);
+        for(int i = 0; i < viewList.size(); i++) {
+            if(viewList.get(i).getClass().toString().contains("LinearLayout")){
+                List<View> vs = Base.getAllChildViews(viewList.get(i));
+                TextView tv = (TextView)vs.get(0);
+                ImageView iv = (ImageView)vs.get(1);
+                if(tv.getText().toString().equalsIgnoreCase(splx)) {
+                    iv.setImageResource(R.drawable.check_purple);
+                    iv.setTag(R.drawable.check_purple);
+                }
             }
         }
     }
