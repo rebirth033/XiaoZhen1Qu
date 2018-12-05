@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         }
 
         /// <summary>
-        /// 生活服务_车辆服务_过户/上牌/年检/验车信息ID
+        /// 过户/上牌/年检/验车信息ID
         /// </summary>
         [Id]
         public virtual string ID { get; set; }

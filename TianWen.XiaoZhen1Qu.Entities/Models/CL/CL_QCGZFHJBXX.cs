@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         }
 
         /// <summary>
-        /// 生活服务_车辆服务_汽车美容/装饰信息ID
+        /// 汽车改装/防护信息ID
         /// </summary>
         [Id]
         public virtual string ID { get; set; }

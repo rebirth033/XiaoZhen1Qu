@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         }
 
         /// <summary>
-        /// 货车信息ID
+        /// 客车信息ID
         /// </summary>
         [Id]
         public virtual string ID { get; set; }
