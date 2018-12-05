@@ -16,6 +16,8 @@ public class FB_FC_SJ extends PopupWindow  implements View.OnClickListener {
 
     private View mMenuView;
     public EditText metsj;
+    public TextView mtvtext;
+    public TextView mtvtitle;
 
     public FB_FC_SJ(Activity context, View.OnClickListener itemsOnClick) {
         super(context);
@@ -57,6 +59,8 @@ public class FB_FC_SJ extends PopupWindow  implements View.OnClickListener {
         ImageView mivqx = (ImageView) mMenuView.findViewById(R.id.ivqx);
         TextView mtvqd = (TextView) mMenuView.findViewById(R.id.tvqd);
         metsj = (EditText) mMenuView.findViewById(R.id.etsj);
+        mtvtext = (TextView) mMenuView.findViewById(R.id.tv_fb_fc_zj_text);
+        mtvtitle = (TextView) mMenuView.findViewById(R.id.tv_fb_fc_zj_title);
         mtv0.setOnClickListener(this);
         mtv1.setOnClickListener(this);
         mtv2.setOnClickListener(this);

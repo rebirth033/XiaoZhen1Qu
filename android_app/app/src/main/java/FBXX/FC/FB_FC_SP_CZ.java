@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.example.administrator.Public.R;
 import java.math.BigDecimal;
 import Common.Base;
+import Common.WheelStyle;
 import Entities.FB_FC_SP_Model;
 
 public class FB_FC_SP_CZ extends Base implements View.OnClickListener {
@@ -85,10 +86,10 @@ public class FB_FC_SP_CZ extends Base implements View.OnClickListener {
             case R.id.tv_dbcd_nextstep:
                 YMTZ("FB_FC_SP_CZ2");
                 break;
-            case R.id.ll_sp_lxrsf:
+            case R.id.tv_sp_lxrsf:
                 YMTZ("FB_FC_LXRSF");
                 break;
-            case R.id.ll_sp_lxrlxdh:
+            case R.id.tv_sp_lxrlxdh:
                 YMTZ("FB_FC_LXRLXDH");
                 break;
             case R.id.ll_sp_lx:

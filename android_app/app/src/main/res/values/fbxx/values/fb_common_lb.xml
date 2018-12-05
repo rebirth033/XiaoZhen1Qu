@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ll_fb_lb_root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="sv_fb_lb_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">600dp</item>
+        <item name="android:fillViewport">false</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+    <style name="ll_fb_lb_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="ll_fb_lb_main_top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+    <style name="et_fb_lb_xqmc">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+    <style name="iv_fb_lb_qx">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:background">@color/colorGray</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+    <style name="ll_fb_lb">
+        <item name="android:layout_width">410dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="ll_fb_lb_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+    <style name="iv_fb_lb_item_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="ll_fb_lb_split">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+</resources>

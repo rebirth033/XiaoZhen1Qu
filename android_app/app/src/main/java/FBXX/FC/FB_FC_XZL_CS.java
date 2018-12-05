@@ -26,8 +26,7 @@ public class FB_FC_XZL_CS extends Base implements View.OnClickListener {
 
     public FB_FC_XZL_Model fb_fc_xzl = new FB_FC_XZL_Model();
     public TextView mtvqy;
-    public TextView mtvlp;
-    public TextView mtvdd;
+    public TextView metlp;
     public TextView metbt;
     public TextView metms;
     public TextView mtvmj;
@@ -59,8 +58,9 @@ public class FB_FC_XZL_CS extends Base implements View.OnClickListener {
         findViewById(R.id.tv_dbcd_fb).setOnClickListener(this);
 
         mtvmj = (TextView) findViewById(R.id.tv_xzl_mj);
-        mtvsj = (TextView) findViewById(R.id.tv_xzl_zj);
+        mtvsj = (TextView) findViewById(R.id.tv_xzl_sj);
         metms = (EditText) findViewById(R.id.et_xzl_ms);
+        metlp = (TextView) findViewById(R.id.et_xzl_lp);
         mtvlxrsf = (TextView) findViewById(R.id.tv_xzl_lxrsf);
         mtvlxrlxdh = (TextView) findViewById(R.id.tv_xzl_lxrlxdh);
 
@@ -72,7 +72,7 @@ public class FB_FC_XZL_CS extends Base implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_back:
-                YMTZ("FB_FC_SP_LB");
+                YMTZ("FB_FC_XZL_LB");
                 break;
             case R.id.tv_dbcd_fb:
                 FB();
@@ -83,10 +83,10 @@ public class FB_FC_XZL_CS extends Base implements View.OnClickListener {
             case R.id.ll_xzl_sj:
                 YMTZ("FB_FC_SJ");
                 break;
-            case R.id.ll_xzl_lxrsf:
+            case R.id.tv_xzl_lxrsf:
                 YMTZ("FB_FC_LXRSF");
                 break;
-            case R.id.ll_xzl_lxrlxdh:
+            case R.id.tv_xzl_lxrlxdh:
                 YMTZ("FB_FC_LXRLXDH");
                 break;
         }
@@ -95,7 +95,7 @@ public class FB_FC_XZL_CS extends Base implements View.OnClickListener {
     //页面跳转
     public void YMTZ(String id) {
         if (id == "FB_FC_XZL_LB") {
-            Intent intent = new Intent(FB_FC_XZL_CS.this, FB_FC_SP_LB.class);
+            Intent intent = new Intent(FB_FC_XZL_CS.this, FB_FC_XZL_LB.class);
             startActivity(intent);
             finish();//关闭当前页面
         }
@@ -187,7 +187,7 @@ public class FB_FC_XZL_CS extends Base implements View.OnClickListener {
                     sjWindow.dismiss();
                     mtvsj.setText(sjWindow.metsj.getText());
 
-                    fb_fc_xzl.SJ = new BigDecimal(sjWindow.metsj.getText().toString().replace("元","").replace("/","").replace("月",""));
+                    fb_fc_xzl.SJ = new BigDecimal(sjWindow.metsj.getText().toString().replace("万","").replace("元",""));
                     break;
             }
         }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/rl_fb_window_number" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/rl_fb_window_number_root">
+
+    <LinearLayout style="@style/ll_fb_window_number_root">
+
+        <LinearLayout style="@style/ll_fb_window_number_top">
+            <TextView style="@style/tv_fb_window_number" android:text="面积" />
+            <EditText style="@style/et_fb_window_number" android:id="@+id/etmj" android:hint="请填写面积" />
+        </LinearLayout>
+
+        <TextView style="@style/tv_fb_window_number_title" android:text="请输入房屋面积" />
+
+        <LinearLayout style="@style/ll_fb_window_number_body">
+
+            <LinearLayout style="@style/ll_fb_window_number_body_column">
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv1" android:text="1" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv4" android:text="4" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv7" android:text="7" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tvpoint" android:text="." />
+            </LinearLayout>
+            <LinearLayout style="@style/ll_fb_window_number_body_column">
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv2" android:text="2" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv5" android:text="5" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv8" android:text="8" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv0" android:text="0" />
+            </LinearLayout>
+            <LinearLayout style="@style/ll_fb_window_number_body_column">
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv3" android:text="3" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv6" android:text="6" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv9" android:text="9" />
+                <ImageView style="@style/tv_fb_window_number_body_item" android:id="@+id/ivqx" android:src="@drawable/fb_fc_zz_mj_qx" android:paddingLeft="28dp" android:paddingRight="28dp"/>
+            </LinearLayout>
+            <LinearLayout style="@style/ll_fb_window_number_body_column" android:layout_width="120dp">
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tvsc" android:text="✖" android:layout_width="100dp" android:layout_height="100dp" android:background="#cccccc" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tvqd" android:text="确定" android:layout_width="100dp" android:layout_height="100dp" android:background="#bc6ba6" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

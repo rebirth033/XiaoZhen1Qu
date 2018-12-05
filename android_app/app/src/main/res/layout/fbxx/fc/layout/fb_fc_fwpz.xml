@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/rl_fb_fc_fwpz" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/rl_fb_fc_fwpz_root">
+
+    <LinearLayout style="@style/ll_fb_fc_fwpz_root">
+
+        <LinearLayout style="@style/ll_fb_fc_fwpz_top">
+            <TextView style="@style/tv_fb_fc_lxrsf" android:text="房屋配置" />
+            <TextView android:id="@+id/tvwc" style="@style/tv_fb_fc_lxrsf_wc" android:text="完成" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/ll_fb_fc_fwpz" style="@style/ll_fb_fc_fwpz_body">
+
+            <!--<LinearLayout style="@style/ll_fb_fc_fwpz_body_column">-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_title" android:text="家具" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout style="@style/ll_fb_fc_fwpz_body_column" android:layout_height="45dp">-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="桌椅" />-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="沙发" />-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="床" />-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="衣柜" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout style="@style/ll_fb_fc_fwpz_body_column">-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_title" android:text="家电" />-->
+            <!--</LinearLayout>-->
+
+             <!--<LinearLayout style="@style/ll_fb_fc_fwpz_body_column" android:layout_height="45dp">-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="电视" />-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="冰箱" />-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="空调" />-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="洗衣机" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout style="@style/ll_fb_fc_fwpz_body_column" android:layout_height="45dp">-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="热水器" />-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="微波炉" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout style="@style/ll_fb_fc_fwpz_body_column" android:layout_height="45dp">-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_title" android:text="其他" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout style="@style/ll_fb_fc_fwpz_body_column" android:layout_height="45dp">-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="暖气" />-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="宽带" />-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="阳台" />-->
+                <!--<TextView style="@style/tv_fb_fc_fwpz_body_item" android:text="燃气灶" />-->
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

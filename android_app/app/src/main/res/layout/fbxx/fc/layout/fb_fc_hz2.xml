@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/fb_fc_hz2" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_fb_main">
+
+        <LinearLayout style="@style/ll_fb_main">
+
+            <LinearLayout style="@style/ll_fb_top">
+                <ImageView android:id="@+id/iv_back" style="@style/iv_fb_back" android:src="@drawable/arrow_back_black" />
+                <TextView style="@style/tv_fb_title" android:text="（2/2）补充信息" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_hz_fwpz" style="@style/ll_content_middle_vertical">
+                <TextView android:text="房屋配置" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_hz_fwpz" android:text="请选择" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_hz_fwms" style="@style/ll_content_middle_vertical">
+                <TextView android:text="房屋描述（必填）" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_hz_fwms" android:text="如：房屋周边及交通等" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="租客要求" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_horizontal">
+                <LinearLayout android:id="@+id/ll_hz_kfsj" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="看房时间" />
+                    <TextView android:id="@+id/tv_hz_kfsj" style="@style/tv_content_middle_vertical_value" android:text="请选择" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_hz_zkxb" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="租客性别" />
+                    <TextView android:id="@+id/tv_hz_zkxb" style="@style/tv_content_middle_vertical_value" android:text="请选择" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_hz_rzsj" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="入住时间" />
+                    <TextView android:id="@+id/tv_hz_rzsj" style="@style/tv_content_middle_vertical_value" android:text="请选择" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<LinearLayout style="@style/ll_content_middle_horizontal">-->
+                <!--<TextView android:text="租客性别" style="@style/tv_content_middle_text"/>-->
+                <!--<TextView android:text="男女不限" style="@style/tv_content_middle_value" />-->
+                <!--<TextView android:text="限女生" style="@style/tv_content_middle_value" />-->
+                <!--<TextView android:text="限男生" style="@style/tv_content_middle_value" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="联系人" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_horizontal" android:layout_height="60dp">
+                <LinearLayout android:id="@+id/ll_hz_lxrmc" style="@style/ll_content_middle_vertical" android:layout_width="204dp" android:layout_height="60dp">
+                    <EditText android:id="@+id/et_hz_lxrmc" style="@style/tv_content_middle_vertical_value" android:hint="请填写姓名" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_hz_lxrsf" style="@style/ll_content_middle_vertical" android:layout_width="204dp" android:layout_height="60dp">
+                    <TextView android:id="@+id/tv_hz_lxrsf" style="@style/tv_content_middle_vertical_value" android:text="请选择身份" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_hz_lxrlxdh" style="@style/ll_content_middle_vertical">
+                <TextView style="@style/tv_content_middle_vertical_text" android:text="为保护隐私，您的真实号码将被隐藏" />
+                <TextView android:id="@+id/tv_hz_lxrlxdh" style="@style/tv_content_middle_vertical_value" android:text="请填写手机号" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout style="@style/ll_dbcd_nextstep">
+        <TextView android:id="@+id/tv_dbcd_fb" style="@style/tv_dbcd_nextstep" android:text="确定发布" />
+    </LinearLayout>
+
+</LinearLayout>

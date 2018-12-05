@@ -15,6 +15,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import Common.ViewAdapter;
+
 public class FB_FC_SP_WYFSFDF extends PopupWindow implements View.OnClickListener {
 
     private View mMenuView;

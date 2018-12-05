@@ -21,6 +21,7 @@ public class FB_FC_QT_LB extends Base implements View.OnClickListener {
         findViewById(R.id.iv_back).setOnClickListener(this);
         findViewById(R.id.ll_qtcs).setOnClickListener(this);
         findViewById(R.id.ll_qtcz).setOnClickListener(this);
+        findViewById(R.id.ll_qtzr).setOnClickListener(this);
     }
 
     //事件监听
@@ -35,6 +36,9 @@ public class FB_FC_QT_LB extends Base implements View.OnClickListener {
             case R.id.ll_qtcz:
                 YMTZ("FB_FC_QT_CZ");
                 break;
+            case R.id.ll_qtzr:
+                YMTZ("FB_FC_QT_ZR");
+                break;
 
         }
     }
@@ -44,17 +48,22 @@ public class FB_FC_QT_LB extends Base implements View.OnClickListener {
         if (id == "FB_FC") {
             Intent intent = new Intent(FB_FC_QT_LB.this, FB_FC.class);
             startActivity(intent);
-            finish();//关闭当前页面
+            finish();
         }
-//        if (id == "FB_FC_QT_CS") {
-//            Intent intent = new Intent(FB_FC_QT_LB.this, FB_FC_QT_CS.class);
-//            startActivity(intent);
-//            finish();//关闭当前页面
-//        }
+        if (id == "FB_FC_QT_CS") {
+            Intent intent = new Intent(FB_FC_QT_LB.this, FB_FC_QT_CS.class);
+            startActivity(intent);
+            finish();
+        }
         if (id == "FB_FC_QT_CZ") {
             Intent intent = new Intent(FB_FC_QT_LB.this, FB_FC_QT_CZ.class);
             startActivity(intent);
             finish();//关闭当前页面
+        }
+        if (id == "FB_FC_QT_ZR") {
+            Intent intent = new Intent(FB_FC_QT_LB.this, FB_FC_QT_ZR.class);
+            startActivity(intent);
+            finish();
         }
     }
 }

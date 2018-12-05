@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/fb_fc_sp_zr" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_fb_main">
+
+        <LinearLayout style="@style/ll_fb_main">
+
+            <LinearLayout style="@style/ll_fb_top">
+                <ImageView android:id="@+id/iv_back" style="@style/iv_fb_back" android:src="@drawable/arrow_back_black" />
+                <TextView style="@style/tv_fb_title" android:text="生意转让(1/2)" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_fb_head">
+                <LinearLayout android:id="@+id/ll_fb_head_tp" style="@style/ll_fb_head_tp">
+                    <TextView android:id="@+id/tv_yhm" style="@style/tv_fb_head_sczp" />
+                    <ImageView android:id="@+id/iv_sczp" style="@style/iv_fb_head_sczp" android:src="@drawable/grzx_sczp_blue" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="基本信息" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_lx" style="@style/ll_content_middle_vertical">
+                <TextView android:text="商铺类型" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_sp_lx" android:text="请选择" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_lc" style="@style/ll_content_middle_vertical">
+                <TextView android:text="楼层" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_sp_lc" android:hint="请填写" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_mj" style="@style/ll_content_middle_vertical">
+                <TextView android:text="面积" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_sp_mj" android:hint="请填写" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_horizontal">
+                <LinearLayout android:id="@+id/ll_sp_mk" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="面宽" />
+                    <TextView android:id="@+id/tv_sp_mk" style="@style/tv_content_middle_vertical_value" android:hint="请填写" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_sp_cg" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="层高" />
+                    <TextView android:id="@+id/tv_sp_cg" style="@style/tv_content_middle_vertical_value" android:hint="请填写" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_sp_js" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="进深" />
+                    <TextView android:id="@+id/tv_sp_js" style="@style/tv_content_middle_vertical_value" android:hint="请填写" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_jyzt" style="@style/ll_content_middle_vertical">
+                <TextView android:text="经营状态" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_sp_jyzt" android:hint="请选择" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_jyhy" style="@style/ll_content_middle_vertical">
+                <TextView android:text="经营行业" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_sp_jyhy" android:hint="请选择" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="价格详情" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_zj" style="@style/ll_content_middle_vertical">
+                <TextView android:text="租金" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_sp_zj" android:hint="请填写" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_yffs" style="@style/ll_content_middle_vertical">
+                <TextView android:text="付款方式" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_sp_yffs" android:hint="请填写" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_zrf" style="@style/ll_content_middle_vertical">
+                <TextView android:text="转让费" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_sp_zrf" android:hint="请填写" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="联系人" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_horizontal" android:layout_height="60dp">
+                <LinearLayout android:id="@+id/ll_sp_lxrmc" style="@style/ll_content_middle_vertical" android:layout_width="204dp" android:layout_height="60dp">
+                    <EditText android:id="@+id/et_sp_lxrmc" style="@style/tv_content_middle_vertical_value" android:hint="请填写姓名" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_sp_lxrsf" style="@style/ll_content_middle_vertical" android:layout_width="204dp" android:layout_height="60dp">
+                    <TextView android:id="@+id/tv_sp_lxrsf" style="@style/tv_content_middle_vertical_value" android:hint="请选择身份" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_lxrlxdh" style="@style/ll_content_middle_vertical">
+                <TextView style="@style/tv_content_middle_vertical_text" android:text="为保护隐私，您的真实号码将被隐藏" />
+                <TextView android:id="@+id/tv_sp_lxrlxdh" style="@style/tv_content_middle_vertical_value" android:hint="请填写手机号" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout style="@style/ll_dbcd_nextstep">
+        <TextView android:id="@+id/tv_dbcd_nextstep" style="@style/tv_dbcd_nextstep" android:text="下一步" />
+    </LinearLayout>
+
+</LinearLayout>

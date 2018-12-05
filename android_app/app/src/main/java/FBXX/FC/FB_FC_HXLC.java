@@ -15,6 +15,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import Common.ViewAdapter;
+import Common.WheelStyle;
+import Common.WheelView;
+
 public class FB_FC_HXLC extends PopupWindow implements View.OnClickListener {
 
     private View mMenuView;

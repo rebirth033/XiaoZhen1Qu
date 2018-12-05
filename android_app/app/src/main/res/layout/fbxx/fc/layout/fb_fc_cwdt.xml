@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:id="@+id/rl_fb_fc_cwdt" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/rl_fb_window_wheel_root">
+
+    <LinearLayout style="@style/ll_fb_window_wheel_root">
+
+        <LinearLayout style="@style/ll_fb_window_wheel_top_item" android:id="@+id/llcw">
+            <TextView style="@style/tv_fb_window_wheel" android:text="车位" />
+            <TextView style="@style/tv_fb_window_wheel_value" android:id="@+id/tv_cw" android:textColor="#bc6ba6" android:textColorHint="#bc6ba6" android:hint="请选择" />
+        </LinearLayout>
+        <LinearLayout style="@style/ll_fb_window_wheel_top_item" android:id="@+id/lldt">
+            <TextView style="@style/tv_fb_window_wheel" android:text="电梯" />
+            <TextView style="@style/tv_fb_window_wheel_value" android:id="@+id/tv_dt" android:hint="请选择" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_fb_window_wheel_body">
+
+            <android.support.design.widget.TabLayout style="@style/tb_fb_window_wheel" android:id="@+id/tb_body">
+
+            </android.support.design.widget.TabLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager android:id="@+id/vp_body" android:layout_width="410dp" android:layout_height="230dp" android:layout_marginTop="440dp" />
+
+</RelativeLayout>

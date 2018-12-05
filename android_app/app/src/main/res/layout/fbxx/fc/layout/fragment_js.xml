@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_window_wheel_body" android:id="@+id/fragment_js" android:orientation="vertical">
+
+        <TextView android:id="@+id/tv_fb_window_number_title" style="@style/tv_fb_window_number_title" android:text="请填写进深" />
+
+        <LinearLayout style="@style/ll_fb_window_number_body">
+
+            <LinearLayout style="@style/ll_fb_window_number_body_column">
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_1" android:text="1" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_4" android:text="4" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_7" android:text="7" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_point" android:text="." />
+            </LinearLayout>
+            <LinearLayout style="@style/ll_fb_window_number_body_column">
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_2" android:text="2" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_5" android:text="5" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_8" android:text="8" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_0" android:text="0" />
+            </LinearLayout>
+            <LinearLayout style="@style/ll_fb_window_number_body_column">
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_3" android:text="3" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_6" android:text="6" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_9" android:text="9" />
+                <ImageView style="@style/tv_fb_window_number_body_item" android:id="@+id/iv_js_qx" android:src="@drawable/fb_fc_zz_mj_qx" android:paddingLeft="28dp" android:paddingRight="28dp"/>
+            </LinearLayout>
+            <LinearLayout style="@style/ll_fb_window_number_body_column" android:layout_width="120dp">
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_sc" android:text="✖" android:layout_width="100dp" android:layout_height="100dp" android:background="#cccccc" />
+                <TextView style="@style/tv_fb_window_number_body_item" android:id="@+id/tv_js_qd" android:text="确定" android:layout_width="100dp" android:layout_height="100dp" android:background="#bc6ba6" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

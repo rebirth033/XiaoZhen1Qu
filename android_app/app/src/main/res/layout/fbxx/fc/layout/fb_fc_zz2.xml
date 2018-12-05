@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/fb_fc_zz2" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_fb_main">
+
+        <LinearLayout style="@style/ll_fb_main">
+
+            <LinearLayout style="@style/ll_fb_top">
+                <ImageView android:id="@+id/iv_back" style="@style/iv_fb_back" android:src="@drawable/arrow_back_black" />
+                <TextView style="@style/tv_fb_title" android:text="整租发布" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="入住信息" style="@style/tv_content_middle_title" />
+                <TextView android:text="（选填）" style="@style/tv_content_middle_title_tip" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_horizontal">
+                <LinearLayout android:id="@+id/ll_zz_kfsj" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="看房时间" />
+                    <TextView android:id="@+id/tv_zz_kfsj" style="@style/tv_content_middle_vertical_value" android:text="请选择" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_zz_yzrs" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="宜住人数" />
+                    <TextView android:id="@+id/tv_zz_yzrs" style="@style/tv_content_middle_vertical_value" android:text="请选择" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_zz_rzsj" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="入住时间" />
+                    <TextView android:id="@+id/tv_zz_rzsj" style="@style/tv_content_middle_vertical_value" android:text="请选择" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="房屋配置" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_zz_fwpz" style="@style/ll_content_middle_vertical" android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="房屋亮点" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_zz_fwld" style="@style/ll_content_middle_vertical" android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="出租要求" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_zz_czyq" style="@style/ll_content_middle_vertical" android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="补充描述" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_zz_bcms" style="@style/ll_content_middle_vertical" android:layout_height="150dp">
+                <Custom.CustomEditText android:id="@+id/et_content_middle_bcms" style="@style/et_content_middle_bcms" android:hint="（选填）可以介绍房子吸引人的地方，交通和周边环境，可以入住时间等" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout style="@style/ll_dbcd_nextstep">
+        <TextView android:id="@+id/tv_dbcd_fb" style="@style/tv_dbcd_nextstep" android:text="确定发布" />
+    </LinearLayout>
+
+</LinearLayout>

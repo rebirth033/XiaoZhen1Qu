@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/fb2" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_fb_main">
+
+        <LinearLayout style="@style/ll_fb_main" android:layout_height="match_parent">
+
+            <LinearLayout style="@style/ll_fb_top">
+                <ImageView android:id="@+id/iv_back" style="@style/iv_fb_back" android:src="@drawable/arrow_back_black" />
+                <TextView style="@style/tv_fb_title" android:text="添加房源描述" android:layout_width="300dp" />
+                <TextView android:id="@+id/tv_save" style="@style/tv_fb_title" android:text="保存" android:layout_width="40dp" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_zz_bcms" style="@style/ll_content_middle_vertical" android:layout_height="match_parent">
+                <Custom.CustomEditText android:id="@+id/et_content_middle_bcms" style="@style/et_content_middle_bcms" android:layout_height="600dp" android:hint="（选填）可以介绍房子吸引人的地方，交通和周边环境，可以入住时间等" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

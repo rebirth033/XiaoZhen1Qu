@@ -15,6 +15,7 @@ public class FB_FC_CF_Model extends JCXX_Model implements Serializable {
     public String GJC;
     public BigDecimal SJ;
     public BigDecimal ZJ;
+    public BigDecimal ZRF;
     public byte[] BCMS;
 
 }

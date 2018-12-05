@@ -146,7 +146,13 @@
         <activity android:name="FBXX.FC.FB_FC_XZL_LB" />
         <activity android:name="FBXX.FC.FB_FC_XZL_CS" />
         <activity android:name="FBXX.FC.FB_FC_QT_CZ" />
-        <activity android:name="FBXX.FC.FB_FC_QT_LB"></activity>
+        <activity android:name="FBXX.FC.FB_FC_QT_LB" />
+        <activity android:name="FBXX.FC.FB_FC_QT_CS" />
+        <activity android:name="FBXX.FC.FB_FC_QT_LX" />
+        <activity android:name="FBXX.FC.FB_FC_QT_ZR" />
+        <activity android:name="FBXX.FC.FB_FC_SP_ZR" />
+        <activity android:name="FBXX.FC.FB_FC_SP_ZR2" />
+        <activity android:name="FBXX.CL.FB_CL_ESC"></activity>
     </application>
 
 </manifest>

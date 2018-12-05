@@ -37,7 +37,7 @@ public class FB_FC_SP_LB extends Base implements View.OnClickListener {
                 YMTZ("FB_FC_SP_CZ");
                 break;
             case R.id.ll_syzr:
-                YMTZ("FB_FC_SP_SYZR");
+                YMTZ("FB_FC_SP_ZR");
                 break;
 
         }
@@ -57,6 +57,11 @@ public class FB_FC_SP_LB extends Base implements View.OnClickListener {
         }
         if (id == "FB_FC_SP_CZ") {
             Intent intent = new Intent(FB_FC_SP_LB.this, FB_FC_SP_CZ.class);
+            startActivity(intent);
+            finish();//关闭当前页面
+        }
+        if (id == "FB_FC_SP_ZR") {
+            Intent intent = new Intent(FB_FC_SP_LB.this, FB_FC_SP_ZR.class);
             startActivity(intent);
             finish();//关闭当前页面
         }

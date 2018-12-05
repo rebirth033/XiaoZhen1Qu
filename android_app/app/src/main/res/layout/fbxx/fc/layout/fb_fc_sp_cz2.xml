@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/fb_fc_sp_cz2" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_fb_main">
+
+        <LinearLayout style="@style/ll_fb_main">
+
+            <LinearLayout style="@style/ll_fb_top">
+                <ImageView android:id="@+id/iv_back" style="@style/iv_fb_back" android:src="@drawable/arrow_back_black" />
+                <TextView style="@style/tv_fb_title" android:text="商铺出租" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="商铺配套" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_sppt" style="@style/ll_content_middle_vertical" android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="附加信息" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_horizontal">
+                <LinearLayout android:id="@+id/ll_sp_wyf" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="物业费（元/㎡/天）" />
+                    <TextView android:id="@+id/tv_sp_wyf" style="@style/tv_content_middle_vertical_value" android:hint="请选择" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_sp_sf" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="水费（元/吨）" />
+                    <TextView android:id="@+id/tv_sp_sf" style="@style/tv_content_middle_vertical_value" android:hint="请选择" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_sp_df" style="@style/ll_content_middle_vertical" android:layout_width="136dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="电费（元/度）" />
+                    <TextView android:id="@+id/tv_sp_df" style="@style/tv_content_middle_vertical_value" android:hint="请选择" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="位置信息" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_szqy" style="@style/ll_content_middle_vertical">
+                <TextView android:text="所在区域" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_sp_szqy" android:hint="请输入" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_spdz" style="@style/ll_content_middle_vertical">
+                <TextView android:text="商铺地址" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_sp_spdz" android:hint="请输入" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_ljzt" style="@style/ll_content_middle_vertical">
+                <TextView android:text="临街状态" style="@style/tv_content_middle_vertical_text" />
+                <LinearLayout style="@style/ll_content_middle_horizontal" android:layout_height="50dp" android:gravity="center">
+                    <TextView style="@style/tv_content_middle_horizontal_radio" android:text="是" />
+                    <TextView style="@style/tv_content_middle_horizontal_radio" android:text="否" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_split">
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="详细信息" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_bt" style="@style/ll_content_middle_vertical">
+                <TextView android:text="标题" style="@style/tv_content_middle_vertical_text" />
+                <EditText android:id="@+id/et_sp_bt" android:hint="请输入" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="房屋描述" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_sp_bcms" style="@style/ll_content_middle_vertical" android:layout_height="150dp">
+                <Custom.CustomEditText android:id="@+id/et_content_middle_bcms" style="@style/et_content_middle_bcms" android:hint="可描述商铺优点，周边的业态，人流信息，适合营业类型" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout style="@style/ll_dbcd_nextstep">
+        <TextView android:id="@+id/tv_dbcd_fb" style="@style/tv_dbcd_nextstep" android:text="确定发布" />
+    </LinearLayout>
+
+</LinearLayout>

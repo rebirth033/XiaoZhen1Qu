@@ -20,25 +20,25 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import Common.Base;
+import Common.WheelStyle;
 import Entities.FB_FC_CF_Model;
 
 public class FB_FC_QT_CZ extends Base implements View.OnClickListener {
 
     public FB_FC_CF_Model fb_fc_qt = new FB_FC_CF_Model();
     public TextView mtvqy;
-    public TextView mtvlp;
-    public TextView mtvdd;
+    public TextView mtvlx;
     public TextView metbt;
     public TextView metms;
     public TextView mtvmj;
-    public TextView mtvsj;
+    public TextView mtvzj;
     public TextView mtvlxrsf;
     public TextView mtvlxrlxdh;
 
     //自定义的弹出框类
-
+    FB_FC_QT_LX qtlxWindow;
     FB_FC_MJ mjWindow;
-    FB_FC_SJ sjWindow;
+    FB_FC_ZJ zjWindow;
     FB_FC_LXRSF lxrsfWindow;
     FB_FC_LXRLXDH lxrlxdhWindow;
 
@@ -52,14 +52,16 @@ public class FB_FC_QT_CZ extends Base implements View.OnClickListener {
     //初始化页面
     private void initView() {
         findViewById(R.id.iv_back).setOnClickListener(this);
+        findViewById(R.id.ll_qt_lx).setOnClickListener(this);
         findViewById(R.id.ll_qt_mj).setOnClickListener(this);
         findViewById(R.id.ll_qt_zj).setOnClickListener(this);
         findViewById(R.id.ll_qt_lxrsf).setOnClickListener(this);
         findViewById(R.id.ll_qt_lxrlxdh).setOnClickListener(this);
         findViewById(R.id.tv_dbcd_fb).setOnClickListener(this);
 
+        mtvlx = (TextView) findViewById(R.id.tv_qt_lx);
         mtvmj = (TextView) findViewById(R.id.tv_qt_mj);
-        mtvsj = (TextView) findViewById(R.id.tv_qt_zj);
+        mtvzj = (TextView) findViewById(R.id.tv_qt_zj);
         metms = (EditText) findViewById(R.id.et_qt_ms);
         mtvlxrsf = (TextView) findViewById(R.id.tv_qt_lxrsf);
         mtvlxrlxdh = (TextView) findViewById(R.id.tv_qt_lxrlxdh);
@@ -72,10 +74,13 @@ public class FB_FC_QT_CZ extends Base implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_back:
-                YMTZ("FB_FC_SP_LB");
+                YMTZ("FB_FC_QT_LB");
                 break;
             case R.id.tv_dbcd_fb:
                 FB();
+                break;
+            case R.id.ll_qt_lx:
+                YMTZ("FB_FC_QT_LX");
                 break;
             case R.id.ll_qt_mj:
                 YMTZ("FB_FC_MJ");
@@ -83,10 +88,10 @@ public class FB_FC_QT_CZ extends Base implements View.OnClickListener {
             case R.id.ll_qt_zj:
                 YMTZ("FB_FC_ZJ");
                 break;
-            case R.id.ll_qt_lxrsf:
+            case R.id.tv_qt_lxrsf:
                 YMTZ("FB_FC_LXRSF");
                 break;
-            case R.id.ll_qt_lxrlxdh:
+            case R.id.tv_qt_lxrlxdh:
                 YMTZ("FB_FC_LXRLXDH");
                 break;
         }
@@ -95,19 +100,25 @@ public class FB_FC_QT_CZ extends Base implements View.OnClickListener {
     //页面跳转
     public void YMTZ(String id) {
         if (id == "FB_FC_QT_LB") {
-            Intent intent = new Intent(FB_FC_QT_CZ.this, FB_FC_SP_LB.class);
+            Intent intent = new Intent(FB_FC_QT_CZ.this, FB_FC_QT_LB.class);
             startActivity(intent);
             finish();//关闭当前页面
+        }
+        if (id == "FB_FC_QT_LX") {
+            qtlxWindow = new FB_FC_QT_LX(FB_FC_QT_CZ.this, qtlxOnClick);
+            qtlxWindow.showAtLocation(FB_FC_QT_CZ.this.findViewById(R.id.fb_fc_qt_cz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            qtlxWindow.mtvlx.setText(mtvlx.getText());
+            qtlxWindow.mwvlx.setWheelItemList(WheelStyle.createQTLXString());
         }
         if (id == "FB_FC_MJ") {
             mjWindow = new FB_FC_MJ(FB_FC_QT_CZ.this, mjOnClick);
             mjWindow.showAtLocation(FB_FC_QT_CZ.this.findViewById(R.id.fb_fc_qt_cz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
             mjWindow.metmj.setText(mtvmj.getText());
         }
-        if (id == "FB_FC_SJ") {
-            sjWindow = new FB_FC_SJ(FB_FC_QT_CZ.this, sjOnClick);
-            sjWindow.showAtLocation(FB_FC_QT_CZ.this.findViewById(R.id.fb_fc_qt_cz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
-            sjWindow.metsj.setText(mtvsj.getText());
+        if (id == "FB_FC_ZJ") {
+            zjWindow = new FB_FC_ZJ(FB_FC_QT_CZ.this, zjOnClick);
+            zjWindow.showAtLocation(FB_FC_QT_CZ.this.findViewById(R.id.fb_fc_qt_cz), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+            zjWindow.metzj.setText(mtvzj.getText());
         }
         if (id == "FB_FC_LXRSF") {
             lxrsfWindow = new FB_FC_LXRSF(FB_FC_QT_CZ.this, lxrsfOnClick);
@@ -159,6 +170,19 @@ public class FB_FC_QT_CZ extends Base implements View.OnClickListener {
         }.execute();
     }
 
+    //其他类型页面按钮监听
+    private View.OnClickListener qtlxOnClick = new View.OnClickListener(){
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.tv_qtlx_qd:
+                    qtlxWindow.dismiss();
+                    mtvlx.setText(WheelStyle.createQTLXString().get(qtlxWindow.mwvlx.getCurrentItem()));
+                    break;
+            }
+        }
+    };
+
+
     //面积页面按钮监听
     private View.OnClickListener mjOnClick = new View.OnClickListener(){
         public void onClick(View v) {
@@ -177,17 +201,17 @@ public class FB_FC_QT_CZ extends Base implements View.OnClickListener {
     };
 
     //租金页面按钮监听
-    private View.OnClickListener sjOnClick = new View.OnClickListener(){
+    private View.OnClickListener zjOnClick = new View.OnClickListener(){
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.ivqx:
-                    sjWindow.dismiss();
+                    zjWindow.dismiss();
                     break;
                 case R.id.tvqd:
-                    sjWindow.dismiss();
-                    mtvsj.setText(sjWindow.metsj.getText());
+                    zjWindow.dismiss();
+                    mtvzj.setText(zjWindow.metzj.getText());
 
-                    fb_fc_qt.SJ = new BigDecimal(sjWindow.metsj.getText().toString().replace("元","").replace("/","").replace("月",""));
+                    fb_fc_qt.ZJ = new BigDecimal(zjWindow.metzj.getText().toString().replace("元","").replace("/","").replace("月",""));
                     break;
             }
         }

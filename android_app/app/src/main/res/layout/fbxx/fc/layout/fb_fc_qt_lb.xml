@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_lb_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_sy_main">
+
+        <LinearLayout style="@style/ll_fb_lb_main">
+
+            <LinearLayout style="@style/ll_fb_lb_main_top">
+                <ImageView android:id="@+id/iv_back" style="@style/iv_fb_back" android:src="@drawable/arrow_back_black" />
+                <TextView style="@style/tv_fb_title" android:text="厂房/仓库/土地/车位" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/llXQLB" style="@style/ll_fb_lb">
+
+                <LinearLayout android:id="@+id/ll_qtcz" style="@style/ll_fb_lb_item">
+                    <TextView style="@style/iv_fb_lb_item_text" android:text="出租" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ll_fb_lb_split">
+
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/ll_qtcs" style="@style/ll_fb_lb_item">
+                    <TextView style="@style/iv_fb_lb_item_text" android:text="出售" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ll_fb_lb_split">
+
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/ll_qtzr" style="@style/ll_fb_lb_item">
+                    <TextView style="@style/iv_fb_lb_item_text" android:text="转让" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/ll_fb_lb_split">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
