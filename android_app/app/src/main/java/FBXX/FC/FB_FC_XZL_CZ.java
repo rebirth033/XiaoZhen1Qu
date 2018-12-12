@@ -20,11 +20,11 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import Common.Base;
-import Entities.FB_FC_XZL_Model;
+import Entities.FC_XZL_Model;
 
 public class FB_FC_XZL_CZ extends Base implements View.OnClickListener {
 
-    public FB_FC_XZL_Model fb_fc_xzl = new FB_FC_XZL_Model();
+    public FC_XZL_Model fb_fc_xzl = new FC_XZL_Model();
     public TextView mtvqy;
     public TextView metlp;
     public TextView metbt;

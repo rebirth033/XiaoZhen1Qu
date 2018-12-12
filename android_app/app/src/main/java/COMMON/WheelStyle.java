@@ -210,4 +210,30 @@ public class WheelStyle {
         }
         return wheelString;
     }
+    //车辆颜色
+    public static List<String> createCLYSString() {
+        List<String> wheelString = new ArrayList<>();
+        String[] array = new String[]{"白","灰","银","红","蓝","黄","绿"};
+        for (int i = 0; i < array.length; i++) {
+            wheelString.add(array[i].toString());
+        }
+        return wheelString;
+    }
+    //上牌年份
+    public static List<String> createSPNFString() {
+        List<String> wheelString = new ArrayList<>();
+        String[] array = new String[]{"2013","2014","2015","2016","2017","2018"};
+        for (int i = 0; i < array.length; i++) {
+            wheelString.add(array[i].toString() + "年");
+        }
+        return wheelString;
+    }
+    //过户次数
+    public static List<String> createGHCSString() {
+        List<String> wheelString = new ArrayList<>();
+        for (int i = 1; i <= 10; i++) {
+            wheelString.add(i + "次");
+        }
+        return wheelString;
+    }
 }

@@ -21,12 +21,12 @@ import java.util.List;
 import Common.Base;
 import Common.EditPicture;
 import Common.WheelStyle;
-import Entities.FB_FC_ESF_Model;
+import Entities.FC_ESF_Model;
 import LBXZ.FB_FC;
 
 public class FB_FC_ESF extends Base implements View.OnClickListener {
 
-    public FB_FC_ESF_Model FB_FC_ESF = new FB_FC_ESF_Model();
+    public FC_ESF_Model FB_FC_ESF = new FC_ESF_Model();
     public TextView mtvxqmc;
     public TextView mtvmj;
     public TextView mtvsj;
@@ -41,6 +41,7 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
     public TextView mtvfwms;
     public TextView mtvlxrsf;
     public TextView mtvlxrlxdh;
+
     //自定义的弹出框类
     FB_FC_XQCX xqcxWindow;
     FB_FC_MJ mjWindow;
@@ -139,10 +140,10 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
             case R.id.ll_esf_zx:
                 YMTZ("FB_FC_CQZX_ZXQK");
                 break;
-            case R.id.ll_esf_lxrsf:
+            case R.id.tv_esf_lxrsf:
                 YMTZ("FB_FC_LXRSF");
                 break;
-            case R.id.ll_esf_lxrlxdh:
+            case R.id.tv_esf_lxrlxdh:
                 YMTZ("FB_FC_LXRLXDH");
                 break;
             case R.id.tv_dbcd_fb:
@@ -300,13 +301,6 @@ public class FB_FC_ESF extends Base implements View.OnClickListener {
         if (id == "FB_FC_LXRLXDH") {
             lxrlxdhWindow = new FB_FC_LXRLXDH(FB_FC_ESF.this, lxrlxdhOnClick);
             lxrlxdhWindow.showAtLocation(FB_FC_ESF.this.findViewById(R.id.fb_fc_esf), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
-        }
-        if (id == "NextStep") {
-            Intent intent = new Intent(FB_FC_ESF.this, FB_FC_HZ2.class);
-            Bundle bundle = new Bundle();
-            bundle.putSerializable("FB_FC_HZ", FB_FC_ESF);
-            intent.putExtras(bundle);
-            startActivity(intent);
         }
     }
 

@@ -5,7 +5,6 @@
             <TextView android:id="@+id/tv_cw_qd" style="@style/tv_fb_window_wheel_title_qd"  android:text="确定" />
         </LinearLayout>
     <LinearLayout style="@style/ll_fb_window_wheel_middle" android:layout_width="410dp" android:layout_height="185dp">
-        <Common.WheelView
-            android:id="@+id/wvcw" android:layout_width="410dp" android:layout_height="185dp" />
+        <Common.WheelView android:id="@+id/wvcw" android:layout_width="410dp" android:layout_height="185dp" />
     </LinearLayout>
 </LinearLayout>

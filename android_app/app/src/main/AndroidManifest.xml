@@ -152,7 +152,21 @@
         <activity android:name="FBXX.FC.FB_FC_QT_ZR" />
         <activity android:name="FBXX.FC.FB_FC_SP_ZR" />
         <activity android:name="FBXX.FC.FB_FC_SP_ZR2" />
-        <activity android:name="FBXX.CL.FB_CL_ESC"></activity>
+        <activity
+            android:name="FBXX.CL.FB_CL_JC"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="FBXX.CL.FB_CL_JC2"
+            android:launchMode="singleInstance" />
+        <activity android:name="FBXX.CL.FB_CL_JC_PP" />
+        <activity android:name="FBXX.CL.FB_CL_JC_YSSP" />
+        <activity android:name="FBXX.CL.FB_CL_XSLC" />
+        <activity android:name="FBXX.CL.FB_CL_JC_GHCS" />
+        <activity android:name="FBXX.CL.FB_CL_JC_CKMS" />
+        <activity android:name="FBXX.CL.FB_CL_JC_YWDY" />
+        <activity android:name="FBXX.CL.FB_CL_JC_JZPZ" />
+        <activity android:name="FBXX.CL.FB_CL_GCC" />
+        <activity android:name="FBXX.CL.FB_CL_GCC_JX"></activity>
     </application>
 
 </manifest>

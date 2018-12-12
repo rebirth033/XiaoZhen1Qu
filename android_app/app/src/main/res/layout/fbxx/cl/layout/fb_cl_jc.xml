@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/fb_cl_jc" xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_fb_main">
+
+        <LinearLayout style="@style/ll_fb_main">
+
+            <LinearLayout style="@style/ll_fb_top">
+                <ImageView android:id="@+id/iv_back" style="@style/iv_fb_back" android:src="@drawable/arrow_back_black" />
+                <TextView style="@style/tv_fb_title" android:text="二手车发布" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_fb_head">
+                <LinearLayout android:id="@+id/ll_fb_head_tp" style="@style/ll_fb_head_tp">
+                    <TextView android:id="@+id/tv_yhm" style="@style/tv_fb_head_sczp" />
+                    <ImageView android:id="@+id/iv_sczp" style="@style/iv_fb_head_sczp" android:src="@drawable/grzx_sczp_blue" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="车辆基本信息" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/ll_jc_clpp" style="@style/ll_content_middle_vertical">
+                <TextView android:text="车辆品牌" style="@style/tv_content_middle_vertical_text" />
+                <TextView android:id="@+id/tv_jc_clpp" android:hint="请选择" style="@style/tv_content_middle_vertical_value" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_horizontal">
+                <LinearLayout android:id="@+id/ll_jc_clys" style="@style/ll_content_middle_vertical" android:layout_width="205dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="车辆颜色" />
+                    <TextView android:id="@+id/tv_jc_clys" style="@style/tv_content_middle_vertical_value" android:hint="请选择" />
+                </LinearLayout>
+                <LinearLayout style="@style/ll_content_middle_vertical_split">
+
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ll_jc_spsj" style="@style/ll_content_middle_vertical" android:layout_width="205dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="上牌时间" />
+                    <TextView android:id="@+id/tv_jc_spsj" style="@style/tv_content_middle_vertical_value" android:hint="请选择" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_horizontal">
+                <LinearLayout android:id="@+id/ll_jc_xslc" style="@style/ll_content_middle_vertical" android:layout_width="410dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="行驶里程" />
+                    <TextView android:id="@+id/tv_jc_xslc" style="@style/tv_content_middle_vertical_value" android:hint="请选择" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_title">
+                <TextView android:text="车辆售价信息" style="@style/tv_content_middle_title" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_horizontal">
+                <LinearLayout android:id="@+id/ll_jc_jg" style="@style/ll_content_middle_vertical" android:layout_width="410dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="价格" />
+                    <TextView android:id="@+id/tv_jc_jg" style="@style/tv_content_middle_vertical_value" android:hint="请选择" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_content_middle_horizontal">
+                <LinearLayout android:id="@+id/ll_jc_ywdy" style="@style/ll_content_middle_vertical" android:layout_width="410dp">
+                    <TextView style="@style/tv_content_middle_vertical_text" android:text="车辆有无抵押" />
+                    <TextView android:id="@+id/tv_jc_ywdy" style="@style/tv_content_middle_vertical_value" android:hint="请选择" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout style="@style/ll_dbcd_nextstep">
+        <TextView android:id="@+id/tv_dbcd_nextstep" style="@style/tv_dbcd_nextstep" android:text="下一步" />
+    </LinearLayout>
+
+</LinearLayout>

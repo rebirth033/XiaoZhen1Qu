@@ -11,12 +11,12 @@ import java.util.List;
 import Common.Base;
 import Common.EditPicture;
 import Common.WheelStyle;
-import Entities.FB_FC_ZZ_Model;
+import Entities.FC_ZZF_Model;
 import LBXZ.FB_FC;
 
 public class FB_FC_ZZ extends Base implements View.OnClickListener {
 
-    public FB_FC_ZZ_Model fb_fc_zz = new FB_FC_ZZ_Model();
+    public FC_ZZF_Model fb_fc_zz = new FC_ZZF_Model();
     public TextView mtvxqmc;
     public TextView mtvmj;
     public TextView mtvzj;

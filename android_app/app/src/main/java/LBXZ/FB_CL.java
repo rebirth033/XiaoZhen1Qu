@@ -4,7 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import Common.Base;
-import FBXX.CL.FB_CL_ESC;
+import FBXX.CL.FB_CL_GCC;
+import FBXX.CL.FB_CL_JC;
 import com.example.administrator.Public.R;
 
 public class FB_CL extends Base implements View.OnClickListener {
@@ -19,6 +20,7 @@ public class FB_CL extends Base implements View.OnClickListener {
     private void findById() {
         findViewById(R.id.ivBACK).setOnClickListener(this);
         findViewById(R.id.llESC).setOnClickListener(this);
+        findViewById(R.id.llGCC).setOnClickListener(this);
     }
 
     //事件监听
@@ -28,7 +30,10 @@ public class FB_CL extends Base implements View.OnClickListener {
                 YMTZ("FB_Main");
                 break;
             case R.id.llESC:
-                YMTZ("FB_CL_ESC");
+                YMTZ("FB_CL_JC");
+                break;
+            case R.id.llGCC:
+                YMTZ("FB_CL_GCC");
                 break;
         }
     }
@@ -40,8 +45,14 @@ public class FB_CL extends Base implements View.OnClickListener {
             startActivity(intent);
             finish();//关闭当前页面
         }
-        if (id == "FB_FC_ZZ") {
-            Intent intent = new Intent(FB_CL.this, FB_CL_ESC.class);
+        if (id == "FB_CL_JC") {
+            Intent intent = new Intent(FB_CL.this, FB_CL_JC.class);
+            intent.putExtra("YMMC", "FB_CL");//设置参数
+            startActivity(intent);
+            finish();//关闭当前页面
+        }
+        if (id == "FB_CL_GCC") {
+            Intent intent = new Intent(FB_CL.this, FB_CL_GCC.class);
             intent.putExtra("YMMC", "FB_CL");//设置参数
             startActivity(intent);
             finish();//关闭当前页面

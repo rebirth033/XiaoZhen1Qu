@@ -10,11 +10,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.administrator.Public.R;
 import Common.Base;
-import Entities.FB_FC_SP_Model;
+import Entities.FC_SP_Model;
 
 public class FB_FC_SP_CS2 extends Base implements View.OnClickListener {
 
-    public FB_FC_SP_Model fb_fc_sp = new FB_FC_SP_Model();
+    public FC_SP_Model fb_fc_sp = new FC_SP_Model();
     private LinearLayout mllSPPT;
     public TextView mtvwyf;
     public TextView mtvsf;

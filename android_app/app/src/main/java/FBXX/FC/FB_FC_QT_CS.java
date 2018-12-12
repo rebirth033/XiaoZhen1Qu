@@ -21,11 +21,11 @@ import java.util.ArrayList;
 import java.util.List;
 import Common.Base;
 import Common.WheelStyle;
-import Entities.FB_FC_CF_Model;
+import Entities.FC_CF_Model;
 
 public class FB_FC_QT_CS extends Base implements View.OnClickListener {
 
-    public FB_FC_CF_Model fb_fc_qt = new FB_FC_CF_Model();
+    public FC_CF_Model fb_fc_qt = new FC_CF_Model();
     public TextView mtvqy;
     public TextView mtvlx;
     public TextView metbt;

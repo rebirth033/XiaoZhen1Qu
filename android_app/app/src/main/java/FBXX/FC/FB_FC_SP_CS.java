@@ -9,11 +9,11 @@ import com.example.administrator.Public.R;
 import java.math.BigDecimal;
 import Common.Base;
 import Common.WheelStyle;
-import Entities.FB_FC_SP_Model;
+import Entities.FC_SP_Model;
 
 public class FB_FC_SP_CS extends Base implements View.OnClickListener {
 
-    public FB_FC_SP_Model fb_fc_sp = new FB_FC_SP_Model();
+    public FC_SP_Model fb_fc_sp = new FC_SP_Model();
     public TextView mtvsplx;
     public TextView mtvlxrsf;
     public TextView mtvlxrlxdh;

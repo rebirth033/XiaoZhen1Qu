@@ -111,7 +111,7 @@ public class FB_FC_SP_JYHY extends PopupWindow implements View.OnClickListener {
         }
     }
 
-    //获取商铺类型
+    //获取单选
     public String GetCheck(){
         String bhfy = new String();
         List<View> viewList = Base.getAllChildViews(mllJYHYLB);
@@ -140,7 +140,7 @@ public class FB_FC_SP_JYHY extends PopupWindow implements View.OnClickListener {
             }
         }
     }
-    //设置商铺类型
+    //设置单选
     public void SetCheck(String splx){
         List<View> viewList = Base.getAllChildViews(mllJYHYLB);
         for(int i = 0; i < viewList.size(); i++) {

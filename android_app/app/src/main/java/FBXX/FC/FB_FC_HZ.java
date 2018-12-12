@@ -13,12 +13,12 @@ import java.util.List;
 import Common.Base;
 import Common.EditPicture;
 import Common.WheelStyle;
-import Entities.FB_FC_HZ_Model;
+import Entities.FC_HZF_Model;
 import LBXZ.FB_FC;
 
 public class FB_FC_HZ extends Base implements View.OnClickListener {
 
-    public FB_FC_HZ_Model FB_FC_HZ = new FB_FC_HZ_Model();
+    public FC_HZF_Model FB_FC_HZ = new FC_HZF_Model();
     public TextView mtvxqmc;
     public TextView mtvmj;
     public TextView mtvzj;
@@ -112,7 +112,7 @@ public class FB_FC_HZ extends Base implements View.OnClickListener {
                 YMTZ("FB_FC_LXCX_CX");
                 break;
             case R.id.tv_dbcd_nextstep:
-                YMTZ("NextStep");
+                YMTZ("FB_FC_HZ2");
                 break;
         }
     }
@@ -202,7 +202,7 @@ public class FB_FC_HZ extends Base implements View.OnClickListener {
             lxcxWindow.mwvwslx.setCurrentItem(WheelStyle.createWSLXString().indexOf(mtvwslx.getText()));
             lxcxWindow.mwvwscx.setCurrentItem(WheelStyle.createCXString().indexOf(mtvwscx.getText()));
         }
-        if (id == "NextStep") {
+        if (id == "FB_FC_HZ2") {
             Intent intent = new Intent(FB_FC_HZ.this, FB_FC_HZ2.class);
             Bundle bundle = new Bundle();
             bundle.putSerializable("FB_FC_HZ", FB_FC_HZ);

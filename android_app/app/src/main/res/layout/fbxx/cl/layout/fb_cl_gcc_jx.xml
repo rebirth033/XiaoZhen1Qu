@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ll_fb_fc_xqcx_root">
+
+    <ScrollView android:id="@+id/sv_channel" style="@style/sv_sy_main">
+
+        <LinearLayout style="@style/ll_fb_fc_xqcx_main">
+
+            <LinearLayout style="@style/ll_fb_fc_xqcx_main_top">
+                <ImageView android:id="@+id/iv_back" style="@style/iv_fb_back" android:src="@drawable/arrow_back_black" />
+                <TextView style="@style/tv_fb_title" android:text="请选择机型" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/llLB" style="@style/ll_fb_fc_xqcx_xqlb">
+
+                <!--<LinearLayout style="@style/ll_fb_fc_xqcx_xqlb_item">-->
+                <!--<TextView style="@style/iv_fb_fc_xqcx_xqlb_item_text" android:text="高峰小区" />-->
+                <!--<TextView style="@style/iv_fb_fc_xqcx_xqlb_item_value" android:text="古田支路55号" />-->
+                <!--</LinearLayout>-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

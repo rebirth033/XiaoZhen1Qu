@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 import Common.Base;
 import Common.WheelStyle;
-import Entities.FB_FC_ZZ_Model;
+import Entities.FC_ZZF_Model;
 import com.alibaba.fastjson.JSONObject;
 
 public class FB_FC_ZZ2 extends Base implements View.OnClickListener {
@@ -39,7 +39,7 @@ public class FB_FC_ZZ2 extends Base implements View.OnClickListener {
     private ImageView mivback;
     //自定义的弹出框类
     FB_FC_RZXX rzxxWindow;
-    public FB_FC_ZZ_Model fb_fc_zz = new FB_FC_ZZ_Model();
+    public FC_ZZF_Model fb_fc_zz = new FC_ZZF_Model();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class FB_FC_ZZ2 extends Base implements View.OnClickListener {
         setContentView(R.layout.fb_fc_zz2);
 
         Intent intent  = this.getIntent();
-        fb_fc_zz = (FB_FC_ZZ_Model)intent.getSerializableExtra("fb_fc_zz");
+        fb_fc_zz = (FC_ZZF_Model)intent.getSerializableExtra("fb_fc_zz");
 
         initView();
         loadFWPZ();

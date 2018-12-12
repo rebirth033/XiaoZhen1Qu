@@ -22,7 +22,7 @@ import org.apache.http.util.EntityUtils;
 import java.util.ArrayList;
 import java.util.List;
 import Common.Base;
-import Entities.FB_FC_SP_Model;
+import Entities.FC_SP_Model;
 
 public class FB_FC_SP_CZ2 extends Base implements View.OnClickListener {
 
@@ -32,7 +32,7 @@ public class FB_FC_SP_CZ2 extends Base implements View.OnClickListener {
     public TextView mtvdf;
     private TextView mtvfb;
     private EditText metbcms;
-    public FB_FC_SP_Model fb_fc_sp = new FB_FC_SP_Model();
+    public FC_SP_Model fb_fc_sp = new FC_SP_Model();
 
     FB_FC_SP_WYFSFDF wyfsfdfWindow;
 
@@ -42,7 +42,7 @@ public class FB_FC_SP_CZ2 extends Base implements View.OnClickListener {
         setContentView(R.layout.fb_fc_sp_cz2);
 
         Intent intent  = this.getIntent();
-        fb_fc_sp = (FB_FC_SP_Model)intent.getSerializableExtra("fb_fc_sp");
+        fb_fc_sp = (FC_SP_Model)intent.getSerializableExtra("fb_fc_sp");
 
         initView();
         loadSPPT();

@@ -21,10 +21,12 @@ import java.util.ArrayList;
 import java.util.List;
 import Common.Base;
 import Common.WheelStyle;
-import Entities.FB_FC_HZ_Model;
+import Entities.FC_HZF_Model;
 import com.alibaba.fastjson.JSONObject;
 
 public class FB_FC_HZ2 extends Base implements View.OnClickListener {
+
+    public FC_HZF_Model fb_fc_hz = new FC_HZF_Model();
 
     private LinearLayout mllfwpz;
     private LinearLayout mllfwms;
@@ -37,60 +39,51 @@ public class FB_FC_HZ2 extends Base implements View.OnClickListener {
     private TextView mtvlxrsf;
     private TextView mtvlxrlxdh;
     private ImageView mivback;
+
     //自定义的弹出框类
-    FB_FC_FWPZ fwpzWindow;
-    FB_FC_ZKYQ rzxxWindow;
-    FB_FC_LXRSF lxrsfWindow;
-    FB_FC_LXRLXDH lxrlxdhWindow;
-    public FB_FC_HZ_Model fb_fc_hz = new FB_FC_HZ_Model();
+    private FB_FC_FWPZ fwpzWindow;
+    private FB_FC_ZKYQ rzxxWindow;
+    private FB_FC_LXRSF lxrsfWindow;
+    private FB_FC_LXRLXDH lxrlxdhWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fb_fc_hz2);
-
         Intent intent  = this.getIntent();
-        fb_fc_hz = (FB_FC_HZ_Model)intent.getSerializableExtra("FB_FC_HZ");
-
-        initView();
+        fb_fc_hz = (FC_HZF_Model)intent.getSerializableExtra("FB_FC_HZ");
 
         String YMMC = intent.getStringExtra("YMMC");
         String FWMS = intent.getStringExtra("FWMS");
         if(!(null == YMMC))
             if(YMMC.equalsIgnoreCase("FB_FC_FWMS"))
                 mtvfwms.setText(FWMS);
+
+        initView();
     }
 
     //初始化页面
     private void initView() {
-        mllfwpz = (LinearLayout) findViewById(R.id.ll_hz_fwpz);
-        mllfwms = (LinearLayout) findViewById(R.id.ll_hz_fwms);
+
         mtvfb = (TextView) findViewById(R.id.tv_dbcd_fb);
         mtvfwpz = (TextView) findViewById(R.id.tv_hz_fwpz);
         mtvfwms = (TextView) findViewById(R.id.tv_hz_fwms);
         mtvlxrsf = (TextView) findViewById(R.id.tv_hz_lxrsf);
         mtvlxrlxdh = (TextView) findViewById(R.id.tv_hz_lxrlxdh);
         mivback = (ImageView) findViewById(R.id.iv_back);
-
-        ViewGroup mllkfsj = (ViewGroup) findViewById(R.id.ll_hz_kfsj);
-        ViewGroup mllzkxb = (ViewGroup) findViewById(R.id.ll_hz_zkxb);
-        ViewGroup mllrzsj = (ViewGroup) findViewById(R.id.ll_hz_rzsj);
-        ViewGroup mlllxrsf = (ViewGroup) findViewById(R.id.ll_hz_lxrsf);
-        ViewGroup mlllxrlxdh = (ViewGroup) findViewById(R.id.ll_hz_lxrlxdh);
-
         mtvkfsj = (TextView) findViewById(R.id.tv_hz_kfsj);
         mtvzkxb = (TextView) findViewById(R.id.tv_hz_zkxb);
         mtvrzsj = (TextView) findViewById(R.id.tv_hz_rzsj);
 
-        mllfwpz.setOnClickListener(this);
-        mllfwms.setOnClickListener(this);
         mtvfb.setOnClickListener(this);
         mivback.setOnClickListener(this);
-        mllkfsj.setOnClickListener(this);
-        mllzkxb.setOnClickListener(this);
-        mllrzsj.setOnClickListener(this);
-        mlllxrsf.setOnClickListener(this);
-        mlllxrlxdh.setOnClickListener(this);
+        findViewById(R.id.ll_hz_fwpz).setOnClickListener(this);
+        findViewById(R.id.ll_hz_fwms).setOnClickListener(this);
+        findViewById(R.id.ll_hz_kfsj).setOnClickListener(this);
+        findViewById(R.id.ll_hz_zkxb).setOnClickListener(this);
+        findViewById(R.id.ll_hz_rzsj).setOnClickListener(this);
+        findViewById(R.id.ll_hz_lxrsf).setOnClickListener(this);
+        findViewById(R.id.ll_hz_lxrlxdh).setOnClickListener(this);
     }
 
     //事件监听
